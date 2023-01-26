@@ -13,7 +13,7 @@ class _WelcomePageState extends State<WelcomePage> {
   final PageController _controller = PageController();
   bool isLastPage = false;
 
-  Widget getStarted() {
+  Widget getStarted() { 
     return Container(
       alignment: const Alignment(0, 0.60),
       child: ElevatedButton(
