@@ -107,7 +107,7 @@ class _HomeState extends State<Home> {
 // Search Bar code
 class CustomSearchDelegate extends SearchDelegate {
   List<String> searchTerms = [
-    'Apple',
+    'Apples',
     'Banana',
     'Pear',
     'Orange',
