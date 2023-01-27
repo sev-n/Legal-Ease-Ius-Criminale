@@ -64,8 +64,7 @@ class _HomeState extends State<Home> {
           child: ListView(
             padding: EdgeInsets.zero,
             children: const <Widget>[
-              DrawerHeader(
-                decoration: BoxDecoration(
+              DrawerHeader(decoration: BoxDecoration(
                   color: Color(0xff272f31),
                 ),
                 child: Text(
@@ -106,7 +105,7 @@ class _HomeState extends State<Home> {
                   minLines: 2,
                   maxLines: 3,
                   keyboardType: TextInputType.multiline,
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                     hintText: "Enter a complaint",
                     hintStyle: TextStyle(
                       color: Colors.grey
@@ -117,7 +116,7 @@ class _HomeState extends State<Home> {
                   ),
                 ),
               ),
-              ElevatedButton(onPressed: (){}, child: Text("Send Compaint"),)
+              ElevatedButton(onPressed: (){}, child: const Text("Send Compaint"),)
             ],
           ),
         ),
