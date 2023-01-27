@@ -37,14 +37,28 @@ class __TabControlState extends State<_TabControl> {
               maxLines: 3,
               keyboardType: TextInputType.multiline,
               decoration: const InputDecoration(
-                  hintText: "Enter a complant",
-                  hintStyle: TextStyle(color: Colors.grey),
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.all(Radius.circular(10)),
-                  )),
+                filled: true,
+                fillColor: Colors.white,
+                hintText: "Enter a complaint",
+                hintStyle: TextStyle(color: Colors.grey),
+                enabledBorder: OutlineInputBorder(
+                  borderSide: BorderSide(color: Color.fromARGB(192, 255, 153, 0), width: 1.5),
+                  borderRadius: BorderRadius.all(Radius.circular(20.0))
+                ),
+               ),
             ),
           ),
           ElevatedButton(
+            style: ButtonStyle(
+              alignment: Alignment.centerRight,
+              backgroundColor: MaterialStateProperty.all<Color>(const Color.fromARGB(192, 255, 153, 0)),
+              shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10.0),
+                  side: const BorderSide(color: Color.fromARGB(197, 238, 143, 0))
+                )
+              )
+            ),
             onPressed: () {},
             child: const Text("Send Compaint"),
           )
@@ -129,62 +143,64 @@ class __TabControlState extends State<_TabControl> {
             ),
           ),
           body: SafeArea(
-            child: Column(
-              children: [
-                AppBar(
-                  elevation: 0,
-                  bottomOpacity: 0,
-                  shadowColor: Colors.transparent,
-                  backgroundColor: Colors.transparent,
-                  title: const Text(
-                    'LegalEase',
-                    style: TextStyle(fontWeight: FontWeight.bold),
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  AppBar(
+                    elevation: 0,
+                    bottomOpacity: 0,
+                    shadowColor: Colors.transparent,
+                    backgroundColor: Colors.transparent,
+                    title: const Text(
+                      'LegalEase',
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ),
+                    leading: Builder(
+                      builder: (BuildContext context) {
+                        return IconButton(
+                          icon: const Icon(Icons.grid_view_rounded),
+                          onPressed: () {
+                            Scaffold.of(context).openDrawer();
+                          },
+                          tooltip: MaterialLocalizations.of(context)
+                              .openAppDrawerTooltip,
+                        );
+                      },
+                    ),
                   ),
-                  leading: Builder(
-                    builder: (BuildContext context) {
-                      return IconButton(
-                        icon: const Icon(Icons.grid_view_rounded),
-                        onPressed: () {
-                          Scaffold.of(context).openDrawer();
-                        },
-                        tooltip: MaterialLocalizations.of(context)
-                            .openAppDrawerTooltip,
-                      );
-                    },
+                  const Divider(
+                    color: Color(0xff93979a),
+                    thickness: 3,
                   ),
-                ),
-                const Divider(
-                  color: Color(0xff93979a),
-                  thickness: 3,
-                ),
-                //Tabbar code
-                const TabBar(
-                  indicatorColor: Color(0xff93979a),
-                  tabs: [
-                    Tab(
-                      icon: Icon(Icons.menu_book_rounded),
-                      text: 'Jhon',
-                    ),
-                    Tab(
-                      icon: Icon(Icons.menu_book_rounded),
-                      text: 'Lurion',
-                    ),
-                    Tab(
-                      icon: Icon(Icons.menu_book_rounded),
-                      text: 'Panis',
-                    ),
-                    Tab(
-                      icon: Icon(Icons.menu_book_rounded),
-                      text: 'Khane',
-                    ),
-                  ],
-                ),
-                textField(),
-                Container(
-                  alignment: Alignment.center,
-                  padding: const EdgeInsets.all(32),
-                ),
-              ],
+                  //Tabbar code
+                  const TabBar(
+                    indicatorColor: Color(0xff93979a),
+                    tabs: [
+                      Tab(
+                        icon: Icon(Icons.menu_book_rounded),
+                        text: 'Jhon',
+                      ),
+                      Tab(
+                        icon: Icon(Icons.menu_book_rounded),
+                        text: 'Lurion',
+                      ),
+                      Tab(
+                        icon: Icon(Icons.menu_book_rounded),
+                        text: 'Panis',
+                      ),
+                      Tab(
+                        icon: Icon(Icons.menu_book_rounded),
+                        text: 'Khane',
+                      ),
+                    ],
+                  ),
+                  textField(),
+                  Container(
+                    alignment: Alignment.center,
+                    padding: const EdgeInsets.all(32),
+                  ),
+                ],
+              ),
             ),
           ),
         ),
