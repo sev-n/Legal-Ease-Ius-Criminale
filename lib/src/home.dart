@@ -90,14 +90,14 @@ class __TabControlState extends State<_TabControl> {
                           'Articulos',
                           style: TextStyle(color: Colors.white),
                         ),
-                        iconColor: Colors.white),
+                        iconColor: Color(0xffb99c7e)),
                     ListTile(
                       leading: Icon(Icons.bookmark_rounded),
                       title: Text(
                         'Bookmark',
                         style: TextStyle(color: Colors.white),
                       ),
-                      iconColor: Colors.white,
+                      iconColor: Color(0xffb99c7e),
                     ),
                     ListTile(
                       leading: Icon(Icons.settings_applications_rounded),
@@ -105,7 +105,7 @@ class __TabControlState extends State<_TabControl> {
                         'Settings',
                         style: TextStyle(color: Colors.white),
                       ),
-                      iconColor: Colors.white,
+                      iconColor: Color(0xffb99c7e),
                     ),
                     ListTile(
                       leading: Icon(Icons.feedback_rounded),
@@ -113,7 +113,7 @@ class __TabControlState extends State<_TabControl> {
                         'Feedback',
                         style: TextStyle(color: Colors.white),
                       ),
-                      iconColor: Colors.white,
+                      iconColor: Color(0xffb99c7e),
                     ),
                     ListTile(
                       leading: Icon(Icons.help_center_rounded),
@@ -121,70 +121,107 @@ class __TabControlState extends State<_TabControl> {
                         'Help',
                         style: TextStyle(color: Colors.white),
                       ),
-                      iconColor: Colors.white,
+                      iconColor: Color(0xffb99c7e),
                     ),
                   ],
                 ),
               ],
             ),
           ),
-          body: SafeArea(
-            child: Column(
-              children: [
-                AppBar(
-                  elevation: 0,
-                  bottomOpacity: 0,
-                  shadowColor: Colors.transparent,
-                  backgroundColor: Colors.transparent,
-                  title: const Text(
-                    'LegalEase',
-                    style: TextStyle(fontWeight: FontWeight.bold),
+          body: SingleChildScrollView(
+            child: SafeArea(
+              child: Column(
+                children: [
+                  AppBar(
+                    elevation: 0,
+                    bottomOpacity: 0,
+                    shadowColor: Colors.transparent,
+                    backgroundColor: Colors.transparent,
+                    title: const Text(
+                      'LegalEase',
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ),
+                    leading: Builder(
+                      builder: (BuildContext context) {
+                        return IconButton(
+                          icon: const Icon(
+                            Icons.grid_view_rounded,
+                            color: Color(0xffd9b38e),
+                          ),
+                          onPressed: () {
+                            Scaffold.of(context).openDrawer();
+                          },
+                          tooltip: MaterialLocalizations.of(context)
+                              .openAppDrawerTooltip,
+                        );
+                      },
+                    ),
                   ),
-                  leading: Builder(
-                    builder: (BuildContext context) {
-                      return IconButton(
-                        icon: const Icon(Icons.grid_view_rounded),
-                        onPressed: () {
-                          Scaffold.of(context).openDrawer();
-                        },
-                        tooltip: MaterialLocalizations.of(context)
-                            .openAppDrawerTooltip,
-                      );
-                    },
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: const Color(0xffa1a2a4),
+                        border: Border.all(color: const Color(0xffa1a2a4)),
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                      child: Row(
+                        children: const [
+                          Padding(
+                            padding: EdgeInsets.symmetric(horizontal: 10.0),
+                            child: SizedBox(
+                              height: 30,
+                              child: Icon(
+                                Icons.search,
+                                color: Colors.white54,
+                              ),
+                            ),
+                          ),
+                          Expanded(
+                            child: TextField(
+                              decoration: InputDecoration(
+                                border: InputBorder.none,
+                                hintText: 'Search an article...',
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
                   ),
-                ),
-                const Divider(
-                  color: Color(0xff93979a),
-                  thickness: 3,
-                ),
-                //Tabbar code
-                const TabBar(
-                  indicatorColor: Color(0xff93979a),
-                  tabs: [
-                    Tab(
-                      icon: Icon(Icons.menu_book_rounded),
-                      text: 'Jhon',
-                    ),
-                    Tab(
-                      icon: Icon(Icons.menu_book_rounded),
-                      text: 'Lurion',
-                    ),
-                    Tab(
-                      icon: Icon(Icons.menu_book_rounded),
-                      text: 'Panis',
-                    ),
-                    Tab(
-                      icon: Icon(Icons.menu_book_rounded),
-                      text: 'Khane',
-                    ),
-                  ],
-                ),
-                textField(),
-                Container(
-                  alignment: Alignment.center,
-                  padding: const EdgeInsets.all(32),
-                ),
-              ],
+                  const Divider(
+                    color: Color(0xff93979a),
+                    thickness: 3,
+                  ),
+                  //Tabbar code
+                  const TabBar(
+                    indicatorColor: Color(0xff93979a),
+                    tabs: [
+                      Tab(
+                        icon: Icon(Icons.menu_book_rounded),
+                        text: 'Jhon',
+                      ),
+                      Tab(
+                        icon: Icon(Icons.menu_book_rounded),
+                        text: 'Lurion',
+                      ),
+                      Tab(
+                        icon: Icon(Icons.menu_book_rounded),
+                        text: 'Panis',
+                      ),
+                      Tab(
+                        icon: Icon(Icons.menu_book_rounded),
+                        text: 'Khane',
+                      ),
+                    ],
+                  ),
+                  textField(),
+                  Container(
+                    alignment: Alignment.center,
+                    padding: const EdgeInsets.all(32),
+                  ),
+                ],
+              ),
             ),
           ),
         ),
