@@ -143,62 +143,64 @@ class __TabControlState extends State<_TabControl> {
             ),
           ),
           body: SafeArea(
-            child: Column(
-              children: [
-                AppBar(
-                  elevation: 0,
-                  bottomOpacity: 0,
-                  shadowColor: Colors.transparent,
-                  backgroundColor: Colors.transparent,
-                  title: const Text(
-                    'LegalEase',
-                    style: TextStyle(fontWeight: FontWeight.bold),
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  AppBar(
+                    elevation: 0,
+                    bottomOpacity: 0,
+                    shadowColor: Colors.transparent,
+                    backgroundColor: Colors.transparent,
+                    title: const Text(
+                      'LegalEase',
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ),
+                    leading: Builder(
+                      builder: (BuildContext context) {
+                        return IconButton(
+                          icon: const Icon(Icons.grid_view_rounded),
+                          onPressed: () {
+                            Scaffold.of(context).openDrawer();
+                          },
+                          tooltip: MaterialLocalizations.of(context)
+                              .openAppDrawerTooltip,
+                        );
+                      },
+                    ),
                   ),
-                  leading: Builder(
-                    builder: (BuildContext context) {
-                      return IconButton(
-                        icon: const Icon(Icons.grid_view_rounded),
-                        onPressed: () {
-                          Scaffold.of(context).openDrawer();
-                        },
-                        tooltip: MaterialLocalizations.of(context)
-                            .openAppDrawerTooltip,
-                      );
-                    },
+                  const Divider(
+                    color: Color(0xff93979a),
+                    thickness: 3,
                   ),
-                ),
-                const Divider(
-                  color: Color(0xff93979a),
-                  thickness: 3,
-                ),
-                //Tabbar code
-                const TabBar(
-                  indicatorColor: Color(0xff93979a),
-                  tabs: [
-                    Tab(
-                      icon: Icon(Icons.menu_book_rounded),
-                      text: 'Jhon',
-                    ),
-                    Tab(
-                      icon: Icon(Icons.menu_book_rounded),
-                      text: 'Lurion',
-                    ),
-                    Tab(
-                      icon: Icon(Icons.menu_book_rounded),
-                      text: 'Panis',
-                    ),
-                    Tab(
-                      icon: Icon(Icons.menu_book_rounded),
-                      text: 'Khane',
-                    ),
-                  ],
-                ),
-                textField(),
-                Container(
-                  alignment: Alignment.center,
-                  padding: const EdgeInsets.all(32),
-                ),
-              ],
+                  //Tabbar code
+                  const TabBar(
+                    indicatorColor: Color(0xff93979a),
+                    tabs: [
+                      Tab(
+                        icon: Icon(Icons.menu_book_rounded),
+                        text: 'Jhon',
+                      ),
+                      Tab(
+                        icon: Icon(Icons.menu_book_rounded),
+                        text: 'Lurion',
+                      ),
+                      Tab(
+                        icon: Icon(Icons.menu_book_rounded),
+                        text: 'Panis',
+                      ),
+                      Tab(
+                        icon: Icon(Icons.menu_book_rounded),
+                        text: 'Khane',
+                      ),
+                    ],
+                  ),
+                  textField(),
+                  Container(
+                    alignment: Alignment.center,
+                    padding: const EdgeInsets.all(32),
+                  ),
+                ],
+              ),
             ),
           ),
         ),
