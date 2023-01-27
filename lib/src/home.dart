@@ -25,7 +25,6 @@ class _TabControl extends StatefulWidget {
 }
 
 class __TabControlState extends State<_TabControl> {
-  
   Widget textField() {
     return SingleChildScrollView(
       child: Column(
@@ -38,7 +37,7 @@ class __TabControlState extends State<_TabControl> {
               maxLines: 3,
               keyboardType: TextInputType.multiline,
               decoration: const InputDecoration(
-                  hintText: "Enter a complaint",
+                  hintText: "Enter a complant",
                   hintStyle: TextStyle(color: Colors.grey),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.all(Radius.circular(10)),
