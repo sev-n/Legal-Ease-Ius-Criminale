@@ -37,14 +37,28 @@ class __TabControlState extends State<_TabControl> {
               maxLines: 3,
               keyboardType: TextInputType.multiline,
               decoration: const InputDecoration(
-                  hintText: "Enter a complant",
-                  hintStyle: TextStyle(color: Colors.grey),
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.all(Radius.circular(10)),
-                  )),
+                filled: true,
+                fillColor: Colors.white,
+                hintText: "Enter a complaint",
+                hintStyle: TextStyle(color: Colors.grey),
+                enabledBorder: OutlineInputBorder(
+                  borderSide: BorderSide(color: Color.fromARGB(192, 255, 153, 0), width: 1.5),
+                  borderRadius: BorderRadius.all(Radius.circular(20.0))
+                ),
+               ),
             ),
           ),
           ElevatedButton(
+            style: ButtonStyle(
+              alignment: Alignment.centerRight,
+              backgroundColor: MaterialStateProperty.all<Color>(const Color.fromARGB(192, 255, 153, 0)),
+              shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10.0),
+                  side: const BorderSide(color: Color.fromARGB(197, 238, 143, 0))
+                )
+              )
+            ),
             onPressed: () {},
             child: const Text("Send Compaint"),
           )
