@@ -10,6 +10,52 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
+    return const Scaffold(
+      body: _TabControl(),
+    );
+  }
+}
+
+class _TabControl extends StatefulWidget {
+  // ignore: unused_element
+  const _TabControl({super.key});
+
+  @override
+  State<_TabControl> createState() => __TabControlState();
+}
+
+class __TabControlState extends State<_TabControl> {
+  
+  Widget textField() {
+    return SingleChildScrollView(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(20.0),
+            child: TextFormField(
+              minLines: 2,
+              maxLines: 3,
+              keyboardType: TextInputType.multiline,
+              decoration: const InputDecoration(
+                  hintText: "Enter a complaint",
+                  hintStyle: TextStyle(color: Colors.grey),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(10)),
+                  )),
+            ),
+          ),
+          ElevatedButton(
+            onPressed: () {},
+            child: const Text("Send Compaint"),
+          )
+        ],
+      ),
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
     return DefaultTabController(
       length: 4,
       child: Container(
@@ -134,10 +180,12 @@ class _HomeState extends State<Home> {
                     ),
                   ],
                 ),
+                textField(),
                 Container(
                   alignment: Alignment.center,
                   padding: const EdgeInsets.all(32),
                 ),
+                
               ],
             ),
           ),
