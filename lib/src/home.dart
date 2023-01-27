@@ -104,14 +104,14 @@ class __TabControlState extends State<_TabControl> {
                           'Articulos',
                           style: TextStyle(color: Colors.white),
                         ),
-                        iconColor: Colors.white),
+                        iconColor: Color(0xffb99c7e)),
                     ListTile(
                       leading: Icon(Icons.bookmark_rounded),
                       title: Text(
                         'Bookmark',
                         style: TextStyle(color: Colors.white),
                       ),
-                      iconColor: Colors.white,
+                      iconColor: Color(0xffb99c7e),
                     ),
                     ListTile(
                       leading: Icon(Icons.settings_applications_rounded),
@@ -119,7 +119,7 @@ class __TabControlState extends State<_TabControl> {
                         'Settings',
                         style: TextStyle(color: Colors.white),
                       ),
-                      iconColor: Colors.white,
+                      iconColor: Color(0xffb99c7e),
                     ),
                     ListTile(
                       leading: Icon(Icons.feedback_rounded),
@@ -127,7 +127,7 @@ class __TabControlState extends State<_TabControl> {
                         'Feedback',
                         style: TextStyle(color: Colors.white),
                       ),
-                      iconColor: Colors.white,
+                      iconColor: Color(0xffb99c7e),
                     ),
                     ListTile(
                       leading: Icon(Icons.help_center_rounded),
@@ -135,15 +135,15 @@ class __TabControlState extends State<_TabControl> {
                         'Help',
                         style: TextStyle(color: Colors.white),
                       ),
-                      iconColor: Colors.white,
+                      iconColor: Color(0xffb99c7e),
                     ),
                   ],
                 ),
               ],
             ),
           ),
-          body: SafeArea(
-            child: SingleChildScrollView(
+          body: SingleChildScrollView(
+            child: SafeArea(
               child: Column(
                 children: [
                   AppBar(
@@ -158,7 +158,10 @@ class __TabControlState extends State<_TabControl> {
                     leading: Builder(
                       builder: (BuildContext context) {
                         return IconButton(
-                          icon: const Icon(Icons.grid_view_rounded),
+                          icon: const Icon(
+                            Icons.grid_view_rounded,
+                            color: Color(0xffd9b38e),
+                          ),
                           onPressed: () {
                             Scaffold.of(context).openDrawer();
                           },
@@ -166,6 +169,38 @@ class __TabControlState extends State<_TabControl> {
                               .openAppDrawerTooltip,
                         );
                       },
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: const Color(0xffa1a2a4),
+                        border: Border.all(color: const Color(0xffa1a2a4)),
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                      child: Row(
+                        children: const [
+                          Padding(
+                            padding: EdgeInsets.symmetric(horizontal: 10.0),
+                            child: SizedBox(
+                              height: 30,
+                              child: Icon(
+                                Icons.search,
+                                color: Colors.white54,
+                              ),
+                            ),
+                          ),
+                          Expanded(
+                            child: TextField(
+                              decoration: InputDecoration(
+                                border: InputBorder.none,
+                                hintText: 'Search an article...',
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                   const Divider(
