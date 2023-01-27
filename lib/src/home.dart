@@ -25,7 +25,6 @@ class _TabControl extends StatefulWidget {
 }
 
 class __TabControlState extends State<_TabControl> {
-  
   Widget textField() {
     return SingleChildScrollView(
       child: Column(
@@ -45,7 +44,8 @@ class __TabControlState extends State<_TabControl> {
                 enabledBorder: OutlineInputBorder(
                   borderSide: BorderSide(color: Color.fromARGB(192, 255, 153, 0), width: 1.5),
                   borderRadius: BorderRadius.all(Radius.circular(20.0))
-                )),
+                ),
+               ),
             ),
           ),
           ElevatedButton(
