@@ -96,8 +96,30 @@ class _HomeState extends State<Home> {
             ],
           ),
         ),
-        body: const Center(
-          child: Text("Start here!"),
+        body: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: TextFormField(
+                  minLines: 2,
+                  maxLines: 3,
+                  keyboardType: TextInputType.multiline,
+                  decoration: InputDecoration(
+                    hintText: "Enter a complaint",
+                    hintStyle: TextStyle(
+                      color: Colors.grey
+                    ),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(10)),
+                    )
+                  ),
+                ),
+              ),
+              ElevatedButton(onPressed: (){}, child: Text("Send Compaint"),)
+            ],
+          ),
         ),
       ),
     );
