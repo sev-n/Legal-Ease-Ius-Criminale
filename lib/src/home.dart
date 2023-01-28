@@ -30,20 +30,21 @@ class __TabControlState extends State<_TabControl> {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Padding(
-            padding: const EdgeInsets.all(20.0),
-            child: TextFormField(
+          const Padding(
+            padding: EdgeInsets.all(20.0),
+            child: TextField(
               minLines: 2,
-              maxLines: 3,
+              maxLines: 2,
               keyboardType: TextInputType.multiline,
-              decoration: const InputDecoration(
+              decoration: InputDecoration(
                 filled: true,
                 fillColor: Colors.white,
                 hintText: "Enter a complaint",
                 hintStyle: TextStyle(color: Colors.grey),
-                enabledBorder: OutlineInputBorder(
-                  borderSide: BorderSide(color: Color.fromARGB(192, 255, 153, 0), width: 1.5),
-                  borderRadius: BorderRadius.all(Radius.circular(20.0))
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(20.0)
+                  ),
                 ),
                ),
             ),
@@ -51,7 +52,7 @@ class __TabControlState extends State<_TabControl> {
           ElevatedButton(
             style: ButtonStyle(
               alignment: Alignment.centerRight,
-              backgroundColor: MaterialStateProperty.all<Color>(const Color.fromARGB(192, 255, 153, 0)),
+              backgroundColor: MaterialStateProperty.all<Color>(const Color.fromARGB(192, 255, 178, 63)),
               shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                 RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(10.0),
