@@ -182,6 +182,7 @@ class __TabControlState extends State<_TabControl> {
                               decoration: InputDecoration(
                                 border: InputBorder.none,
                                 hintText: 'Search an article...',
+                                hintStyle: TextStyle(color: Colors.white),
                               ),
                             ),
                           ),
@@ -194,12 +195,13 @@ class __TabControlState extends State<_TabControl> {
                     thickness: 3,
                   ),
                   //Tabbar code
-                  const SingleChildScrollView(
+                  SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
                     child: TabBar(
-                      indicatorColor: Color(0xff93979a),
+                      splashBorderRadius: BorderRadius.circular(20),
+                      indicatorColor: const Color(0xff93979a),
                       isScrollable: true,
-                      tabs: [
+                      tabs: const [
                         Tab(
                           icon: Icon(Icons.menu_book_rounded),
                           text: '1',
