@@ -71,7 +71,7 @@ class __TabControlState extends State<_TabControl> {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 4,
+      length: 10,
       child: Container(
         decoration: const BoxDecoration(
           image: DecorationImage(
@@ -197,6 +197,7 @@ class __TabControlState extends State<_TabControl> {
                               decoration: InputDecoration(
                                 border: InputBorder.none,
                                 hintText: 'Search an article...',
+                                hintStyle: TextStyle(color: Colors.white),
                               ),
                             ),
                           ),
@@ -209,26 +210,55 @@ class __TabControlState extends State<_TabControl> {
                     thickness: 3,
                   ),
                   //Tabbar code
-                  const TabBar(
-                    indicatorColor: Color(0xff93979a),
-                    tabs: [
-                      Tab(
-                        icon: Icon(Icons.menu_book_rounded),
-                        text: 'Jhon',
-                      ),
-                      Tab(
-                        icon: Icon(Icons.menu_book_rounded),
-                        text: 'Lurion',
-                      ),
-                      Tab(
-                        icon: Icon(Icons.menu_book_rounded),
-                        text: 'Panis',
-                      ),
-                      Tab(
-                        icon: Icon(Icons.menu_book_rounded),
-                        text: 'Khane',
-                      ),
-                    ],
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: TabBar(
+                      splashBorderRadius: BorderRadius.circular(20),
+                      indicatorColor: const Color(0xff93979a),
+                      isScrollable: true,
+                      tabs: const [
+                        Tab(
+                          icon: Icon(Icons.menu_book_rounded),
+                          text: '1',
+                        ),
+                        Tab(
+                          icon: Icon(Icons.menu_book_rounded),
+                          text: '2',
+                        ),
+                        Tab(
+                          icon: Icon(Icons.menu_book_rounded),
+                          text: '3',
+                        ),
+                        Tab(
+                          icon: Icon(Icons.menu_book_rounded),
+                          text: '4',
+                        ),
+                        Tab(
+                          icon: Icon(Icons.menu_book_rounded),
+                          text: '5',
+                        ),
+                        Tab(
+                          icon: Icon(Icons.menu_book_rounded),
+                          text: '6',
+                        ),
+                        Tab(
+                          icon: Icon(Icons.menu_book_rounded),
+                          text: '7',
+                        ),
+                        Tab(
+                          icon: Icon(Icons.menu_book_rounded),
+                          text: '8',
+                        ),
+                        Tab(
+                          icon: Icon(Icons.menu_book_rounded),
+                          text: '9',
+                        ),
+                        Tab(
+                          icon: Icon(Icons.menu_book_rounded),
+                          text: '10',
+                        ),
+                      ],
+                    ),
                   ),
                   textField(),
                   Container(
