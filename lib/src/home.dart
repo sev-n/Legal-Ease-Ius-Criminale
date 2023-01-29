@@ -39,27 +39,24 @@ class __TabControlState extends State<_TabControl> {
               decoration: InputDecoration(
                 filled: true,
                 fillColor: Colors.white,
-                hintText: "Enter a complaint",
+                hintText: "test test",
                 hintStyle: TextStyle(color: Colors.grey),
                 border: OutlineInputBorder(
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(20.0)
-                  ),
+                  borderRadius: BorderRadius.all(Radius.circular(20.0)),
                 ),
-               ),
+              ),
             ),
           ),
           ElevatedButton(
             style: ButtonStyle(
-              alignment: Alignment.centerRight,
-              backgroundColor: MaterialStateProperty.all<Color>(const Color.fromARGB(192, 255, 178, 63)),
-              shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10.0),
-                  side: const BorderSide(color: Color.fromARGB(197, 238, 143, 0))
-                )
-              )
-            ),
+                alignment: Alignment.centerRight,
+                backgroundColor: MaterialStateProperty.all<Color>(
+                    const Color.fromARGB(192, 255, 178, 63)),
+                shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                    RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10.0),
+                        side: const BorderSide(
+                            color: Color.fromARGB(197, 238, 143, 0))))),
             onPressed: () {},
             child: const Text("Send Compaint"),
           )
