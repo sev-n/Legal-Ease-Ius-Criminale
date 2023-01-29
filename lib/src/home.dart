@@ -39,7 +39,7 @@ class __TabControlState extends State<_TabControl> {
               decoration: InputDecoration(
                 filled: true,
                 fillColor: Colors.white,
-                hintText: "test test",
+                hintText: "test",
                 hintStyle: TextStyle(color: Colors.grey),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.all(Radius.circular(20.0)),
