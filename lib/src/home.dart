@@ -19,8 +19,7 @@ class _HomeState extends State<Home> {
 }
 
 class _TabControl extends StatefulWidget {
-  // ignore: unused_element
-  const _TabControl({super.key});
+  const _TabControl();
 
   @override
   State<_TabControl> createState() => __TabControlState();
