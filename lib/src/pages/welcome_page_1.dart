@@ -1,19 +1,28 @@
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 
-class WelcomePageOne extends StatefulWidget {
+class WelcomePageOne extends StatelessWidget {
   const WelcomePageOne({super.key});
 
   @override
-  State<WelcomePageOne> createState() => _WelcomePageOneState();
-}
-
-class _WelcomePageOneState extends State<WelcomePageOne> {
-  @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.blueGrey,
-      child: const Center(
-        child: Text("First page"),
+      color: const Color(0xffd9b38e),
+      child: Stack(
+        children: [
+          Container(
+            alignment: const Alignment(0, 0),
+            child: Lottie.asset('assets/First.json',
+                // todo: need to review width and height
+                width: MediaQuery.of(context).size.width * 0.80,
+                height: MediaQuery.of(context).size.width * 0.80,
+                fit: BoxFit.fill),
+          ),
+          Container(
+            alignment: const Alignment(0, 0.50),
+            child: const Text("Need text kahit short message!"),
+          ),
+        ],
       ),
     );
   }

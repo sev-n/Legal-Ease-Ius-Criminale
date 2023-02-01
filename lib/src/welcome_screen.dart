@@ -34,6 +34,7 @@ class _WelcomePageState extends State<WelcomePage> {
             WelcomePageThree() 
           ],
         ),
+        // todo: Need to reposition or remove.
         if (isLastPage) const GetStartedBtn(),
         Container(
           alignment: const Alignment(0, 0.80),
