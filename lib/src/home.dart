@@ -10,6 +10,8 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
+    // ignore: avoid_print
+    print("Home rebuild");
     return const Scaffold(
       body: _TabControl(),
     );
@@ -25,54 +27,16 @@ class _TabControl extends StatefulWidget {
 }
 
 class __TabControlState extends State<_TabControl> {
-  Widget textField() {
-    return SingleChildScrollView(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          const Padding(
-            padding: EdgeInsets.all(20.0),
-            child: TextField(
-              minLines: 2,
-              maxLines: 2,
-              keyboardType: TextInputType.multiline,
-              decoration: InputDecoration(
-                filled: true,
-                fillColor: Colors.white,
-                hintText: "test",
-                hintStyle: TextStyle(color: Colors.grey),
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.all(Radius.circular(20.0)),
-                ),
-              ),
-            ),
-          ),
-          ElevatedButton(
-            style: ButtonStyle(
-                alignment: Alignment.centerRight,
-                backgroundColor: MaterialStateProperty.all<Color>(
-                    const Color.fromARGB(192, 255, 178, 63)),
-                shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                    RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10.0),
-                        side: const BorderSide(
-                            color: Color.fromARGB(197, 238, 143, 0))))),
-            onPressed: () {},
-            child: const Text("Send Compaint"),
-          )
-        ],
-      ),
-    );
-  }
-
   @override
   Widget build(BuildContext context) {
+    // ignore: avoid_print
+    print("Tab rebuild");
     return DefaultTabController(
       length: 10,
       child: Container(
         decoration: const BoxDecoration(
           image: DecorationImage(
-            image: AssetImage("images/LegalEase_BG.png"),
+            image: AssetImage("assets/images/LegalEase_BG.png"),
             fit: BoxFit.fill,
           ),
         ),
@@ -149,9 +113,8 @@ class __TabControlState extends State<_TabControl> {
                     bottomOpacity: 0,
                     shadowColor: Colors.transparent,
                     backgroundColor: Colors.transparent,
-                    title: const Text(
-                      'LegalEase',
-                      style: TextStyle(fontWeight: FontWeight.bold),
+                    title: const Center(
+                      child: Text("Legal Ease"),
                     ),
                     leading: Builder(
                       builder: (BuildContext context) {
@@ -168,40 +131,15 @@ class __TabControlState extends State<_TabControl> {
                         );
                       },
                     ),
+                    actions: <Widget>[
+                      IconButton(
+                        icon: const Icon(Icons.add_box_outlined,
+                            color: Color(0xffd9b38e), size: 26),
+                        onPressed: () {},
+                      )
+                    ],
                   ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 25.0),
-                    child: Container(
-                      decoration: BoxDecoration(
-                        color: const Color(0xffa1a2a4),
-                        border: Border.all(color: const Color(0xffa1a2a4)),
-                        borderRadius: BorderRadius.circular(12),
-                      ),
-                      child: Row(
-                        children: const [
-                          Padding(
-                            padding: EdgeInsets.symmetric(horizontal: 10.0),
-                            child: SizedBox(
-                              height: 30,
-                              child: Icon(
-                                Icons.search,
-                                color: Colors.white54,
-                              ),
-                            ),
-                          ),
-                          Expanded(
-                            child: TextField(
-                              decoration: InputDecoration(
-                                border: InputBorder.none,
-                                hintText: 'Search an article...',
-                                hintStyle: TextStyle(color: Colors.white),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
+
                   const Divider(
                     color: Color(0xff93979a),
                     thickness: 3,
@@ -216,7 +154,7 @@ class __TabControlState extends State<_TabControl> {
                       tabs: const [
                         Tab(
                           icon: Icon(Icons.menu_book_rounded),
-                          text: '1',
+                          text: 'Traffic \nOffense',
                         ),
                         Tab(
                           icon: Icon(Icons.menu_book_rounded),
@@ -257,7 +195,7 @@ class __TabControlState extends State<_TabControl> {
                       ],
                     ),
                   ),
-                  textField(),
+                  //textField(),
                   Container(
                     alignment: Alignment.center,
                     padding: const EdgeInsets.all(32),
@@ -267,6 +205,105 @@ class __TabControlState extends State<_TabControl> {
             ),
           ),
         ),
+      ),
+    );
+  }
+}
+
+class SearchField extends StatefulWidget {
+  const SearchField({super.key});
+
+  @override
+  State<SearchField> createState() => _SearchFieldState();
+}
+
+class _SearchFieldState extends State<SearchField> {
+  @override
+  Widget build(BuildContext context) {
+    // ignore: avoid_print
+    print("Search rebuild");
+    return Container(
+      // width: 250,
+      height: 40,
+      margin: const EdgeInsets.all(0),
+      decoration: BoxDecoration(
+        color: const Color(0xffa1a2a4),
+        border: Border.all(color: const Color(0xffa1a2a4)),
+        borderRadius: BorderRadius.circular(12),
+      ),
+      child: Row(
+        children: const [
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 10.0),
+            child: SizedBox(
+              height: 30,
+              child: Icon(
+                Icons.search,
+                color: Colors.white54,
+              ),
+            ),
+          ),
+          Expanded(
+            child: TextField(
+              decoration: InputDecoration(
+                border: InputBorder.none,
+                hintText: 'Search an article...',
+                hintStyle: TextStyle(color: Colors.white),
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class _TextField extends StatefulWidget {
+  // ignore: unused_element
+  const _TextField({super.key});
+
+  @override
+  State<_TextField> createState() => __TextFieldState();
+}
+
+class __TextFieldState extends State<_TextField> {
+  @override
+  Widget build(BuildContext context) {
+    return SingleChildScrollView(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          const Padding(
+            padding: EdgeInsets.all(20.0),
+            child: TextField(
+              minLines: 2,
+              maxLines: 2,
+              keyboardType: TextInputType.multiline,
+              decoration: InputDecoration(
+                filled: true,
+                fillColor: Colors.white,
+                hintText: "test",
+                hintStyle: TextStyle(color: Colors.grey),
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(20.0)),
+                ),
+              ),
+            ),
+          ),
+          ElevatedButton(
+            style: ButtonStyle(
+                alignment: Alignment.centerRight,
+                backgroundColor: MaterialStateProperty.all<Color>(
+                    const Color.fromARGB(192, 255, 178, 63)),
+                shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                    RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10.0),
+                        side: const BorderSide(
+                            color: Color.fromARGB(197, 238, 143, 0))))),
+            onPressed: () {},
+            child: const Text("Send Compaint"),
+          )
+        ],
       ),
     );
   }
