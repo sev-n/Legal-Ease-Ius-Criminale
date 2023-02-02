@@ -14,6 +14,7 @@ class WelcomePageTwo extends StatelessWidget {
             alignment: const Alignment(0, 0),
             child: Lottie.asset('assets/Try.json',
                 // todo: need to review width and height
+                // todo: not finalized background color
                 width: MediaQuery.of(context).size.width * .80,
                 height: MediaQuery.of(context).size.width * .80,
                 fit: BoxFit.fill),
