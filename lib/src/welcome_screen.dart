@@ -5,16 +5,20 @@ import 'package:legalease_matrimonial/src/pages/welcome_page_2.dart';
 import 'package:legalease_matrimonial/src/pages/welcome_page_3.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
+// todo: need to review, might not be a good approach.
+final PageController _controller = PageController(initialPage: 0);
+
 class WelcomePage extends StatefulWidget {
   const WelcomePage({super.key});
 
   @override
   State<WelcomePage> createState() => _WelcomePageState();
+  
 }
 
 class _WelcomePageState extends State<WelcomePage> {
-  final PageController _controller = PageController();
   bool isLastPage = false;
+  bool isFirstPage = false; // second page
 
   @override
   Widget build(BuildContext context) {
@@ -24,6 +28,8 @@ class _WelcomePageState extends State<WelcomePage> {
           onPageChanged: (index) {
             setState(() {
               isLastPage = (index == 2);
+              isFirstPage = (index == 0);
+
             });
           },
           controller: _controller,
@@ -31,18 +37,26 @@ class _WelcomePageState extends State<WelcomePage> {
             // pages
             WelcomePageOne(),
             WelcomePageTwo(),
-            WelcomePageThree() 
+            WelcomePageThree()
           ],
         ),
-        // todo: Need to reposition or remove.
-        if (isLastPage) const GetStartedBtn(),
         Container(
           alignment: const Alignment(0, 0.80),
-          child: SmoothPageIndicator(
-            controller: _controller,
-            count: 3,
-            effect: const ScrollingDotsEffect(
-                activeDotScale: 0.5, radius: 6, spacing: 11),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: <Widget>[
+              // page controller
+              isFirstPage ? const SkipBtn() : const PreviousBtn(),
+
+              SmoothPageIndicator(
+                controller: _controller,
+                count: 3,
+                effect: const WormEffect(),
+              ),
+              // page controller
+              isLastPage ? const DoneBtn() : const NextBtn(),
+
+            ],
           ),
         ),
       ]),
@@ -50,33 +64,64 @@ class _WelcomePageState extends State<WelcomePage> {
   }
 }
 
-class GetStartedBtn extends StatefulWidget {
-  const GetStartedBtn({super.key});
+// todo: All icons and it's size undecided
 
-  @override
-  State<GetStartedBtn> createState() => _GetStartedBtnState();
-}
+class PreviousBtn extends StatelessWidget {
+  const PreviousBtn({super.key});
 
-class _GetStartedBtnState extends State<GetStartedBtn> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      alignment: const Alignment(0, 0.60),
-      child: ElevatedButton(
-        onPressed: () {
-          Navigator.push(context, MaterialPageRoute(builder: (context) {
-            return const Home();
+    return GestureDetector(
+      onTap: () {
+        _controller.previousPage(
+            duration: const Duration(milliseconds: 500), curve: Curves.easeOut);
+      },
+      child: const Icon(Icons.arrow_left, size: 30, color: Color(0xff4050ba)),
+    );
+  }
+}
+
+class NextBtn extends StatelessWidget {
+  const NextBtn({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: () {
+        _controller.nextPage(
+            duration: const Duration(milliseconds: 500), curve: Curves.easeIn);
+      },
+      child: const Icon(Icons.arrow_right, size: 30, color: Color(0xff4050ba)),
+    );
+  }
+}
+
+class SkipBtn extends StatelessWidget {
+  const SkipBtn({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: () {
+        _controller.jumpToPage(2);
+      },
+      child: const Icon(Icons.close, size: 30, color: Color(0xff4050ba)),
+    );
+  }
+}
+
+class DoneBtn extends StatelessWidget {
+  const DoneBtn({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: () {
+        Navigator.push(context, MaterialPageRoute(builder: (context){
+          return const Home();
           }));
-        },
-        style: ElevatedButton.styleFrom(
-          backgroundColor: Colors.white,
-          foregroundColor: Colors.black,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(32.0),
-          ),
-        ),
-        child: const Text("Get Started"),
-      ),
+      },
+      child: const Icon(Icons.check, size: 30, color: Color(0xff4050ba)),
     );
   }
 }
