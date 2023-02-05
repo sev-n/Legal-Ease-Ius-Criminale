@@ -56,7 +56,7 @@ class __TabControlState extends State<_TabControl> {
                         mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          Image.asset("assets/images/logo.png"),
+                          Image.asset("assets/images/Logo.png"),
                           const Text(
                             "Legal Ease",
                             style: TextStyle(color: Colors.black54),
@@ -78,7 +78,7 @@ class __TabControlState extends State<_TabControl> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => ArticlePage(),
+                              builder: (context) => const ArticlePage(),
                             ),
                           );
                         },
@@ -93,7 +93,7 @@ class __TabControlState extends State<_TabControl> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => BookmarkPage(),
+                            builder: (context) => const BookmarkPage(),
                           ),
                         );
                       },
@@ -146,7 +146,7 @@ class __TabControlState extends State<_TabControl> {
                         style: TextStyle(fontSize: 15.0),
                       ),
                       Image.asset(
-                        'assets/images/logo.png',
+                        'assets/images/Logo.png',
                         fit: BoxFit.fitWidth,
                         height: MediaQuery.of(context).size.height * 0.2,
                         width: MediaQuery.of(context).size.width * 0.2,
