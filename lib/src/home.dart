@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:legalease_matrimonial/src/bookmark_page.dart';
+import 'article_page.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -32,175 +34,199 @@ class __TabControlState extends State<_TabControl> {
     print("Tab rebuild");
     return DefaultTabController(
       length: 10,
-      child: Container(
-        decoration: const BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage("assets/images/LegalEase_BG.png"),
-            fit: BoxFit.fill,
-          ),
-        ),
-        child: Scaffold(
-          backgroundColor: Colors.transparent,
-          extendBodyBehindAppBar: true,
-          //Side Navigation Menu code
-          drawer: Drawer(
-            backgroundColor: const Color(0xff4f555d),
+      child: Scaffold(
+        backgroundColor: const Color(0xffD9D9D9),
+        //Side Navigation Menu code
+        drawer: ClipRRect(
+          borderRadius: BorderRadius.circular(6.0),
+          child: Drawer(
+            backgroundColor: const Color(0xffEADFD5),
             child: ListView(
               padding: EdgeInsets.zero,
               children: <Widget>[
-                const DrawerHeader(
-                  decoration: BoxDecoration(
-                    color: Color(0xff272f31),
-                  ),
-                  child: Text(
-                    'Legal Ease',
-                    style: TextStyle(color: Colors.white, fontSize: 24),
+                SizedBox(
+                  height: 145.0,
+                  child: DrawerHeader(
+                    decoration: BoxDecoration(
+                      color: const Color(0xff24534B).withOpacity(0.5),
+                    ),
+                    child: Container(
+                      padding: const EdgeInsets.all(2.0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Image.asset("assets/images/logo.png"),
+                          const Text(
+                            "Legal Ease",
+                            style: TextStyle(color: Colors.black54),
+                          ),
+                        ],
+                      ),
+                    ),
                   ),
                 ),
                 Column(
-                  children: const [
+                  children: [
                     ListTile(
-                        leading: Icon(Icons.menu_book_outlined),
-                        title: Text(
-                          'Articulos',
-                          style: TextStyle(color: Colors.white),
+                        leading: const Icon(Icons.menu_book_rounded),
+                        title: const Text(
+                          'Articles',
+                          style: TextStyle(color: Colors.black),
                         ),
-                        iconColor: Color(0xffb99c7e)),
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => ArticlePage(),
+                            ),
+                          );
+                        },
+                        iconColor: const Color(0xff2E5966)),
                     ListTile(
-                      leading: Icon(Icons.bookmark_rounded),
-                      title: Text(
+                      leading: const Icon(Icons.bookmark_rounded),
+                      title: const Text(
                         'Bookmark',
-                        style: TextStyle(color: Colors.white),
+                        style: TextStyle(color: Colors.black),
                       ),
-                      iconColor: Color(0xffb99c7e),
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => BookmarkPage(),
+                          ),
+                        );
+                      },
+                      iconColor: const Color(0xff654858),
                     ),
-                    ListTile(
-                      leading: Icon(Icons.settings_applications_rounded),
+                    const ListTile(
+                      leading: Icon(Icons.settings),
                       title: Text(
                         'Settings',
-                        style: TextStyle(color: Colors.white),
+                        style: TextStyle(color: Colors.black),
                       ),
-                      iconColor: Color(0xffb99c7e),
+                      iconColor: Color(0xff48433E),
                     ),
-                    ListTile(
-                      leading: Icon(Icons.feedback_rounded),
-                      title: Text(
-                        'Feedback',
-                        style: TextStyle(color: Colors.white),
-                      ),
-                      iconColor: Color(0xffb99c7e),
-                    ),
-                    ListTile(
+                    const ListTile(
                       leading: Icon(Icons.help_center_rounded),
                       title: Text(
-                        'Help',
-                        style: TextStyle(color: Colors.white),
+                        'FAQs',
+                        style: TextStyle(color: Colors.black),
                       ),
-                      iconColor: Color(0xffb99c7e),
+                      iconColor: Color(0xff985416),
+                    ),
+                    const ListTile(
+                      leading: Icon(Icons.feedback_rounded),
+                      title: Text(
+                        'Help',
+                        style: TextStyle(color: Colors.black),
+                      ),
+                      iconColor: Color(0xff0C2924),
                     ),
                   ],
                 ),
               ],
             ),
           ),
-          body: SingleChildScrollView(
-            child: SafeArea(
-              child: Column(
-                children: [
-                  AppBar(
-                    elevation: 0,
-                    bottomOpacity: 0,
-                    shadowColor: Colors.transparent,
-                    backgroundColor: Colors.transparent,
-                    title: const Center(
-                      child: Text("Legal Ease"),
-                    ),
-                    leading: Builder(
-                      builder: (BuildContext context) {
-                        return IconButton(
-                          icon: const Icon(
-                            Icons.grid_view_rounded,
-                            color: Color(0xffd9b38e),
-                          ),
-                          onPressed: () {
-                            Scaffold.of(context).openDrawer();
-                          },
-                          tooltip: MaterialLocalizations.of(context)
-                              .openAppDrawerTooltip,
-                        );
-                      },
-                    ),
-                    actions: <Widget>[
-                      IconButton(
-                        icon: const Icon(Icons.add_box_outlined,
-                            color: Color(0xffd9b38e), size: 26),
-                        onPressed: () {},
-                      )
+        ),
+        body: SingleChildScrollView(
+          child: SafeArea(
+            child: Column(
+              children: [
+                AppBar(
+                  elevation: 0,
+                  bottomOpacity: 0,
+                  shadowColor: Colors.transparent,
+                  backgroundColor: const Color(0xff24534B).withOpacity(0.5),
+                  title: Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      const Text(
+                        'LegalEase\nlus criminale ',
+                        style: TextStyle(fontSize: 15.0),
+                      ),
+                      Image.asset(
+                        'assets/images/logo.png',
+                        fit: BoxFit.fitWidth,
+                        height: MediaQuery.of(context).size.height * 0.2,
+                        width: MediaQuery.of(context).size.width * 0.2,
+                      ),
                     ],
                   ),
-
-                  const Divider(
-                    color: Color(0xff93979a),
-                    thickness: 3,
+                  leading: Builder(
+                    builder: (BuildContext context) {
+                      return IconButton(
+                        icon: const Icon(
+                          Icons.grid_view_rounded,
+                          color: Color(0xffEADFD5),
+                        ),
+                        onPressed: () {
+                          Scaffold.of(context).openDrawer();
+                        },
+                        tooltip: MaterialLocalizations.of(context)
+                            .openAppDrawerTooltip,
+                      );
+                    },
                   ),
-                  //Tabbar code
-                  SingleChildScrollView(
-                    scrollDirection: Axis.horizontal,
-                    child: TabBar(
-                      splashBorderRadius: BorderRadius.circular(20),
-                      indicatorColor: const Color(0xff93979a),
-                      isScrollable: true,
-                      tabs: const [
-                        Tab(
-                          icon: Icon(Icons.menu_book_rounded),
-                          text: 'Traffic \nOffense',
-                        ),
-                        Tab(
-                          icon: Icon(Icons.menu_book_rounded),
-                          text: '2',
-                        ),
-                        Tab(
-                          icon: Icon(Icons.menu_book_rounded),
-                          text: '3',
-                        ),
-                        Tab(
-                          icon: Icon(Icons.menu_book_rounded),
-                          text: '4',
-                        ),
-                        Tab(
-                          icon: Icon(Icons.menu_book_rounded),
-                          text: '5',
-                        ),
-                        Tab(
-                          icon: Icon(Icons.menu_book_rounded),
-                          text: '6',
-                        ),
-                        Tab(
-                          icon: Icon(Icons.menu_book_rounded),
-                          text: '7',
-                        ),
-                        Tab(
-                          icon: Icon(Icons.menu_book_rounded),
-                          text: '8',
-                        ),
-                        Tab(
-                          icon: Icon(Icons.menu_book_rounded),
-                          text: '9',
-                        ),
-                        Tab(
-                          icon: Icon(Icons.menu_book_rounded),
-                          text: '10',
-                        ),
-                      ],
-                    ),
+                ),
+                //Tabbar code
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: TabBar(
+                    splashBorderRadius: BorderRadius.circular(20),
+                    indicatorColor: const Color(0xff93979a),
+                    labelColor: const Color(0xff24534B).withOpacity(0.5),
+                    isScrollable: true,
+                    tabs: const [
+                      Tab(
+                        icon: Icon(Icons.menu_book_rounded),
+                        text: 'Traffic \nOffense',
+                      ),
+                      Tab(
+                        icon: Icon(Icons.menu_book_rounded),
+                        text: '2',
+                      ),
+                      Tab(
+                        icon: Icon(Icons.menu_book_rounded),
+                        text: '3',
+                      ),
+                      Tab(
+                        icon: Icon(Icons.menu_book_rounded),
+                        text: '4',
+                      ),
+                      Tab(
+                        icon: Icon(Icons.menu_book_rounded),
+                        text: '5',
+                      ),
+                      Tab(
+                        icon: Icon(Icons.menu_book_rounded),
+                        text: '6',
+                      ),
+                      Tab(
+                        icon: Icon(Icons.menu_book_rounded),
+                        text: '7',
+                      ),
+                      Tab(
+                        icon: Icon(Icons.menu_book_rounded),
+                        text: '8',
+                      ),
+                      Tab(
+                        icon: Icon(Icons.menu_book_rounded),
+                        text: '9',
+                      ),
+                      Tab(
+                        icon: Icon(Icons.menu_book_rounded),
+                        text: '10',
+                      ),
+                    ],
                   ),
-                  //textField(),
-                  Container(
-                    alignment: Alignment.center,
-                    padding: const EdgeInsets.all(32),
-                  ),
-                ],
-              ),
+                ),
+                //textField(),
+                Container(
+                  alignment: Alignment.center,
+                  padding: const EdgeInsets.all(32),
+                ),
+              ],
             ),
           ),
         ),
