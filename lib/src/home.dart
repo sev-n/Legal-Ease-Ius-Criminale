@@ -10,6 +10,7 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+
   @override
   Widget build(BuildContext context) {
     // ignore: avoid_print
@@ -28,12 +29,32 @@ class _TabControl extends StatefulWidget {
 }
 
 class __TabControlState extends State<_TabControl> {
+
+  List<Tab> tabsList = const [
+    Tab(icon: Icon(Icons.menu_book_rounded), text: 'Traffic \nOffense',),
+    Tab(icon: Icon(Icons.menu_book_rounded),text: 'Against \nPerson',),
+    Tab(icon: Icon(Icons.menu_book_rounded),text: 'Against \nProperty',),
+    Tab(icon: Icon(Icons.menu_book_rounded),text: 'Statutory \nRights',),
+    Tab(icon: Icon(Icons.menu_book_rounded),text: 'White \nCollar',),
+    Tab(icon: Icon(Icons.menu_book_rounded),text: 'Inchoate \nCrime',),
+  ];
+
+  List<Widget> tabsContent = [
+    Container(color: Colors.lime,child: const Text("Some Content"),),
+    Container(color: Colors.yellow),
+    Container(color: Colors.white),
+    Container(color: Colors.orange),
+    Container(color: Colors.grey),
+    Container(color: Colors.cyan),
+  ];
+
+
   @override
   Widget build(BuildContext context) {
     // ignore: avoid_print
     print("Tab rebuild");
     return DefaultTabController(
-      length: 10,
+      length: tabsList.length,
       child: Scaffold(
         backgroundColor: const Color(0xffD9D9D9),
         //Side Navigation Menu code
@@ -173,52 +194,11 @@ class __TabControlState extends State<_TabControl> {
                 SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
                   child: TabBar(
+                    isScrollable: true,
                     splashBorderRadius: BorderRadius.circular(20),
                     indicatorColor: const Color(0xff93979a),
                     labelColor: const Color(0xff24534B).withOpacity(0.5),
-                    isScrollable: true,
-                    tabs: const [
-                      Tab(
-                        icon: Icon(Icons.menu_book_rounded),
-                        text: 'Traffic \nOffense',
-                      ),
-                      Tab(
-                        icon: Icon(Icons.menu_book_rounded),
-                        text: 'Against \nPerson',
-                      ),
-                      Tab(
-                        icon: Icon(Icons.menu_book_rounded),
-                        text: 'Against \nProperty',
-                      ),
-                      Tab(
-                        icon: Icon(Icons.menu_book_rounded),
-                        text: 'Statutory \nRights',
-                      ),
-                      Tab(
-                        icon: Icon(Icons.menu_book_rounded),
-                        text: 'White \nCollar',
-                      ),
-                      Tab(
-                        icon: Icon(Icons.menu_book_rounded),
-                        text: 'Inchoate \nCrime',
-                      ),
-                      Tab(
-                        icon: Icon(Icons.menu_book_rounded),
-                        text: '7',
-                      ),
-                      Tab(
-                        icon: Icon(Icons.menu_book_rounded),
-                        text: '8',
-                      ),
-                      Tab(
-                        icon: Icon(Icons.menu_book_rounded),
-                        text: '9',
-                      ),
-                      Tab(
-                        icon: Icon(Icons.menu_book_rounded),
-                        text: '10',
-                      ),
-                    ],
+                    tabs: tabsList,
                   ),
                 ),
                 //textField(),
@@ -230,21 +210,7 @@ class __TabControlState extends State<_TabControl> {
                     maxWidth: MediaQuery.of(context).size.width
                   ),
                   child: TabBarView(
-                    children: [
-                      Container(
-                        color: Colors.lime,
-                        child: const Text("Some Content"),
-                        ),
-                      Container(color: Colors.yellow),
-                      Container(color: Colors.white),
-                      Container(color: Colors.orange),
-                      Container(color: Colors.grey),
-                      Container(color: Colors.cyan),
-                      Container(color: Colors.lightBlue),
-                      Container(color: Colors.purple),
-                      Container(color: Colors.pink),
-                      Container(color: Colors.red),
-                  ]
+                    children: tabsContent
                   ),
                 ),
               ],
@@ -308,5 +274,3 @@ class __TextFieldState extends State<_TextField> {
     );
   }
 }
-
-// my task
