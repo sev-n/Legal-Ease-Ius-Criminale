@@ -184,23 +184,23 @@ class __TabControlState extends State<_TabControl> {
                       ),
                       Tab(
                         icon: Icon(Icons.menu_book_rounded),
-                        text: '2',
+                        text: 'Against \nPerson',
                       ),
                       Tab(
                         icon: Icon(Icons.menu_book_rounded),
-                        text: '3',
+                        text: 'Against \nProperty',
                       ),
                       Tab(
                         icon: Icon(Icons.menu_book_rounded),
-                        text: '4',
+                        text: 'Statutory \nRights',
                       ),
                       Tab(
                         icon: Icon(Icons.menu_book_rounded),
-                        text: '5',
+                        text: 'White \nCollar',
                       ),
                       Tab(
                         icon: Icon(Icons.menu_book_rounded),
-                        text: '6',
+                        text: 'Inchoate \nCrime',
                       ),
                       Tab(
                         icon: Icon(Icons.menu_book_rounded),
@@ -222,9 +222,30 @@ class __TabControlState extends State<_TabControl> {
                   ),
                 ),
                 //textField(),
+                // TAB BAR VIEW
                 Container(
                   alignment: Alignment.center,
-                  padding: const EdgeInsets.all(32),
+                  constraints: BoxConstraints(
+                    maxHeight: MediaQuery.of(context).size.height,
+                    maxWidth: MediaQuery.of(context).size.width
+                  ),
+                  child: TabBarView(
+                    children: [
+                      Container(
+                        color: Colors.lime,
+                        child: const Text("Some Content"),
+                        ),
+                      Container(color: Colors.yellow),
+                      Container(color: Colors.white),
+                      Container(color: Colors.orange),
+                      Container(color: Colors.grey),
+                      Container(color: Colors.cyan),
+                      Container(color: Colors.lightBlue),
+                      Container(color: Colors.purple),
+                      Container(color: Colors.pink),
+                      Container(color: Colors.red),
+                  ]
+                  ),
                 ),
               ],
             ),
@@ -235,53 +256,7 @@ class __TabControlState extends State<_TabControl> {
   }
 }
 
-class SearchField extends StatefulWidget {
-  const SearchField({super.key});
 
-  @override
-  State<SearchField> createState() => _SearchFieldState();
-}
-
-class _SearchFieldState extends State<SearchField> {
-  @override
-  Widget build(BuildContext context) {
-    // ignore: avoid_print
-    print("Search rebuild");
-    return Container(
-      // width: 250,
-      height: 40,
-      margin: const EdgeInsets.all(0),
-      decoration: BoxDecoration(
-        color: const Color(0xffa1a2a4),
-        border: Border.all(color: const Color(0xffa1a2a4)),
-        borderRadius: BorderRadius.circular(12),
-      ),
-      child: Row(
-        children: const [
-          Padding(
-            padding: EdgeInsets.symmetric(horizontal: 10.0),
-            child: SizedBox(
-              height: 30,
-              child: Icon(
-                Icons.search,
-                color: Colors.white54,
-              ),
-            ),
-          ),
-          Expanded(
-            child: TextField(
-              decoration: InputDecoration(
-                border: InputBorder.none,
-                hintText: 'Search an article...',
-                hintStyle: TextStyle(color: Colors.white),
-              ),
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}
 
 class _TextField extends StatefulWidget {
   // ignore: unused_element
@@ -333,3 +308,5 @@ class __TextFieldState extends State<_TextField> {
     );
   }
 }
+
+// my task
