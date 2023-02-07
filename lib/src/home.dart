@@ -10,7 +10,6 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-
   @override
   Widget build(BuildContext context) {
     // ignore: avoid_print
@@ -29,32 +28,12 @@ class _TabControl extends StatefulWidget {
 }
 
 class __TabControlState extends State<_TabControl> {
-
-  List<Tab> tabsList = const [
-    Tab(icon: Icon(Icons.menu_book_rounded), text: 'Traffic \nOffense',),
-    Tab(icon: Icon(Icons.menu_book_rounded),text: 'Against \nPerson',),
-    Tab(icon: Icon(Icons.menu_book_rounded),text: 'Against \nProperty',),
-    Tab(icon: Icon(Icons.menu_book_rounded),text: 'Statutory \nRights',),
-    Tab(icon: Icon(Icons.menu_book_rounded),text: 'White \nCollar',),
-    Tab(icon: Icon(Icons.menu_book_rounded),text: 'Inchoate \nCrime',),
-  ];
-
-  List<Widget> tabsContent = [
-    Container(color: Colors.lime,child: const Text("Some Content"),),
-    Container(color: Colors.yellow),
-    Container(color: Colors.white),
-    Container(color: Colors.orange),
-    Container(color: Colors.grey),
-    Container(color: Colors.cyan),
-  ];
-
-
   @override
   Widget build(BuildContext context) {
     // ignore: avoid_print
     print("Tab rebuild");
     return DefaultTabController(
-      length: tabsList.length,
+      length: 6,
       child: Scaffold(
         backgroundColor: const Color(0xffD9D9D9),
         //Side Navigation Menu code
@@ -157,62 +136,66 @@ class __TabControlState extends State<_TabControl> {
                 AppBar(
                   elevation: 0,
                   bottomOpacity: 0,
+                  toolbarHeight: 150,
+                  shape: const RoundedRectangleBorder(
+                    borderRadius: BorderRadius.vertical(
+                      bottom: Radius.circular(30),
+                    ),
+                  ),
                   shadowColor: Colors.transparent,
                   backgroundColor: const Color(0xff24534B).withOpacity(0.5),
                   title: Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
-                      const Text(
-                        'LegalEase\nlus criminale ',
-                        style: TextStyle(fontSize: 15.0),
-                      ),
-                      Image.asset(
-                        'assets/images/Logo.png',
-                        fit: BoxFit.fitWidth,
-                        height: MediaQuery.of(context).size.height * 0.2,
-                        width: MediaQuery.of(context).size.width * 0.2,
-                      ),
-                    ],
-                  ),
+                    Stack(
+                      children: [
+                        const Positioned(
+                          top: 10,
+                          right: 30,
+                          child: Text(
+                            'LegalEase\nlus criminale ',
+                            style: TextStyle(fontSize: 15.0),
+                          ),
+                        ),
+                        Image.asset(
+                          'assets/images/Logo.png',
+                          fit: BoxFit.fitWidth,
+                          height: MediaQuery.of(context).size.height * 0.2,
+                          width: MediaQuery.of(context).size.width * 0.2,
+                        ),
+                      ],
+                    ),
+                  ]),
                   leading: Builder(
                     builder: (BuildContext context) {
-                      return IconButton(
-                        icon: const Icon(
-                          Icons.grid_view_rounded,
-                          color: Color(0xffEADFD5),
-                        ),
-                        onPressed: () {
-                          Scaffold.of(context).openDrawer();
-                        },
-                        tooltip: MaterialLocalizations.of(context)
-                            .openAppDrawerTooltip,
+                      return Stack(
+                        children: [
+                          Positioned(
+                            top: 10,
+                            left: .20,
+                            child: IconButton(
+                              icon: const Icon(
+                                Icons.grid_view_rounded,
+                                color: Color(0xffEADFD5),
+                              ),
+                              onPressed: () {
+                                Scaffold.of(context).openDrawer();
+                              },
+                              tooltip: MaterialLocalizations.of(context)
+                                  .openAppDrawerTooltip,
+                            ),
+                          ),
+                          const Positioned(
+                            top: 70,
+                            left: 10,
+                            child: Icon(Icons.close),
+                          )
+                        ],
                       );
                     },
                   ),
                 ),
                 //Tabbar code
-                SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  child: TabBar(
-                    isScrollable: true,
-                    splashBorderRadius: BorderRadius.circular(20),
-                    indicatorColor: const Color(0xff93979a),
-                    labelColor: const Color(0xff24534B).withOpacity(0.5),
-                    tabs: tabsList,
-                  ),
-                ),
-                //textField(),
-                // TAB BAR VIEW
-                Container(
-                  alignment: Alignment.center,
-                  constraints: BoxConstraints(
-                    maxHeight: MediaQuery.of(context).size.height,
-                    maxWidth: MediaQuery.of(context).size.width
-                  ),
-                  child: TabBarView(
-                    children: tabsContent
-                  ),
-                ),
               ],
             ),
           ),
@@ -221,8 +204,6 @@ class __TabControlState extends State<_TabControl> {
     );
   }
 }
-
-
 
 class _TextField extends StatefulWidget {
   // ignore: unused_element
@@ -274,3 +255,52 @@ class __TextFieldState extends State<_TextField> {
     );
   }
 }
+
+
+// class Items extends StatelessWidget {
+//   const Items({super.key});
+
+//   List<Tab> tabsList = const [
+//     Tab(icon: Icon(Icons.menu_book_rounded), text: 'Traffic \nOffense',),
+//     Tab(icon: Icon(Icons.menu_book_rounded),text: 'Against \nPerson',),
+//     Tab(icon: Icon(Icons.menu_book_rounded),text: 'Against \nProperty',),
+//     Tab(icon: Icon(Icons.menu_book_rounded),text: 'Statutory \nRights',),
+//     Tab(icon: Icon(Icons.menu_book_rounded),text: 'White \nCollar',),
+//     Tab(icon: Icon(Icons.menu_book_rounded),text: 'Inchoate \nCrime',),
+//   ];
+
+//   List<Widget> tabsContent = [
+//     Container(color: Colors.lime,child: const Text("Some Content"),),
+//     Container(color: Colors.yellow),
+//     Container(color: Colors.white),
+//     Container(color: Colors.orange),
+//     Container(color: Colors.grey),
+//     Container(color: Colors.cyan),
+//   ];
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return SingleChildScrollView(
+//                   scrollDirection: Axis.horizontal,
+//                   child: TabBar(
+//                     isScrollable: true,
+//                     splashBorderRadius: BorderRadius.circular(20),
+//                     indicatorColor: const Color(0xff93979a),
+//                     labelColor: const Color(0xff24534B).withOpacity(0.5),
+//                     tabs: tabsList,
+//                   ),
+//                 );
+//                 //textField(),
+//                 // TAB BAR VIEW
+//                 // Container(
+//                 //   alignment: Alignment.center,
+//                 //   constraints: BoxConstraints(
+//                 //     maxHeight: MediaQuery.of(context).size.height,
+//                 //     maxWidth: MediaQuery.of(context).size.width
+//                 //   ),
+//                 //   child: TabBarView(
+//                 //     children: tabsContent
+//                 //   ),
+//                 // );
+//   }
+// }
