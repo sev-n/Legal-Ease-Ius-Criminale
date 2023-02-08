@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:legalease_matrimonial/src/home.dart';
+//import 'package:legalease_matrimonial/src/home.dart';
+import 'package:legalease_matrimonial/src/pages/home_page.dart';
 import 'package:legalease_matrimonial/src/pages/welcome_page_1.dart';
 import 'package:legalease_matrimonial/src/pages/welcome_page_2.dart';
 import 'package:legalease_matrimonial/src/pages/welcome_page_3.dart';
@@ -118,7 +119,7 @@ class DoneBtn extends StatelessWidget {
     return GestureDetector(
       onTap: () {
         Navigator.push(context, MaterialPageRoute(builder: (context){
-          return const Home();
+          return const HomePage();
           }));
       },
       child: const Icon(Icons.check, size: 30, color: Color(0xff4050ba)),
