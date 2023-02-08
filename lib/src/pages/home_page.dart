@@ -12,13 +12,9 @@ class HomePage extends StatelessWidget {
           child: Stack(children: [
             Container(
               width: MediaQuery.of(context).size.width,
-              height: 200,
+              height: MediaQuery.of(context).size.height,
               decoration: const BoxDecoration(
-                //color: Color(0xff98a396),
-                gradient: LinearGradient(
-                    begin: Alignment.centerLeft,
-                    end: Alignment.centerRight,
-                    colors: [Color(0xffb7bcb1), Color(0xff9fa496)]),
+                color: Color(0xff97a294),
               ),
               // !alert insert items here
               child: Stack(
@@ -42,13 +38,13 @@ class HomePage extends StatelessWidget {
               alignment: Alignment.bottomCenter,
               child: SizedBox(
                 width: MediaQuery.of(context).size.width,
-                height: MediaQuery.of(context).size.height - 200,
+                height: MediaQuery.of(context).size.height - 230,
                 child: Container(
                   decoration: const BoxDecoration(
-                    color: Color(0xffD9D9D9),
+                    color: Color(0xCCD9D9D9),
                     borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(30),
-                      topRight: Radius.circular(30),
+                      topLeft: Radius.circular(10),
+                      topRight: Radius.circular(10),
                     ),
                   ),
                   // !alert: insert items here!
