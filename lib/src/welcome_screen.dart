@@ -5,6 +5,7 @@ import 'package:legalease_matrimonial/src/pages/welcome_page_1.dart';
 import 'package:legalease_matrimonial/src/pages/welcome_page_2.dart';
 import 'package:legalease_matrimonial/src/pages/welcome_page_3.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+import 'package:legalease_matrimonial/src/sidenav.dart';
 
 // todo: need to review, might not be a good approach.
 final PageController _controller = PageController(initialPage: 0);
@@ -14,7 +15,6 @@ class WelcomePage extends StatefulWidget {
 
   @override
   State<WelcomePage> createState() => _WelcomePageState();
-  
 }
 
 class _WelcomePageState extends State<WelcomePage> {
@@ -30,7 +30,6 @@ class _WelcomePageState extends State<WelcomePage> {
             setState(() {
               isLastPage = (index == 2);
               isFirstPage = (index == 0);
-
             });
           },
           controller: _controller,
@@ -56,7 +55,6 @@ class _WelcomePageState extends State<WelcomePage> {
               ),
               // page controller
               isLastPage ? const DoneBtn() : const NextBtn(),
-
             ],
           ),
         ),
@@ -118,9 +116,9 @@ class DoneBtn extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        Navigator.push(context, MaterialPageRoute(builder: (context){
+        Navigator.push(context, MaterialPageRoute(builder: (context) {
           return HomePage();
-          }));
+        }));
       },
       child: const Icon(Icons.check, size: 30, color: Color(0xff4050ba)),
     );

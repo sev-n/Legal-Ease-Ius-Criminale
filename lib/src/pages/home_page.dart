@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../sidenav.dart';
 
 // ignore: must_be_immutable
 class HomePage extends StatelessWidget {
@@ -50,10 +51,18 @@ class HomePage extends StatelessWidget {
                 // !alert insert items here
                 child: Stack(
                   children: [
-                    const Positioned(
+                    Positioned(
                       top: 20,
                       left: 20,
-                      child: Icon(Icons.grid_view_rounded),
+                      child: GestureDetector(
+                        child: const Icon(Icons.grid_view_rounded),
+                        onTap: () {
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (context) {
+                            return const Sidenav();
+                          }));
+                        },
+                      ),
                     ),
                     Positioned(
                       top: -35,
@@ -162,4 +171,3 @@ class __TextFieldState extends State<_TextField> {
     );
   }
 }
-
