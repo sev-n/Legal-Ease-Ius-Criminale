@@ -51,8 +51,8 @@ class HomePage extends StatelessWidget {
               
               // CUSTOMIZE TAB BAR CODE
               Positioned(
-                top: 110,
-                left: 17,
+                top: 80,
+                left: 22,
                 right: 10,
                 child: Center(
                   child: Row(
@@ -114,7 +114,7 @@ class HomePage extends StatelessWidget {
                 alignment: Alignment.bottomCenter,
                 child: SizedBox(
                   width: MediaQuery.of(context).size.width,
-                  height: MediaQuery.of(context).size.height - 230,
+                  height: MediaQuery.of(context).size.height - 380,
                   child: Container(
                     decoration: const BoxDecoration(
                       color: Color(0xCCD9D9D9),
@@ -130,7 +130,7 @@ class HomePage extends StatelessWidget {
               ),
 
               Container(
-                alignment: const Alignment(0.0, -0.20),
+                alignment: const Alignment(0.0, -0.30),
                 child: const _TextField()
               )
 
@@ -159,36 +159,56 @@ class __TextFieldState extends State<_TextField> {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          const Padding(
-            padding: EdgeInsets.all(20.0),
-            child: TextField(
-              minLines: 2,
-              maxLines: 2,
-              keyboardType: TextInputType.multiline,
-              decoration: InputDecoration(
-                filled: true,
-                fillColor: Colors.white,
-                hintText: "test",
-                hintStyle: TextStyle(color: Colors.grey),
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.all(Radius.circular(20.0)),
-                ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: const [
+              Padding(
+                padding: EdgeInsets.only(left: 12),
+                child: Text("Consultation", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),),
               ),
+            ],
+          ),
+          Padding(
+            padding: const EdgeInsets.all(10.0),
+            // ignore: sized_box_for_whitespace
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                // ignore: sized_box_for_whitespace
+                Container(
+                  width: double.infinity,
+                  child: const TextField(
+                    minLines: 2,
+                    maxLines: 2,
+                    keyboardType: TextInputType.multiline,
+                    decoration: InputDecoration(
+                      filled: true,
+                      fillColor: Colors.white,
+                      hintText: "test",
+                      hintStyle: TextStyle(color: Colors.grey),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(20.0)),
+                      ),
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 5.0,),
+                ElevatedButton(
+                  style: ButtonStyle(
+                    alignment: Alignment.centerRight,
+                    backgroundColor: MaterialStateProperty.all<Color>(
+                    const Color(0xCCD9D9D9)),
+                    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                      RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10.0),
+                        side: const BorderSide(
+                        color: Color(0xCCD9D9D9))))),
+                    onPressed: () {},
+                    child: const Text("Generate"),
+                )
+              ],
             ),
           ),
-          ElevatedButton(
-            style: ButtonStyle(
-              alignment: Alignment.centerRight,
-              backgroundColor: MaterialStateProperty.all<Color>(
-                  const Color(0xff97a294)),
-                shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                  RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10.0),
-                      side: const BorderSide(
-                        color: Color(0xff97a294))))),
-            onPressed: () {},
-            child: const Text("Generate"),
-          )
         ],
       ),
     );

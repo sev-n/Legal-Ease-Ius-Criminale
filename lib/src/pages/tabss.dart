@@ -6,13 +6,16 @@ class tabBox extends StatelessWidget{
 
   @override
   Widget build(BuildContext context){
-    return Container(
-      decoration: BoxDecoration(
-        color: const Color(0xCCD9D9D9),
-        borderRadius: BorderRadius.circular(12),
+    return GestureDetector(
+      onTap: (){},
+      child: Container(
+        decoration: BoxDecoration(
+          color: const Color(0xCCD9D9D9),
+          borderRadius: BorderRadius.circular(12),
+        ),
+        padding: const EdgeInsets.all(10),
+        child: const Text("Icon")
       ),
-      padding: const EdgeInsets.all(12),
-      child: Text("Icon")
     );
   }
 
