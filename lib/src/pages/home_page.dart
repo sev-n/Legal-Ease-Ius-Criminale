@@ -44,20 +44,6 @@ class HomePage extends StatelessWidget {
                           width: MediaQuery.of(context).size.width * 0.2,
                           height: MediaQuery.of(context).size.height * 0.2),
                     ),
-
-                    /*Positioned(
-                      top: 50,
-                      child: SingleChildScrollView(
-                        child: Container(
-                          alignment: Alignment.bottomCenter,
-                          child: TabBar(
-                            isScrollable: true,
-                            tabs: tabsList
-                          ),
-                        ),
-                      ),
-                    ),*/
-          
                   ],
                 ),
               ),
@@ -96,10 +82,69 @@ class HomePage extends StatelessWidget {
                     child: null,
                   ),
                 ),
+              ),
+
+              Container(
+                alignment: const Alignment(0.0, -0.20),
+                child: const _TextField()
               )
+
             ]),
           ),
         ),
+      ),
+    );
+  }
+}
+
+// TEXT FIELD
+
+class _TextField extends StatefulWidget {
+  // ignore: unused_element
+  const _TextField({super.key});
+
+  @override
+  State<_TextField> createState() => __TextFieldState();
+}
+
+class __TextFieldState extends State<_TextField> {
+  @override
+  Widget build(BuildContext context) {
+    return SingleChildScrollView(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          const Padding(
+            padding: EdgeInsets.all(20.0),
+            child: TextField(
+              minLines: 2,
+              maxLines: 2,
+              keyboardType: TextInputType.multiline,
+              decoration: InputDecoration(
+                filled: true,
+                fillColor: Colors.white,
+                hintText: "test",
+                hintStyle: TextStyle(color: Colors.grey),
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(20.0)),
+                ),
+              ),
+            ),
+          ),
+          ElevatedButton(
+            style: ButtonStyle(
+              alignment: Alignment.centerRight,
+              backgroundColor: MaterialStateProperty.all<Color>(
+                  const Color(0xff97a294)),
+                shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                  RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10.0),
+                      side: const BorderSide(
+                        color: Color(0xff97a294))))),
+            onPressed: () {},
+            child: const Text("Generate"),
+          )
+        ],
       ),
     );
   }
