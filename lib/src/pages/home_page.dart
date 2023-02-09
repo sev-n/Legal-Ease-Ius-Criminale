@@ -65,7 +65,10 @@ class HomePage extends StatelessWidget {
               // TAB BAR CODE
               Positioned(
                 top: 120,
+                left: 0, 
+                right: 0, 
                 child: SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
                   child: TabBar(
                     indicatorColor: const Color(0xCCD9D9D9), 
                     isScrollable: true,
@@ -73,7 +76,7 @@ class HomePage extends StatelessWidget {
                   ),
                 ),
               ),
-              // TAB BAR
+              // TAB BAR CODE
 
 
               Align(
