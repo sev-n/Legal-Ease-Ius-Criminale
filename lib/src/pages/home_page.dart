@@ -96,14 +96,13 @@ class HomePage extends StatelessWidget {
                       ),
                     ),
                     // !alert: insert items here!
-                    child: null,
+                    child: const Align(
+                      alignment: Alignment.topCenter,
+                      child: _TextField(),
+                    ),
                   ),
                 ),
               ),
-
-              Container(
-                  alignment: const Alignment(0.0, -0.20),
-                  child: const _TextField())
             ]),
           ),
         ),
@@ -163,3 +162,4 @@ class __TextFieldState extends State<_TextField> {
     );
   }
 }
+
