@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './tabss.dart';
 
 // ignore: must_be_immutable
 class HomePage extends StatelessWidget {
@@ -47,23 +48,67 @@ class HomePage extends StatelessWidget {
                   ],
                 ),
               ),
-
-              // TAB BAR CODE
+              
+              // CUSTOMIZE TAB BAR CODE
               Positioned(
-                top: 120,
-                left: 0, 
-                right: 0, 
-                child: SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  child: TabBar(
-                    indicatorColor: const Color(0xCCD9D9D9), 
-                    isScrollable: true,
-                    tabs: tabsList
+                top: 110,
+                left: 17,
+                right: 10,
+                child: Center(
+                  child: Row(
+                    children: <Widget>[
+                      Column(
+                        children: const [
+                          tabBox(),
+                          SizedBox(height: 8,),
+                          Text("Traffic \nOffense", style: TextStyle(color: Colors.white),)
+                        ],
+                      ),
+                      const SizedBox(width: 10,),
+                      Column(
+                        children: const [
+                          tabBox(),
+                          SizedBox(height: 8,),
+                          Text("Against \nPerson", style: TextStyle(color: Colors.white),)
+                        ],
+                      ),
+                      const SizedBox(width: 10,),
+                      Column(
+                        children: const [
+                          tabBox(),
+                          SizedBox(height: 8,),
+                          Text("Against \nProperty", style: TextStyle(color: Colors.white),)
+                        ],
+                      ), 
+                      const SizedBox(width: 10,),
+                      Column(
+                        children: const [
+                          tabBox(),
+                          SizedBox(height: 8,),
+                          Text("Statutory \nRights", style: TextStyle(color: Colors.white),)
+                        ],
+                      ), 
+                      const SizedBox(width: 10,),
+                      Column(
+                        children: const [
+                          tabBox(),
+                          SizedBox(height: 8,),
+                          Text("White \nCollar", style: TextStyle(color: Colors.white),)
+                        ],
+                      ), 
+                      const SizedBox(width: 10,),
+                      Column(
+                        children: const [
+                          tabBox(),
+                          SizedBox(height: 8,),
+                          Text("Inchoate \nCrimes", style: TextStyle(color: Colors.white),)
+                        ],
+                      )
+                    ],
                   ),
                 ),
               ),
-              // TAB BAR CODE
-
+              // CUSTOMIZE TAB BAR CODE
 
               Align(
                 alignment: Alignment.bottomCenter,
@@ -149,3 +194,25 @@ class __TextFieldState extends State<_TextField> {
     );
   }
 }
+
+
+// DUMP CODES
+// dito ko muna ilalagay yung mga waste codes na di ko muna idedelete baka kailanganin in the future HAHAHA
+// TAB BAR CODE
+              /*Positioned(
+                top: 120,
+                left: 0, 
+                right: 0, 
+                child: SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: TabBar(
+                    physics: const ClampingScrollPhysics(),
+                    padding: const EdgeInsets.only(top: 10, left: 10, right: 10, bottom: 10),
+                    indicatorColor: const Color(0xCCD9D9D9),
+                    indicatorSize: TabBarIndicatorSize.label, 
+                    isScrollable: true,
+                    tabs: tabsList
+                  ),
+                ),
+              ),*/
+              // TAB BAR CODE
