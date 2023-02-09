@@ -4,22 +4,40 @@ import 'package:flutter/material.dart';
 class HomePage extends StatelessWidget {
   HomePage({super.key});
 
-   List<Tab> tabsList = const [
-    Tab(icon: Icon(Icons.menu_book_rounded), text: 'Traffic \nOffense',),
-    Tab(icon: Icon(Icons.menu_book_rounded),text: 'Against \nPerson',),
-    Tab(icon: Icon(Icons.menu_book_rounded),text: 'Against \nProperty',),
-    Tab(icon: Icon(Icons.menu_book_rounded),text: 'Statutory \nRights',),
-    Tab(icon: Icon(Icons.menu_book_rounded),text: 'White \nCollar',),
-    Tab(icon: Icon(Icons.menu_book_rounded),text: 'Inchoate \nCrime',),
+  List<Tab> tabsList = const [
+    Tab(
+      icon: Icon(Icons.menu_book_rounded),
+      text: 'Traffic \nOffense',
+    ),
+    Tab(
+      icon: Icon(Icons.menu_book_rounded),
+      text: 'Against \nPerson',
+    ),
+    Tab(
+      icon: Icon(Icons.menu_book_rounded),
+      text: 'Against \nProperty',
+    ),
+    Tab(
+      icon: Icon(Icons.menu_book_rounded),
+      text: 'Statutory \nRights',
+    ),
+    Tab(
+      icon: Icon(Icons.menu_book_rounded),
+      text: 'White \nCollar',
+    ),
+    Tab(
+      icon: Icon(Icons.menu_book_rounded),
+      text: 'Inchoate \nCrime',
+    ),
   ];
 
-  
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
       length: tabsList.length,
       child: SafeArea(
         child: Scaffold(
+          resizeToAvoidBottomInset: false,
           body: Align(
             alignment: Alignment.topCenter,
             child: Stack(children: [
@@ -44,26 +62,25 @@ class HomePage extends StatelessWidget {
                           width: MediaQuery.of(context).size.width * 0.2,
                           height: MediaQuery.of(context).size.height * 0.2),
                     ),
+                    Positioned(
+                      top: 120,
+                      left: 0,
+                      right: 0,
+                      child: SingleChildScrollView(
+                        scrollDirection: Axis.horizontal,
+                        child: TabBar(
+                            indicatorColor: const Color(0xCCD9D9D9),
+                            isScrollable: true,
+                            tabs: tabsList),
+                      ),
+                    ),
                   ],
                 ),
               ),
 
               // TAB BAR CODE
-              Positioned(
-                top: 120,
-                left: 0, 
-                right: 0, 
-                child: SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  child: TabBar(
-                    indicatorColor: const Color(0xCCD9D9D9), 
-                    isScrollable: true,
-                    tabs: tabsList
-                  ),
-                ),
-              ),
-              // TAB BAR CODE
 
+              // TAB BAR CODE
 
               Align(
                 alignment: Alignment.bottomCenter,
@@ -85,10 +102,8 @@ class HomePage extends StatelessWidget {
               ),
 
               Container(
-                alignment: const Alignment(0.0, -0.20),
-                child: const _TextField()
-              )
-
+                  alignment: const Alignment(0.0, -0.20),
+                  child: const _TextField())
             ]),
           ),
         ),
@@ -133,14 +148,13 @@ class __TextFieldState extends State<_TextField> {
           ),
           ElevatedButton(
             style: ButtonStyle(
-              alignment: Alignment.centerRight,
-              backgroundColor: MaterialStateProperty.all<Color>(
-                  const Color(0xff97a294)),
+                alignment: Alignment.centerRight,
+                backgroundColor:
+                    MaterialStateProperty.all<Color>(const Color(0xff97a294)),
                 shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                  RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10.0),
-                      side: const BorderSide(
-                        color: Color(0xff97a294))))),
+                    RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10.0),
+                        side: const BorderSide(color: Color(0xff97a294))))),
             onPressed: () {},
             child: const Text("Generate"),
           )
