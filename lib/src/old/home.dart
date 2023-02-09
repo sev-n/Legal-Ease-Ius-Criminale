@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:legalease_matrimonial/src/bookmark_page.dart';
+import 'package:legalease_matrimonial/src/old/bookmark_page.dart';
 import 'article_page.dart';
 
 class Home extends StatefulWidget {

@@ -5,22 +5,40 @@ import './tabss.dart';
 class HomePage extends StatelessWidget {
   HomePage({super.key});
 
-   List<Tab> tabsList = const [
-    Tab(icon: Icon(Icons.menu_book_rounded), text: 'Traffic \nOffense',),
-    Tab(icon: Icon(Icons.menu_book_rounded),text: 'Against \nPerson',),
-    Tab(icon: Icon(Icons.menu_book_rounded),text: 'Against \nProperty',),
-    Tab(icon: Icon(Icons.menu_book_rounded),text: 'Statutory \nRights',),
-    Tab(icon: Icon(Icons.menu_book_rounded),text: 'White \nCollar',),
-    Tab(icon: Icon(Icons.menu_book_rounded),text: 'Inchoate \nCrime',),
+  List<Tab> tabsList = const [
+    Tab(
+      icon: Icon(Icons.menu_book_rounded),
+      text: 'Traffic \nOffense',
+    ),
+    Tab(
+      icon: Icon(Icons.menu_book_rounded),
+      text: 'Against \nPerson',
+    ),
+    Tab(
+      icon: Icon(Icons.menu_book_rounded),
+      text: 'Against \nProperty',
+    ),
+    Tab(
+      icon: Icon(Icons.menu_book_rounded),
+      text: 'Statutory \nRights',
+    ),
+    Tab(
+      icon: Icon(Icons.menu_book_rounded),
+      text: 'White \nCollar',
+    ),
+    Tab(
+      icon: Icon(Icons.menu_book_rounded),
+      text: 'Inchoate \nCrime',
+    ),
   ];
 
-  
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
       length: tabsList.length,
       child: SafeArea(
         child: Scaffold(
+          resizeToAvoidBottomInset: false,
           body: Align(
             alignment: Alignment.topCenter,
             child: Stack(children: [
@@ -44,6 +62,18 @@ class HomePage extends StatelessWidget {
                       child: Image.asset("assets/images/asdf.png",
                           width: MediaQuery.of(context).size.width * 0.2,
                           height: MediaQuery.of(context).size.height * 0.2),
+                    ),
+                    Positioned(
+                      top: 120,
+                      left: 0,
+                      right: 0,
+                      child: SingleChildScrollView(
+                        scrollDirection: Axis.horizontal,
+                        child: TabBar(
+                            indicatorColor: const Color(0xCCD9D9D9),
+                            isScrollable: true,
+                            tabs: tabsList),
+                      ),
                     ),
                   ],
                 ),
@@ -124,16 +154,19 @@ class HomePage extends StatelessWidget {
                       ),
                     ),
                     // !alert: insert items here!
-                    child: null,
+                    child: const Align(
+                      alignment: Alignment.topCenter,
+                      child: _TextField(),
+                    ),
                   ),
                 ),
               ),
+
 
               Container(
                 alignment: const Alignment(0.0, -0.30),
                 child: const _TextField()
               )
-
             ]),
           ),
         ),
