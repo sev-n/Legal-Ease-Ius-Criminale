@@ -28,7 +28,7 @@ class HomePage extends StatelessWidget {
                 children: [
                   Positioned(
                     top: 20,
-                    left: 20,
+                    left: 13,
                     child: GestureDetector(
                       child: Container(
                         height: 25,
@@ -53,7 +53,7 @@ class HomePage extends StatelessWidget {
                   ),
                   Positioned(
                     top: 1,
-                    right: 20,
+                    right: -5,
                     child: Image.asset("assets/images/asdf.png",
                         width: 75, 
                         height: 75),
@@ -65,7 +65,7 @@ class HomePage extends StatelessWidget {
                     child: Text(
                       "Consultation",
                       style:
-                          TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                          TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
                     ),
                   ),
                   // alignment: const Alignment(0.0, -0.40),
