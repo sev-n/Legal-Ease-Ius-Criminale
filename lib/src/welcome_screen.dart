@@ -5,7 +5,6 @@ import 'package:legalease_matrimonial/src/pages/welcome_page_1.dart';
 import 'package:legalease_matrimonial/src/pages/welcome_page_2.dart';
 import 'package:legalease_matrimonial/src/pages/welcome_page_3.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
-import 'package:legalease_matrimonial/src/sidenav.dart';
 
 // todo: need to review, might not be a good approach.
 final PageController _controller = PageController(initialPage: 0);

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:legalease_matrimonial/src/pages/sidenavpages/articles.dart';
-import 'package:legalease_matrimonial/src/pages/sidenavpages/bookmark.dart';
+import 'package:legalease_matrimonial/src/pages/sidenavpages/bookmark/bookmark.dart';
 
 class Sidenav extends StatelessWidget {
   const Sidenav({super.key});
@@ -92,7 +92,7 @@ class Sidenav extends StatelessWidget {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => BookMark(),
+                                  builder: (context) => const BookMark(),
                                 ),
                               );
                             },
