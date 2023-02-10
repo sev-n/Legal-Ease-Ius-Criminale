@@ -2,122 +2,103 @@ import 'package:flutter/material.dart';
 import '../sidenav.dart';
 import './tabss.dart';
 
-
-// ignore: must_be_immutable
 class HomePage extends StatelessWidget {
-  HomePage({super.key});
-
-  List<Tab> tabsList = const [
-    Tab(
-      icon: Icon(Icons.menu_book_rounded),
-      text: 'Traffic \nOffense',
-    ),
-    Tab(
-      icon: Icon(Icons.menu_book_rounded),
-      text: 'Against \nPerson',
-    ),
-    Tab(
-      icon: Icon(Icons.menu_book_rounded),
-      text: 'Against \nProperty',
-    ),
-    Tab(
-      icon: Icon(Icons.menu_book_rounded),
-      text: 'Statutory \nRights',
-    ),
-    Tab(
-      icon: Icon(Icons.menu_book_rounded),
-      text: 'White \nCollar',
-    ),
-    Tab(
-      icon: Icon(Icons.menu_book_rounded),
-      text: 'Inchoate \nCrime',
-    ),
-  ];
+  const HomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return DefaultTabController(
-      length: tabsList.length,
-      child: SafeArea(
-        bottom: true,
-        child: Scaffold(
-          resizeToAvoidBottomInset: false,
-          body: Align(
-            alignment: Alignment.topCenter,
-            child: Stack(children: [
-              Container(
-                width: MediaQuery.of(context).size.width,
-                height: MediaQuery.of(context).size.height,
-                decoration: const BoxDecoration(
-                  color: Color(0xff97a294),
-                ),
-                // !alert insert items here
-                child: Stack(
-                  children: [
-                    Positioned(
-                      top: 20,
-                      left: 20,
-                      child: GestureDetector(
-                        child: const Icon(Icons.grid_view_rounded),
-                        onTap: () {
-                          Navigator.push(context,
-                              MaterialPageRoute(builder: (context) {
-                            return const Sidenav();
-                          }));
-                        },
-                      ),
-                    ),
-                    Positioned(
-                      top: -35,
-                      right: 20,
-                      child: Image.asset("assets/images/asdf.png",
-                          width: MediaQuery.of(context).size.width * 0.2,
-                          height: MediaQuery.of(context).size.height * 0.2),
-                    ),
-                    const Laws(),
-                    const Positioned(
-                      top: 175,
-                      left: 20,
-                      child: Text(
-                        "Consultation",
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 20),
-                      ),
-                    ),
-                    Container(
-                      alignment: const Alignment(0.0, -0.40),
-                      child: const _TextField(),
-                    ),
-                    const Positioned(
-                      top: 280,
-                      right: 138,
-                      child: GenerateBtn(),
-                    ),
-                  ],
-                ),
-              ),
+    double screenHeight = MediaQuery.of(context).size.height;
+    double screenWidth = MediaQuery.of(context).size.width;
 
-              // Body part
-              Align(
-                alignment: Alignment.bottomCenter,
-                child: SizedBox(
-                  width: MediaQuery.of(context).size.width - 25,
-                  height: MediaQuery.of(context).size.height - 420,
-                  child: Container(
-                    decoration: const BoxDecoration(
-                      color: Color(0x99D9D9D9),
-                      borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(15),
-                        topRight: Radius.circular(15),
+    return Scaffold(
+      resizeToAvoidBottomInset: false,
+      body: SafeArea(
+        child: Align(
+          alignment: Alignment.topCenter,
+          child: Stack(children: [
+            Container(
+              width: screenWidth,
+              height: screenHeight,
+              decoration: const BoxDecoration(
+                color: Color(0xff97a294),
+              ),
+              // !alert insert items here
+              child: Stack(
+                alignment: Alignment.center,
+                children: [
+                  Positioned(
+                    top: 20,
+                    left: 20,
+                    child: GestureDetector(
+                      child: Container(
+                        height: 25,
+                        width: 25,
+                        decoration: BoxDecoration(
+                          color: const Color(0xCCD9D9D9),
+                          borderRadius: BorderRadius.circular(5.0),
+                        ),
+                        child: const Icon(
+                          Icons.grid_view_rounded,
+                          size: 20,
+                          color: Color(0xCC0C2924),
+                        ),
                       ),
+                      onTap: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) {
+                          return const Sidenav();
+                        }));
+                      },
                     ),
-                    // !alert: insert items here!
-                    child: null,
                   ),
+                  Positioned(
+                    top: -35,
+                    right: 20,
+                    child: Image.asset("assets/images/asdf.png",
+                        width: screenWidth * 0.2, height: screenHeight * 0.2),
+                  ),
+                  const Laws(),
+                  // const Positioned(
+                  //   top: 175,
+                  //   left: 20,
+                  //   child: Text(
+                  //     "Consultation",
+                  //     style:
+                  //         TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                  //   ),
+                  // ),
+                  // alignment: const Alignment(0.0, -0.40),
+                  const Positioned(top: 200, right: 12, child: _TextField()),
+                  // const Positioned(
+                  //   top: 280,
+                  //   right: 138,
+                  //   child: GenerateBtn(),
+                  // ),
+                  const GenerateBtn()
+                ],
+              ),
+            ),
+
+            // Body part
+            Align(
+              alignment: Alignment.bottomCenter,
+              child: SizedBox(
+                width: MediaQuery.of(context).size.width - 25,
+                height: MediaQuery.of(context).size.height - 420,
+                child: Container(
+                  decoration: const BoxDecoration(
+                    color: Color(0x99D9D9D9),
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(15),
+                      topRight: Radius.circular(15),
+                    ),
+                  ),
+                  // !alert: insert items here!
+                  child: null,
                 ),
               ),
-            ]),
-          ),
+            ),
+          ]),
         ),
       ),
     );
@@ -137,20 +118,22 @@ class _TextField extends StatefulWidget {
 class __TextFieldState extends State<_TextField> {
   @override
   Widget build(BuildContext context) {
-    return const SingleChildScrollView(
-      child: Padding(
-        padding: EdgeInsets.all(20.0),
-        child: TextField(
-          minLines: 2,
-          maxLines: 2,
-          keyboardType: TextInputType.multiline,
-          decoration: InputDecoration(
-            filled: true,
-            fillColor: Color(0xffD9D9D9),
-            hintText: "test",
-            hintStyle: TextStyle(color: Colors.grey),
-            border: OutlineInputBorder(
-              borderRadius: BorderRadius.all(Radius.circular(15.0)),
+    return SizedBox(
+      width: MediaQuery.of(context).size.width - 24,
+      child: const SingleChildScrollView(
+        child: Center(
+          child: TextField(
+            minLines: 2,
+            maxLines: 2,
+            keyboardType: TextInputType.multiline,
+            decoration: InputDecoration(
+              filled: true,
+              fillColor: Color(0xffD9D9D9),
+              hintText: "test",
+              hintStyle: TextStyle(color: Colors.grey),
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.all(Radius.circular(15.0)),
+              ),
             ),
           ),
         ),
@@ -164,18 +147,26 @@ class GenerateBtn extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton(
-      style: ButtonStyle(
-          alignment: Alignment.centerRight,
-          backgroundColor: MaterialStateProperty.all(const Color(0xffD9D9D9)),
-          shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-              RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10.0),
-                  side: const BorderSide(color: Color(0xff97a294))))),
-      onPressed: () {},
-      child: const Text(
-        "Generate",
-        style: TextStyle(color: Color(0xCC000000)),
+    return Positioned(
+      top: 290,
+      child: SizedBox(
+        width: 100,
+        height: 40,
+        child: ElevatedButton(
+          style: ButtonStyle(
+              alignment: Alignment.center,
+              backgroundColor:
+                  MaterialStateProperty.all(const Color(0xffD9D9D9)),
+              shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                  RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(15.0),
+                      side: const BorderSide(color: Color(0xff97a294))))),
+          onPressed: () {},
+          child: const Text(
+            "Generate",
+            style: TextStyle(color: Color(0xCC000000)),
+          ),
+        ),
       ),
     );
   }
