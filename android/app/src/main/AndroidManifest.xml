@@ -4,7 +4,7 @@
         android:label="Legal Ease"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher"
-        android:ScreenOrientation="portrait">
+        android:screenOrientation="portrait">
         <activity
             android:name=".MainActivity"
             android:exported="true"
