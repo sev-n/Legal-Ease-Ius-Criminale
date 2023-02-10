@@ -7,10 +7,10 @@ class Sidenav extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        resizeToAvoidBottomInset: false,
-        body: Align(
+    return Scaffold(
+      resizeToAvoidBottomInset: false,
+      body: SafeArea(
+        child: Align(
           alignment: Alignment.topCenter,
           child: Stack(children: [
             Container(
@@ -21,11 +21,11 @@ class Sidenav extends StatelessWidget {
                 ),
                 // !alert insert items here
                 child: null),
-
+      
             // LOGO CODE
-
+      
             // LOGO CODE
-
+      
             Align(
               alignment: Alignment.bottomCenter,
               child: SizedBox(
