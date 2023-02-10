@@ -14,7 +14,7 @@ class HomePage extends StatelessWidget {
       resizeToAvoidBottomInset: false,
       body: SafeArea(
         child: Align(
-          alignment: Alignment.topCenter,
+          alignment: Alignment.center,
           child: Stack(children: [
             Container(
               width: screenWidth,
@@ -52,21 +52,22 @@ class HomePage extends StatelessWidget {
                     ),
                   ),
                   Positioned(
-                    top: -35,
+                    top: 1,
                     right: 20,
                     child: Image.asset("assets/images/asdf.png",
-                        width: screenWidth * 0.2, height: screenHeight * 0.2),
+                        width: 75, 
+                        height: 75),
                   ),
                   const Laws(),
-                  // const Positioned(
-                  //   top: 175,
-                  //   left: 20,
-                  //   child: Text(
-                  //     "Consultation",
-                  //     style:
-                  //         TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
-                  //   ),
-                  // ),
+                  const Positioned(
+                    top: 175,
+                    left: 20,
+                    child: Text(
+                      "Consultation",
+                      style:
+                          TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                    ),
+                  ),
                   // alignment: const Alignment(0.0, -0.40),
                   const Positioned(top: 200, right: 12, child: _TextField()),
                   // const Positioned(
@@ -108,8 +109,7 @@ class HomePage extends StatelessWidget {
 // TEXT FIELD
 
 class _TextField extends StatefulWidget {
-  // ignore: unused_element
-  const _TextField({super.key});
+  const _TextField();
 
   @override
   State<_TextField> createState() => __TextFieldState();
