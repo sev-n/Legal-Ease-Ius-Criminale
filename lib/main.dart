@@ -1,7 +1,13 @@
 import 'package:flutter/material.dart';
 import 'src/welcome_screen.dart';
+import 'package:flutter/services.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();  // making sure flutter framework is initialize before creating BuildContext.
+  SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitDown,
+    DeviceOrientation.portraitUp
+  ]); // force to portrait orientation, it throws and exception once the app is on landscape mode.
   runApp(const MyApp());
 }
 
@@ -23,4 +29,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-                                                  
