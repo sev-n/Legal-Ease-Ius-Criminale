@@ -9,6 +9,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     double screenHeight = MediaQuery.of(context).size.height;
     double screenWidth = MediaQuery.of(context).size.width;
+    FocusScopeNode textFieldFocus = FocusScope.of(context);
 
     return Scaffold(
       resizeToAvoidBottomInset: false,
@@ -16,86 +17,93 @@ class HomePage extends StatelessWidget {
         child: Align(
           alignment: Alignment.center,
           child: Stack(children: [
-            Container(
-              width: screenWidth,
-              height: screenHeight,
-              decoration: const BoxDecoration(
-                color: Color(0xff97a294),
-              ),
-              // !alert insert items here
-              child: Stack(
-                alignment: Alignment.center,
-                children: [
-                  Positioned(
-                    top: 20,
-                    left: 13,
-                    child: GestureDetector(
-                      child: Container(
-                        height: 25,
-                        width: 25,
-                        decoration: BoxDecoration(
-                          color: const Color(0xCCD9D9D9),
-                          borderRadius: BorderRadius.circular(5.0),
+            GestureDetector(
+              onTap: () {
+                if (!textFieldFocus.hasPrimaryFocus) {
+                  textFieldFocus.unfocus();
+                }
+              },
+              child: Container(
+                width: screenWidth,
+                height: screenHeight,
+                decoration: const BoxDecoration(
+                  color: Color(0xff97a294),
+                ),
+                // !alert insert items here
+                child: Stack(
+                  alignment: Alignment.center,
+                  children: [
+                    Positioned(
+                      top: 20,
+                      left: 13,
+                      child: GestureDetector(
+                        child: Container(
+                          height: 25,
+                          width: 25,
+                          decoration: BoxDecoration(
+                            color: const Color(0xCCD9D9D9),
+                            borderRadius: BorderRadius.circular(5.0),
+                          ),
+                          child: const Icon(
+                            Icons.grid_view_rounded,
+                            size: 20,
+                            color: Color(0xCC0C2924),
+                          ),
                         ),
-                        child: const Icon(
-                          Icons.grid_view_rounded,
-                          size: 20,
-                          color: Color(0xCC0C2924),
-                        ),
+                        onTap: () {
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (context) {
+                            return const Sidenav();
+                          }));
+                        },
                       ),
-                      onTap: () {
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: (context) {
-                          return const Sidenav();
-                        }));
-                      },
                     ),
-                  ),
-                  Positioned(
-                    top: 1,
-                    right: -5,
-                    child: Image.asset("assets/images/asdf.png",
-                        width: 75, 
-                        height: 75),
-                  ),
-                  const Laws(),
-                  const Positioned(
-                    top: 175,
-                    left: 20,
-                    child: Text(
-                      "Consultation",
-                      style:
-                          TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+                    Positioned(
+                      top: 1,
+                      right: -5,
+                      child: Image.asset("assets/images/asdf.png",
+                          width: 75, height: 75),
                     ),
-                  ),
-                  // alignment: const Alignment(0.0, -0.40),
-                  const Positioned(top: 200, right: 12, child: _TextField()),
-                  // const Positioned(
-                  //   top: 280,
-                  //   right: 138,
-                  //   child: GenerateBtn(),
-                  // ),
-                  const GenerateBtn()
-                ],
+                    const Laws(),
+                    const Positioned(
+                      top: 175,
+                      left: 20,
+                      child: Text(
+                        "Consultation",
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 18),
+                      ),
+                    ),
+                    const Positioned(top: 200, right: 12, child: _TextField()),
+                    const GenerateBtn()
+                  ],
+                ),
               ),
             ),
 
             // Body part
             Align(
               alignment: Alignment.bottomCenter,
-              child: SizedBox(
-                width: MediaQuery.of(context).size.width - 25,
-                height: MediaQuery.of(context).size.height - 420,
-                child: Container(
-                  decoration: const BoxDecoration(
-                    color: Color(0x99D9D9D9),
-                    borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(15),
-                      topRight: Radius.circular(15),
+              child: GestureDetector(
+                onTap: () {
+                  if (!textFieldFocus.hasPrimaryFocus) {
+                    textFieldFocus.unfocus();
+                  }
+                },
+                child: SizedBox(
+                  width: MediaQuery.of(context).size.width - 25,
+                  height: MediaQuery.of(context).size.height - 420,
+                  child: Container(
+                    decoration: const BoxDecoration(
+                      color: Color(0x99D9D9D9),
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(15),
+                        topRight: Radius.circular(15),
+                      ),
                     ),
+                    // !alert: insert items here!
+                    child: null,
                   ),
-                  // !alert: insert items here!
-                  child: null,
                 ),
               ),
             ),
