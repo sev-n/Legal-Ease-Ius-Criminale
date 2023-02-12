@@ -21,11 +21,11 @@ class BookMark extends StatelessWidget {
                   ),
                   // !alert insert items here
                   child: null),
-      
+
               // *LOGO CODE
-      
+
               // *LOGO CODE
-      
+
               Align(
                 alignment: Alignment.bottomCenter,
                 child: SizedBox(
@@ -45,12 +45,22 @@ class BookMark extends StatelessWidget {
                       child: SizedBox(
                         width: MediaQuery.of(context).size.width,
                         height: MediaQuery.of(context).size.height - 250,
-      
+
                         // *BOOKMARK LIST CODE
-                        child: const BookmarkList(),
-                        // *BOOKMARK LIST CODE
+                        child: ListView(
+                          children: const [
+                            BookmarkList(),
+                            BookmarkList(),
+                            BookmarkList(),
+                            BookmarkList(),
+                            BookmarkList(),
+                            BookmarkList(),
+                            BookmarkList(),
+                          ],
+                        ),
                       ),
                     ),
+                    // *BOOKMARK LIST CODE
                   ),
                 ),
               ),
