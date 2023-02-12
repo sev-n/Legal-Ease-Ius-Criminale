@@ -91,23 +91,50 @@ class HomePage extends StatelessWidget {
                   }
                 },
                 child: SizedBox(
-                  width: MediaQuery.of(context).size.width - 25,
-                  height: MediaQuery.of(context).size.height - 420,
-                  child: Container(
-                    decoration: const BoxDecoration(
-                      color: Color(0x99D9D9D9),
-                      borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(15),
-                        topRight: Radius.circular(15),
+                    width: MediaQuery.of(context).size.width - 25,
+                    height: MediaQuery.of(context).size.height - 420,
+                    child: Container(
+                      decoration: const BoxDecoration(
+                        color: Color(0x99D9D9D9),
+                        borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(15),
+                          topRight: Radius.circular(15),
+                        ),
                       ),
-                    ),
-                    // !alert: insert items here!
-                    child: null,
-                  ),
-                ),
+                      // !alert: insert items here!
+                      child: Stack(alignment: Alignment.center, children: const [ButtonX()]),
+                    )),
               ),
             ),
           ]),
+        ),
+      ),
+    );
+  }
+}
+
+class ButtonX extends StatelessWidget {
+  
+  const ButtonX({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      width: 75,
+      height: 75,
+      child: Material(
+        type: MaterialType.transparency,
+        child: InkWell(
+          borderRadius: BorderRadius.circular(15.0),
+          splashColor: Colors.black.withOpacity(0.3),
+          onTap: () {
+            // ignore: avoid_print
+            print("Hello world");
+          },
+          child:  IconButton(
+        icon: Image.asset('assets/images/sample.png'),
+        onPressed: null,
+          ),
         ),
       ),
     );

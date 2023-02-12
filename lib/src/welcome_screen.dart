@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 //import 'package:legalease_matrimonial/src/home.dart';
-import 'package:legalease_matrimonial/src/pages/home_page.dart';
+//import 'package:legalease_matrimonial/src/pages/home_page.dart';
 import 'package:legalease_matrimonial/src/pages/welcome_page_1.dart';
 import 'package:legalease_matrimonial/src/pages/welcome_page_2.dart';
 import 'package:legalease_matrimonial/src/pages/welcome_page_3.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+
+import 'home_option.dart';
 //import 'package:legalease_matrimonial/src/sidenav.dart';
 
 // todo: need to review, might not be a good approach.
@@ -117,7 +119,7 @@ class DoneBtn extends StatelessWidget {
     return GestureDetector(
       onTap: () {
         Navigator.push(context, MaterialPageRoute(builder: (context) {
-          return const HomePage();
+          return const HomeOption();
         }));
       },
       child: const Icon(Icons.check, size: 30, color: Color(0xff4050ba)),
