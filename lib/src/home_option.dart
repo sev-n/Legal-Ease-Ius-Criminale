@@ -137,8 +137,9 @@ class HomeOption extends StatelessWidget {
                   height: screenHeight - 300,
                   width: screenWidth,
                   decoration: BoxDecoration(
-                      color: const Color(0xE6FFFFFF),
-                      borderRadius: BorderRadius.circular(10.0)),
+                    color: const Color(0xE6FFFFFF),
+                    borderRadius: BorderRadius.circular(10.0),
+                  ),
                   // ** Insert content here!
                   child: Stack(
                     alignment: Alignment.center,
@@ -154,15 +155,11 @@ class HomeOption extends StatelessWidget {
                               fontFamily: "RobotoFlex"),
                         ),
                       ),
-                      Positioned(
-                        top: 30,
-                        left: 41,
-                        child: Contents(),
-                      ),
-                      Positioned(
-                        top: 53,
-                        left: 65,
-                        child: IconBtn(),),
+                      FirstRowBtn(),
+                      SecondRowBtn(),
+                      FirstRowIcon(),
+                      SecondRowIcon()
+                      
                     ],
                   ),
                 ),
