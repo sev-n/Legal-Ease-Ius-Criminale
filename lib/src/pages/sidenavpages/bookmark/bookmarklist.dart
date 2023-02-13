@@ -9,9 +9,9 @@ class BookmarkList extends StatelessWidget {
   Widget build(BuildContext context) {
     final random = Random();
     final color = Color.fromRGBO(
-      random.nextInt(256),
-      random.nextInt(256),
-      random.nextInt(256),
+      random.nextInt(120),
+      random.nextInt(120),
+      random.nextInt(120),
       1,
     );
 
