@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:legalease_matrimonial/src/pages/sidenavpages/articles.dart';
+import 'package:legalease_matrimonial/src/pages/sidenavpages/article/articles.dart';
 import 'package:legalease_matrimonial/src/pages/sidenavpages/bookmark/bookmark.dart';
 import 'package:get/get.dart';
 
