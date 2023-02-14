@@ -166,6 +166,7 @@ class HomeOption extends StatelessWidget {
                           child: Text(
                             "Categories",
                             style: TextStyle(
+                                fontWeight: FontWeight.w500,
                                 fontSize: 18,
                                 color: Color(0xff0C2924),
                                 fontFamily: "RobotoFlex"),
@@ -180,6 +181,7 @@ class HomeOption extends StatelessWidget {
                   ),
                 ),
               ),
+
               //----------------------------------------------------------------------------------------------------
               Align(
                 alignment: Alignment.bottomCenter,
@@ -200,7 +202,63 @@ class HomeOption extends StatelessWidget {
                       ),
                     ),
                     // ** Insert content here!
-                    child: null,
+                    child: Padding(
+                      padding: const EdgeInsets.only(
+                        left: 15.0,
+                        right: 15.0,
+                        top: 45.0,
+                      ),
+                      child: ListView(
+                        children: const [
+                          HighlightsContent(),
+                          HighlightsContent(),
+                          HighlightsContent(),
+                          HighlightsContent(),
+                          HighlightsContent(),
+                          HighlightsContent(),
+                          HighlightsContent(),
+                          HighlightsContent(),
+                          HighlightsContent(),
+                          HighlightsContent(),
+                          HighlightsContent(),
+                          HighlightsContent(),
+                          HighlightsContent(),
+                          HighlightsContent(),
+                          HighlightsContent(),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+
+              Positioned(
+                //top: 380,
+                top: 448,
+                child: Container(
+                  width: screenWidth,
+                  height: 40,
+                  decoration: const BoxDecoration(
+                    color: Color(0xFFFFFFFF),
+                    //color: Colors.blue,
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(10),
+                      topRight: Radius.circular(10),
+                    ),
+                  ),
+                  child: const Padding(
+                    padding: EdgeInsets.only(
+                      left: 14,
+                      top: 10,
+                    ),
+                    child: Text(
+                      "Highlights",
+                      style: TextStyle(
+                          fontWeight: FontWeight.w500,
+                          fontSize: 18,
+                          color: Color(0xff0C2924),
+                          fontFamily: "RobotoFlex"),
+                    ),
                   ),
                 ),
               )
@@ -304,6 +362,37 @@ class GenerateBtn extends StatelessWidget {
           ),
         ),
       ),
+    );
+  }
+}
+
+class HighlightsContent extends StatelessWidget {
+  const HighlightsContent({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: const [
+        Text(
+          "Random text here. Dont mind it ",
+          style: TextStyle(
+            fontWeight: FontWeight.w300,
+            color: Color(0xff000000),
+            fontSize: 15,
+            fontFamily: "RobotoFLex",
+          ),
+        ),
+        Text(
+          "\t\t\tRandom text here. Dont mind it example only example only.",
+          style: TextStyle(
+            color: Color(0xff000000),
+            fontSize: 10,
+            fontFamily: "RobotoFLex",
+          ),
+        ),
+        Divider(),
+      ],
     );
   }
 }
