@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:legalease_matrimonial/src/pages/sidenavpages/articles.dart';
 import 'package:legalease_matrimonial/src/pages/sidenavpages/bookmark/bookmark.dart';
+import 'package:get/get.dart';
 
 class Sidenav extends StatelessWidget {
   const Sidenav({super.key});
@@ -20,12 +21,24 @@ class Sidenav extends StatelessWidget {
                   color: Color(0xff97a294),
                 ),
                 // !alert insert items here
-                child: null),
-      
+                child: Stack(
+                  children: [
+                    Positioned(
+                      top: 0,
+                      child: IconButton(
+                        icon: const Icon(Icons.arrow_back),
+                        onPressed: () {
+                          Get.back();
+                        },
+                      ),
+                    )
+                  ],
+                )),
+
             // LOGO CODE
-      
+
             // LOGO CODE
-      
+
             Align(
               alignment: Alignment.bottomCenter,
               child: SizedBox(
