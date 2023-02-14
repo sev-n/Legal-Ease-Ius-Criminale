@@ -38,7 +38,6 @@ dependencies:
   cupertino_icons: ^1.0.2
   
   smooth_page_indicator: ^1.0.0+2
-  lottie: ^2.2.0
 
 dev_dependencies:
   flutter_test:
