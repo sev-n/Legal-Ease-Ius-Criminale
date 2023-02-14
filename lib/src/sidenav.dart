@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:legalease_matrimonial/src/pages/sidenavpages/articles.dart';
+import 'package:legalease_matrimonial/src/pages/sidenavpages/article/articles.dart';
 import 'package:legalease_matrimonial/src/pages/sidenavpages/bookmark/bookmark.dart';
 
 class Sidenav extends StatelessWidget {
@@ -21,11 +21,11 @@ class Sidenav extends StatelessWidget {
                 ),
                 // !alert insert items here
                 child: null),
-      
+
             // LOGO CODE
-      
+
             // LOGO CODE
-      
+
             Align(
               alignment: Alignment.bottomCenter,
               child: SizedBox(
