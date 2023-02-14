@@ -1,5 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
+import 'categories_contents/against_person.dart';
+import 'categories_contents/against_property.dart';
+import 'categories_contents/inchoate_crime.dart';
+import 'categories_contents/statutory_rights.dart';
+import 'categories_contents/traffic_offense.dart';
+import 'categories_contents/white_collar.dart';
 
 class ContentOne extends StatelessWidget {
   const ContentOne({super.key});
@@ -15,8 +22,11 @@ class ContentOne extends StatelessWidget {
           borderRadius: BorderRadius.circular(15.0),
           splashColor: Colors.black.withOpacity(0.3),
           onTap: () {
-            // ignore: avoid_print
-            print("Hello world");
+            Get.to(
+              () => const TrafficContent(),
+              transition: Transition.zoom,
+              duration: const Duration(milliseconds: 370),
+            );
           },
           child: IconButton(
             icon: Image.asset('assets/image_option/content_box_one.png'),
@@ -42,8 +52,11 @@ class ContentTwo extends StatelessWidget {
           borderRadius: BorderRadius.circular(15.0),
           splashColor: Colors.black.withOpacity(0.3),
           onTap: () {
-            // ignore: avoid_print
-            print("Hello world");
+            Get.to(
+              () => const PersonContent(),
+              transition: Transition.zoom,
+              duration: const Duration(milliseconds: 370),
+            );
           },
           child: IconButton(
             icon: Image.asset('assets/image_option/content_box_two.png'),
@@ -69,8 +82,11 @@ class ContentThree extends StatelessWidget {
           borderRadius: BorderRadius.circular(15.0),
           splashColor: Colors.black.withOpacity(0.3),
           onTap: () {
-            // ignore: avoid_print
-            print("Hello world");
+            Get.to(
+              () => const PropertyContent(),
+              transition: Transition.zoom,
+              duration: const Duration(milliseconds: 370),
+            );
           },
           child: IconButton(
             icon: Image.asset('assets/image_option/content_box_three.png'),
@@ -96,8 +112,11 @@ class ContentFour extends StatelessWidget {
           borderRadius: BorderRadius.circular(15.0),
           splashColor: Colors.black.withOpacity(0.3),
           onTap: () {
-            // ignore: avoid_print
-            print("Hello world");
+            Get.to(
+              () => const RightsContent(),
+              transition: Transition.zoom,
+              duration: const Duration(milliseconds: 370),
+            );
           },
           child: IconButton(
             icon: Image.asset('assets/image_option/content_box_four.png'),
@@ -123,8 +142,11 @@ class ContentFive extends StatelessWidget {
           borderRadius: BorderRadius.circular(15.0),
           splashColor: Colors.black.withOpacity(0.3),
           onTap: () {
-            // ignore: avoid_print
-            print("Hello world");
+            Get.to(
+              () => const CollarContent(),
+              transition: Transition.zoom,
+              duration: const Duration(milliseconds: 370),
+            );
           },
           child: IconButton(
             icon: Image.asset('assets/image_option/content_box_five.png'),
@@ -150,8 +172,11 @@ class ContentSix extends StatelessWidget {
           borderRadius: BorderRadius.circular(15.0),
           splashColor: Colors.black.withOpacity(0.3),
           onTap: () {
-            // ignore: avoid_print
-            print("Hello world");
+            Get.to(
+              () => const CrimeContent(),
+              transition: Transition.zoom,
+              duration: const Duration(milliseconds: 370),
+            );
           },
           child: IconButton(
             icon: Image.asset('assets/image_option/content_box_six.png'),
