@@ -109,7 +109,7 @@ class HomeOption extends StatelessWidget {
                         ),
                         Positioned(
                           top: 20,
-                          left: 14,
+                          left: 16,
                           child: GestureDetector(
                             child: Container(
                               height: 25,
@@ -377,21 +377,27 @@ class HighlightsContent extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: const [
-        Text(
-          "Random text here. Dont mind it ",
-          style: TextStyle(
-            fontWeight: FontWeight.w300,
-            color: Color(0xff000000),
-            fontSize: 15,
-            fontFamily: "RobotoFLex",
+        Padding(
+          padding: EdgeInsets.all(8.0),
+          child: Text(
+            "Random text here. Dont mind it ",
+            style: TextStyle(
+              fontWeight: FontWeight.w300,
+              color: Color(0xff000000),
+              fontSize: 15,
+              fontFamily: "RobotoFLex",
+            ),
           ),
         ),
-        Text(
-          "\t\t\tRandom text here. Dont mind it example only example only.",
-          style: TextStyle(
-            color: Color(0xff000000),
-            fontSize: 10,
-            fontFamily: "RobotoFLex",
+        Padding(
+          padding: EdgeInsets.only(bottom: 8.0),
+          child: Text(
+            "\t\t\tRandom text here. Dont mind it example only example only.",
+            style: TextStyle(
+              color: Color(0xff000000),
+              fontSize: 10,
+              fontFamily: "RobotoFLex",
+            ),
           ),
         ),
         Divider(),

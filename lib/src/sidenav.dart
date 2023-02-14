@@ -24,7 +24,8 @@ class Sidenav extends StatelessWidget {
                 child: Stack(
                   children: [
                     Positioned(
-                      top: 0,
+                      top: 6,
+                      left: 6,
                       child: IconButton(
                         icon: const Icon(Icons.arrow_back),
                         onPressed: () {
