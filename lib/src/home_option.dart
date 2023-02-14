@@ -129,7 +129,7 @@ class HomeOption extends StatelessWidget {
                               Get.to(
                                 () => const Sidenav(),
                                 transition: Transition.leftToRight,
-                                duration: const Duration(milliseconds: 350),
+                                duration: const Duration(milliseconds: 370),
                               );
                             },
                           ),
