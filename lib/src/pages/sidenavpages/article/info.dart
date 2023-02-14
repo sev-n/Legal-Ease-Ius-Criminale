@@ -8,6 +8,7 @@ class InfoPage extends StatelessWidget {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       body: SafeArea(
+        right: true,
         child: Align(
           alignment: Alignment.topCenter,
           child: Stack(
@@ -39,67 +40,30 @@ class InfoPage extends StatelessWidget {
                       ),
                     ),
                     // !alert: insert items here!
-                    child: Align(
-                      alignment: Alignment.bottomCenter,
-                      child: SizedBox(
-                        width: MediaQuery.of(context).size.width,
-                        height: MediaQuery.of(context).size.height - 250,
+                    child: Stack(
+                          children:  [
+                            const Positioned(
+                              top: 20,
+                              left: 30,
+                              child: Text("Section 1. No crime without law"),
+                            ),
+                            const Divider(height: 150, color: Colors.black, indent: 20.0, endIndent: 20.0,),
+                            Positioned(
+                              top: 100,
+                              child: SizedBox(
+                                width: MediaQuery.of(context).size.width,
+                                child: const Padding(
+                                  padding:  EdgeInsets.all(16.0),
+                                  child: Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vel nisl sit amet magna ullamcorper porta. Quisque non ante in quam cursus blandit nec vel dui. Morbi eget bibendum felis. Nullam laoreet nunc vel risus tincidunt, in imperdiet turpis rhoncus. Fusce tincidunt orci vel eleifend blandit. Praesent eget fringilla arcu. Maecenas bibendum sem vitae quam tincidunt efficitur. Suspendisse varius tortor eget nisl fringilla, in iaculis orci scelerisque. Donec lacinia ex ut enim pretium, vel euismod felis consectetur. Nunc at ante enim. ",
+                                  textAlign: TextAlign.justify
+                                  ),
+                                )),
+                            ),
+                          ],
+                        ),
 
                         // *INFO CODE
-                        child: Transform.translate(
-                          offset: const Offset(20, -30),
-                          child: SizedBox(
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                RichText(
-                                  text: const TextSpan(
-                                    style: TextStyle(
-                                      fontSize: 18,
-                                      color: Colors.black,
-                                      height: 1.5, // to add space between lines
-                                    ),
-                                    children: [
-                                      TextSpan(
-                                        text: 'Section 1. ',
-                                        style: TextStyle(
-                                          fontWeight: FontWeight.bold,
-                                        ),
-                                      ),
-                                      TextSpan(
-                                        text: 'No crime without law\n\n',
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                                const Divider(),
-                                Expanded(
-                                  child: RichText(
-                                    softWrap: true,
-                                    textAlign: TextAlign.start,
-                                    text: const TextSpan(
-                                      style: TextStyle(
-                                        fontSize: 14,
-                                      ),
-                                      children: [
-                                        TextSpan(
-                                          text:
-                                              'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vel nisl sit amet magna ullamcorper porta. Quisque non ante in quam cursus blandit nec vel dui. Morbi eget bibendum felis. Nullam laoreet nunc vel risus tincidunt, in imperdiet turpis rhoncus. Fusce tincidunt orci vel eleifend blandit. Praesent eget fringilla arcu. Maecenas bibendum sem vitae quam tincidunt efficitur. Suspendisse varius tortor eget nisl fringilla, in iaculis orci scelerisque. Donec lacinia ex ut enim pretium, vel euismod felis consectetur. Nunc at ante enim. ',
-                                          style: TextStyle(
-                                            color: Colors.black,
-                                            fontSize: 14,
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
+                        
                     // *BOOKMARK LIST CODE
                   ),
                 ),

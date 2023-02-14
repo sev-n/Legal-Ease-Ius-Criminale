@@ -66,7 +66,7 @@ class ArticleList extends StatelessWidget {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => InfoPage()),
+                                    builder: (context) => const InfoPage()),
                               );
                             },
                           ),
