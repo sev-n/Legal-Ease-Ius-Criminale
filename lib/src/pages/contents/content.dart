@@ -164,7 +164,7 @@ class FirstRowIcon extends StatelessWidget {
             height: 30,
             child: GoToFunc(
               whereTo: const TrafficContent(),
-              child: Image.asset("assets/image_option/traffic_icon.png"),
+              child: Image.asset("assets/images/traffic_icon.png"),
             ),
           ),
           const SizedBox(
@@ -175,7 +175,7 @@ class FirstRowIcon extends StatelessWidget {
             height: 30,
             child: GoToFunc(
               whereTo: const PersonContent(),
-              child: Image.asset("assets/image_option/person_icon.png"),
+              child: Image.asset("assets/images/person_icon.png"),
             ),
           ),
           const SizedBox(
@@ -186,7 +186,7 @@ class FirstRowIcon extends StatelessWidget {
             height: 30,
             child: GoToFunc(
               whereTo: const PropertyContent(),
-              child: Image.asset("assets/image_option/property_icon.png"),
+              child: Image.asset("assets/images/property_icon.png"),
             ),
           )
         ],
@@ -210,7 +210,7 @@ class SecondRowIcon extends StatelessWidget {
             height: 30,
             child: GoToFunc(
               whereTo: const RightsContent(),
-              child: Image.asset("assets/image_option/rights_icon.png"),
+              child: Image.asset("assets/images/rights_icon.png"),
             ),
           ),
           const SizedBox(
@@ -222,7 +222,7 @@ class SecondRowIcon extends StatelessWidget {
             height: 30,
             child: GoToFunc(
               whereTo: const CollarContent(),
-              child: Image.asset("assets/image_option/collar_icon.png"),
+              child: Image.asset("assets/images/collar_icon.png"),
             ),
           ),
           const SizedBox(
@@ -234,7 +234,7 @@ class SecondRowIcon extends StatelessWidget {
             height: 155,
             child: GoToFunc(
               whereTo: const CrimeContent(),
-              child: Image.asset("assets/image_option/crime_icon.png"),
+              child: Image.asset("assets/images/crime_icon.png"),
             ),
           )
         ],

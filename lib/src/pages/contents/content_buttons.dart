@@ -29,7 +29,7 @@ class ContentOne extends StatelessWidget {
             );
           },
           child: IconButton(
-            icon: Image.asset('assets/image_option/content_box_one.png'),
+            icon: Image.asset('assets/images/content_box_one.png'),
             onPressed: null,
           ),
         ),
@@ -59,7 +59,7 @@ class ContentTwo extends StatelessWidget {
             );
           },
           child: IconButton(
-            icon: Image.asset('assets/image_option/content_box_two.png'),
+            icon: Image.asset('assets/images/content_box_two.png'),
             onPressed: null,
           ),
         ),
@@ -89,7 +89,7 @@ class ContentThree extends StatelessWidget {
             );
           },
           child: IconButton(
-            icon: Image.asset('assets/image_option/content_box_three.png'),
+            icon: Image.asset('assets/images/content_box_three.png'),
             onPressed: null,
           ),
         ),
@@ -119,7 +119,7 @@ class ContentFour extends StatelessWidget {
             );
           },
           child: IconButton(
-            icon: Image.asset('assets/image_option/content_box_four.png'),
+            icon: Image.asset('assets/images/content_box_four.png'),
             onPressed: null,
           ),
         ),
@@ -149,7 +149,7 @@ class ContentFive extends StatelessWidget {
             );
           },
           child: IconButton(
-            icon: Image.asset('assets/image_option/content_box_five.png'),
+            icon: Image.asset('assets/images/content_box_five.png'),
             onPressed: null,
           ),
         ),
@@ -179,7 +179,7 @@ class ContentSix extends StatelessWidget {
             );
           },
           child: IconButton(
-            icon: Image.asset('assets/image_option/content_box_six.png'),
+            icon: Image.asset('assets/images/content_box_six.png'),
             onPressed: null,
           ),
         ),

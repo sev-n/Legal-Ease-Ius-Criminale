@@ -32,7 +32,7 @@ class HomeOption extends StatelessWidget {
                     width: screenWidth,
                     decoration: const BoxDecoration(
                       image: DecorationImage(
-                          image: AssetImage('assets/image_option/OPTIONAL.png'),
+                          image: AssetImage('assets/images/OPTIONAL.png'),
                           fit: BoxFit.cover),
                     ),
                     // ** Insert content here!
@@ -48,7 +48,7 @@ class HomeOption extends StatelessWidget {
                             decoration: const BoxDecoration(
                               image: DecorationImage(
                                   image: AssetImage(
-                                      'assets/image_option/Ellipse 24.png'),
+                                      'assets/images/Ellipse 24.png'),
                                   fit: BoxFit.cover),
                             ),
                           ),
@@ -62,7 +62,7 @@ class HomeOption extends StatelessWidget {
                             decoration: const BoxDecoration(
                               image: DecorationImage(
                                   image: AssetImage(
-                                      'assets/image_option/Ellipse 26.png'),
+                                      'assets/images/Ellipse 26.png'),
                                   fit: BoxFit.cover),
                             ),
                           ),
@@ -76,7 +76,7 @@ class HomeOption extends StatelessWidget {
                             decoration: const BoxDecoration(
                               image: DecorationImage(
                                   image: AssetImage(
-                                      'assets/image_option/Ellipse 25.png'),
+                                      'assets/images/Ellipse 25.png'),
                                   fit: BoxFit.cover),
                             ),
                           ),
