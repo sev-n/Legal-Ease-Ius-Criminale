@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:legalease_matrimonial/src/sidenav.dart';
 import 'pages/contents/content.dart';
+import 'package:get/get.dart';
 
 TextEditingController _textEditingController = TextEditingController();
 
@@ -123,11 +124,13 @@ class HomeOption extends StatelessWidget {
                                 color: Color(0xCC0C2924),
                               ),
                             ),
+                            // const Sidenav()
                             onTap: () {
-                              Navigator.push(context,
-                                  MaterialPageRoute(builder: (context) {
-                                return const Sidenav();
-                              }));
+                              Get.to(
+                                () => const Sidenav(),
+                                transition: Transition.leftToRight,
+                                duration: const Duration(milliseconds: 700),
+                              );
                             },
                           ),
                         ),
