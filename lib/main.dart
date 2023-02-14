@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'src/welcome_screen.dart';
 import 'package:flutter/services.dart';
+import 'package:get/get.dart';
+
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();  // making sure flutter framework is initialize before creating BuildContext.
@@ -17,7 +19,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: "Legal ease - Ius Criminale",
       theme: ThemeData(
