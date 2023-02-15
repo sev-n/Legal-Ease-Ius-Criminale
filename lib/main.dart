@@ -4,6 +4,7 @@ import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 
 
+
 void main() {
   WidgetsFlutterBinding.ensureInitialized();  // making sure flutter framework is initialize before creating BuildContext.
   SystemChrome.setPreferredOrientations([

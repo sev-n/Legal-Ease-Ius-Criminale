@@ -15,26 +15,62 @@ class Sidenav extends StatelessWidget {
           alignment: Alignment.topCenter,
           child: Stack(children: [
             Container(
-                width: MediaQuery.of(context).size.width,
-                height: MediaQuery.of(context).size.height,
-                decoration: const BoxDecoration(
-                  color: Color(0xff97a294),
-                ),
-                // !alert insert items here
-                child: Stack(
-                  children: [
-                    Positioned(
-                      top: 6,
-                      left: 6,
-                      child: IconButton(
-                        icon: const Icon(Icons.arrow_back),
-                        onPressed: () {
-                          Get.back();
-                        },
+              width: MediaQuery.of(context).size.width,
+              height: MediaQuery.of(context).size.height,
+              decoration: const BoxDecoration(
+                color: Color(0xff97a294),
+              ),
+              // !alert insert items here
+              child: Stack(
+                children: [
+                  Positioned(
+                    top: 6,
+                    left: 6,
+                    child: IconButton(
+                      icon: const Icon(Icons.arrow_back),
+                      onPressed: () {
+                        Get.back();
+                      },
+                    ),
+                  ),
+                  Positioned(
+                    top: -1,
+                    right: 5,
+                    child: Image.asset(
+                      'assets/images/Logo (2).png',
+                      width: 80,
+                      height: 80,
+                    ),
+                  ),
+                  const Positioned(
+                    top: 22,
+                    right: 67,
+                    child: Text(
+                      "LEGAL EASE",
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Color(0xff0C2924),
+                        fontFamily: "RobotoFlex",
+                        fontSize: 12,
                       ),
-                    )
-                  ],
-                )),
+                    ),
+                  ),
+                  const Positioned(
+                    top: 35,
+                    right: 71,
+                    child: Text(
+                      "Ius Criminale",
+                      style: TextStyle(
+                        fontWeight: FontWeight.w500,
+                        color: Color(0xff0C2924),
+                        fontFamily: "RobotoFlex",
+                        fontSize: 10,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
 
             // LOGO CODE
 

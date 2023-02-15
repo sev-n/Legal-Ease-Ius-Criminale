@@ -3,9 +3,12 @@ import 'package:legalease_matrimonial/src/sidenav.dart';
 import 'pages/contents/content.dart';
 import 'package:get/get.dart';
 
+import 'sidemenu.dart';
+
 TextEditingController _textEditingController = TextEditingController();
 
-class HomeOption extends StatelessWidget {
+
+  class HomeOption extends StatelessWidget {
   const HomeOption({super.key});
 
   @override
@@ -13,9 +16,11 @@ class HomeOption extends StatelessWidget {
     double screenHeight = MediaQuery.of(context).size.height;
     double screenWidth = MediaQuery.of(context).size.width;
     FocusScopeNode textFieldFocus = FocusScope.of(context);
-
+    
     return Scaffold(
+      drawerScrimColor: Colors.black.withOpacity(0.3),
       resizeToAvoidBottomInset: false,
+      drawer: const SideMenu(),
       body: SafeArea(
         child: Align(
           alignment: Alignment.center,
@@ -107,33 +112,67 @@ class HomeOption extends StatelessWidget {
                             ),
                           ),
                         ),
+
+                        // !Alert: uncomment for old side bar and comment the new side bar
+                        // Positioned(
+                        //   top: 20,
+                        //   left: 16,
+                        //   child: GestureDetector(
+                        //     child: Container(
+                        //       height: 25,
+                        //       width: 25,
+                        //       decoration: BoxDecoration(
+                        //         color: const Color(0xCCD9D9D9),
+                        //         borderRadius: BorderRadius.circular(5.0),
+                        //       ),
+                        //       child: const Icon(
+                        //         Icons.grid_view_rounded,
+                        //         size: 20,
+                        //         color: Color(0xCC0C2924),
+                        //       ),
+                        //     ),
+                        //     // const Sidenav()
+                        //     onTap: () {
+                        //       Get.to(
+                        //         () => const Sidenav(),
+                        //         transition: Transition.leftToRight,
+                        //         duration: const Duration(milliseconds: 370),
+                        //       );
+                        //     },
+                        //   ),
+                        // ),
+
+                        // !Alert this is for new side bar
                         Positioned(
                           top: 20,
                           left: 16,
-                          child: GestureDetector(
-                            child: Container(
-                              height: 25,
-                              width: 25,
-                              decoration: BoxDecoration(
-                                color: const Color(0xCCD9D9D9),
-                                borderRadius: BorderRadius.circular(5.0),
-                              ),
-                              child: const Icon(
-                                Icons.grid_view_rounded,
-                                size: 20,
-                                color: Color(0xCC0C2924),
-                              ),
+                          child: Container(
+                            height: 25,
+                            width: 25,
+                            decoration: BoxDecoration(
+                              color: const Color(0xCCD9D9D9),
+                              borderRadius: BorderRadius.circular(5.0),
                             ),
-                            // const Sidenav()
-                            onTap: () {
-                              Get.to(
-                                () => const Sidenav(),
-                                transition: Transition.leftToRight,
-                                duration: const Duration(milliseconds: 370),
-                              );
-                            },
                           ),
                         ),
+                        Positioned(
+                          top: 9,
+                          left: 5,
+                          child: Builder(
+                            builder: (context) {
+                              return IconButton(
+                                icon: const Icon(
+                                  Icons.grid_view_rounded,
+                                  size: 20,
+                                  color: Color(0xCC0C2924),
+                                ),
+                                onPressed: () => Scaffold.of(context).openDrawer(),
+                              );
+                            }
+                          ),
+                        ),
+
+
                         const Positioned(
                           top: 98,
                           right: 16,
@@ -264,12 +303,14 @@ class HomeOption extends StatelessWidget {
                     ),
                   ),
                 ),
-              )
+              ),
             ],
           ),
         ),
       ),
     );
+
+    
   }
 }
 
@@ -405,3 +446,7 @@ class HighlightsContent extends StatelessWidget {
     );
   }
 }
+
+
+
+ 
