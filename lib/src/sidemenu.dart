@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 class SideMenu extends StatelessWidget {
   const SideMenu({super.key});
 
-
   // TODO: side menu bar incomplete.
   @override
   Widget build(BuildContext context) {
@@ -18,18 +17,21 @@ class SideMenu extends StatelessWidget {
           padding: EdgeInsets.zero,
           children: <Widget>[
             SizedBox(
-              height: MediaQuery.of(context).size.height,
-              child: const DrawerHeader(
-                  margin: EdgeInsets.all(0),
-                  decoration: BoxDecoration(
-                      image: DecorationImage(
-                    image: AssetImage('assets/images/OPTIONAL.png'),
-                    fit: BoxFit.cover,
-                  )
-                      //color: Colors.blue,
-                      ),
-                  // ** Items here!
-                  child: null),
+              height: MediaQuery.of(context).size.height * 0.201,
+              child: DrawerHeader(
+                margin: const EdgeInsets.all(0),
+                decoration: const BoxDecoration(
+                    image: DecorationImage(
+                  image: AssetImage('assets/images/bg_side_header.png'),
+                  fit: BoxFit.cover,
+                )
+                    //color: Colors.blue,
+                    ),
+                // ** Items here!
+                child: Column(
+                  children: const <Widget>[],
+                ),
+              ),
             ),
             Container(
               height: MediaQuery.of(context).size.height,
@@ -47,16 +49,19 @@ class SideMenu extends StatelessWidget {
                     title: const Text('Messages'),
                     onTap: () {},
                   ),
+                  const Divider(),
                   ListTile(
                     leading: const Icon(Icons.account_circle),
                     title: const Text('Profile'),
                     onTap: () {},
                   ),
+                  const Divider(),
                   ListTile(
                     leading: const Icon(Icons.settings),
                     title: const Text('Settings'),
                     onTap: () {},
                   ),
+                  const Divider(),
                 ],
               ),
             ),
