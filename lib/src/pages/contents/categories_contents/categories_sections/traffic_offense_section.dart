@@ -41,29 +41,41 @@ class TrafficSection extends StatelessWidget {
                     ),
                     // !alert: insert items here!
                     child: Stack(
-                          children:  [
-                            const Positioned(
-                              top: 20,
-                              left: 30,
-                              child: Text("Section 1. No crime without law"),
-                            ),
-                            const Divider(height: 150, color: Colors.black, indent: 20.0, endIndent: 20.0,),
-                            Positioned(
-                              top: 100,
-                              child: SizedBox(
-                                width: MediaQuery.of(context).size.width,
-                                child: const Padding(
-                                  padding:  EdgeInsets.all(16.0),
-                                  child: Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vel nisl sit amet magna ullamcorper porta. Quisque non ante in quam cursus blandit nec vel dui. Morbi eget bibendum felis. Nullam laoreet nunc vel risus tincidunt, in imperdiet turpis rhoncus. Fusce tincidunt orci vel eleifend blandit. Praesent eget fringilla arcu. Maecenas bibendum sem vitae quam tincidunt efficitur. Suspendisse varius tortor eget nisl fringilla, in iaculis orci scelerisque. Donec lacinia ex ut enim pretium, vel euismod felis consectetur. Nunc at ante enim. ",
-                                  textAlign: TextAlign.justify
-                                  ),
-                                )),
-                            ),
-                          ],
+                      children: [
+                        const Positioned(
+                          top: 20,
+                          left: 30,
+                          child: Text(
+                            "Section 1. No crime without law",
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold, fontSize: 22),
+                          ),
                         ),
+                        const Divider(
+                          height: 150,
+                          color: Colors.black,
+                          indent: 20.0,
+                          endIndent: 20.0,
+                        ),
+                        Positioned(
+                          top: 100,
+                          child: SizedBox(
+                            width: MediaQuery.of(context).size.width,
+                            child: const Padding(
+                              padding: EdgeInsets.all(16.0),
+                              child: Text(
+                                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vel nisl sit amet magna ullamcorper porta. Quisque non ante in quam cursus blandit nec vel dui. Morbi eget bibendum felis. Nullam laoreet nunc vel risus tincidunt, in imperdiet turpis rhoncus. Fusce tincidunt orci vel eleifend blandit. Praesent eget fringilla arcu. Maecenas bibendum sem vitae quam tincidunt efficitur. Suspendisse varius tortor eget nisl fringilla, in iaculis orci scelerisque. Donec lacinia ex ut enim pretium, vel euismod felis consectetur. Nunc at ante enim. ",
+                                textAlign: TextAlign.justify,
+                                style: TextStyle(height: 2.0),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
 
-                        // *INFO CODE
-                        
+                    // *INFO CODE
+
                     // *BOOKMARK LIST CODE
                   ),
                 ),
