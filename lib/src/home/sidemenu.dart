@@ -17,7 +17,7 @@ class SideMenu extends StatelessWidget {
           padding: EdgeInsets.zero,
           children: <Widget>[
             SizedBox(
-              height: MediaQuery.of(context).size.height * 0.201,
+              height: MediaQuery.of(context).size.height * 0.205,
               child: DrawerHeader(
                 margin: const EdgeInsets.all(0),
                 padding: EdgeInsets.zero,
@@ -37,8 +37,8 @@ class SideMenu extends StatelessWidget {
                       child: Container(
                         margin: const EdgeInsets.all(0),
                         padding: EdgeInsets.zero,
-                        width: 190,
-                        height: 180,
+                        width: 195,
+                        height: 185,
                         child: null,
                         decoration: const BoxDecoration(
                           image: DecorationImage(
@@ -55,14 +55,44 @@ class SideMenu extends StatelessWidget {
               height: MediaQuery.of(context).size.height,
               decoration: const BoxDecoration(
                 borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(10.0),
-                  topRight: Radius.circular(10.0),
+                  topLeft: Radius.circular(15.0),
+                  topRight: Radius.circular(15.0),
                 ),
                 color: Color(0xffB8BDB7),
               ),
               child: Column(
                 children: [
+                  const SizedBox(
+                    height: 75.0,
+                  ),
                   ListTile(
+                    minLeadingWidth: 10.0,
+                    leading: Image.asset('assets/images/bookmark.png',
+                          width: 20, height: 20),
+                    title: const Text(
+                      'Bookmark',
+                      style: TextStyle(
+                        color: Color(0xff0C2924),
+                        fontFamily: "RobotoFlex",
+                        fontSize: 15,
+                      ),
+                    ),
+                    trailing: const Icon(
+                      Icons.arrow_forward_ios_rounded,
+                      size: 18,
+                      color: Colors.black,
+                    ),
+                    onTap: () {},
+                  ),
+                  const Divider(
+                    height: 0.9,
+                    color: Color(0x33000000),
+                    indent: 16.0,
+                    endIndent: 21.0,
+                  ),
+                  ListTile(
+                    minLeadingWidth: 10.0,
+                    //contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
                     leading: Container(
                       width: 24,
                       height: 24,
@@ -73,11 +103,29 @@ class SideMenu extends StatelessWidget {
                       child: Image.asset('assets/images/bookmark.png',
                           width: 20, height: 20),
                     ),
-                    title: const Text('Bookmark'),
+                    title: const Text(
+                      'Bookmark',
+                      style: TextStyle(
+                        color: Color(0xff0C2924),
+                        fontFamily: "RobotoFlex",
+                        fontSize: 15,
+                      ),
+                    ),
+                    trailing: const Icon(
+                      Icons.arrow_forward_ios_rounded,
+                      size: 18,
+                      color: Colors.black,
+                    ),
                     onTap: () {},
                   ),
-                  const Divider(),
+                  const Divider(
+                    height: 0.9,
+                    color: Color(0x33000000),
+                    indent: 16.0,
+                    endIndent: 21.0,
+                  ),
                   ListTile(
+                    minLeadingWidth: 10.0,
                     leading: Container(
                       width: 24,
                       height: 24,
@@ -88,10 +136,94 @@ class SideMenu extends StatelessWidget {
                       child: Image.asset('assets/images/setting2.png',
                           width: 20, height: 20),
                     ),
-                    title: const Text('Settings'),
+                    title: const Text(
+                      'Settings',
+                      style: TextStyle(
+                        color: Color(0xff0C2924),
+                        fontFamily: "RobotoFlex",
+                        fontSize: 15,
+                      ),
+                    ),
+                    trailing: const Icon(
+                      Icons.arrow_forward_ios_rounded,
+                      size: 16,
+                      color: Colors.black,
+                    ),
                     onTap: () {},
                   ),
-                  const Divider(),
+                  const Divider(
+                    height: 0.9,
+                    color: Color(0x33000000),
+                    indent: 16.0,
+                    endIndent: 21.0,
+                  ),
+                  ListTile(
+                    minLeadingWidth: 10.0,
+                    //contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
+                    leading: Container(
+                      width: 24,
+                      height: 24,
+                      decoration: BoxDecoration(
+                        color: const Color(0x33504A45),
+                        borderRadius: BorderRadius.circular(5.0),
+                      ),
+                      child: Image.asset('assets/images/feedback.png',
+                          width: 20, height: 20),
+                    ),
+                    title: const Text(
+                      'Feedback',
+                      style: TextStyle(
+                        color: Color(0xff0C2924),
+                        fontFamily: "RobotoFlex",
+                        fontSize: 15,
+                      ),
+                    ),
+                    trailing: const Icon(
+                      Icons.arrow_forward_ios_rounded,
+                      size: 18,
+                      color: Colors.black,
+                    ),
+                    onTap: () {},
+                  ),
+                  const Divider(
+                    height: 0.9,
+                    color: Color(0x33000000),
+                    indent: 16.0,
+                    endIndent: 21.0,
+                  ),
+                  ListTile(
+                    minLeadingWidth: 10.0,
+                    leading: Container(
+                      width: 24,
+                      height: 24,
+                      decoration: BoxDecoration(
+                        color: const Color(0x33504A45),
+                        borderRadius: BorderRadius.circular(5.0),
+                      ),
+                      child: Image.asset('assets/images/help.png',
+                          width: 20, height: 20),
+                    ),
+                    title: const Text(
+                      'Help Center',
+                      style: TextStyle(
+                        color: Color(0xff0C2924),
+                        fontFamily: "RobotoFlex",
+                        fontSize: 15,
+                      ),
+                    ),
+                    trailing: const Icon(
+                      Icons.arrow_forward_ios_rounded,
+                      size: 16,
+                      color: Colors.black,
+                    ),
+                    onTap: () {},
+                  ),
+                  const Divider(
+                    height: 0.9,
+                    color: Color(0x33000000),
+                    indent: 16.0,
+                    endIndent: 21.0,
+                  ),
                 ],
               ),
             ),
