@@ -67,19 +67,40 @@ class SideMenu extends StatelessWidget {
                   ),
                   ListTile(
                     minLeadingWidth: 10.0,
+                    leading: Image.asset('assets/images/home.png',
+                        width: 25, height: 25),
+                    title: const Text(
+                      'Home',
+                      style: TextStyle(
+                        color: Color(0xff0C2924),
+                        fontFamily: "RobotoFlex",
+                        fontSize: 16,
+                      ),
+                    ),
+                    onTap: () {},
+                  ),
+                  const Divider(
+                    height: 0.9,
+                    color: Color(0x33000000),
+                    indent: 14.0,
+                    endIndent: 19.0,
+                  ),
+                  const SizedBox(height: 25),
+                  ListTile(
+                    minLeadingWidth: 10.0,
                     leading: Image.asset('assets/images/bookmark.png',
-                          width: 20, height: 20),
+                        width: 25, height: 25),
                     title: const Text(
                       'Bookmark',
                       style: TextStyle(
                         color: Color(0xff0C2924),
                         fontFamily: "RobotoFlex",
-                        fontSize: 15,
+                        fontSize: 16,
                       ),
                     ),
                     trailing: const Icon(
                       Icons.arrow_forward_ios_rounded,
-                      size: 18,
+                      size: 15,
                       color: Colors.black,
                     ),
                     onTap: () {},
@@ -87,66 +108,24 @@ class SideMenu extends StatelessWidget {
                   const Divider(
                     height: 0.9,
                     color: Color(0x33000000),
-                    indent: 16.0,
-                    endIndent: 21.0,
+                    indent: 14.0,
+                    endIndent: 19.0,
                   ),
                   ListTile(
                     minLeadingWidth: 10.0,
-                    //contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
-                    leading: Container(
-                      width: 24,
-                      height: 24,
-                      decoration: BoxDecoration(
-                        color: const Color(0x33504A45),
-                        borderRadius: BorderRadius.circular(5.0),
-                      ),
-                      child: Image.asset('assets/images/bookmark.png',
-                          width: 20, height: 20),
-                    ),
-                    title: const Text(
-                      'Bookmark',
-                      style: TextStyle(
-                        color: Color(0xff0C2924),
-                        fontFamily: "RobotoFlex",
-                        fontSize: 15,
-                      ),
-                    ),
-                    trailing: const Icon(
-                      Icons.arrow_forward_ios_rounded,
-                      size: 18,
-                      color: Colors.black,
-                    ),
-                    onTap: () {},
-                  ),
-                  const Divider(
-                    height: 0.9,
-                    color: Color(0x33000000),
-                    indent: 16.0,
-                    endIndent: 21.0,
-                  ),
-                  ListTile(
-                    minLeadingWidth: 10.0,
-                    leading: Container(
-                      width: 24,
-                      height: 24,
-                      decoration: BoxDecoration(
-                        color: const Color(0x33504A45),
-                        borderRadius: BorderRadius.circular(5.0),
-                      ),
-                      child: Image.asset('assets/images/setting2.png',
-                          width: 20, height: 20),
-                    ),
+                    leading: Image.asset('assets/images/setting2.png',
+                        width: 25, height: 25),
                     title: const Text(
                       'Settings',
                       style: TextStyle(
                         color: Color(0xff0C2924),
                         fontFamily: "RobotoFlex",
-                        fontSize: 15,
+                        fontSize: 16,
                       ),
                     ),
                     trailing: const Icon(
                       Icons.arrow_forward_ios_rounded,
-                      size: 16,
+                      size: 15,
                       color: Colors.black,
                     ),
                     onTap: () {},
@@ -154,33 +133,24 @@ class SideMenu extends StatelessWidget {
                   const Divider(
                     height: 0.9,
                     color: Color(0x33000000),
-                    indent: 16.0,
-                    endIndent: 21.0,
+                    indent: 14.0,
+                    endIndent: 19.0,
                   ),
                   ListTile(
                     minLeadingWidth: 10.0,
-                    //contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
-                    leading: Container(
-                      width: 24,
-                      height: 24,
-                      decoration: BoxDecoration(
-                        color: const Color(0x33504A45),
-                        borderRadius: BorderRadius.circular(5.0),
-                      ),
-                      child: Image.asset('assets/images/feedback.png',
-                          width: 20, height: 20),
-                    ),
+                    leading: Image.asset('assets/images/feedback.png',
+                        width: 25, height: 25),
                     title: const Text(
                       'Feedback',
                       style: TextStyle(
                         color: Color(0xff0C2924),
                         fontFamily: "RobotoFlex",
-                        fontSize: 15,
+                        fontSize: 16,
                       ),
                     ),
                     trailing: const Icon(
                       Icons.arrow_forward_ios_rounded,
-                      size: 18,
+                      size: 15,
                       color: Colors.black,
                     ),
                     onTap: () {},
@@ -188,32 +158,24 @@ class SideMenu extends StatelessWidget {
                   const Divider(
                     height: 0.9,
                     color: Color(0x33000000),
-                    indent: 16.0,
-                    endIndent: 21.0,
+                    indent: 14.0,
+                    endIndent: 19.0,
                   ),
                   ListTile(
                     minLeadingWidth: 10.0,
-                    leading: Container(
-                      width: 24,
-                      height: 24,
-                      decoration: BoxDecoration(
-                        color: const Color(0x33504A45),
-                        borderRadius: BorderRadius.circular(5.0),
-                      ),
-                      child: Image.asset('assets/images/help.png',
-                          width: 20, height: 20),
-                    ),
+                    leading: Image.asset('assets/images/help.png',
+                        width: 26, height: 26),
                     title: const Text(
                       'Help Center',
                       style: TextStyle(
                         color: Color(0xff0C2924),
                         fontFamily: "RobotoFlex",
-                        fontSize: 15,
+                        fontSize: 16,
                       ),
                     ),
                     trailing: const Icon(
                       Icons.arrow_forward_ios_rounded,
-                      size: 16,
+                      size: 15,
                       color: Colors.black,
                     ),
                     onTap: () {},
@@ -221,8 +183,8 @@ class SideMenu extends StatelessWidget {
                   const Divider(
                     height: 0.9,
                     color: Color(0x33000000),
-                    indent: 16.0,
-                    endIndent: 21.0,
+                    indent: 14.0,
+                    endIndent: 19.0,
                   ),
                 ],
               ),
