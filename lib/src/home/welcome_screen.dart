@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 //import 'package:legalease_matrimonial/src/home.dart';
 //import 'package:legalease_matrimonial/src/pages/home_page.dart';
-import 'package:legalease_matrimonial/src/pages/welcome_page_1.dart';
-import 'package:legalease_matrimonial/src/pages/welcome_page_2.dart';
-import 'package:legalease_matrimonial/src/pages/welcome_page_3.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
+import '../pages/welcome_pages/welcome_page_1.dart';
+import '../pages/welcome_pages/welcome_page_2.dart';
+import '../pages/welcome_pages/welcome_page_3.dart';
 import 'home_option.dart';
 //import 'package:legalease_matrimonial/src/sidenav.dart';
 

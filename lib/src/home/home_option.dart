@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:legalease_matrimonial/src/sidenav.dart';
-import 'pages/contents/content.dart';
 import 'package:get/get.dart';
-
+import '../pages/contents/content.dart';
 import 'sidemenu.dart';
 
 TextEditingController _textEditingController = TextEditingController();

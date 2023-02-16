@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'src/welcome_screen.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
+
+import 'src/home/welcome_screen.dart';
 
 
 

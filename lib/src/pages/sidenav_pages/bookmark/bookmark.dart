@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:legalease_matrimonial/src/pages/sidenavpages/bookmark/bookmarklist.dart';
+import 'package:legalease_matrimonial/src/pages/sidenav_pages/bookmark/bookmarklist.dart';
 
 class BookMark extends StatelessWidget {
   const BookMark({super.key});

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class InfoPage extends StatelessWidget {
-  const InfoPage({super.key});
+class TrafficSection extends StatelessWidget {
+  const TrafficSection({super.key});
 
   @override
   Widget build(BuildContext context) {
