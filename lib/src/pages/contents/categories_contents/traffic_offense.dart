@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'categories_sections/traffic_offense_section.dart';
 
 class TrafficContent extends StatelessWidget {
@@ -14,13 +13,30 @@ class TrafficContent extends StatelessWidget {
           alignment: Alignment.topCenter,
           child: Stack(children: [
             Container(
-                width: MediaQuery.of(context).size.width,
-                height: MediaQuery.of(context).size.height,
-                decoration: const BoxDecoration(
-                  color: Color(0xff97a294),
+              width: MediaQuery.of(context).size.width,
+              height: MediaQuery.of(context).size.height,
+              decoration: const BoxDecoration(
+                color: Color(0xff97a294),
+              ),
+              // !alert insert items here
+              child: Padding(
+                padding: const EdgeInsets.only(top: 100, left: 20),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: const [
+                    Text(
+                      'Traffic Offense',
+                      style: TextStyle(
+                        fontSize: 24,
+                        fontWeight: FontWeight.bold,
+                        color: Color(0xff0C2924),
+                      ),
+                    ),
+                  ],
                 ),
-                // !alert insert items here
-                child: null),
+              ),
+            ),
 
             // *LOGO CODE
 
@@ -47,38 +63,112 @@ class TrafficContent extends StatelessWidget {
                       height: MediaQuery.of(context).size.height - 250,
 
                       // *ARTICLE LIST CODE
-                      child: ListView(
-                        children: [
-                          Divider(
-                            thickness: 1.0,
-                            indent: 20.0,
-                            endIndent: 20.0,
-                            color: Colors.grey[500],
-                          ),
-                          ListTile(
-                            title: const Text(
-                              "article title\n section #. ETC",
-                              style: TextStyle(fontWeight: FontWeight.bold),
+                      child: Transform.translate(
+                        offset: const Offset(0, -50.0),
+                        child: ListView(
+                          children: [
+                            Divider(
+                              thickness: 1.0,
+                              indent: 20.0,
+                              endIndent: 20.0,
+                              color: Colors.grey[500],
                             ),
-                            trailing: const Icon(Icons.chevron_right,
-                                color: Colors.black),
-                            onTap: () {
-                              // Navigate to another page here
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => const TrafficSection()),
-                              );
-                            },
-                          ),
-                          Divider(
-                            thickness: 1.0,
-                            indent: 20.0,
-                            endIndent: 20.0,
-                            color: Colors.grey[500],
-                          ),
-                          // More ListTiles...
-                        ],
+                            ListTile(
+                              title: const Text(
+                                "There is no crime unless the act is defined and penalized by this Code or other laws.... \n section 1. No crime without law",
+                                style: TextStyle(
+                                    fontWeight: FontWeight.bold, height: 1.5),
+                              ),
+                              trailing: const Icon(Icons.chevron_right,
+                                  color: Colors.black),
+                              onTap: () {
+                                // Navigate to another page here
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          const TrafficSection()),
+                                );
+                              },
+                            ),
+                            Divider(
+                              thickness: 1.0,
+                              indent: 20.0,
+                              endIndent: 20.0,
+                              color: Colors.grey[500],
+                            ),
+                            ListTile(
+                              title: const Text(
+                                "article title\n section #. ETC",
+                                style: TextStyle(fontWeight: FontWeight.bold),
+                              ),
+                              trailing: const Icon(Icons.chevron_right,
+                                  color: Colors.black),
+                              onTap: () {
+                                // Navigate to another page here
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          const TrafficSection()),
+                                );
+                              },
+                            ),
+                            Divider(
+                              thickness: 1.0,
+                              indent: 20.0,
+                              endIndent: 20.0,
+                              color: Colors.grey[500],
+                            ),
+                            ListTile(
+                              title: const Text(
+                                "article title\n section #. ETC",
+                                style: TextStyle(fontWeight: FontWeight.bold),
+                              ),
+                              trailing: const Icon(Icons.chevron_right,
+                                  color: Colors.black),
+                              onTap: () {
+                                // Navigate to another page here
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          const TrafficSection()),
+                                );
+                              },
+                            ),
+                            Divider(
+                              thickness: 1.0,
+                              indent: 20.0,
+                              endIndent: 20.0,
+                              color: Colors.grey[500],
+                            ),
+                            ListTile(
+                              title: const Text(
+                                "article title\n section #. ETC",
+                                style: TextStyle(fontWeight: FontWeight.bold),
+                              ),
+                              trailing: const Icon(Icons.chevron_right,
+                                  color: Colors.black),
+                              onTap: () {
+                                // Navigate to another page here
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          const TrafficSection()),
+                                );
+                              },
+                            ),
+                            Divider(
+                              thickness: 1.0,
+                              indent: 20.0,
+                              endIndent: 20.0,
+                              color: Colors.grey[500],
+                            ),
+                            // More ListTiles...
+                          ],
+                        ),
                       ),
                       // *ARTICLE LIST CODE
                     ),
