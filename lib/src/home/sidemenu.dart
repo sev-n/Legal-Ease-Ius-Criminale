@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class SideMenu extends StatelessWidget {
-  const SideMenu({super.key});
+  const SideMenu({Key? key}) : super(key: key);
 
   // TODO: side menu bar incomplete.
   @override
@@ -113,10 +113,10 @@ class SideMenu extends StatelessWidget {
                   ),
                   ListTile(
                     minLeadingWidth: 10.0,
-                    leading: Image.asset('assets/images/setting2.png',
+                    leading: Image.asset('assets/images/feedback.png',
                         width: 25, height: 25),
                     title: const Text(
-                      'Settings',
+                      'Feedback',
                       style: TextStyle(
                         color: Color(0xff0C2924),
                         fontFamily: "RobotoFlex",
@@ -138,10 +138,10 @@ class SideMenu extends StatelessWidget {
                   ),
                   ListTile(
                     minLeadingWidth: 10.0,
-                    leading: Image.asset('assets/images/feedback.png',
+                    leading: Image.asset('assets/images/about.png',
                         width: 25, height: 25),
                     title: const Text(
-                      'Feedback',
+                      'About Us',
                       style: TextStyle(
                         color: Color(0xff0C2924),
                         fontFamily: "RobotoFlex",
