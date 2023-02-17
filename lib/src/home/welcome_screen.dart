@@ -95,6 +95,7 @@ class _GetStartedBtnState extends State<GetStartedBtn> {
               style: TextStyle(
                 fontSize: 18,
                 fontWeight: FontWeight.w500,
+                fontFamily: "RobotoFlex",
                 color: Color(0xff0C2924),
               ),
             ),
