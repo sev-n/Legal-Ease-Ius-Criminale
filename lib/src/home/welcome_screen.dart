@@ -26,103 +26,106 @@ class _WelcomePageState extends State<WelcomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Stack(children: [
-        PageView(
-          onPageChanged: (index) {
-            setState(() {
-              isLastPage = (index == 2);
-              isFirstPage = (index == 0);
-            });
-          },
-          controller: _controller,
-          children: const [
-            // pages
-            WelcomePageOne(),
-            WelcomePageTwo(),
-            WelcomePageThree()
-          ],
-        ),
-        Container(
-          alignment: const Alignment(0, 0.80),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: <Widget>[
-              // page controller
-              isFirstPage ? const SkipBtn() : const PreviousBtn(),
-
-              SmoothPageIndicator(
-                controller: _controller,
-                count: 3,
-                effect: const WormEffect(),
-              ),
-              // page controller
-              isLastPage ? const DoneBtn() : const NextBtn(),
+      body: SafeArea(
+        child: Stack(children: [
+          PageView(
+            onPageChanged: (index) {
+              setState(() {
+                isLastPage = (index == 2);
+                isFirstPage = (index == 0);
+              });
+            },
+            controller: _controller,
+            children: const [
+              // pages
+              WelcomePageOne(),
+              WelcomePageTwo(),
+              WelcomePageThree()
             ],
           ),
-        ),
-      ]),
+          if(isLastPage) const GetStartedBtn(),
+          Container(
+            alignment: const Alignment(0, 0.65),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget>[
+                // page controller
+
+                if(!isLastPage) const PageIndicator(),
+
+                // page controller
+              ],
+            ),
+          ),
+        ]),
+      ),
     );
   }
 }
 
-// todo: All icons and it's size undecided
-
-class PreviousBtn extends StatelessWidget {
-  const PreviousBtn({super.key});
+class GetStartedBtn extends StatefulWidget {
+  const GetStartedBtn({super.key});
 
   @override
+  State<GetStartedBtn> createState() => _GetStartedBtnState();
+}
+
+class _GetStartedBtnState extends State<GetStartedBtn> {
+  @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () {
-        _controller.previousPage(
-            duration: const Duration(milliseconds: 500), curve: Curves.easeOut);
-      },
-      child: const Icon(Icons.arrow_left, size: 30, color: Color(0xff4050ba)),
-    );
+    return Positioned(
+        bottom: 60,
+        right: 80,
+        child: Container(
+          width: 200,
+          child: OutlinedButton(
+            onPressed: () {},
+            style: OutlinedButton.styleFrom(
+              side: const BorderSide(
+                width: 1,
+                color: Color(0xff0C2924),
+              ),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(30.0),
+              ),
+              foregroundColor: Colors.black,
+            ),
+            child: const Text(
+              "Get Started",
+              style: TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.w500,
+                color: Color(0xff0C2924),
+              ),
+            ),
+          ),
+        ));
   }
 }
 
-class NextBtn extends StatelessWidget {
-  const NextBtn({super.key});
+class PageIndicator extends StatefulWidget {
+  const PageIndicator({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () {
-        _controller.nextPage(
-            duration: const Duration(milliseconds: 500), curve: Curves.easeIn);
-      },
-      child: const Icon(Icons.arrow_right, size: 30, color: Color(0xff4050ba)),
-    );
-  }
+  State<PageIndicator> createState() => _PageIndicatorState();
 }
 
-class SkipBtn extends StatelessWidget {
-  const SkipBtn({super.key});
-
+class _PageIndicatorState extends State<PageIndicator> {
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () {
-        _controller.jumpToPage(2);
-      },
-      child: const Icon(Icons.close, size: 30, color: Color(0xff4050ba)),
-    );
-  }
-}
-
-class DoneBtn extends StatelessWidget {
-  const DoneBtn({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () {
-        Navigator.push(context, MaterialPageRoute(builder: (context) {
-          return const HomeOption();
-        }));
-      },
-      child: const Icon(Icons.check, size: 30, color: Color(0xff4050ba)),
+    return SmoothPageIndicator(
+      controller: _controller,
+      count: 3,
+      effect: const SlideEffect(
+        spacing: 4.0,
+        radius: 4.0,
+        dotWidth: 30.0,
+        dotHeight: 2.5,
+        paintStyle: PaintingStyle.stroke,
+        strokeWidth: 1.5,
+        dotColor: Color(0xff0C2924),
+        activeDotColor: Color(0xff0C2924),
+      ),
     );
   }
 }
