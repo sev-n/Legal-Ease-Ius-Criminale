@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+// TODO: need to sort the text, its ugly.
+
 class WelcomePageTwo extends StatelessWidget {
   const WelcomePageTwo({super.key});
 
@@ -10,78 +12,72 @@ class WelcomePageTwo extends StatelessWidget {
 
     return Scaffold(
       body: SafeArea(
-        child: Stack(
-          children: [
-            Container(
-              width: screenWidth,
-              height: screenHeight,
-              decoration: const BoxDecoration(
-                image: DecorationImage(
-                    image:
-                        AssetImage('assets/welcomeScreen/welcome_screen_2.png'),
-                    fit: BoxFit.cover),
+        child: Container(
+          width: screenWidth,
+          height: screenHeight,
+          decoration: const BoxDecoration(
+            image: DecorationImage(
+                image: AssetImage('assets/welcomeScreen/welcome_2.png'),
+                fit: BoxFit.cover),
+          ),
+          child: Stack(
+            alignment: Alignment.center,
+            children: [
+              Positioned(
+                top: screenHeight * 0.03,
+                right: screenWidth * 0.04,
+                child: Container(
+                  width: 50,
+                  height: 50,
+                  decoration: const BoxDecoration(
+                    image: DecorationImage(
+                      image:
+                          AssetImage('assets/welcomeScreen/welcome_logo.png'),
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ),
               ),
-              child: Stack(
-                alignment: Alignment.center,
-                children: [
-                  Positioned(
-                    top: 23,
-                    right: 15,
-                    child: Container(
-                      width: 50,
-                      height: 50,
-                      decoration: const BoxDecoration(
-                        image: DecorationImage(
-                          image: AssetImage(
-                              'assets/welcomeScreen/welcome_logo.png'),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
+              Positioned(
+                top: screenHeight * 0.30,
+                right: screenWidth * 0.06,
+                child: Container(
+                  width: 210,
+                  height: 210,
+                  decoration: const BoxDecoration(
+                    image: DecorationImage(
+                      image: AssetImage('assets/welcomeScreen/image_2.png'),
                     ),
                   ),
-                  Positioned(
-                    top: 150,
-                    right: -42,
-                    child: Container(
-                      width: 340,
-                      height: 340,
-                      decoration: const BoxDecoration(
-                        image: DecorationImage(
-                          image: AssetImage(
-                              'assets/welcomeScreen/welcome_screen_2.1.png'),
-                        ),
-                      ),
-                    ),
-                  ),
-                  const Positioned(
-                    top: 140,
-                    left: 22,
-                    child: Text(
-                      "Make a \ngood \ndecision in \nlife.",
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 20,
-                        fontFamily: "RobotoFlex",
-                        color: Color(0xff0C2924),
-                      ),
-                    ),
-                  ),
-                  const Positioned(
-                    top: 460,
-                    right: 20,
-                    child: Text(
-                      "The cave yard from guadadum is \nback. Dont replace it. The blue sky \nis tomorrow night. ",
-                      style: TextStyle(
-                        fontSize: 15,
-                        fontFamily: "RobotoFlex",
-                        color: Color(0xff0C2924),
-                      ),
-                    ),
-                  ),
-                ],
+                ),
               ),
-            ),
-          ],
+              Positioned(
+                top: screenHeight * 0.18,
+                left: screenWidth * 0.06,
+                child: const Text(
+                  "Make a \ngood \ndecision in \nlife.",
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20,
+                    fontFamily: "RobotoFlex",
+                    color: Color(0xff0C2924),
+                  ),
+                ),
+              ),
+              Positioned(
+                top: screenHeight * 0.60,
+                right: screenWidth * 0.05,
+                child: const Text(
+                  "The cave yard from guadadum is \nback. Dont replace it. The blue sky \nis tomorrow night. ",
+                  style: TextStyle(
+                    fontSize: 15,
+                    fontFamily: "RobotoFlex",
+                    color: Color(0xff0C2924),
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );

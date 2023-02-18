@@ -10,7 +10,7 @@ import 'home_option.dart';
 //import 'package:legalease_matrimonial/src/sidenav.dart';
 
 // todo: need to review, might not be a good approach.
-final PageController _controller = PageController(initialPage: 0);
+final PageController _controller = PageController();
 
 class WelcomePage extends StatefulWidget {
   const WelcomePage({super.key});
@@ -25,9 +25,8 @@ class _WelcomePageState extends State<WelcomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SafeArea(
-        child: Stack(children: [
+    return SafeArea(
+        child: Stack(alignment: Alignment.center, children: [
           PageView(
             onPageChanged: (index) {
               setState(() {
@@ -43,23 +42,22 @@ class _WelcomePageState extends State<WelcomePage> {
               WelcomePageThree()
             ],
           ),
-          if(isLastPage) const GetStartedBtn(),
+          if (isLastPage) const GetStartedBtn(),
           Container(
-            alignment: const Alignment(0, 0.65),
+            alignment: const Alignment(0, 0.77),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
                 // page controller
 
-                if(!isLastPage) const PageIndicator(),
+                if (!isLastPage) const PageIndicator(),
 
                 // page controller
               ],
             ),
           ),
         ]),
-      ),
-    );
+      );
   }
 }
 
@@ -76,10 +74,16 @@ class _GetStartedBtnState extends State<GetStartedBtn> {
     return Positioned(
         bottom: 60,
         right: 80,
-        child: Container(
+        child: SizedBox(
           width: 200,
           child: OutlinedButton(
-            onPressed: () {},
+            onPressed: () {
+              // print(MediaQuery.of(context).size.width);
+              // print(MediaQuery.of(context).size.height);
+              Navigator.push(context, MaterialPageRoute(builder: (context) {
+                return const HomeOption();
+              }));
+            },
             style: OutlinedButton.styleFrom(
               side: const BorderSide(
                 width: 1,

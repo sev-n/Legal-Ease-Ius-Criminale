@@ -1,18 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-
+import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'src/home/welcome_screen.dart';
 
 
 
 void main() {
-  WidgetsFlutterBinding.ensureInitialized();  // making sure flutter framework is initialize before creating BuildContext.
+   WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized(); // making sure flutter framework is initialize before creating BuildContext.
+   
+   FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding); 
+  
   SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitDown,
     DeviceOrientation.portraitUp
-  ]); // force to portrait orientation, it throws and exception once the app is on landscape mode.
+  ]); // force to portrait orientation, it throws an exception once the app is on landscape mode.
+  
   runApp(const MyApp());
+
+  FlutterNativeSplash.remove();
 }
 
 class MyApp extends StatelessWidget {
@@ -27,9 +33,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const Scaffold(
-        body: WelcomePage(),
-      ),
+      home: const WelcomePage(),
     );
   }
 }

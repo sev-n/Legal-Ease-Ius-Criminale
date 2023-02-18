@@ -22,33 +22,31 @@ class SideMenu extends StatelessWidget {
                 margin: const EdgeInsets.all(0),
                 padding: EdgeInsets.zero,
                 decoration: const BoxDecoration(
-                    image: DecorationImage(
-                  image: AssetImage('assets/images/BAR.png'),
-                  fit: BoxFit.cover,
-                )
-                    //color: Colors.blue,
-                    ),
+                  image: DecorationImage(
+                    image: AssetImage('assets/images/BAR.png'),
+                    fit: BoxFit.cover,
+                  ),
+                  //color: Colors.blue,
+                ),
                 // ** Items here!
-                child: Stack(
-                  children: <Widget>[
-                    Positioned(
-                      top: 4,
-                      right: -55,
-                      child: Container(
-                        margin: const EdgeInsets.all(0),
-                        padding: EdgeInsets.zero,
-                        width: 195,
-                        height: 185,
-                        child: null,
-                        decoration: const BoxDecoration(
-                          image: DecorationImage(
-                              image: AssetImage('assets/images/side_logo.png'),
-                              fit: BoxFit.cover),
-                        ),
+                child: Stack(children: [
+                  Positioned(
+                    top: 4,
+                    right: -55,
+                    child: Container(
+                      margin: const EdgeInsets.all(0),
+                      padding: EdgeInsets.zero,
+                      width: 195,
+                      height: 185,
+                      child: null,
+                      decoration: const BoxDecoration(
+                        image: DecorationImage(
+                            image: AssetImage('assets/images/side_logo.png'),
+                            fit: BoxFit.cover),
                       ),
                     ),
-                  ],
-                ),
+                  ),
+                ]),
               ),
             ),
             Container(
