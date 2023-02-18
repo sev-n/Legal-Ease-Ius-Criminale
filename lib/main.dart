@@ -7,10 +7,8 @@ import 'src/home/welcome_screen.dart';
 
 
 void main() {
-   WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized(); // making sure flutter framework is initialize before creating BuildContext.
+   WidgetsFlutterBinding.ensureInitialized(); // making sure flutter framework is initialize before creating BuildContext.
    
-   FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding); 
-  
   SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitDown,
     DeviceOrientation.portraitUp

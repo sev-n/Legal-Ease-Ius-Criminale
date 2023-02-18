@@ -7,7 +7,6 @@ class WelcomePageThree extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print("Page 3");
     double screenHeight = MediaQuery.of(context).size.height;
     double screenWidth = MediaQuery.of(context).size.width;
 

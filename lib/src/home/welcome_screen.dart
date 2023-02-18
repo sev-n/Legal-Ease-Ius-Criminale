@@ -52,15 +52,15 @@ class _WelcomePageState extends State<WelcomePage> {
                 ],
               ),
             ),
-            if (isLastPage) const GetStartedBtn(),
+            isLastPage ? const GetStartedBtn() : const NextBtn(),
             Container(
-              alignment: const Alignment(0, 0.77),
+              alignment: const Alignment(0, 0.65),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: <Widget>[
+                children: const <Widget>[
                   // page controller
 
-                  if (!isLastPage) const PageIndicator(),
+                  PageIndicator(),
 
                   // page controller
                 ],
@@ -73,14 +73,9 @@ class _WelcomePageState extends State<WelcomePage> {
   }
 }
 
-class GetStartedBtn extends StatefulWidget {
-  const GetStartedBtn({super.key});
+class NextBtn extends StatelessWidget {
+  const NextBtn({super.key});
 
-  @override
-  State<GetStartedBtn> createState() => _GetStartedBtnState();
-}
-
-class _GetStartedBtnState extends State<GetStartedBtn> {
   @override
   Widget build(BuildContext context) {
     return Positioned(
@@ -90,13 +85,11 @@ class _GetStartedBtnState extends State<GetStartedBtn> {
           width: 200,
           child: OutlinedButton(
             onPressed: () {
-              // print(MediaQuery.of(context).size.width);
-              // print(MediaQuery.of(context).size.height);
-              Navigator.push(context, MaterialPageRoute(builder: (context) {
-                return const HomeOption();
-              }));
+              _controller.nextPage(
+                  duration: const Duration(milliseconds: 500),
+                  curve: Curves.easeIn);
             },
-            style: OutlinedButton.styleFrom(
+            style: FilledButton.styleFrom(
               side: const BorderSide(
                 width: 1,
                 color: Color(0xff0C2924),
@@ -107,7 +100,7 @@ class _GetStartedBtnState extends State<GetStartedBtn> {
               foregroundColor: Colors.black,
             ),
             child: const Text(
-              "Get Started",
+              "Next",
               style: TextStyle(
                 fontSize: 18,
                 fontWeight: FontWeight.w500,
@@ -117,6 +110,44 @@ class _GetStartedBtnState extends State<GetStartedBtn> {
             ),
           ),
         ));
+  }
+}
+
+class GetStartedBtn extends StatelessWidget {
+  const GetStartedBtn({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Positioned(
+      bottom: 60,
+      right: 80,
+      child: SizedBox(
+        width: 200,
+        child: ElevatedButton(
+          onPressed: () {
+            Navigator.push(context, MaterialPageRoute(builder: (context) {
+              return const HomeOption();
+            }));
+          },
+          style: ElevatedButton.styleFrom(
+            backgroundColor: const Color(0xffB5CFBC),
+            foregroundColor: Colors.black,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(30.0),
+            ),
+          ),
+          child: const Text(
+            "Get Started",
+            style: TextStyle(
+              fontSize: 18,
+              fontWeight: FontWeight.w500,
+              fontFamily: "RobotoFlex",
+              color: Color(0xff0C2924),
+            ),
+          ),
+        ),
+      ),
+    );
   }
 }
 

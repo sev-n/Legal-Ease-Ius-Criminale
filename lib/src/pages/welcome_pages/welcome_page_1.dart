@@ -7,7 +7,6 @@ class WelcomePageOne extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print("Page 1");
     double screenHeight = MediaQuery.of(context).size.height;
     double screenWidth = MediaQuery.of(context).size.width;
 
@@ -30,8 +29,7 @@ class WelcomePageOne extends StatelessWidget {
               height: 50,
               decoration: const BoxDecoration(
                 image: DecorationImage(
-                  image:
-                      AssetImage('assets/welcomeScreen/welcome_logo.png'),
+                  image: AssetImage('assets/welcomeScreen/welcome_logo.png'),
                   fit: BoxFit.cover,
                 ),
               ),
@@ -47,8 +45,7 @@ class WelcomePageOne extends StatelessWidget {
                 height: 210,
                 decoration: const BoxDecoration(
                   image: DecorationImage(
-                      image:
-                          AssetImage('assets/welcomeScreen/image_1.png'),
+                      image: AssetImage('assets/welcomeScreen/image_1.png'),
                       fit: BoxFit.cover),
                 ),
               ),
@@ -69,9 +66,9 @@ class WelcomePageOne extends StatelessWidget {
           ),
           Positioned(
             top: screenHeight * 0.66,
-            left: screenWidth * 0.05,
+            left: screenWidth * 0.10,
             child: const Text(
-              "\t\tThe cave yard from guadadum is back. \nDont replace it. The blue sky is tomorrow \n\t\t\t\t\t\t\tnight. Make some refreshment.",
+              "\t\tThe cave yard from guadadum is back. \nDont replace it. The blue sky is tomorrow \n\t\t\t\t\t\t\t\t\tnight. Make some refreshment.",
               style: TextStyle(
                 fontSize: 16,
                 fontFamily: "RobotoFlex",

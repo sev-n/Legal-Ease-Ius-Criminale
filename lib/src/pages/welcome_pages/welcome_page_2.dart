@@ -7,7 +7,6 @@ class WelcomePageTwo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print("Page 2");
     double screenHeight = MediaQuery.of(context).size.height;
     double screenWidth = MediaQuery.of(context).size.width;
 
@@ -51,7 +50,7 @@ class WelcomePageTwo extends StatelessWidget {
               ),
             ),
             Positioned(
-              top: screenHeight * 0.18,
+              top: screenHeight * 0.20,
               left: screenWidth * 0.06,
               child: const Text(
                 "Make a \ngood \ndecision in \nlife.",
@@ -64,8 +63,8 @@ class WelcomePageTwo extends StatelessWidget {
               ),
             ),
             Positioned(
-              top: screenHeight * 0.60,
-              right: screenWidth * 0.05,
+              top: 460,
+              left: 22,
               child: const Text(
                 "The cave yard from guadadum is \nback. Dont replace it. The blue sky \nis tomorrow night. ",
                 style: TextStyle(
