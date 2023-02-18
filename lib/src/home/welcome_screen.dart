@@ -25,39 +25,51 @@ class _WelcomePageState extends State<WelcomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-        child: Stack(alignment: Alignment.center, children: [
-          PageView(
-            onPageChanged: (index) {
-              setState(() {
-                isLastPage = (index == 2);
-                isFirstPage = (index == 0);
-              });
-            },
-            controller: _controller,
-            children: const [
-              // pages
-              WelcomePageOne(),
-              WelcomePageTwo(),
-              WelcomePageThree()
-            ],
-          ),
-          if (isLastPage) const GetStartedBtn(),
-          Container(
-            alignment: const Alignment(0, 0.77),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: <Widget>[
-                // page controller
-
-                if (!isLastPage) const PageIndicator(),
-
-                // page controller
-              ],
+    return Scaffold(
+      body: SafeArea(
+        child: Stack(
+          alignment: Alignment.center,
+          children: [
+            Container(
+              decoration: const BoxDecoration(
+                image: DecorationImage(
+                    image: AssetImage('assets/welcomeScreen/splash.png'),
+                    fit: BoxFit.fill),
+              ),
+              child: PageView(
+                onPageChanged: (index) {
+                  setState(() {
+                    isLastPage = (index == 2);
+                    isFirstPage = (index == 0);
+                  });
+                },
+                controller: _controller,
+                children: const [
+                  // pages
+                  WelcomePageOne(),
+                  WelcomePageTwo(),
+                  WelcomePageThree()
+                ],
+              ),
             ),
-          ),
-        ]),
-      );
+            if (isLastPage) const GetStartedBtn(),
+            Container(
+              alignment: const Alignment(0, 0.77),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: <Widget>[
+                  // page controller
+
+                  if (!isLastPage) const PageIndicator(),
+
+                  // page controller
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }
 
