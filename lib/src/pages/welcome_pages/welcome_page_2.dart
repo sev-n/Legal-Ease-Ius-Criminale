@@ -63,8 +63,8 @@ class WelcomePageTwo extends StatelessWidget {
               ),
             ),
             Positioned(
-              top: 460,
-              left: 22,
+              top: screenHeight * 0.608,
+              right: screenWidth * 0.03,
               child: const Text(
                 "The cave yard from guadadum is \nback. Dont replace it. The blue sky \nis tomorrow night. ",
                 style: TextStyle(

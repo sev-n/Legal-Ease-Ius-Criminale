@@ -1,13 +1,9 @@
 import 'package:flutter/material.dart';
-//import 'package:legalease_matrimonial/src/home.dart';
-//import 'package:legalease_matrimonial/src/pages/home_page.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
-
 import '../pages/welcome_pages/welcome_page_1.dart';
 import '../pages/welcome_pages/welcome_page_2.dart';
 import '../pages/welcome_pages/welcome_page_3.dart';
 import 'home_option.dart';
-//import 'package:legalease_matrimonial/src/sidenav.dart';
 
 // todo: need to review, might not be a good approach.
 final PageController _controller = PageController();
@@ -21,7 +17,6 @@ class WelcomePage extends StatefulWidget {
 
 class _WelcomePageState extends State<WelcomePage> {
   bool isLastPage = false;
-  bool isFirstPage = false; // second page
 
   @override
   Widget build(BuildContext context) {
@@ -40,7 +35,6 @@ class _WelcomePageState extends State<WelcomePage> {
                 onPageChanged: (index) {
                   setState(() {
                     isLastPage = (index == 2);
-                    isFirstPage = (index == 0);
                   });
                 },
                 controller: _controller,
@@ -79,8 +73,8 @@ class NextBtn extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Positioned(
-        bottom: 60,
-        right: 80,
+        bottom: MediaQuery.of(context).size.height * 0.08,
+        right: MediaQuery.of(context).size.width * 0.22,
         child: SizedBox(
           width: 200,
           child: OutlinedButton(
@@ -119,8 +113,8 @@ class GetStartedBtn extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Positioned(
-      bottom: 60,
-      right: 80,
+      bottom: MediaQuery.of(context).size.height * 0.08,
+      right: MediaQuery.of(context).size.width * 0.22,
       child: SizedBox(
         width: 200,
         child: ElevatedButton(
