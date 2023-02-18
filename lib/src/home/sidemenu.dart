@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import '../pages/sidenav_pages/bookmark/bookmark.dart';
+import 'home_option.dart';
+
 class SideMenu extends StatelessWidget {
   const SideMenu({Key? key}) : super(key: key);
 
@@ -75,7 +78,13 @@ class SideMenu extends StatelessWidget {
                         fontSize: 16,
                       ),
                     ),
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (_) => const HomeOption(),
+                        ),
+                      );
+                    },
                   ),
                   const Divider(
                     height: 0.9,
@@ -101,7 +110,14 @@ class SideMenu extends StatelessWidget {
                       size: 15,
                       color: Colors.black,
                     ),
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const BookMark(),
+                        ),
+                      );
+                    },
                   ),
                   const Divider(
                     height: 0.9,

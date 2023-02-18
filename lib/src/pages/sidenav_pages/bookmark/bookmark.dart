@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:legalease_matrimonial/src/pages/sidenav_pages/bookmark/bookmarklist.dart';
+
+import '../../../home/sidemenu.dart';
+import 'bookmarklist.dart';
 
 class BookMark extends StatelessWidget {
   const BookMark({super.key});
@@ -8,6 +10,7 @@ class BookMark extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
+      drawer: const SideMenu(),
       body: SafeArea(
         child: Align(
           alignment: Alignment.topCenter,
