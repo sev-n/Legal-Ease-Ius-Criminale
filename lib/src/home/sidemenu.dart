@@ -93,7 +93,7 @@ class SideMenu extends StatelessWidget {
                     indent: 14.0,
                     endIndent: 19.0,
                   ),
-                  const SizedBox(height: 25),
+                  //const SizedBox(height: 25),
                   ListTile(
                     minLeadingWidth: 10.0,
                     leading: Image.asset('assets/images/bookmark.png',
