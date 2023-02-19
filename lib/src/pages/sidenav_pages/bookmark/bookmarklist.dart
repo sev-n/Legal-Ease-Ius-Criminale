@@ -20,9 +20,10 @@ class BookmarkList extends StatelessWidget {
       child: Row(
         children: [
           Expanded(
-            flex: 5,
+            flex: 10,
             child: Container(
-              height: 60,
+              height: 61,
+              width: 320.0,
               decoration: const BoxDecoration(
                 color: Color(0xffD9D9D9),
                 boxShadow: [
@@ -34,8 +35,8 @@ class BookmarkList extends StatelessWidget {
                   ),
                 ],
                 borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(10.0),
-                  bottomLeft: Radius.circular(10.0),
+                  topLeft: Radius.circular(3.0),
+                  bottomLeft: Radius.circular(3.0),
                 ),
               ),
               child: Padding(
@@ -59,7 +60,7 @@ class BookmarkList extends StatelessWidget {
           Expanded(
             flex: 1,
             child: Container(
-              height: 60,
+              height: 61,
               decoration: BoxDecoration(
                 color: color,
                 boxShadow: const [
@@ -71,8 +72,8 @@ class BookmarkList extends StatelessWidget {
                   ),
                 ],
                 borderRadius: const BorderRadius.only(
-                  topRight: Radius.circular(10.0),
-                  bottomRight: Radius.circular(10.0),
+                  topRight: Radius.circular(3.0),
+                  bottomRight: Radius.circular(3.0),
                 ),
               ),
             ),
