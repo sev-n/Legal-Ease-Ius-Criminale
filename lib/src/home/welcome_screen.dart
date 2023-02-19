@@ -78,7 +78,7 @@ class NextBtn extends StatelessWidget {
 
     return Align(
       alignment: const Alignment(0, 0.85),
-      child: Container(
+      child: SizedBox(
         width: 200,
         child: OutlinedButton(
           onPressed: () {
@@ -118,7 +118,7 @@ class GetStartedBtn extends StatelessWidget {
   Widget build(BuildContext context) {
     return Align(
       alignment: const Alignment(0, 0.85),
-      child: Container(
+      child: SizedBox(
         width: 200,
         child: ElevatedButton(
           onPressed: () {

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-// TODO: need to sort the text, its ugly.
 
 class WelcomePageOne extends StatelessWidget {
   const WelcomePageOne({super.key});
@@ -41,8 +40,8 @@ class WelcomePageOne extends StatelessWidget {
             child: Transform.rotate(
               angle: 0.066 * (3.14 / 180), // convert degrees to radians
               child: Container(
-                width: 200,
-                height: 210,
+                width: 180,
+                height: 190,
                 decoration: const BoxDecoration(
                   image: DecorationImage(
                       image: AssetImage('assets/welcomeScreen/image_1.png'),
@@ -53,25 +52,26 @@ class WelcomePageOne extends StatelessWidget {
           ),
           Positioned(
             top: screenHeight * 0.57,
-            left: screenWidth * 0.27,
+            left: screenWidth * 0.064,
             child: const Text(
-              "Great ideas come \n\t\t\t\t frome coffee.",
+              "Legal Ease Ius Criminale as your \ntrusted legal partner",
               style: TextStyle(
                 fontSize: 22,
                 fontFamily: "RobotoFlex",
-                fontWeight: FontWeight.bold,
+                fontWeight: FontWeight.w700,
                 color: Color(0xff0C2924),
               ),
             ),
           ),
           Positioned(
             top: screenHeight * 0.66,
-            left: screenWidth * 0.10,
+            left: screenWidth * 0.064,
             child: const Text(
-              "\t\tThe cave yard from guadadum is back. \nDont replace it. The blue sky is tomorrow \n\t\t\t\t\t\t\t\t\tnight. Make some refreshment.",
+              "Offers you a law consultation whom you may \ncontact privately for your legal matter.",
               style: TextStyle(
+                fontWeight: FontWeight.w400,
                 fontSize: 16,
-                fontFamily: "RobotoFlex",
+                fontFamily: "Habibi",
                 color: Color(0xff0C2924),
               ),
             ),

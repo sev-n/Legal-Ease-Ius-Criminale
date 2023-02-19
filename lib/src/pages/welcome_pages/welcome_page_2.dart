@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-// TODO: need to sort the text, its ugly.
 
 class WelcomePageTwo extends StatelessWidget {
   const WelcomePageTwo({super.key});
@@ -37,8 +36,8 @@ class WelcomePageTwo extends StatelessWidget {
               ),
             ),
             Positioned(
-              top: screenHeight * 0.30,
-              right: screenWidth * 0.06,
+              top: screenHeight * 0.25,
+              left: screenWidth * 0.061,
               child: Container(
                 width: 210,
                 height: 210,
@@ -50,30 +49,31 @@ class WelcomePageTwo extends StatelessWidget {
               ),
             ),
             Positioned(
-              top: screenHeight * 0.20,
-              left: screenWidth * 0.06,
-              child: const Text(
-                "Make a \ngood \ndecision in \nlife.",
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 20,
-                  fontFamily: "RobotoFlex",
-                  color: Color(0xff0C2924),
-                ),
+            top: screenHeight * 0.57,
+            left: screenWidth *0.058,
+            child: const Text(
+              "Free Legal Advice and Resources \nfor all",
+              style: TextStyle(
+                fontSize: 22,
+                fontFamily: "RobotoFlex",
+                fontWeight: FontWeight.w700,
+                color: Color(0xff0C2924),
               ),
             ),
-            Positioned(
-              top: screenHeight * 0.608,
-              right: screenWidth * 0.03,
-              child: const Text(
-                "The cave yard from guadadum is \nback. Dont replace it. The blue sky \nis tomorrow night. ",
-                style: TextStyle(
-                  fontSize: 15,
-                  fontFamily: "RobotoFlex",
-                  color: Color(0xff0C2924),
-                ),
+          ),
+          Positioned(
+            top: screenHeight * 0.66,
+            left: screenWidth * 0.058,
+            child: const Text(
+              "Whether you need help with legal issue, have a \nquestion about the law, or need legal document \npreparation, our app is here to help.",
+              style: TextStyle(
+                fontWeight: FontWeight.w400,
+                fontSize: 16,
+                fontFamily: "Habibi",
+                color: Color(0xff0C2924),
               ),
             ),
+          ),
           ],
         ),
       );
