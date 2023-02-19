@@ -51,7 +51,7 @@ class _WelcomePageState extends State<WelcomePage> {
               alignment: const Alignment(0, 0.65),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: const <Widget>[
+                children: const [
                   // page controller
 
                   PageIndicator(),
@@ -72,38 +72,41 @@ class NextBtn extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Positioned(
-        bottom: MediaQuery.of(context).size.height * 0.08,
-        right: MediaQuery.of(context).size.width * 0.22,
-        child: SizedBox(
-          width: 200,
-          child: OutlinedButton(
-            onPressed: () {
-              _controller.nextPage(
-                  duration: const Duration(milliseconds: 500),
-                  curve: Curves.easeIn);
-            },
-            style: FilledButton.styleFrom(
-              side: const BorderSide(
-                width: 1,
-                color: Color(0xff0C2924),
-              ),
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(30.0),
-              ),
-              foregroundColor: Colors.black,
+    // top: 625,
+    // left: 80,
+
+    return Align(
+      alignment: const Alignment(0, 0.85),
+      child: Container(
+        width: 200,
+        child: OutlinedButton(
+          onPressed: () {
+            _controller.nextPage(
+                duration: const Duration(milliseconds: 500),
+                curve: Curves.easeIn);
+          },
+          style: FilledButton.styleFrom(
+            side: const BorderSide(
+              width: 1,
+              color: Color(0xff0C2924),
             ),
-            child: const Text(
-              "Next",
-              style: TextStyle(
-                fontSize: 18,
-                fontWeight: FontWeight.w500,
-                fontFamily: "RobotoFlex",
-                color: Color(0xff0C2924),
-              ),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(30.0),
+            ),
+            foregroundColor: Colors.black,
+          ),
+          child: const Text(
+            "Next",
+            style: TextStyle(
+              fontSize: 18,
+              fontWeight: FontWeight.w500,
+              fontFamily: "RobotoFlex",
+              color: Color(0xff0C2924),
             ),
           ),
-        ));
+        ),
+      ),
+    );
   }
 }
 
@@ -112,10 +115,9 @@ class GetStartedBtn extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Positioned(
-      bottom: MediaQuery.of(context).size.height * 0.08,
-      right: MediaQuery.of(context).size.width * 0.22,
-      child: SizedBox(
+    return Align(
+      alignment: const Alignment(0, 0.85),
+      child: Container(
         width: 200,
         child: ElevatedButton(
           onPressed: () {

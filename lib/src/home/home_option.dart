@@ -14,22 +14,23 @@ TextEditingController _textEditingController = TextEditingController();
     double screenWidth = MediaQuery.of(context).size.width;
     FocusScopeNode textFieldFocus = FocusScope.of(context);
     
-    return Scaffold(
-      drawerScrimColor: Colors.black.withOpacity(0.3),
-      resizeToAvoidBottomInset: false,
-      drawer: const SideMenu(),
-      body: SafeArea(
-        child: Align(
-          alignment: Alignment.center,
-          child: Stack(
-            children: [
-              GestureDetector(
-                onTap: () {
-                  if (!textFieldFocus.hasPrimaryFocus) {
-                    textFieldFocus.unfocus();
-                  }
-                },
-                child: Container(
+    return GestureDetector(
+      onTap:(){
+
+        if (!textFieldFocus.hasPrimaryFocus) {
+          textFieldFocus.unfocus();
+        }
+      },
+      child: Scaffold(
+        drawerScrimColor: Colors.black.withOpacity(0.3),
+        resizeToAvoidBottomInset: false,
+        drawer: const SideMenu(),
+        body: SafeArea(
+          child: Align(
+            alignment: Alignment.center,
+            child: Stack(
+              children: [
+                Container(
                     height: screenHeight,
                     width: screenWidth,
                     decoration: const BoxDecoration(
@@ -109,7 +110,7 @@ TextEditingController _textEditingController = TextEditingController();
                             ),
                           ),
                         ),
-
+    
                         // !Alert: uncomment for old side bar and comment the new side bar
                         // Positioned(
                         //   top: 20,
@@ -138,7 +139,7 @@ TextEditingController _textEditingController = TextEditingController();
                         //     },
                         //   ),
                         // ),
-
+    
                         // !Alert this is for new side bar
                         Positioned(
                           top: 20,
@@ -163,13 +164,16 @@ TextEditingController _textEditingController = TextEditingController();
                                   size: 20,
                                   color: Color(0xCC0C2924),
                                 ),
-                                onPressed: () => Scaffold.of(context).openDrawer(),
+                                onPressed: () { 
+                                  Scaffold.of(context).openDrawer();
+                                  textFieldFocus.unfocus();
+                                  },
                               );
                             }
                           ),
                         ),
-
-
+    
+    
                         const Positioned(
                           top: 98,
                           right: 16,
@@ -178,16 +182,9 @@ TextEditingController _textEditingController = TextEditingController();
                         const GenerateBtn()
                       ],
                     )),
-              ),
-              //----------------------------------------------------------------------------------------------------
-              Positioned(
-                top: 210,
-                child: GestureDetector(
-                  onTap: () {
-                    if (!textFieldFocus.hasPrimaryFocus) {
-                      textFieldFocus.unfocus();
-                    }
-                  },
+                //----------------------------------------------------------------------------------------------------
+                Positioned(
+                  top: 210,
                   child: Container(
                     height: screenHeight - 300,
                     width: screenWidth,
@@ -219,17 +216,10 @@ TextEditingController _textEditingController = TextEditingController();
                     ),
                   ),
                 ),
-              ),
-
-              //----------------------------------------------------------------------------------------------------
-              Align(
-                alignment: Alignment.bottomCenter,
-                child: GestureDetector(
-                  onTap: () {
-                    if (!textFieldFocus.hasPrimaryFocus) {
-                      textFieldFocus.unfocus();
-                    }
-                  },
+    
+                //----------------------------------------------------------------------------------------------------
+                Align(
+                  alignment: Alignment.bottomCenter,
                   child: Container(
                     width: screenWidth,
                     height: screenHeight - 480,
@@ -269,39 +259,39 @@ TextEditingController _textEditingController = TextEditingController();
                     ),
                   ),
                 ),
-              ),
-
-              Positioned(
-                //top: 380,
-                top: 448,
-                child: Container(
-                  width: screenWidth,
-                  height: 40,
-                  decoration: const BoxDecoration(
-                    color: Color(0xFFFFFFFF),
-                    //color: Colors.blue,
-                    borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(10),
-                      topRight: Radius.circular(10),
+    
+                Positioned(
+                  //top: 380,
+                  top: 448,
+                  child: Container(
+                    width: screenWidth,
+                    height: 40,
+                    decoration: const BoxDecoration(
+                      color: Color(0xFFFFFFFF),
+                      //color: Colors.blue,
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(10),
+                        topRight: Radius.circular(10),
+                      ),
                     ),
-                  ),
-                  child: const Padding(
-                    padding: EdgeInsets.only(
-                      left: 14,
-                      top: 10,
-                    ),
-                    child: Text(
-                      "Highlights",
-                      style: TextStyle(
-                          fontWeight: FontWeight.w500,
-                          fontSize: 18,
-                          color: Color(0xff0C2924),
-                          fontFamily: "RobotoFlex"),
+                    child: const Padding(
+                      padding: EdgeInsets.only(
+                        left: 14,
+                        top: 10,
+                      ),
+                      child: Text(
+                        "Highlights",
+                        style: TextStyle(
+                            fontWeight: FontWeight.w500,
+                            fontSize: 18,
+                            color: Color(0xff0C2924),
+                            fontFamily: "RobotoFlex"),
+                      ),
                     ),
                   ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),
@@ -353,6 +343,7 @@ class __TextFieldState extends State<_TextField> {
       width: MediaQuery.of(context).size.width - 30,
       child: Center(
         child: TextField(
+          
           controller: _textEditingController,
           focusNode: _focusNode,
           minLines: 1,
