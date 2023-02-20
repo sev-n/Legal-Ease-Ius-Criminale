@@ -1,11 +1,29 @@
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import '../pages/welcome_pages/welcome_page_1.dart';
 import '../pages/welcome_pages/welcome_page_2.dart';
 import '../pages/welcome_pages/welcome_page_3.dart';
 import 'home_option.dart';
 
-// todo: need to review, might not be a good approach.
+class ServeAsBridge extends StatelessWidget {
+  final SharedPreferences prefs;
+
+  const ServeAsBridge({Key? key, required this.prefs}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    final hasShownWelcomePage = prefs.getBool('hasShownWelcomePage') ?? false;
+
+    if (hasShownWelcomePage) {
+      return const HomeOption();
+    } else {
+      prefs.setBool('hasShownWelcomePage', true);
+      return const WelcomePage();
+    }
+  }
+}
+
 final PageController _controller = PageController();
 
 class WelcomePage extends StatefulWidget {
@@ -122,9 +140,9 @@ class GetStartedBtn extends StatelessWidget {
         width: 200,
         child: ElevatedButton(
           onPressed: () {
-            Navigator.push(context, MaterialPageRoute(builder: (context) {
-              return const HomeOption();
-            }));
+            Navigator.of(context).pushReplacement(
+              MaterialPageRoute(builder: (context) => const HomeOption()),
+            );
           },
           style: ElevatedButton.styleFrom(
             backgroundColor: const Color(0xffB5CFBC),

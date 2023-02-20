@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'src/home/welcome_screen.dart';
 
 
-void main() {
+Future main() async {
    WidgetsFlutterBinding.ensureInitialized(); // making sure flutter framework is initialize before creating BuildContext.
    
   SystemChrome.setPreferredOrientations([
@@ -12,13 +13,16 @@ void main() {
     DeviceOrientation.portraitUp
   ]); // force to portrait orientation, it throws an exception once the app is on landscape mode.
   
-  runApp(const MyApp());
+  final prefs = await SharedPreferences.getInstance();
 
+  runApp(MyApp(prefs: prefs));
 
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  final SharedPreferences prefs;
+
+  const MyApp({super.key, required this.prefs});
 
   // This widget is the root of your application.
   @override
@@ -29,7 +33,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const WelcomePage(),
+      home: ServeAsBridge(prefs: prefs),
     );
   }
 }
