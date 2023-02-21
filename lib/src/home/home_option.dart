@@ -4,300 +4,297 @@ import 'sidemenu.dart';
 
 TextEditingController _textEditingController = TextEditingController();
 
-
-  class HomeOption extends StatelessWidget {
+class HomeOption extends StatefulWidget {
   const HomeOption({super.key});
+
+  @override
+  State<HomeOption> createState() => _HomeOptionState();
+}
+
+class _HomeOptionState extends State<HomeOption> {
+  Future<bool> _androidBackBtn() async {
+    return (await showDialog(
+          context: context,
+          builder: (context) => Theme(
+            data: ThemeData.from(
+              colorScheme: const ColorScheme.light(),
+            ),
+            child: AlertDialog(
+              title: const Text('Confirm Quit'),
+              content: const Text('Do you want to exit the App?'),
+              actions: <Widget>[
+                TextButton(
+                  onPressed: () =>
+                      Navigator.of(context).pop(false),
+                  child: const Text('No'),
+                ),
+                TextButton(
+                  onPressed: () =>
+                      Navigator.of(context).pop(true),
+                  child: const Text('Yes'),
+                ),
+              ],
+            ),
+          ),
+        )) ??
+        false;
+  }
 
   @override
   Widget build(BuildContext context) {
     double screenHeight = MediaQuery.of(context).size.height;
     double screenWidth = MediaQuery.of(context).size.width;
     FocusScopeNode textFieldFocus = FocusScope.of(context);
-    
-    return GestureDetector(
-      onTap:(){
 
-        if (!textFieldFocus.hasPrimaryFocus) {
-          textFieldFocus.unfocus();
-        }
-      },
-      child: Scaffold(
-        drawerScrimColor: Colors.black.withOpacity(0.3),
-        resizeToAvoidBottomInset: false,
-        drawer: const SideMenu(),
-        body: SafeArea(
-          child: Align(
-            alignment: Alignment.center,
-            child: Stack(
-              children: [
-                Container(
-                    height: screenHeight,
-                    width: screenWidth,
-                    decoration: const BoxDecoration(
-                      image: DecorationImage(
-                          image: AssetImage('assets/images/OPTIONAL.png'),
-                          fit: BoxFit.cover),
-                    ),
-                    // ** Insert content here!
-                    child: Stack(
-                      alignment: Alignment.center,
-                      children: [
-                        Positioned(
-                          top: 0,
-                          right: -15,
-                          child: Container(
-                            height: 210,
-                            width: 135,
-                            decoration: const BoxDecoration(
-                              image: DecorationImage(
-                                  image: AssetImage(
-                                      'assets/images/Ellipse 24.png'),
-                                  fit: BoxFit.cover),
-                            ),
-                          ),
-                        ),
-                        Positioned(
-                          top: 160,
-                          left: 80,
-                          child: Container(
-                            height: 190,
-                            width: 165,
-                            decoration: const BoxDecoration(
-                              image: DecorationImage(
-                                  image: AssetImage(
-                                      'assets/images/Ellipse 26.png'),
-                                  fit: BoxFit.cover),
-                            ),
-                          ),
-                        ),
-                        Positioned(
-                          top: 0,
-                          left: -6,
-                          child: Container(
-                            height: 160,
-                            width: 105,
-                            decoration: const BoxDecoration(
-                              image: DecorationImage(
-                                  image: AssetImage(
-                                      'assets/images/Ellipse 25.png'),
-                                  fit: BoxFit.cover),
-                            ),
-                          ),
-                        ),
-                        const Positioned(
-                          top: 15,
-                          child: Center(
-                            child: Text(
-                              "Legal Ease",
-                              style: TextStyle(
-                                fontSize: 20,
-                                fontFamily: "Questrial",
-                                color: Color(0xD90C2924),
+    return WillPopScope(
+      onWillPop: _androidBackBtn,
+      child: GestureDetector(
+        onTap: () {
+          if (!textFieldFocus.hasPrimaryFocus) {
+            textFieldFocus.unfocus();
+          }
+        },
+        child: Scaffold(
+          drawerScrimColor: Colors.black.withOpacity(0.3),
+          resizeToAvoidBottomInset: false,
+          drawer: const SideMenu(),
+          body: SafeArea(
+            child: Align(
+              alignment: Alignment.center,
+              child: Stack(
+                children: [
+                  Container(
+                      height: screenHeight,
+                      width: screenWidth,
+                      decoration: const BoxDecoration(
+                        image: DecorationImage(
+                            image: AssetImage('assets/images/OPTIONAL.png'),
+                            fit: BoxFit.cover),
+                      ),
+                      // ** Insert content here!
+                      child: Stack(
+                        alignment: Alignment.center,
+                        children: [
+                          Positioned(
+                            top: 0,
+                            right: -15,
+                            child: Container(
+                              height: 210,
+                              width: 135,
+                              decoration: const BoxDecoration(
+                                image: DecorationImage(
+                                    image: AssetImage(
+                                        'assets/images/Ellipse 24.png'),
+                                    fit: BoxFit.cover),
                               ),
                             ),
                           ),
-                        ),
-                        const Positioned(
-                          top: 35,
-                          child: Center(
-                            child: Text(
-                              "Ius Criminales",
-                              style: TextStyle(
-                                fontSize: 12,
-                                fontFamily: "Questrial",
-                                color: Color(0xD90C2924),
+                          Positioned(
+                            top: 160,
+                            left: 80,
+                            child: Container(
+                              height: 190,
+                              width: 165,
+                              decoration: const BoxDecoration(
+                                image: DecorationImage(
+                                    image: AssetImage(
+                                        'assets/images/Ellipse 26.png'),
+                                    fit: BoxFit.cover),
                               ),
                             ),
                           ),
-                        ),
-    
-                        // !Alert: uncomment for old side bar and comment the new side bar
-                        // Positioned(
-                        //   top: 20,
-                        //   left: 16,
-                        //   child: GestureDetector(
-                        //     child: Container(
-                        //       height: 25,
-                        //       width: 25,
-                        //       decoration: BoxDecoration(
-                        //         color: const Color(0xCCD9D9D9),
-                        //         borderRadius: BorderRadius.circular(5.0),
-                        //       ),
-                        //       child: const Icon(
-                        //         Icons.grid_view_rounded,
-                        //         size: 20,
-                        //         color: Color(0xCC0C2924),
-                        //       ),
-                        //     ),
-                        //     // const Sidenav()
-                        //     onTap: () {
-                        //       Get.to(
-                        //         () => const Sidenav(),
-                        //         transition: Transition.leftToRight,
-                        //         duration: const Duration(milliseconds: 370),
-                        //       );
-                        //     },
-                        //   ),
-                        // ),
-    
-                        // !Alert this is for new side bar
-                        Positioned(
-                          top: 20,
-                          left: 16,
-                          child: Container(
-                            height: 25,
-                            width: 25,
-                            decoration: BoxDecoration(
-                              color: const Color(0xCCD9D9D9),
-                              borderRadius: BorderRadius.circular(5.0),
+                          Positioned(
+                            top: 0,
+                            left: -6,
+                            child: Container(
+                              height: 160,
+                              width: 105,
+                              decoration: const BoxDecoration(
+                                image: DecorationImage(
+                                    image: AssetImage(
+                                        'assets/images/Ellipse 25.png'),
+                                    fit: BoxFit.cover),
+                              ),
                             ),
                           ),
-                        ),
-                        Positioned(
-                          top: 9,
-                          left: 5,
-                          child: Builder(
-                            builder: (context) {
+                          const Positioned(
+                            top: 15,
+                            child: Center(
+                              child: Text(
+                                "Legal Ease",
+                                style: TextStyle(
+                                  fontSize: 20,
+                                  fontFamily: "Questrial",
+                                  color: Color(0xD90C2924),
+                                ),
+                              ),
+                            ),
+                          ),
+                          const Positioned(
+                            top: 35,
+                            child: Center(
+                              child: Text(
+                                "Ius Criminales",
+                                style: TextStyle(
+                                  fontSize: 12,
+                                  fontFamily: "Questrial",
+                                  color: Color(0xD90C2924),
+                                ),
+                              ),
+                            ),
+                          ),
+                          Positioned(
+                            top: 20,
+                            left: 16,
+                            child: Container(
+                              height: 25,
+                              width: 25,
+                              decoration: BoxDecoration(
+                                color: const Color(0xCCD9D9D9),
+                                borderRadius: BorderRadius.circular(5.0),
+                              ),
+                            ),
+                          ),
+                          Positioned(
+                            top: 9,
+                            left: 5,
+                            child: Builder(builder: (context) {
                               return IconButton(
                                 icon: const Icon(
                                   Icons.grid_view_rounded,
                                   size: 20,
                                   color: Color(0xCC0C2924),
                                 ),
-                                onPressed: () { 
+                                onPressed: () {
                                   Scaffold.of(context).openDrawer();
                                   textFieldFocus.unfocus();
-                                  },
+                                },
                               );
-                            }
+                            }),
                           ),
-                        ),
-    
-    
-                        const Positioned(
-                          top: 98,
-                          right: 16,
-                          child: _TextField(),
-                        ),
-                        const GenerateBtn()
-                      ],
-                    )),
-                //----------------------------------------------------------------------------------------------------
-                Positioned(
-                  top: 210,
-                  child: Container(
-                    height: screenHeight - 300,
-                    width: screenWidth,
-                    decoration: BoxDecoration(
-                      color: const Color(0xE6FFFFFF),
-                      borderRadius: BorderRadius.circular(10.0),
-                    ),
-                    // ** Insert content here!
-                    child: Stack(
-                      alignment: Alignment.center,
-                      children: const [
-                        Positioned(
-                          top: 10,
-                          left: 13,
-                          child: Text(
-                            "Categories",
-                            style: TextStyle(
-                                fontWeight: FontWeight.w500,
-                                fontSize: 18,
-                                color: Color(0xff0C2924),
-                                fontFamily: "RobotoFlex"),
+                          const Positioned(
+                            top: 98,
+                            right: 16,
+                            child: _TextField(),
                           ),
-                        ),
-                        FirstRowBtn(),
-                        SecondRowBtn(),
-                        FirstRowIcon(),
-                        SecondRowIcon()
-                      ],
-                    ),
-                  ),
-                ),
-    
-                //----------------------------------------------------------------------------------------------------
-                Align(
-                  alignment: Alignment.bottomCenter,
-                  child: Container(
-                    width: screenWidth,
-                    height: screenHeight - 480,
-                    decoration: const BoxDecoration(
-                      color: Color(0xFFFFFFFF),
-                      borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(10),
-                        topRight: Radius.circular(10),
+                          const GenerateBtn()
+                        ],
+                      )),
+                  //----------------------------------------------------------------------------------------------------
+                  Positioned(
+                    top: 210,
+                    child: Container(
+                      height: screenHeight - 300,
+                      width: screenWidth,
+                      decoration: BoxDecoration(
+                        color: const Color(0xE6FFFFFF),
+                        borderRadius: BorderRadius.circular(10.0),
                       ),
-                    ),
-                    // ** Insert content here!
-                    child: Padding(
-                      padding: const EdgeInsets.only(
-                        left: 15.0,
-                        right: 15.0,
-                        top: 45.0,
-                      ),
-                      child: ListView(
+                      // ** Insert content here!
+                      child: Stack(
+                        alignment: Alignment.center,
                         children: const [
-                          HighlightsContent(),
-                          HighlightsContent(),
-                          HighlightsContent(),
-                          HighlightsContent(),
-                          HighlightsContent(),
-                          HighlightsContent(),
-                          HighlightsContent(),
-                          HighlightsContent(),
-                          HighlightsContent(),
-                          HighlightsContent(),
-                          HighlightsContent(),
-                          HighlightsContent(),
-                          HighlightsContent(),
-                          HighlightsContent(),
-                          HighlightsContent(),
+                          Positioned(
+                            top: 10,
+                            left: 13,
+                            child: Text(
+                              "Categories",
+                              style: TextStyle(
+                                  fontWeight: FontWeight.w500,
+                                  fontSize: 18,
+                                  color: Color(0xff0C2924),
+                                  fontFamily: "RobotoFlex"),
+                            ),
+                          ),
+                          FirstRowBtn(),
+                          SecondRowBtn(),
+                          FirstRowIcon(),
+                          SecondRowIcon()
                         ],
                       ),
                     ),
                   ),
-                ),
-    
-                Positioned(
-                  //top: 380,
-                  top: 448,
-                  child: Container(
-                    width: screenWidth,
-                    height: 40,
-                    decoration: const BoxDecoration(
-                      color: Color(0xFFFFFFFF),
-                      //color: Colors.blue,
-                      borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(10),
-                        topRight: Radius.circular(10),
+
+                  //----------------------------------------------------------------------------------------------------
+                  Align(
+                    alignment: Alignment.bottomCenter,
+                    child: Container(
+                      width: screenWidth,
+                      height: screenHeight - 480,
+                      decoration: const BoxDecoration(
+                        color: Color(0xFFFFFFFF),
+                        borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(10),
+                          topRight: Radius.circular(10),
+                        ),
                       ),
-                    ),
-                    child: const Padding(
-                      padding: EdgeInsets.only(
-                        left: 14,
-                        top: 10,
-                      ),
-                      child: Text(
-                        "Highlights",
-                        style: TextStyle(
-                            fontWeight: FontWeight.w500,
-                            fontSize: 18,
-                            color: Color(0xff0C2924),
-                            fontFamily: "RobotoFlex"),
+                      // ** Insert content here!
+                      child: Padding(
+                        padding: const EdgeInsets.only(
+                          left: 15.0,
+                          right: 15.0,
+                          top: 45.0,
+                        ),
+                        child: ListView(
+                          children: const [
+                            HighlightsContent(),
+                            HighlightsContent(),
+                            HighlightsContent(),
+                            HighlightsContent(),
+                            HighlightsContent(),
+                            HighlightsContent(),
+                            HighlightsContent(),
+                            HighlightsContent(),
+                            HighlightsContent(),
+                            HighlightsContent(),
+                            HighlightsContent(),
+                            HighlightsContent(),
+                            HighlightsContent(),
+                            HighlightsContent(),
+                            HighlightsContent(),
+                          ],
+                        ),
                       ),
                     ),
                   ),
-                ),
-              ],
+
+                  Positioned(
+                    //top: 380,
+                    top: 448,
+                    child: Container(
+                      width: screenWidth,
+                      height: 40,
+                      decoration: const BoxDecoration(
+                        color: Color(0xFFFFFFFF),
+                        //color: Colors.blue,
+                        borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(10),
+                          topRight: Radius.circular(10),
+                        ),
+                      ),
+                      child: const Padding(
+                        padding: EdgeInsets.only(
+                          left: 14,
+                          top: 10,
+                        ),
+                        child: Text(
+                          "Highlights",
+                          style: TextStyle(
+                              fontWeight: FontWeight.w500,
+                              fontSize: 18,
+                              color: Color(0xff0C2924),
+                              fontFamily: "RobotoFlex"),
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
         ),
       ),
     );
-
-    
   }
 }
 
@@ -343,7 +340,6 @@ class __TextFieldState extends State<_TextField> {
       width: MediaQuery.of(context).size.width - 30,
       child: Center(
         child: TextField(
-          
           controller: _textEditingController,
           focusNode: _focusNode,
           minLines: 1,
@@ -435,7 +431,3 @@ class HighlightsContent extends StatelessWidget {
     );
   }
 }
-
-
-
- 
