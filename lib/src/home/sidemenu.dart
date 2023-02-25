@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../pages/sidenav_pages/about_us.dart';
 import '../pages/sidenav_pages/bookmark/bookmark.dart';
 import '../pages/sidenav_pages/helpcenter.dart';
 import 'home_option.dart';
@@ -168,7 +169,14 @@ class SideMenu extends StatelessWidget {
                       size: 15,
                       color: Colors.black,
                     ),
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const AboutUs(),
+                        ),
+                      );
+                    },
                   ),
                   const Divider(
                     height: 0.9,
