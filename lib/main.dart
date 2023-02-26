@@ -33,7 +33,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: ServeAsBridge(prefs: prefs),
+      home: OneTimeWelcomePage(prefs: prefs),
     );
   }
 }
