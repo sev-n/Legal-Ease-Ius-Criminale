@@ -6,10 +6,10 @@ import '../pages/welcome_pages/welcome_page_2.dart';
 import '../pages/welcome_pages/welcome_page_3.dart';
 import 'home_option.dart';
 
-class ServeAsBridge extends StatelessWidget {
+class OneTimeWelcomePage extends StatelessWidget {
   final SharedPreferences prefs;
 
-  const ServeAsBridge({Key? key, required this.prefs}) : super(key: key);
+  const OneTimeWelcomePage({Key? key, required this.prefs}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
