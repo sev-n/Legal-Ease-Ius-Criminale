@@ -57,6 +57,7 @@ class BookMark extends StatelessWidget {
                     Positioned(
                       top: (100 / MediaQuery.of(context).size.height) * MediaQuery.of(context).size.height,
                       child: IconButton(
+                        tooltip: "Back",
                         icon: const Icon(
                           Icons.arrow_back,
                           size: 22,

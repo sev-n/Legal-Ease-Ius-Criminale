@@ -45,17 +45,19 @@ class HelpCenter extends StatelessWidget {
                       ),
                     ),
                     Positioned(
-                      top: (100 / MediaQuery.of(context).size.height) * MediaQuery.of(context).size.height,
+                      top: (100 / MediaQuery.of(context).size.height) *
+                          MediaQuery.of(context).size.height,
                       child: IconButton(
-                            icon: const Icon(
-                              Icons.arrow_back,
-                              size: 22,
-                              color: Color(0xff0C2924),
-                            ),
-                            onPressed: () {
-                              Navigator.pop(context);
-                            },
-                          ),
+                        tooltip: "Back",
+                        icon: const Icon(
+                          Icons.arrow_back,
+                          size: 22,
+                          color: Color(0xff0C2924),
+                        ),
+                        onPressed: () {
+                          Navigator.pop(context);
+                        },
+                      ),
                     ),
                   ],
                 ),
