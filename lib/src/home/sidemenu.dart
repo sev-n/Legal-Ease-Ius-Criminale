@@ -5,8 +5,15 @@ import '../pages/sidenav_pages/bookmark/bookmark.dart';
 import '../pages/sidenav_pages/helpcenter.dart';
 import 'home_option.dart';
 
-class SideMenu extends StatelessWidget {
-  const SideMenu({Key? key}) : super(key: key);
+class SideMenu extends StatefulWidget {
+  const SideMenu({super.key});
+
+  @override
+  State<SideMenu> createState() => _SideMenuState();
+}
+
+class _SideMenuState extends State<SideMenu> {
+  bool selectedItem = false;
 
   // TODO: side menu bar incomplete.
   @override
@@ -81,11 +88,11 @@ class SideMenu extends StatelessWidget {
                       ),
                     ),
                     onTap: () {
-                      Navigator.of(context).push(
-                        MaterialPageRoute(
-                          builder: (_) => const HomeOption(),
-                        ),
-                      );
+                      Navigator.of(context).pushAndRemoveUntil(
+                          MaterialPageRoute(
+                            builder: (context) => const HomeOption(),
+                          ),
+                          (route) => route.isFirst);
                     },
                   ),
                   const Divider(
@@ -113,12 +120,11 @@ class SideMenu extends StatelessWidget {
                       color: Colors.black,
                     ),
                     onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => const BookMark(),
-                        ),
-                      );
+                      Navigator.of(context).pushAndRemoveUntil(
+                          MaterialPageRoute(
+                            builder: (context) => const BookMark(),
+                          ),
+                          (route) => route.isFirst);
                     },
                   ),
                   const Divider(
@@ -170,12 +176,11 @@ class SideMenu extends StatelessWidget {
                       color: Colors.black,
                     ),
                     onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => const AboutUs(),
-                        ),
-                      );
+                      Navigator.of(context).pushAndRemoveUntil(
+                          MaterialPageRoute(
+                            builder: (context) => const AboutUs(),
+                          ),
+                          (route) => route.isFirst);
                     },
                   ),
                   const Divider(
@@ -202,12 +207,11 @@ class SideMenu extends StatelessWidget {
                       color: Colors.black,
                     ),
                     onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => const HelpCenter(),
-                        ),
-                      );
+                      Navigator.of(context).pushAndRemoveUntil(
+                          MaterialPageRoute(
+                            builder: (context) => const HelpCenter(),
+                          ),
+                          (route) => route.isFirst);
                     },
                   ),
                   const Divider(
