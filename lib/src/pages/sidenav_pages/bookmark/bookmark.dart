@@ -22,38 +22,50 @@ class BookMark extends StatelessWidget {
                   color: Color(0xff97a294),
                 ),
                 // !alert insert items here
-                child: Padding(
-                  padding: const EdgeInsets.only(top: 20, left: 20),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: const [
-                      Text(
-                        'Your bookmark',
-                        style: TextStyle(
-                          fontSize: 24,
-                          fontWeight: FontWeight.bold,
+                child: Stack(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(top: 60, left: 45),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: const [
+                          Text(
+                            'Your bookmark',
+                            style: TextStyle(
+                              fontSize: 25,
+                              fontWeight: FontWeight.w700,
+                              color: Color(0xff0C2924),
+                              fontFamily: 'RobotoFlex',
+                            ),
+                          ),
+                          Text(
+                            'Saved articles',
+                            style: TextStyle(
+                              fontSize: 13,
+                              fontWeight: FontWeight.w400,
+                              color: Color(0xff0C2924),
+                              fontFamily: 'RobotoFlex',
+                            ),
+                          ),
+                          SizedBox(
+                            height: 18,
+                          ),
+                        ],
+                      ),
+                    ),
+                    const Positioned(
+                      top: 115,
+                      child: Padding(
+                        padding: EdgeInsets.only(left: 10),
+                        child: Icon(
+                          Icons.arrow_back,
+                          size: 22,
                           color: Color(0xff0C2924),
                         ),
                       ),
-                      Text(
-                        'Saved articles',
-                        style: TextStyle(
-                          fontSize: 12,
-                          fontWeight: FontWeight.bold,
-                          color: Color(0xff0C2924),
-                        ),
-                      ),
-                      SizedBox(
-                        height: 18,
-                      ),
-                      Icon(
-                        Icons.arrow_back,
-                        size: 22,
-                        color: Color(0xff0C2924),
-                      ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
               ),
 
