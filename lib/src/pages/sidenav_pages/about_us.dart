@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-
 
 class AboutUs extends StatefulWidget {
   const AboutUs({super.key});
@@ -10,84 +8,20 @@ class AboutUs extends StatefulWidget {
 }
 
 class _AboutUsState extends State<AboutUs> {
-  bool _isAppBarVisible = true;
-  ScrollController scrollController = ScrollController();
-
-  @override
-  void initState() {
-    super.initState();
-    scrollController.addListener(() {
-      if (scrollController.position.userScrollDirection ==
-              ScrollDirection.reverse &&
-          _isAppBarVisible) {
-        setState(() {
-          _isAppBarVisible = false;
-        });
-      }
-      if (scrollController.position.userScrollDirection ==
-              ScrollDirection.forward &&
-          !_isAppBarVisible) {
-        setState(() {
-          _isAppBarVisible = true;
-        });
-      }
-    });
-  }
-
-  @override
-  void dispose() {
-    scrollController.removeListener(() {});
-    super.dispose();
-  }
-
   @override
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
     double screenHeight = MediaQuery.of(context).size.height;
-    return SafeArea(
-      child: Scaffold(
-        backgroundColor: Colors.transparent,
-        appBar: PreferredSize(
-          preferredSize: const Size.fromHeight(kToolbarHeight),
-          child: AnimatedContainer(
-            duration: const Duration(milliseconds: 500),
-            height: _isAppBarVisible ? kToolbarHeight : 0.0,
-            child: AppBar(
-              backgroundColor: const Color(0xffF9F9F9),
-              elevation: 0,
-              leading: Padding(
-                padding: const EdgeInsets.only(top: 10.0),
-                child: IconButton(
-                  icon: const Icon(
-                    Icons.menu,
-                    color: Color(0xff0C2924),
-                  ),
-                  onPressed: () {},
-                ),
-              ),
-              title: Align(
-                alignment: const Alignment(1.11, 0.0),
-                child: Padding(
-                  padding: const EdgeInsets.only(top: 14.0),
-                  child: Image.asset(
-                    'assets/images/black_logo.png',
-                    width: (60 / screenWidth) * screenWidth,
-                    height: (60 / screenHeight) * screenHeight,
-                  ),
-                ),
-              ),
-            ),
-          ),
-        ),
-        body: SingleChildScrollView(
-          controller: scrollController,
+
+    Widget content() => SliverToBoxAdapter(
           child: Container(
-            width: screenWidth,
-            height: (1050 / screenHeight) * screenHeight,
+            width: MediaQuery.of(context).size.width,
+            height: (1050 / MediaQuery.of(context).size.height) *
+                MediaQuery.of(context).size.height,
             decoration: const BoxDecoration(
               image: DecorationImage(
                   image: AssetImage('assets/images/bg_about.png'),
-                  fit: BoxFit.fill),
+                  fit: BoxFit.cover),
             ),
             child: Stack(
               children: [
@@ -98,8 +32,7 @@ class _AboutUsState extends State<AboutUs> {
                     height: (310 / screenHeight) * screenHeight,
                     decoration: const BoxDecoration(
                       image: DecorationImage(
-                        image:
-                            AssetImage('assets/images/Ellipse_1_about.png'),
+                        image: AssetImage('assets/images/Ellipse_1_about.png'),
                       ),
                     ),
                   ),
@@ -112,8 +45,7 @@ class _AboutUsState extends State<AboutUs> {
                     height: (640 / screenHeight) * screenHeight,
                     decoration: const BoxDecoration(
                       image: DecorationImage(
-                        image:
-                            AssetImage('assets/images/Ellipse_2_about.png'),
+                        image: AssetImage('assets/images/Ellipse_2_about.png'),
                       ),
                     ),
                   ),
@@ -121,8 +53,73 @@ class _AboutUsState extends State<AboutUs> {
               ],
             ),
           ),
+        );
+
+    return Scaffold(
+      body: SafeArea(
+        child: CustomScrollView(
+          slivers: [
+            SliverAppBar(
+              backgroundColor: Colors.grey,
+              elevation: 0,
+              pinned: true,
+              flexibleSpace: FlexibleSpaceBar(
+                title: const Text("About Us"),
+                centerTitle: true,
+                background: Container(
+                  decoration: const BoxDecoration(
+                    image: DecorationImage(
+                        image: AssetImage('assets/images/1.png'),
+                        fit: BoxFit.fill),
+                  ),
+                ),
+              ),
+              title: Align(
+                alignment: const Alignment(
+                  1.11,
+                  0.0,
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.only(top: 14.0),
+                  child: Image.asset(
+                    'assets/images/black_logo.png',
+                    width: (60 / screenWidth) * screenWidth,
+                    height: (60 / screenHeight) * screenHeight,
+                  ),
+                ),
+              ),
+              expandedHeight: 200,
+              floating: true,
+              snap: false,
+            ),
+            content(),
+
+          ],
         ),
       ),
     );
   }
 }
+
+// ListView.builder(
+//           itemCount: 10,
+//           shrinkWrap: true,
+//           primary: false,
+//           itemBuilder: (BuildContext context, int index) {
+//             return Container(
+//               height: 100,
+//               width: double.infinity,
+//               margin: const EdgeInsets.all(10),
+//               decoration: BoxDecoration(
+//                 color: Colors.grey[300],
+//                 borderRadius: BorderRadius.circular(10),
+//               ),
+//               child: Center(
+//                 child: Text(
+//                   "Item $index",
+//                   style: const TextStyle(fontSize: 20),
+//                 ),
+//               ),
+//             );
+//           },
+//         ),
