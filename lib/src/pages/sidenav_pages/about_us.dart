@@ -16,8 +16,7 @@ class _AboutUsState extends State<AboutUs> {
     Widget content() => SliverToBoxAdapter(
           child: Container(
             width: MediaQuery.of(context).size.width,
-            height: (1050 / MediaQuery.of(context).size.height) *
-                MediaQuery.of(context).size.height,
+            height: (1050 / screenHeight) * screenHeight,
             decoration: const BoxDecoration(
               image: DecorationImage(
                   image: AssetImage('assets/images/bg_about.png'),
@@ -50,6 +49,34 @@ class _AboutUsState extends State<AboutUs> {
                     ),
                   ),
                 ),
+                Positioned(
+                  top: 520,
+                  left: 35,
+                  child: Container(
+                    width: 160,
+                    height: 125,
+                    decoration: const BoxDecoration(
+                      image: DecorationImage(
+                        image: AssetImage('assets/images/Ellipse_3_about.png'),
+                      ),
+                    ),
+                  ),
+                ),
+                // top: 321,
+                // left: 234,
+                Positioned(
+                  top: 321,
+                  left: 215,
+                  child: Container(
+                    width: 140,
+                    height: 120,
+                    decoration: const BoxDecoration(
+                      image: DecorationImage(
+                        image: AssetImage('assets/images/Ellipse_4_about.png'),
+                      ),
+                    ),
+                  ),
+                ),
               ],
             ),
           ),
@@ -60,12 +87,12 @@ class _AboutUsState extends State<AboutUs> {
         child: CustomScrollView(
           slivers: [
             SliverAppBar(
-              backgroundColor: Colors.grey,
+              backgroundColor: const Color(0xff8a968a),
               elevation: 0,
               pinned: true,
               flexibleSpace: FlexibleSpaceBar(
-                title: const Text("About Us"),
-                centerTitle: true,
+                // title: const Text("About Us"),
+                // centerTitle: true,
                 background: Container(
                   decoration: const BoxDecoration(
                     image: DecorationImage(
@@ -80,7 +107,7 @@ class _AboutUsState extends State<AboutUs> {
                   0.0,
                 ),
                 child: Padding(
-                  padding: const EdgeInsets.only(top: 14.0),
+                  padding: const EdgeInsets.only(top: 8.0),
                   child: Image.asset(
                     'assets/images/black_logo.png',
                     width: (60 / screenWidth) * screenWidth,
@@ -93,7 +120,6 @@ class _AboutUsState extends State<AboutUs> {
               snap: false,
             ),
             content(),
-
           ],
         ),
       ),
