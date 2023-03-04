@@ -44,15 +44,15 @@ class _HomeOptionState extends State<HomeOption> {
   Widget build(BuildContext context) {
     double screenHeight = MediaQuery.of(context).size.height;
     double screenWidth = MediaQuery.of(context).size.width;
-    FocusScopeNode textFieldFocus = FocusScope.of(context);
+    final FocusScopeNode textFieldFocus = FocusScope.of(context);
 
     return WillPopScope(
       onWillPop: _androidBackBtn,
       child: GestureDetector(
         onTap: () {
-          if (!textFieldFocus.hasPrimaryFocus) {
-            textFieldFocus.unfocus();
-          }
+          if (!textFieldFocus.hasPrimaryFocus && textFieldFocus.hasFocus) {
+          FocusManager.instance.primaryFocus?.unfocus();
+        }
         },
         child: Scaffold(
           drawerScrimColor: Colors.black.withOpacity(0.3),
