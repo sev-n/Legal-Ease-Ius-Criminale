@@ -62,8 +62,6 @@ class _AboutUsState extends State<AboutUs> {
                     ),
                   ),
                 ),
-                // top: 321,
-                // left: 234,
                 Positioned(
                   top: 321,
                   left: 215,
@@ -74,6 +72,43 @@ class _AboutUsState extends State<AboutUs> {
                       image: DecorationImage(
                         image: AssetImage('assets/images/Ellipse_4_about.png'),
                       ),
+                    ),
+                  ),
+                ),
+                const Positioned(
+                  top: 60,
+                  left: 25,
+                  child: Text.rich(
+                    TextSpan(
+                      text: 'A',
+                      style: TextStyle(
+                          fontFamily: 'RobotoFlex',
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20),
+                      children: <TextSpan>[
+                        TextSpan(
+                          text: ' ONE ',
+                          style: TextStyle(color: Color(0xff0C2924)),
+                        ),
+                        TextSpan(
+                          text: 'STEP \nAHEAD',
+                        ),
+                        TextSpan(
+                          text: ' FOR ',
+                          style: TextStyle(color: Color(0xff0C2924)),
+                        ),
+                        TextSpan(
+                          text: 'YOUR \nLEGAL',
+                        ),
+                        TextSpan(
+                          text: ' RIGHTS \nEASY ACCESS AND ',
+                          style: TextStyle(color: Color(0xff0C2924)),
+                        ),
+                        TextSpan(
+                          text: '\nHANDY',
+                        ),
+                      ],
                     ),
                   ),
                 ),
@@ -89,7 +124,7 @@ class _AboutUsState extends State<AboutUs> {
             SliverAppBar(
               backgroundColor: const Color(0xff8a968a),
               elevation: 0,
-              pinned: true,
+              //pinned: true,
               flexibleSpace: FlexibleSpaceBar(
                 // title: const Text("About Us"),
                 // centerTitle: true,
@@ -126,26 +161,3 @@ class _AboutUsState extends State<AboutUs> {
     );
   }
 }
-
-// ListView.builder(
-//           itemCount: 10,
-//           shrinkWrap: true,
-//           primary: false,
-//           itemBuilder: (BuildContext context, int index) {
-//             return Container(
-//               height: 100,
-//               width: double.infinity,
-//               margin: const EdgeInsets.all(10),
-//               decoration: BoxDecoration(
-//                 color: Colors.grey[300],
-//                 borderRadius: BorderRadius.circular(10),
-//               ),
-//               child: Center(
-//                 child: Text(
-//                   "Item $index",
-//                   style: const TextStyle(fontSize: 20),
-//                 ),
-//               ),
-//             );
-//           },
-//         ),
