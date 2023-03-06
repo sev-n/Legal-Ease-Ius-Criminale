@@ -105,33 +105,43 @@ class ContentButtons extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: const [
               Padding(
-                padding: EdgeInsets.only(right: 10.0, left: 2.0, top: 10.0),
+                padding: EdgeInsets.only(
+                  right: 10.0,
+                  left: 2.0,
+                  top: 10.0,
+                ),
                 child: Text(
                   "Traffic Offense",
                   style: TextStyle(
-                      fontWeight: FontWeight.bold,
+                      fontWeight: FontWeight.w600,
                       color: Color(0xCC0C2924),
                       fontSize: 12,
                       fontFamily: "RobotoFlex"),
                 ),
               ),
               Padding(
-                padding: EdgeInsets.only(left: 8.0, top: 10.0),
+                padding: EdgeInsets.only(
+                  left: 8.0,
+                  top: 10.0,
+                ),
                 child: Text(
                   "Against Person",
                   style: TextStyle(
-                      fontWeight: FontWeight.bold,
+                      fontWeight: FontWeight.w600,
                       color: Color(0xCC0C2924),
                       fontSize: 12,
                       fontFamily: "RobotoFlex"),
                 ),
               ),
               Padding(
-                padding: EdgeInsets.only(left: 8.0, top: 10.0),
+                padding: EdgeInsets.only(
+                  left: 8.0,
+                  top: 10.0,
+                ),
                 child: Text(
                   "Against Property",
                   style: TextStyle(
-                      fontWeight: FontWeight.bold,
+                      fontWeight: FontWeight.w600,
                       color: Color(0xCC0C2924),
                       fontSize: 12,
                       fontFamily: "RobotoFlex"),
@@ -240,33 +250,41 @@ class ContentButtons extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: const [
               Padding(
-                padding: EdgeInsets.only(right: 21.0, top: 10.0),
+                padding: EdgeInsets.only(
+                  right: 21.0,
+                  top: 10.0,
+                ),
                 child: Text(
                   "Statutory Rights",
                   style: TextStyle(
-                      fontWeight: FontWeight.bold,
+                      fontWeight: FontWeight.w600,
                       color: Color(0xCC0C2924),
                       fontSize: 12,
                       fontFamily: "RobotoFlex"),
                 ),
               ),
               Padding(
-                padding: EdgeInsets.only(right: 21.0, top: 10.0),
+                padding: EdgeInsets.only(
+                  right: 21.0,
+                  top: 10.0,
+                ),
                 child: Text(
                   "White Collar",
                   style: TextStyle(
-                      fontWeight: FontWeight.bold,
+                      fontWeight: FontWeight.w600,
                       color: Color(0xCC0C2924),
                       fontSize: 12,
                       fontFamily: "RobotoFlex"),
                 ),
               ),
               Padding(
-                padding: EdgeInsets.only(top: 10.0),
+                padding: EdgeInsets.only(
+                  top: 10.0,
+                ),
                 child: Text(
                   "Inchoate Crime",
                   style: TextStyle(
-                      fontWeight: FontWeight.bold,
+                      fontWeight: FontWeight.w600,
                       color: Color(0xCC0C2924),
                       fontSize: 12,
                       fontFamily: "RobotoFlex"),
