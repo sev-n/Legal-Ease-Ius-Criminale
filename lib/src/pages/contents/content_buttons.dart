@@ -173,7 +173,7 @@ class ContentButtons extends StatelessWidget {
                   child: SizedBox(
                     width: 25,
                     height: 25,
-                    child: Image.asset('assets/images/traffic_icon.png'),
+                    child: Image.asset('assets/images/rights_icon.png'),
                   ),
                 ),
               ),
@@ -196,7 +196,7 @@ class ContentButtons extends StatelessWidget {
                   child: SizedBox(
                     width: 25,
                     height: 25,
-                    child: Image.asset('assets/images/person_icon.png'),
+                    child: Image.asset('assets/images/collar_icon.png'),
                   ),
                 ),
               ),
@@ -219,7 +219,7 @@ class ContentButtons extends StatelessWidget {
                   child: SizedBox(
                     width: 25,
                     height: 25,
-                    child: Image.asset('assets/images/property_icon.png'),
+                    child: Image.asset('assets/images/crime_icon.png'),
                   ),
                 ),
               ),
