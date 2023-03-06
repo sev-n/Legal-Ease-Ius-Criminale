@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../pages/contents/content.dart';
+import '../pages/contents/content_buttons.dart';
 import 'sidemenu.dart';
 
 TextEditingController _textEditingController = TextEditingController();
@@ -194,22 +194,25 @@ class _HomeOptionState extends State<HomeOption> {
                       child: Stack(
                         alignment: Alignment.center,
                         children: const [
-                          Positioned(
-                            top: 10,
-                            left: 13,
-                            child: Text(
-                              "Categories",
-                              style: TextStyle(
-                                  fontWeight: FontWeight.w500,
-                                  fontSize: 18,
-                                  color: Color(0xff0C2924),
-                                  fontFamily: "RobotoFlex"),
+                          Align(
+                            alignment: Alignment.topLeft,
+                            child: Padding(
+                              padding: EdgeInsets.only(left: 14.0, top: 5.0),
+                              child: Text(
+                                "Categories",
+                                style: TextStyle(
+                                    fontWeight: FontWeight.w500,
+                                    fontSize: 18,
+                                    color: Color(0xff0C2924),
+                                    fontFamily: "RobotoFlex"),
+                              ),
                             ),
                           ),
-                          FirstRowBtn(),
-                          SecondRowBtn(),
-                          FirstRowIcon(),
-                          SecondRowIcon()
+                          // FirstRowBtn(),
+                          // SecondRowBtn(),
+                          // FirstRowIcon(),
+                          // SecondRowIcon()
+                          ContentButtons(),
                         ],
                       ),
                     ),

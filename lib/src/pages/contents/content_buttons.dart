@@ -1,189 +1,240 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
-import 'categories_contents/against_person.dart';
-import 'categories_contents/against_property.dart';
-import 'categories_contents/inchoate_crime.dart';
-import 'categories_contents/statutory_rights.dart';
-import 'categories_contents/traffic_offense.dart';
-import 'categories_contents/white_collar.dart';
-
-class ContentOne extends StatelessWidget {
-  const ContentOne({super.key});
+class ContentButtons extends StatelessWidget {
+  const ContentButtons({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      width: 80,
-      height: 80,
-      child: Material(
-        type: MaterialType.transparency,
-        child: InkWell(
-          borderRadius: BorderRadius.circular(15.0),
-          splashColor: Colors.black.withOpacity(0.3),
-          onTap: () {
-            Get.to(
-              () => const TrafficContent(),
-              transition: Transition.zoom,
-              duration: const Duration(milliseconds: 370),
-            );
-          },
-          child: IconButton(
-            icon: Image.asset('assets/images/content_box_one.png'),
-            onPressed: null,
+    return Column(
+      children: [
+        Padding(
+          padding: const EdgeInsets.only(
+            top: 29.0,
+            left: 20.0,
+            right: 20.0,
+          ),
+
+          // ** Box Content **
+
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              Container(
+                width: 65,
+                height: 65,
+                decoration: const BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage('assets/images/content_box_one.png'),
+                  ),
+                ),
+                child: Center(
+                  child: SizedBox(
+                    width: 25,
+                    height: 25,
+                    child: Image.asset('assets/images/traffic_icon.png'),
+                  ),
+                ),
+              ),
+              Container(
+                width: 65,
+                height: 65,
+                decoration: const BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage('assets/images/content_box_two.png'),
+                  ),
+                ),
+                child: Center(
+                  child: SizedBox(
+                    width: 25,
+                    height: 25,
+                    child: Image.asset('assets/images/person_icon.png'),
+                  ),
+                ),
+              ),
+              Container(
+                width: 65,
+                height: 65,
+                decoration: const BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage('assets/images/content_box_three.png'),
+                  ),
+                ),
+                child: Center(
+                  child: SizedBox(
+                    width: 25,
+                    height: 25,
+                    child: Image.asset('assets/images/property_icon.png'),
+                  ),
+                ),
+              ),
+            ],
           ),
         ),
-      ),
-    );
-  }
-}
 
-class ContentTwo extends StatelessWidget {
-  const ContentTwo({super.key});
+        // ** Box Content **
 
-  @override
-  Widget build(BuildContext context) {
-    return SizedBox(
-      width: 80,
-      height: 80,
-      child: Material(
-        type: MaterialType.transparency,
-        child: InkWell(
-          borderRadius: BorderRadius.circular(15.0),
-          splashColor: Colors.black.withOpacity(0.3),
-          onTap: () {
-            Get.to(
-              () => const PersonContent(),
-              transition: Transition.zoom,
-              duration: const Duration(milliseconds: 370),
-            );
-          },
-          child: IconButton(
-            icon: Image.asset('assets/images/content_box_two.png'),
-            onPressed: null,
+        // ** Text **
+
+        Padding(
+          padding: const EdgeInsets.only(
+            left: 20.0,
+            right: 20.0,
+          ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: const [
+              Padding(
+                padding: EdgeInsets.only(right: 10.0, left: 2.0, top: 10.0),
+                child: Text(
+                  "Traffic Offense",
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      color: Color(0xCC0C2924),
+                      fontSize: 12,
+                      fontFamily: "RobotoFlex"),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.only(left: 8.0, top: 10.0),
+                child: Text(
+                  "Against Person",
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      color: Color(0xCC0C2924),
+                      fontSize: 12,
+                      fontFamily: "RobotoFlex"),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.only(left: 8.0, top: 10.0),
+                child: Text(
+                  "Against Property",
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      color: Color(0xCC0C2924),
+                      fontSize: 12,
+                      fontFamily: "RobotoFlex"),
+                ),
+              ),
+            ],
           ),
         ),
-      ),
-    );
-  }
-}
 
-class ContentThree extends StatelessWidget {
-  const ContentThree({super.key});
+        // ** Text **
 
-  @override
-  Widget build(BuildContext context) {
-    return SizedBox(
-      width: 80,
-      height: 80,
-      child: Material(
-        type: MaterialType.transparency,
-        child: InkWell(
-          borderRadius: BorderRadius.circular(15.0),
-          splashColor: Colors.black.withOpacity(0.3),
-          onTap: () {
-            Get.to(
-              () => const PropertyContent(),
-              transition: Transition.zoom,
-              duration: const Duration(milliseconds: 370),
-            );
-          },
-          child: IconButton(
-            icon: Image.asset('assets/images/content_box_three.png'),
-            onPressed: null,
+        // ** Box Content **
+
+        Padding(
+          padding: const EdgeInsets.only(
+            top: 16.0,
+            left: 20.0,
+            right: 20.0,
+          ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              Container(
+                width: 65,
+                height: 65,
+                decoration: const BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage('assets/images/content_box_four.png'),
+                  ),
+                ),
+                child: Center(
+                  child: SizedBox(
+                    width: 25,
+                    height: 25,
+                    child: Image.asset('assets/images/traffic_icon.png'),
+                  ),
+                ),
+              ),
+              Container(
+                width: 65,
+                height: 65,
+                decoration: const BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage('assets/images/content_box_five.png'),
+                  ),
+                ),
+                child: Center(
+                  child: SizedBox(
+                    width: 25,
+                    height: 25,
+                    child: Image.asset('assets/images/person_icon.png'),
+                  ),
+                ),
+              ),
+              Container(
+                width: 65,
+                height: 65,
+                decoration: const BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage('assets/images/content_box_six.png'),
+                  ),
+                ),
+                child: Center(
+                  child: SizedBox(
+                    width: 25,
+                    height: 25,
+                    child: Image.asset('assets/images/property_icon.png'),
+                  ),
+                ),
+              ),
+            ],
           ),
         ),
-      ),
-    );
-  }
-}
 
-class ContentFour extends StatelessWidget {
-  const ContentFour({super.key});
+        // ** Box Content **
 
-  @override
-  Widget build(BuildContext context) {
-    return SizedBox(
-      width: 80,
-      height: 80,
-      child: Material(
-        type: MaterialType.transparency,
-        child: InkWell(
-          borderRadius: BorderRadius.circular(15.0),
-          splashColor: Colors.black.withOpacity(0.3),
-          onTap: () {
-            Get.to(
-              () => const RightsContent(),
-              transition: Transition.zoom,
-              duration: const Duration(milliseconds: 370),
-            );
-          },
-          child: IconButton(
-            icon: Image.asset('assets/images/content_box_four.png'),
-            onPressed: null,
+        // ** Text **
+
+        Padding(
+          padding: const EdgeInsets.only(
+            left: 20.0,
+            right: 20.0,
+          ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: const [
+              Padding(
+                padding: EdgeInsets.only(right: 21.0, top: 10.0),
+                child: Text(
+                  "Statutory Rights",
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      color: Color(0xCC0C2924),
+                      fontSize: 12,
+                      fontFamily: "RobotoFlex"),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.only(right: 21.0, top: 10.0),
+                child: Text(
+                  "White Collar",
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      color: Color(0xCC0C2924),
+                      fontSize: 12,
+                      fontFamily: "RobotoFlex"),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.only(top: 10.0),
+                child: Text(
+                  "Inchoate Crime",
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      color: Color(0xCC0C2924),
+                      fontSize: 12,
+                      fontFamily: "RobotoFlex"),
+                ),
+              ),
+            ],
           ),
         ),
-      ),
-    );
-  }
-}
-
-class ContentFive extends StatelessWidget {
-  const ContentFive({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return SizedBox(
-      width: 80,
-      height: 80,
-      child: Material(
-        type: MaterialType.transparency,
-        child: InkWell(
-          borderRadius: BorderRadius.circular(15.0),
-          splashColor: Colors.black.withOpacity(0.3),
-          onTap: () {
-            Get.to(
-              () => const CollarContent(),
-              transition: Transition.zoom,
-              duration: const Duration(milliseconds: 370),
-            );
-          },
-          child: IconButton(
-            icon: Image.asset('assets/images/content_box_five.png'),
-            onPressed: null,
-          ),
-        ),
-      ),
-    );
-  }
-}
-
-class ContentSix extends StatelessWidget {
-  const ContentSix({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return SizedBox(
-      width: 80,
-      height: 80,
-      child: Material(
-        type: MaterialType.transparency,
-        child: InkWell(
-          borderRadius: BorderRadius.circular(15.0),
-          splashColor: Colors.black.withOpacity(0.3),
-          onTap: () {
-            Get.to(
-              () => const CrimeContent(),
-              transition: Transition.zoom,
-              duration: const Duration(milliseconds: 370),
-            );
-          },
-          child: IconButton(
-            icon: Image.asset('assets/images/content_box_six.png'),
-            onPressed: null,
-          ),
-        ),
-      ),
+        // ** Text **
+      ],
     );
   }
 }
