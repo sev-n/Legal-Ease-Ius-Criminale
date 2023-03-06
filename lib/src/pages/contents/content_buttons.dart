@@ -22,8 +22,15 @@ class ContentButtons extends StatelessWidget {
               Container(
                 width: 65,
                 height: 65,
-                decoration: const BoxDecoration(
-                  image: DecorationImage(
+                decoration: BoxDecoration(
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black.withOpacity(0.2),
+                      blurRadius: 5,
+                      offset: const Offset(0, 3), // offset the shadow downwards
+                    ),
+                  ],
+                  image: const DecorationImage(
                     image: AssetImage('assets/images/content_box_one.png'),
                   ),
                 ),
@@ -38,8 +45,15 @@ class ContentButtons extends StatelessWidget {
               Container(
                 width: 65,
                 height: 65,
-                decoration: const BoxDecoration(
-                  image: DecorationImage(
+                decoration: BoxDecoration(
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black.withOpacity(0.2),
+                      blurRadius: 5,
+                      offset: const Offset(0, 3), // offset the shadow downwards
+                    ),
+                  ],
+                  image: const DecorationImage(
                     image: AssetImage('assets/images/content_box_two.png'),
                   ),
                 ),
@@ -54,8 +68,15 @@ class ContentButtons extends StatelessWidget {
               Container(
                 width: 65,
                 height: 65,
-                decoration: const BoxDecoration(
-                  image: DecorationImage(
+                decoration: BoxDecoration(
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black.withOpacity(0.2),
+                      blurRadius: 5,
+                      offset: const Offset(0, 3), // offset the shadow downwards
+                    ),
+                  ],
+                  image: const DecorationImage(
                     image: AssetImage('assets/images/content_box_three.png'),
                   ),
                 ),
@@ -136,8 +157,15 @@ class ContentButtons extends StatelessWidget {
               Container(
                 width: 65,
                 height: 65,
-                decoration: const BoxDecoration(
-                  image: DecorationImage(
+                decoration: BoxDecoration(
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black.withOpacity(0.2),
+                      blurRadius: 5,
+                      offset: const Offset(0, 3), // offset the shadow downwards
+                    ),
+                  ],
+                  image: const DecorationImage(
                     image: AssetImage('assets/images/content_box_four.png'),
                   ),
                 ),
@@ -152,8 +180,15 @@ class ContentButtons extends StatelessWidget {
               Container(
                 width: 65,
                 height: 65,
-                decoration: const BoxDecoration(
-                  image: DecorationImage(
+                decoration: BoxDecoration(
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black.withOpacity(0.2),
+                      blurRadius: 5,
+                      offset: const Offset(0, 3), // offset the shadow downwards
+                    ),
+                  ],
+                  image: const DecorationImage(
                     image: AssetImage('assets/images/content_box_five.png'),
                   ),
                 ),
@@ -168,8 +203,15 @@ class ContentButtons extends StatelessWidget {
               Container(
                 width: 65,
                 height: 65,
-                decoration: const BoxDecoration(
-                  image: DecorationImage(
+                decoration: BoxDecoration(
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black.withOpacity(0.2),
+                      blurRadius: 5,
+                      offset: const Offset(0, 3), // offset the shadow downwards
+                    ),
+                  ],
+                  image: const DecorationImage(
                     image: AssetImage('assets/images/content_box_six.png'),
                   ),
                 ),
