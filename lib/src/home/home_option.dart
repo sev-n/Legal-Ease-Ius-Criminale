@@ -24,13 +24,11 @@ class _HomeOptionState extends State<HomeOption> {
               content: const Text('Do you want to exit the App?'),
               actions: <Widget>[
                 TextButton(
-                  onPressed: () =>
-                      Navigator.of(context).pop(false),
+                  onPressed: () => Navigator.of(context).pop(false),
                   child: const Text('No'),
                 ),
                 TextButton(
-                  onPressed: () =>
-                      Navigator.of(context).pop(true),
+                  onPressed: () => Navigator.of(context).pop(true),
                   child: const Text('Yes'),
                 ),
               ],
@@ -51,8 +49,8 @@ class _HomeOptionState extends State<HomeOption> {
       child: GestureDetector(
         onTap: () {
           if (!textFieldFocus.hasPrimaryFocus && textFieldFocus.hasFocus) {
-          FocusManager.instance.primaryFocus?.unfocus();
-        }
+            FocusManager.instance.primaryFocus?.unfocus();
+          }
         },
         child: Scaffold(
           drawerScrimColor: Colors.black.withOpacity(0.3),
@@ -76,11 +74,11 @@ class _HomeOptionState extends State<HomeOption> {
                         alignment: Alignment.center,
                         children: [
                           Positioned(
-                            top: 0,
-                            right: -15,
+                            top: (0 / screenHeight) * screenHeight,
+                            right: (-15 / screenWidth) * screenWidth,
                             child: Container(
-                              height: 210,
-                              width: 135,
+                              height: (210 / screenHeight) * screenHeight,
+                              width: (135 / screenWidth) * screenWidth,
                               decoration: const BoxDecoration(
                                 image: DecorationImage(
                                     image: AssetImage(
@@ -90,11 +88,11 @@ class _HomeOptionState extends State<HomeOption> {
                             ),
                           ),
                           Positioned(
-                            top: 160,
-                            left: 80,
+                            top: (160 / screenHeight) * screenHeight,
+                            left: (80 / screenWidth) * screenWidth,
                             child: Container(
-                              height: 190,
-                              width: 165,
+                              height: (190 / screenHeight) * screenHeight,
+                              width: (165 / screenWidth) * screenWidth,
                               decoration: const BoxDecoration(
                                 image: DecorationImage(
                                     image: AssetImage(
@@ -104,11 +102,11 @@ class _HomeOptionState extends State<HomeOption> {
                             ),
                           ),
                           Positioned(
-                            top: 0,
-                            left: -6,
+                            top: (0 / screenHeight) * screenHeight,
+                            left: (-6 / screenWidth) * screenWidth,
                             child: Container(
-                              height: 160,
-                              width: 105,
+                              height: (160 / screenHeight) * screenHeight,
+                              width: (105 / screenWidth) * screenWidth,
                               decoration: const BoxDecoration(
                                 image: DecorationImage(
                                     image: AssetImage(
@@ -117,38 +115,38 @@ class _HomeOptionState extends State<HomeOption> {
                               ),
                             ),
                           ),
-                          const Positioned(
-                            top: 15,
+                          Positioned(
+                            top: (15 / screenHeight) * screenHeight,
                             child: Center(
                               child: Text(
                                 "Legal Ease",
                                 style: TextStyle(
-                                  fontSize: 20,
+                                  fontSize: (20 / screenWidth) * screenWidth,
                                   fontFamily: "Questrial",
-                                  color: Color(0xD90C2924),
-                                ),
-                              ),
-                            ),
-                          ),
-                          const Positioned(
-                            top: 35,
-                            child: Center(
-                              child: Text(
-                                "Ius Criminales",
-                                style: TextStyle(
-                                  fontSize: 12,
-                                  fontFamily: "Questrial",
-                                  color: Color(0xD90C2924),
+                                  color: const Color(0xD90C2924),
                                 ),
                               ),
                             ),
                           ),
                           Positioned(
-                            top: 20,
-                            left: 16,
+                            top: (35 / screenHeight) * screenHeight,
+                            child: Center(
+                              child: Text(
+                                "Ius Criminales",
+                                style: TextStyle(
+                                  fontSize: (12 / screenWidth) * screenWidth,
+                                  fontFamily: "Questrial",
+                                  color: const Color(0xD90C2924),
+                                ),
+                              ),
+                            ),
+                          ),
+                          Positioned(
+                            top: (20 / screenHeight) * screenHeight,
+                            left: (16 / screenWidth) * screenWidth,
                             child: Container(
-                              height: 25,
-                              width: 25,
+                              height: (25 / screenHeight) * screenHeight,
+                              width: (25 / screenWidth) * screenWidth,
                               decoration: BoxDecoration(
                                 color: const Color(0xCCD9D9D9),
                                 borderRadius: BorderRadius.circular(5.0),
@@ -156,14 +154,14 @@ class _HomeOptionState extends State<HomeOption> {
                             ),
                           ),
                           Positioned(
-                            top: 9,
-                            left: 5,
+                            top: (8.5 / screenHeight) * screenHeight,
+                            left: (4.5 / screenWidth) * screenWidth,
                             child: Builder(builder: (context) {
                               return IconButton(
-                                icon: const Icon(
+                                icon: Icon(
                                   Icons.grid_view_rounded,
-                                  size: 20,
-                                  color: Color(0xCC0C2924),
+                                  size: (20 / screenWidth) * screenWidth,
+                                  color: const Color(0xCC0C2924),
                                 ),
                                 onPressed: () {
                                   Scaffold.of(context).openDrawer();
@@ -182,7 +180,7 @@ class _HomeOptionState extends State<HomeOption> {
                       )),
                   //----------------------------------------------------------------------------------------------------
                   Positioned(
-                    top: 210,
+                    top: (210 / screenHeight) * screenHeight,
                     child: Container(
                       height: screenHeight - 300,
                       width: screenWidth,
@@ -193,17 +191,20 @@ class _HomeOptionState extends State<HomeOption> {
                       // ** Insert content here!
                       child: Stack(
                         alignment: Alignment.center,
-                        children: const [
+                        children: [
                           Align(
                             alignment: Alignment.topLeft,
                             child: Padding(
-                              padding: EdgeInsets.only(left: 14.0, top: 5.0),
+                              padding: EdgeInsets.only(
+                                left: (14.0 / screenWidth) * screenWidth,
+                                top: (5.0 / screenHeight) * screenHeight,
+                              ),
                               child: Text(
                                 "Categories",
                                 style: TextStyle(
                                     fontWeight: FontWeight.w500,
-                                    fontSize: 18,
-                                    color: Color(0xff0C2924),
+                                    fontSize: (18 / screenWidth) * screenWidth,
+                                    color: const Color(0xff0C2924),
                                     fontFamily: "RobotoFlex"),
                               ),
                             ),
@@ -212,7 +213,7 @@ class _HomeOptionState extends State<HomeOption> {
                           // SecondRowBtn(),
                           // FirstRowIcon(),
                           // SecondRowIcon()
-                          ContentButtons(),
+                          const ContentButtons(),
                         ],
                       ),
                     ),
@@ -233,10 +234,10 @@ class _HomeOptionState extends State<HomeOption> {
                       ),
                       // ** Insert content here!
                       child: Padding(
-                        padding: const EdgeInsets.only(
-                          left: 15.0,
-                          right: 15.0,
-                          top: 45.0,
+                        padding: EdgeInsets.only(
+                          left: (15.0 / screenWidth) * screenWidth,
+                          right: (15.0 / screenWidth) * screenWidth,
+                          top: (45.0 / screenHeight) * screenHeight,
                         ),
                         child: ListView(
                           children: const [
@@ -263,10 +264,10 @@ class _HomeOptionState extends State<HomeOption> {
 
                   Positioned(
                     //top: 380,
-                    top: 448,
+                    top: (448 / screenHeight) * screenHeight,
                     child: Container(
                       width: screenWidth,
-                      height: 40,
+                      height: (40 / screenHeight) * screenHeight,
                       decoration: const BoxDecoration(
                         color: Color(0xFFFFFFFF),
                         //color: Colors.blue,
@@ -275,17 +276,17 @@ class _HomeOptionState extends State<HomeOption> {
                           topRight: Radius.circular(10),
                         ),
                       ),
-                      child: const Padding(
+                      child: Padding(
                         padding: EdgeInsets.only(
-                          left: 14,
-                          top: 10,
+                          left: (14 / screenWidth) * screenWidth,
+                          top: (10 / screenHeight) * screenHeight,
                         ),
                         child: Text(
                           "Highlights",
                           style: TextStyle(
                               fontWeight: FontWeight.w500,
-                              fontSize: 18,
-                              color: Color(0xff0C2924),
+                              fontSize: (18 / screenWidth) * screenWidth,
+                              color: const Color(0xff0C2924),
                               fontFamily: "RobotoFlex"),
                         ),
                       ),
@@ -367,11 +368,13 @@ class GenerateBtn extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double screenHeight = MediaQuery.of(context).size.height;
+    double screenWidth = MediaQuery.of(context).size.width;
     return Positioned(
-      top: 165,
+      top: (165 / screenHeight) * screenHeight,
       child: SizedBox(
-        width: 100,
-        height: 35,
+        width: (100 / screenWidth) * screenWidth,
+        height: (35 / screenHeight) * screenHeight,
         child: ElevatedButton(
           style: ButtonStyle(
             alignment: Alignment.center,
@@ -386,6 +389,7 @@ class GenerateBtn extends StatelessWidget {
             ),
           ),
           onPressed: () {
+            // !final
             _textEditingController.clear();
           },
           child: const Text(
@@ -403,33 +407,37 @@ class HighlightsContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double screenHeight = MediaQuery.of(context).size.height;
+    double screenWidth = MediaQuery.of(context).size.width;
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
-      children: const [
+      children: [
         Padding(
-          padding: EdgeInsets.all(8.0),
+          padding: const EdgeInsets.all(8.0),
           child: Text(
             "Random text here. Dont mind it ",
             style: TextStyle(
               fontWeight: FontWeight.w300,
-              color: Color(0xff000000),
-              fontSize: 15,
+              color: const Color(0xff000000),
+              fontSize: (15 / screenWidth) * screenWidth,
               fontFamily: "RobotoFLex",
             ),
           ),
         ),
         Padding(
-          padding: EdgeInsets.only(bottom: 8.0),
+          padding: EdgeInsets.only(
+            bottom: (8.0 / screenHeight) * screenHeight,
+          ),
           child: Text(
             "\t\t\tRandom text here. Dont mind it example only example only.",
             style: TextStyle(
-              color: Color(0xff000000),
-              fontSize: 10,
+              color: const Color(0xff000000),
+              fontSize: (10 / screenWidth) * screenWidth,
               fontFamily: "RobotoFLex",
             ),
           ),
         ),
-        Divider(),
+        const Divider(),
       ],
     );
   }
