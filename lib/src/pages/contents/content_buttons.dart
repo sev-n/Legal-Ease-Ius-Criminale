@@ -1,4 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+
+import 'categories_contents/against_person.dart';
+import 'categories_contents/against_property.dart';
+import 'categories_contents/inchoate_crime.dart';
+import 'categories_contents/statutory_rights.dart';
+import 'categories_contents/traffic_offense.dart';
+import 'categories_contents/white_collar.dart';
 
 class ContentButtons extends StatelessWidget {
   const ContentButtons({super.key});
@@ -19,72 +27,81 @@ class ContentButtons extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              Container(
-                width: 65,
-                height: 65,
-                decoration: BoxDecoration(
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.black.withOpacity(0.2),
-                      blurRadius: 5,
-                      offset: const Offset(0, 3), // offset the shadow downwards
+              GoToPageContent(
+                toWhere: const TrafficContent(),
+                child: Container(
+                  width: 65,
+                  height: 65,
+                  decoration: BoxDecoration(
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black.withOpacity(0.2),
+                        blurRadius: 5,
+                        offset: const Offset(0, 3), // offset the shadow downwards
+                      ),
+                    ],
+                    image: const DecorationImage(
+                      image: AssetImage('assets/images/content_box_one.png'),
                     ),
-                  ],
-                  image: const DecorationImage(
-                    image: AssetImage('assets/images/content_box_one.png'),
                   ),
-                ),
-                child: Center(
-                  child: SizedBox(
-                    width: 25,
-                    height: 25,
-                    child: Image.asset('assets/images/traffic_icon.png'),
+                  child: Center(
+                    child: SizedBox(
+                      width: 25,
+                      height: 25,
+                      child: Image.asset('assets/images/traffic_icon.png'),
+                    ),
                   ),
                 ),
               ),
-              Container(
-                width: 65,
-                height: 65,
-                decoration: BoxDecoration(
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.black.withOpacity(0.2),
-                      blurRadius: 5,
-                      offset: const Offset(0, 3), // offset the shadow downwards
+              GoToPageContent(
+                toWhere: const PersonContent(),
+                child: Container(
+                  width: 65,
+                  height: 65,
+                  decoration: BoxDecoration(
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black.withOpacity(0.2),
+                        blurRadius: 5,
+                        offset: const Offset(0, 3), // offset the shadow downwards
+                      ),
+                    ],
+                    image: const DecorationImage(
+                      image: AssetImage('assets/images/content_box_two.png'),
                     ),
-                  ],
-                  image: const DecorationImage(
-                    image: AssetImage('assets/images/content_box_two.png'),
                   ),
-                ),
-                child: Center(
-                  child: SizedBox(
-                    width: 25,
-                    height: 25,
-                    child: Image.asset('assets/images/person_icon.png'),
+                  child: Center(
+                    child: SizedBox(
+                      width: 25,
+                      height: 25,
+                      child: Image.asset('assets/images/person_icon.png'),
+                    ),
                   ),
                 ),
               ),
-              Container(
-                width: 65,
-                height: 65,
-                decoration: BoxDecoration(
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.black.withOpacity(0.2),
-                      blurRadius: 5,
-                      offset: const Offset(0, 3), // offset the shadow downwards
+              GoToPageContent(
+                toWhere: const PropertyContent(),
+                child: Container(
+                  width: 65,
+                  height: 65,
+                  decoration: BoxDecoration(
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black.withOpacity(0.2),
+                        blurRadius: 5,
+                        offset: const Offset(0, 3), // offset the shadow downwards
+                      ),
+                    ],
+                    image: const DecorationImage(
+                      image: AssetImage('assets/images/content_box_three.png'),
                     ),
-                  ],
-                  image: const DecorationImage(
-                    image: AssetImage('assets/images/content_box_three.png'),
                   ),
-                ),
-                child: Center(
-                  child: SizedBox(
-                    width: 25,
-                    height: 25,
-                    child: Image.asset('assets/images/property_icon.png'),
+                  child: Center(
+                    child: SizedBox(
+                      width: 25,
+                      height: 25,
+                      child: Image.asset('assets/images/property_icon.png'),
+                    ),
                   ),
                 ),
               ),
@@ -164,72 +181,81 @@ class ContentButtons extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              Container(
-                width: 65,
-                height: 65,
-                decoration: BoxDecoration(
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.black.withOpacity(0.2),
-                      blurRadius: 5,
-                      offset: const Offset(0, 3), // offset the shadow downwards
+              GoToPageContent(
+                toWhere: const RightsContent(),
+                child: Container(
+                  width: 65,
+                  height: 65,
+                  decoration: BoxDecoration(
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black.withOpacity(0.2),
+                        blurRadius: 5,
+                        offset: const Offset(0, 3), // offset the shadow downwards
+                      ),
+                    ],
+                    image: const DecorationImage(
+                      image: AssetImage('assets/images/content_box_four.png'),
                     ),
-                  ],
-                  image: const DecorationImage(
-                    image: AssetImage('assets/images/content_box_four.png'),
                   ),
-                ),
-                child: Center(
-                  child: SizedBox(
-                    width: 25,
-                    height: 25,
-                    child: Image.asset('assets/images/rights_icon.png'),
+                  child: Center(
+                    child: SizedBox(
+                      width: 25,
+                      height: 25,
+                      child: Image.asset('assets/images/rights_icon.png'),
+                    ),
                   ),
                 ),
               ),
-              Container(
-                width: 65,
-                height: 65,
-                decoration: BoxDecoration(
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.black.withOpacity(0.2),
-                      blurRadius: 5,
-                      offset: const Offset(0, 3), // offset the shadow downwards
+              GoToPageContent(
+                toWhere: const CollarContent(),
+                child: Container(
+                  width: 65,
+                  height: 65,
+                  decoration: BoxDecoration(
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black.withOpacity(0.2),
+                        blurRadius: 5,
+                        offset: const Offset(0, 3), // offset the shadow downwards
+                      ),
+                    ],
+                    image: const DecorationImage(
+                      image: AssetImage('assets/images/content_box_five.png'),
                     ),
-                  ],
-                  image: const DecorationImage(
-                    image: AssetImage('assets/images/content_box_five.png'),
                   ),
-                ),
-                child: Center(
-                  child: SizedBox(
-                    width: 25,
-                    height: 25,
-                    child: Image.asset('assets/images/collar_icon.png'),
+                  child: Center(
+                    child: SizedBox(
+                      width: 25,
+                      height: 25,
+                      child: Image.asset('assets/images/collar_icon.png'),
+                    ),
                   ),
                 ),
               ),
-              Container(
-                width: 65,
-                height: 65,
-                decoration: BoxDecoration(
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.black.withOpacity(0.2),
-                      blurRadius: 5,
-                      offset: const Offset(0, 3), // offset the shadow downwards
+              GoToPageContent(
+                toWhere: const CrimeContent(),
+                child: Container(
+                  width: 65,
+                  height: 65,
+                  decoration: BoxDecoration(
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black.withOpacity(0.2),
+                        blurRadius: 5,
+                        offset: const Offset(0, 3), // offset the shadow downwards
+                      ),
+                    ],
+                    image: const DecorationImage(
+                      image: AssetImage('assets/images/content_box_six.png'),
                     ),
-                  ],
-                  image: const DecorationImage(
-                    image: AssetImage('assets/images/content_box_six.png'),
                   ),
-                ),
-                child: Center(
-                  child: SizedBox(
-                    width: 25,
-                    height: 25,
-                    child: Image.asset('assets/images/crime_icon.png'),
+                  child: Center(
+                    child: SizedBox(
+                      width: 25,
+                      height: 25,
+                      child: Image.asset('assets/images/crime_icon.png'),
+                    ),
                   ),
                 ),
               ),
@@ -295,6 +321,33 @@ class ContentButtons extends StatelessWidget {
         ),
         // ** Text **
       ],
+    );
+  }
+}
+
+class GoToPageContent extends StatelessWidget {
+  final Widget child;
+  final Widget toWhere;
+
+  const GoToPageContent(
+      {super.key, required this.child, required this.toWhere});
+
+  @override
+  Widget build(BuildContext context) {
+    return Material(
+      type: MaterialType.transparency,
+      child: InkWell(
+        borderRadius: BorderRadius.circular(15.0),
+        splashColor: Colors.black.withOpacity(0.3),
+        onTap: () {
+          Get.to(
+            () => toWhere,
+            transition: Transition.zoom,
+            duration: const Duration(milliseconds: 370),
+          );
+        },
+        child: child,
+      ),
     );
   }
 }
