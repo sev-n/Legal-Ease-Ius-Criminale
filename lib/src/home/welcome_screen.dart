@@ -4,7 +4,7 @@ import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import '../pages/welcome_pages/welcome_page_1.dart';
 import '../pages/welcome_pages/welcome_page_2.dart';
 import '../pages/welcome_pages/welcome_page_3.dart';
-import 'home_option.dart';
+import 'home.dart';
 
 class OneTimeWelcomePage extends StatelessWidget {
   final SharedPreferences prefs;
@@ -16,7 +16,7 @@ class OneTimeWelcomePage extends StatelessWidget {
     final hasShownWelcomePage = prefs.getBool('hasShownWelcomePage') ?? false;
 
     if (hasShownWelcomePage) {
-      return const HomeOption();
+      return const HomePage();
     } else {
       prefs.setBool('hasShownWelcomePage', true);
       return const WelcomePage();
@@ -141,7 +141,7 @@ class GetStartedBtn extends StatelessWidget {
         child: ElevatedButton(
           onPressed: () {
             Navigator.of(context).pushReplacement(
-              MaterialPageRoute(builder: (context) => const HomeOption()),
+              MaterialPageRoute(builder: (context) => const HomePage()),
             );
           },
           style: ElevatedButton.styleFrom(

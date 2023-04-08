@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../pages/sidenav_pages/about_us.dart';
 import '../pages/sidenav_pages/bookmark/bookmark.dart';
 import '../pages/sidenav_pages/helpcenter.dart';
-import 'home_option.dart';
+import 'home.dart';
 
 class SideMenu extends StatefulWidget {
   const SideMenu({super.key});
@@ -15,21 +15,23 @@ class SideMenu extends StatefulWidget {
 class _SideMenuState extends State<SideMenu> {
   bool selectedItem = false;
 
-  // TODO: side menu bar incomplete.
+  // TODO: need to fix position and size.
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
+    double width = MediaQuery.of(context).size.width;
+    double height = MediaQuery.of(context).size.height;
+    return SafeArea( 
       child: Drawer(
         backgroundColor: const Color(0xff6c7a70),
         shadowColor: Colors.black,
-        width: MediaQuery.of(context).size.width * 0.80,
+        width: width * 0.80,
         child: ListView(
-          shrinkWrap: true,
+          //shrinkWrap: true,
           physics: const NeverScrollableScrollPhysics(),
           padding: EdgeInsets.zero,
           children: <Widget>[
             SizedBox(
-              height: MediaQuery.of(context).size.height * 0.205,
+              height: height * 0.172,
               child: DrawerHeader(
                 margin: const EdgeInsets.all(0),
                 padding: EdgeInsets.zero,
@@ -41,24 +43,27 @@ class _SideMenuState extends State<SideMenu> {
                   //color: Colors.blue,
                 ),
                 // ** Items here!
-                child: Stack(children: [
-                  Positioned(
-                    top: 4,
-                    right: -55,
-                    child: Container(
-                      margin: const EdgeInsets.all(0),
-                      padding: EdgeInsets.zero,
-                      width: 195,
-                      height: 185,
-                      child: null,
-                      decoration: const BoxDecoration(
-                        image: DecorationImage(
-                            image: AssetImage('assets/images/side_logo.png'),
-                            fit: BoxFit.cover),
+                child: Stack(
+                  fit: StackFit.expand,
+                  children: [
+                    Positioned(
+                      top: (4 / height) * height,
+                      right: (-55 / width) * width,
+                      child: Container(
+                        margin: const EdgeInsets.all(0),
+                        padding: EdgeInsets.zero,
+                        width: (195 / width) * width,
+                        height: (185 / height) * height,
+                        child: null,
+                        decoration: const BoxDecoration(
+                          image: DecorationImage(
+                              image: AssetImage('assets/images/side_logo.png'),
+                              fit: BoxFit.cover),
+                        ),
                       ),
                     ),
-                  ),
-                ]),
+                  ],
+                ),
               ),
             ),
             Container(
@@ -90,7 +95,7 @@ class _SideMenuState extends State<SideMenu> {
                     onTap: () {
                       Navigator.of(context).pushAndRemoveUntil(
                           MaterialPageRoute(
-                            builder: (context) => const HomeOption(),
+                            builder: (context) => const HomePage(),
                           ),
                           (route) => route.isFirst);
                     },
