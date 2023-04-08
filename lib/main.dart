@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'src/home/welcome_screen.dart';
+
 
 
 Future main() async {
@@ -27,13 +29,18 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: "Legal ease - Ius Criminale",
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: OneTimeWelcomePage(prefs: prefs),
+    return ScreenUtilInit(
+      designSize: const Size(390, 844),
+      builder: (context, child){
+      return GetMaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: "Legal ease - Ius Criminale",
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+        ),
+        home: OneTimeWelcomePage(prefs: prefs),
+      );
+      },
     );
   }
 }
