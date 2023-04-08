@@ -39,6 +39,8 @@ dependencies:
   smooth_page_indicator: ^1.0.0+2
   get: ^4.6.5
   shared_preferences: ^2.0.17
+  flutter_screenutil: ^5.7.0
+  google_fonts: ^4.0.3
 
 dev_dependencies:
   flutter_test:
