@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../pages/sidenav_pages/about_us.dart';
 import '../pages/sidenav_pages/bookmark/bookmark.dart';
 import '../pages/sidenav_pages/helpcenter.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'home.dart';
 
 class SideMenu extends StatefulWidget {
@@ -20,18 +21,18 @@ class _SideMenuState extends State<SideMenu> {
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height;
-    return SafeArea( 
+    return SafeArea(
       child: Drawer(
         backgroundColor: const Color(0xff6c7a70),
         shadowColor: Colors.black,
-        width: width * 0.80,
+        width: 310.w,
         child: ListView(
           //shrinkWrap: true,
           physics: const NeverScrollableScrollPhysics(),
           padding: EdgeInsets.zero,
           children: <Widget>[
             SizedBox(
-              height: height * 0.172,
+              height: 180.h,
               child: DrawerHeader(
                 margin: const EdgeInsets.all(0),
                 padding: EdgeInsets.zero,
@@ -47,13 +48,13 @@ class _SideMenuState extends State<SideMenu> {
                   fit: StackFit.expand,
                   children: [
                     Positioned(
-                      top: (4 / height) * height,
-                      right: (-55 / width) * width,
+                      top: 45.h,
+                      right: -45.w,
                       child: Container(
                         margin: const EdgeInsets.all(0),
                         padding: EdgeInsets.zero,
-                        width: (195 / width) * width,
-                        height: (185 / height) * height,
+                        width: 155.w,
+                        height: 155.h,
                         child: null,
                         decoration: const BoxDecoration(
                           image: DecorationImage(
@@ -68,22 +69,22 @@ class _SideMenuState extends State<SideMenu> {
             ),
             Container(
               height: MediaQuery.of(context).size.height,
-              decoration: const BoxDecoration(
+              decoration: BoxDecoration(
                 borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(15.0),
-                  topRight: Radius.circular(15.0),
+                  topLeft: Radius.circular(15.0.r),
+                  topRight: Radius.circular(15.0.r),
                 ),
-                color: Color(0xffB8BDB7),
+                color: const Color(0xffB8BDB7),
               ),
               child: Column(
                 children: [
-                  const SizedBox(
-                    height: 75.0,
+                  SizedBox(
+                    height: 90.0.h,
                   ),
                   ListTile(
                     minLeadingWidth: 10.0,
                     leading: Image.asset('assets/images/home.png',
-                        width: 25, height: 25),
+                        width: 30.w, height: 30.h),
                     title: const Text(
                       'Home',
                       style: TextStyle(

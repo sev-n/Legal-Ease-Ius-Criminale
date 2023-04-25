@@ -3,7 +3,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:legalease_matrimonial/utils.dart';
-
 import 'categories_contents/against_person.dart';
 import 'categories_contents/against_property.dart';
 import 'categories_contents/inchoate_crime.dart';
@@ -16,7 +15,6 @@ class ContentButtons extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     return Padding(
       padding: EdgeInsets.only(top: 40.0.h),
       child: Column(
@@ -34,7 +32,8 @@ class ContentButtons extends StatelessWidget {
                       BoxShadow(
                         color: Colors.black.withOpacity(0.2),
                         blurRadius: 5,
-                        offset: const Offset(0, 3), // offset the shadow downwards
+                        offset:
+                            const Offset(0, 3), // offset the shadow downwards
                       ),
                     ],
                     image: const DecorationImage(
@@ -60,7 +59,8 @@ class ContentButtons extends StatelessWidget {
                       BoxShadow(
                         color: Colors.black.withOpacity(0.2),
                         blurRadius: 5,
-                        offset: const Offset(0, 3), // offset the shadow downwards
+                        offset:
+                            const Offset(0, 3), // offset the shadow downwards
                       ),
                     ],
                     image: const DecorationImage(
@@ -86,7 +86,8 @@ class ContentButtons extends StatelessWidget {
                       BoxShadow(
                         color: Colors.black.withOpacity(0.2),
                         blurRadius: 5,
-                        offset: const Offset(0, 3), // offset the shadow downwards
+                        offset:
+                            const Offset(0, 3), // offset the shadow downwards
                       ),
                     ],
                     image: const DecorationImage(
@@ -159,7 +160,8 @@ class ContentButtons extends StatelessWidget {
                       BoxShadow(
                         color: Colors.black.withOpacity(0.2),
                         blurRadius: 5,
-                        offset: const Offset(0, 3), // offset the shadow downwards
+                        offset:
+                            const Offset(0, 3), // offset the shadow downwards
                       ),
                     ],
                     image: const DecorationImage(
@@ -185,7 +187,8 @@ class ContentButtons extends StatelessWidget {
                       BoxShadow(
                         color: Colors.black.withOpacity(0.2),
                         blurRadius: 5,
-                        offset: const Offset(0, 3), // offset the shadow downwards
+                        offset:
+                            const Offset(0, 3), // offset the shadow downwards
                       ),
                     ],
                     image: const DecorationImage(
@@ -211,7 +214,8 @@ class ContentButtons extends StatelessWidget {
                       BoxShadow(
                         color: Colors.black.withOpacity(0.2),
                         blurRadius: 5,
-                        offset: const Offset(0, 3), // offset the shadow downwards
+                        offset:
+                            const Offset(0, 3), // offset the shadow downwards
                       ),
                     ],
                     image: const DecorationImage(
