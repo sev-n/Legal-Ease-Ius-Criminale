@@ -17,14 +17,14 @@ Future main() async {
   
   final prefs = await SharedPreferences.getInstance();
 
-  runApp(MyApp(prefs: prefs));
+  runApp(MyApp());
 
 }
 
 class MyApp extends StatelessWidget {
-  final SharedPreferences prefs;
+  //final SharedPreferences prefs;
 
-  const MyApp({super.key, required this.prefs});
+  const MyApp({super.key});
 
   // This widget is the root of your application.
   @override
@@ -34,11 +34,11 @@ class MyApp extends StatelessWidget {
       builder: (context, child){
       return GetMaterialApp(
         debugShowCheckedModeBanner: false,
-        title: "Legal ease - Ius Criminale",
+        title: "Legal ease",
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: OneTimeWelcomePage(prefs: prefs),
+        home: const WelcomePage(),
       );
       },
     );

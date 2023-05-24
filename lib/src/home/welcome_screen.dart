@@ -68,9 +68,9 @@ class _WelcomePageState extends State<WelcomePage> {
             isLastPage ? const GetStartedBtn() : const NextBtn(),
             Container(
               alignment: const Alignment(0, 0.65),
-              child: Row(
+              child: const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: const [
+                children: [
                   // page controller
 
                   PageIndicator(),

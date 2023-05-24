@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class WelcomePageThree extends StatelessWidget {
   const WelcomePageThree({super.key});
@@ -10,81 +10,77 @@ class WelcomePageThree extends StatelessWidget {
     double screenWidth = MediaQuery.of(context).size.width;
 
     return Container(
-        width: screenWidth,
-        height: screenHeight,
-        decoration: const BoxDecoration(
-          image: DecorationImage(
-              image: AssetImage('assets/welcomeScreen/welcome_3.png'),
-              fit: BoxFit.fill),
-        ),
-        child: Stack(
-          alignment: Alignment.center,
-          children: [
-            Positioned(
-              top: screenHeight * 0.03,
-              right: screenWidth * 0.04,
-              child: Container(
-                width: 50,
-                height: 50,
-                decoration: const BoxDecoration(
-                  image: DecorationImage(
-                    image:
-                        AssetImage('assets/welcomeScreen/welcome_logo.png'),
-                    fit: BoxFit.cover,
+      width: screenWidth,
+      height: screenHeight,
+      decoration: const BoxDecoration(
+        image: DecorationImage(
+            image: AssetImage('assets/welcomeScreen/welcome_3.png'),
+            fit: BoxFit.fill),
+      ),
+      child: Stack(
+        alignment: Alignment.center,
+        children: [
+          Positioned(
+            top: 20.h,
+            right: 15.w,
+            child: Container(
+              width: 60.w,
+              height: 60.h,
+              decoration: const BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage('assets/welcomeScreen/welcome_logo.png'),
+                  fit: BoxFit.cover,
+                ),
+              ),
+            ),
+          ),
+          Padding(
+            padding: EdgeInsets.only(top: 230.h),
+            child: Column(
+              children: [
+                Container(
+                  width: 250.w,
+                  height: 240.h,
+                  decoration: const BoxDecoration(
+                    image: DecorationImage(
+                        image: AssetImage('assets/welcomeScreen/image_3.png'),
+                        fit: BoxFit.cover),
                   ),
                 ),
-              ),
-            ),
-            Positioned(
-              //width 240 -> export 265
-              //height 205 -> export 300
-              top: screenHeight * 0.26,
-              left: screenWidth * 0.16,
-              child: Container(
-                width: 220,
-                height: 210,
-                decoration: const BoxDecoration(
-                  image: DecorationImage(
-                      image:
-                          AssetImage('assets/welcomeScreen/image_3.png'),
-                      fit: BoxFit.cover),
+                Padding(
+                  padding: EdgeInsets.only(top: 15.h),
+                  child: Text(
+                    "A one tap app and pocketable \nlegal service for you",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: 22.sp,
+                      fontFamily: "RobotoFlex",
+                      fontWeight: FontWeight.bold,
+                      color: const Color(0xff0C2924),
+                    ),
+                  ),
                 ),
-              ),
-            ),
-            Positioned(
-            top: screenHeight * 0.57,
-            left: screenWidth * 0.097,
-            child: const Text(
-              "A one tap app and pocketable \nlegal service for you",
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                fontSize: 22,
-                fontFamily: "RobotoFlex",
-                fontWeight: FontWeight.bold,
-                color: Color(0xff0C2924),
-              ),
-            ),
-          ),
-          // top: screenHeight * 0.66,
-          // left: screenWidth * 0.097,
-          // TODO: need to fix alignment
-          const Align(
-            alignment: Alignment(0, 0.50),
-            child: Text(
-              "Designed to be easy to use and offers a range of \nlegal services, all accessible from the palm of \nyour hand.",
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                fontWeight: FontWeight.w400,
-                fontSize: 16,
-                fontFamily: "Habibi",
-                color: Color(0xff0C2924),
-              ),
+                // top: screenHeight * 0.66,
+                // left: screenWidth * 0.097,
+                // TODO: need to fix alignment
+                Padding(
+                  padding: EdgeInsets.only(top: 15.h),
+                  child: Text(
+                    "Designed to be easy to use and offers a range of \nlegal services, all accessible from the palm of \nyour hand.",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontWeight: FontWeight.w400,
+                      fontSize: 16.sp,
+                      fontFamily: "Habibi",
+                      color: const Color(0xff0C2924),
+                    ),
+                  ),
+                ),
+              ],
             ),
           ),
-
-          ],
-        ),
-      );
+        ],
+      ),
+    );
   }
 }
-

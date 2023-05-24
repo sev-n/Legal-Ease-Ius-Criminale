@@ -21,11 +21,11 @@ class HelpCenter extends StatelessWidget {
                 ),
                 child: Stack(
                   children: [
-                    Padding(
-                      padding: const EdgeInsets.only(left: 45, top: 60),
+                    const Padding(
+                      padding: EdgeInsets.only(left: 45, top: 60),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
-                        children: const [
+                        children: [
                           Text(
                             "Help Center",
                             style: TextStyle(

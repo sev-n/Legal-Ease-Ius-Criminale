@@ -19,12 +19,12 @@ class TrafficContent extends StatelessWidget {
                 color: Color(0xff97a294),
               ),
               // !alert insert items here
-              child: Padding(
-                padding: const EdgeInsets.only(top: 100, left: 20),
+              child: const Padding(
+                padding: EdgeInsets.only(top: 100, left: 20),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: const [
+                  children: [
                     Text(
                       'Traffic Offense',
                       style: TextStyle(

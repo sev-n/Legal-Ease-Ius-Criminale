@@ -19,8 +19,6 @@ class _SideMenuState extends State<SideMenu> {
   // TODO: need to fix position and size.
   @override
   Widget build(BuildContext context) {
-    double width = MediaQuery.of(context).size.width;
-    double height = MediaQuery.of(context).size.height;
     return SafeArea(
       child: Drawer(
         backgroundColor: const Color(0xff6c7a70),

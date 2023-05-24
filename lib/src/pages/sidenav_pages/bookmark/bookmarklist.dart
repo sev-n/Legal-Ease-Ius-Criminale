@@ -39,12 +39,12 @@ class BookmarkList extends StatelessWidget {
                   bottomLeft: Radius.circular(3.0),
                 ),
               ),
-              child: Padding(
-                padding: const EdgeInsets.only(left: 10.0),
+              child: const Padding(
+                padding: EdgeInsets.only(left: 10.0),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: const [
+                  children: [
                     Text(
                       "Book Mark... ",
                       style: TextStyle(

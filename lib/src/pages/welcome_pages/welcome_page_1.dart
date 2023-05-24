@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class WelcomePageOne extends StatelessWidget {
   const WelcomePageOne({super.key});
@@ -21,11 +21,11 @@ class WelcomePageOne extends StatelessWidget {
         alignment: Alignment.center,
         children: [
           Positioned(
-            top: screenHeight * 0.03,
-            right: screenWidth * 0.04,
+            top: 20.h,
+            right: 15.w,
             child: Container(
-              width: 50,
-              height: 50,
+              width: 60.w,
+              height: 60.h,
               decoration: const BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage('assets/welcomeScreen/welcome_logo.png'),
@@ -34,46 +34,47 @@ class WelcomePageOne extends StatelessWidget {
               ),
             ),
           ),
-          Positioned(
-            top: screenHeight * 0.24,
-            left: screenWidth * 0.25,
-            child: Transform.rotate(
-              angle: 0.066 * (3.14 / 180), // convert degrees to radians
-              child: Container(
-                width: 180,
-                height: 190,
-                decoration: const BoxDecoration(
-                  image: DecorationImage(
-                      image: AssetImage('assets/welcomeScreen/image_1.png'),
-                      fit: BoxFit.cover),
+          Padding(
+            padding: EdgeInsets.only(top: 230.h),
+            child: Column(
+              children: [
+                Transform.rotate(
+                  angle: 0.066 * (3.14 / 180), // convert degrees to radians
+                  child: Container(
+                    width: 200.w,
+                    height: 210.h,
+                    decoration: const BoxDecoration(
+                      image: DecorationImage(
+                          image: AssetImage('assets/welcomeScreen/image_1.png'),
+                          fit: BoxFit.cover),
+                    ),
+                  ),
                 ),
-              ),
-            ),
-          ),
-          Positioned(
-            top: screenHeight * 0.57,
-            left: screenWidth * 0.064,
-            child: const Text(
-              "Legal Ease Ius Criminale as your \ntrusted legal partner",
-              style: TextStyle(
-                fontSize: 22,
-                fontFamily: "RobotoFlex",
-                fontWeight: FontWeight.w700,
-                color: Color(0xff0C2924),
-              ),
-            ),
-          ),
-          Positioned(
-            top: screenHeight * 0.66,
-            left: screenWidth * 0.064,
-            child: const Text(
-              "Offers you a law consultation whom you may \ncontact privately for your legal matter.",
-              style: TextStyle(
-                fontWeight: FontWeight.w400,
-                fontSize: 16,
-                fontFamily: "Habibi",
-                color: Color(0xff0C2924),
-              ),
+                Padding(
+                  padding: EdgeInsets.only(top: 40.h),
+                  child: Text(
+                    "Legal Ease Ius Criminale as your \ntrusted legal partner",
+                    style: TextStyle(
+                      fontSize: 22.sp,
+                      fontFamily: "RobotoFlex",
+                      fontWeight: FontWeight.w700,
+                      color: const Color(0xff0C2924),
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsets.only(top: 20.h),
+                  child: Text(
+                    "Offers you a law consultation whom you may \ncontact privately for your legal matter.",
+                    style: TextStyle(
+                      fontWeight: FontWeight.w400,
+                      fontSize: 16.sp,
+                      fontFamily: "Habibi",
+                      color: const Color(0xff0C2924),
+                    ),
+                  ),
+                ),
+              ],
             ),
           ),
         ],

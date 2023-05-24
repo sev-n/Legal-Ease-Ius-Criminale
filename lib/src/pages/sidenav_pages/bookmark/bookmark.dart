@@ -24,12 +24,12 @@ class BookMark extends StatelessWidget {
                 // !alert insert items here
                 child: Stack(
                   children: [
-                    Padding(
-                      padding: const EdgeInsets.only(top: 60, left: 45),
+                    const Padding(
+                      padding: EdgeInsets.only(top: 60, left: 45),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.start,
-                        children: const [
+                        children: [
                           Text(
                             'Your bookmark',
                             style: TextStyle(
