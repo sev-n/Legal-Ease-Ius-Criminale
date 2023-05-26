@@ -63,63 +63,70 @@ class HomePageState extends State<HomePage> {
               Container(
                 width: width,
                 height: height,
-                decoration: const BoxDecoration(
-                  image: DecorationImage(
-                    image: AssetImage('assets/images/MAIN.png'),
-                    fit: BoxFit.cover,
-                  ),
-                ),
+                color: const Color(0xff028D8F),
+                // decoration: const BoxDecoration(
+                //   image: DecorationImage(
+                //     image: AssetImage('assets/images/MAIN.png'),
+                //     fit: BoxFit.cover,
+                //   ),
+                // ),
                 // ** ITEMS HERE **
                 child: Stack(
                   children: [
-                    Positioned(
-                      top: 0.h,
-                      right: 0.w,
-                      child: Container(
-                        height: 242.h,
-                        width: 140.w,
-                        decoration: const BoxDecoration(
-                          image: DecorationImage(
-                              image: AssetImage('assets/images/Ellipse 24.png'),
-                              fit: BoxFit.cover),
-                        ),
-                      ),
-                    ),
-                    Positioned(
-                      top: 0.h,
-                      left: 0.w,
-                      child: Image.asset('assets/images/Ellipse 25.png'),
-                    ),
-                    Positioned(
-                      top: 180.h,
-                      left: 65.w,
-                      child: Image.asset('assets/images/Ellipse 26.png'),
-                    ),
+                    // Positioned(
+                    //   top: 0.h,
+                    //   right: 0.w,
+                    //   child: Container(
+                    //     height: 242.h,
+                    //     width: 140.w,
+                    //     decoration: const BoxDecoration(
+                    //       image: DecorationImage(
+                    //           image: AssetImage('assets/images/Ellipse 24.png'),
+                    //           fit: BoxFit.cover),
+                    //     ),
+                    //   ),
+                    // ),
+                    // Positioned(
+                    //   top: 0.h,
+                    //   left: 0.w,
+                    //   child: Image.asset('assets/images/Ellipse 25.png'),
+                    // ),
+                    // Positioned(
+                    //   top: 180.h,
+                    //   left: 65.w,
+                    //   child: Image.asset('assets/images/Ellipse 26.png'),
+                    // ),
                     Align(
                       alignment: Alignment.topCenter,
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           SizedBox(height: 30.h),
-                          Text(
-                            "Legal Ease",
-                            style: TextStyle(
-                              fontSize: 20.sp,
-                              fontFamily: "Questrial",
-                              fontWeight: FontWeight.w400,
-                              color: const Color(0xD90C2924),
+                          Padding(
+                            padding: EdgeInsets.only(left: 150.w),
+                            child: Text(
+                              "Legal Ease",
+                              style: TextStyle(
+                                fontSize: 18.sp,
+                                fontFamily: "RobotoFlex",
+                                fontWeight: FontWeight.w400,
+                                color: Colors.white,
+                              ),
+                              textScaleFactor: 1.2,
                             ),
-                            textScaleFactor: 1.2,
                           ),
-                          Text(
-                            "Ius Criminales",
-                            style: TextStyle(
-                              fontSize: 12.sp,
-                              fontFamily: "Questrial",
-                              fontWeight: FontWeight.w400,
-                              color: const Color(0xD90C2924),
+                          Padding(
+                            padding: EdgeInsets.only(left: 190.w),
+                            child: Text(
+                              "Ius Criminales",
+                              style: TextStyle(
+                                fontSize: 10.sp,
+                                fontFamily: "RobotoFlex",
+                                fontWeight: FontWeight.w400,
+                                color: Colors.white,
+                              ),
+                              textScaleFactor: 1.2,
                             ),
-                            textScaleFactor: 1.2,
                           ),
                           SizedBox(height: 38.h),
                           const _TextField(),
@@ -129,32 +136,29 @@ class HomePageState extends State<HomePage> {
                       ),
                     ),
                     Padding(
-                      padding: EdgeInsets.only(top: 35.h, left: 15.w),
+                      padding: EdgeInsets.only(top: 47.h, left: 15.w),
                       child: Builder(
                         builder: (context) {
                           return GestureDetector(
-                            onTap: (){
+                            onTap: () {
                               textFieldFocus.unfocus();
                               Scaffold.of(context).openDrawer();
-                              
                             },
-                            child: Container(
-                              width: 32.w,
-                              height: 32.h,
-                              decoration: BoxDecoration(
-                                color: const Color(0xCCD9D9D9),
-                                borderRadius: BorderRadius.circular(10.r),
-                              ),
-                              child: Center(
-                                child: Icon(
-                                    Icons.grid_view_rounded,
-                                    color: const Color(0xCC0C2924),
-                                    size: 20.sp,
-                                  ),
-                              ),
+                            child: const Icon(
+                              Icons.menu_rounded,
+                              size: 25,
+                              color: Colors.white,
                             ),
                           );
-                        }
+                        },
+                      ),
+                    ),
+                    Align(
+                      alignment: Alignment.topRight,
+                      child: Padding(
+                        padding: EdgeInsets.only(top: 11.h, left: 15.w),
+                        child: Image.asset('assets/images/Logo.png',
+                            width: 90.w, height: 90.h),
                       ),
                     )
                   ],
@@ -213,11 +217,13 @@ class HomePageState extends State<HomePage> {
                       Container(
                         width: width,
                         height: 55.h,
-                        decoration: BoxDecoration(
-                          color: const Color(0xFFFFFFFF),
-                          borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(15.r),
-                            topRight: Radius.circular(15.r),
+                        decoration: const BoxDecoration(
+                          color: Color(0xFFFFFFFF),
+                          border: Border(
+                            top: BorderSide(
+                              width: 1.0,
+                              color: Color(0x33000000),
+                            ),
                           ),
                         ),
                         child: Padding(
@@ -296,7 +302,7 @@ class __TextFieldState extends State<_TextField> {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: const Color(0x99D9D9D9),
+        color: const Color(0xffE8E8E8),
         borderRadius: BorderRadius.circular(12.r),
         boxShadow: const [
           BoxShadow(
@@ -342,7 +348,7 @@ class GenerateBtn extends StatelessWidget {
       child: ElevatedButton(
         style: ButtonStyle(
           alignment: Alignment.center,
-          backgroundColor: MaterialStateProperty.all(const Color(0xB3D9D9D9)),
+          backgroundColor: MaterialStateProperty.all(const Color(0xffF2F2F2)),
           shape: MaterialStateProperty.all<RoundedRectangleBorder>(
             RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(8.0.r),
