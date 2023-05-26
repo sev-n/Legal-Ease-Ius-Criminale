@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:legalease_matrimonial/utils.dart';
 import 'categories_contents/against_person.dart';
 import 'categories_contents/against_property.dart';
@@ -28,17 +27,8 @@ class ContentButtons extends StatelessWidget {
                   width: FormatUtil.contSizeCategories.w,
                   height: FormatUtil.contSizeCategories.h,
                   decoration: BoxDecoration(
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.black.withOpacity(0.2),
-                        blurRadius: 5,
-                        offset:
-                            const Offset(0, 3), // offset the shadow downwards
-                      ),
-                    ],
-                    image: const DecorationImage(
-                      image: AssetImage('assets/images/content_box_one.png'),
-                    ),
+                    color: const Color(0xffD5D5D5),
+                    borderRadius: BorderRadius.circular(10.r),
                   ),
                   child: Center(
                     child: SizedBox(
@@ -55,17 +45,8 @@ class ContentButtons extends StatelessWidget {
                   width: FormatUtil.contSizeCategories.w,
                   height: FormatUtil.contSizeCategories.h,
                   decoration: BoxDecoration(
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.black.withOpacity(0.2),
-                        blurRadius: 5,
-                        offset:
-                            const Offset(0, 3), // offset the shadow downwards
-                      ),
-                    ],
-                    image: const DecorationImage(
-                      image: AssetImage('assets/images/content_box_two.png'),
-                    ),
+                    color: const Color(0xffD5D5D5),
+                    borderRadius: BorderRadius.circular(10.r),
                   ),
                   child: Center(
                     child: SizedBox(
@@ -82,23 +63,14 @@ class ContentButtons extends StatelessWidget {
                   width: FormatUtil.contSizeCategories.w,
                   height: FormatUtil.contSizeCategories.h,
                   decoration: BoxDecoration(
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.black.withOpacity(0.2),
-                        blurRadius: 5,
-                        offset:
-                            const Offset(0, 3), // offset the shadow downwards
-                      ),
-                    ],
-                    image: const DecorationImage(
-                      image: AssetImage('assets/images/content_box_three.png'),
-                    ),
+                    color: const Color(0xffD5D5D5),
+                    borderRadius: BorderRadius.circular(10.r),
                   ),
                   child: Center(
-                    child: Image.asset(
-                      'assets/images/property_icon.png',
+                    child: SizedBox(
                       width: FormatUtil.sizeBoxCategories.w,
                       height: FormatUtil.sizeBoxCategories.h,
+                      child: Image.asset('assets/images/property_icon.png'),
                     ),
                   ),
                 ),
@@ -117,25 +89,28 @@ class ContentButtons extends StatelessWidget {
               children: [
                 Text(
                   "Traffic Offense",
-                  style: GoogleFonts.robotoFlex(
-                    fontWeight: FontWeight.w600,
+                  style: TextStyle(
+                    fontFamily: "RobotoFlex",
                     fontSize: 12.sp,
+                    fontWeight: FontWeight.w600,
                     color: const Color(0xCC0C2924),
                   ),
                 ),
                 Text(
                   "Against Person",
-                  style: GoogleFonts.robotoFlex(
-                    fontWeight: FontWeight.w600,
+                  style: TextStyle(
+                    fontFamily: "RobotoFlex",
                     fontSize: 12.sp,
+                    fontWeight: FontWeight.w600,
                     color: const Color(0xCC0C2924),
                   ),
                 ),
                 Text(
                   "Against Property",
-                  style: GoogleFonts.robotoFlex(
-                    fontWeight: FontWeight.w600,
+                  style: TextStyle(
+                    fontFamily: "RobotoFlex",
                     fontSize: 12.sp,
+                    fontWeight: FontWeight.w600,
                     color: const Color(0xCC0C2924),
                   ),
                 ),
@@ -156,17 +131,8 @@ class ContentButtons extends StatelessWidget {
                   width: FormatUtil.contSizeCategories.w,
                   height: FormatUtil.contSizeCategories.h,
                   decoration: BoxDecoration(
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.black.withOpacity(0.2),
-                        blurRadius: 5,
-                        offset:
-                            const Offset(0, 3), // offset the shadow downwards
-                      ),
-                    ],
-                    image: const DecorationImage(
-                      image: AssetImage('assets/images/content_box_four.png'),
-                    ),
+                    color: const Color(0xffD5D5D5),
+                    borderRadius: BorderRadius.circular(10.r),
                   ),
                   child: Center(
                     child: SizedBox(
@@ -183,17 +149,8 @@ class ContentButtons extends StatelessWidget {
                   width: FormatUtil.contSizeCategories.w,
                   height: FormatUtil.contSizeCategories.h,
                   decoration: BoxDecoration(
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.black.withOpacity(0.2),
-                        blurRadius: 5,
-                        offset:
-                            const Offset(0, 3), // offset the shadow downwards
-                      ),
-                    ],
-                    image: const DecorationImage(
-                      image: AssetImage('assets/images/content_box_five.png'),
-                    ),
+                    color: const Color(0xffD5D5D5),
+                    borderRadius: BorderRadius.circular(10.r),
                   ),
                   child: Center(
                     child: SizedBox(
@@ -210,17 +167,8 @@ class ContentButtons extends StatelessWidget {
                   width: FormatUtil.contSizeCategories.w,
                   height: FormatUtil.contSizeCategories.h,
                   decoration: BoxDecoration(
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.black.withOpacity(0.2),
-                        blurRadius: 5,
-                        offset:
-                            const Offset(0, 3), // offset the shadow downwards
-                      ),
-                    ],
-                    image: const DecorationImage(
-                      image: AssetImage('assets/images/content_box_six.png'),
-                    ),
+                    color: const Color(0xffD5D5D5),
+                    borderRadius: BorderRadius.circular(10.r),
                   ),
                   child: Center(
                     child: SizedBox(
@@ -245,25 +193,28 @@ class ContentButtons extends StatelessWidget {
               children: [
                 Text(
                   "Statutory Rights",
-                  style: GoogleFonts.robotoFlex(
-                    fontWeight: FontWeight.w600,
+                  style: TextStyle(
+                    fontFamily: "RobotoFlex",
                     fontSize: 12.sp,
+                    fontWeight: FontWeight.w600,
                     color: const Color(0xCC0C2924),
                   ),
                 ),
                 Text(
                   "White Collar",
-                  style: GoogleFonts.robotoFlex(
-                    fontWeight: FontWeight.w600,
+                  style: TextStyle(
+                    fontFamily: "RobotoFlex",
                     fontSize: 12.sp,
+                    fontWeight: FontWeight.w600,
                     color: const Color(0xCC0C2924),
                   ),
                 ),
                 Text(
                   "Inchoate Crime",
-                  style: GoogleFonts.robotoFlex(
-                    fontWeight: FontWeight.w600,
+                  style: TextStyle(
+                    fontFamily: "RobotoFlex",
                     fontSize: 12.sp,
+                    fontWeight: FontWeight.w600,
                     color: const Color(0xCC0C2924),
                   ),
                 ),

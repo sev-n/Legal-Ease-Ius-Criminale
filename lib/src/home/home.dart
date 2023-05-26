@@ -171,11 +171,20 @@ class HomePageState extends State<HomePage> {
                   width: ScreenUtil().screenWidth,
                   height: 350.h,
                   decoration: BoxDecoration(
-                    color: const Color(0xE6FFFFFF),
+                    color: const Color(0xffF2F2F2),
                     borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(25.r),
                       topRight: Radius.circular(25.r),
                     ),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black.withOpacity(0.2),
+                        blurRadius: 5.0,
+                        spreadRadius: 2.0,
+                        offset:
+                            const Offset(0, -2), // offset the shadow downwards
+                      ),
+                    ],
                   ),
                   // ** ITEMS HERE **
                   child: Stack(
@@ -186,10 +195,11 @@ class HomePageState extends State<HomePage> {
                           padding: EdgeInsets.only(top: 8.h, left: 15.w),
                           child: Text(
                             "Categories",
-                            style: GoogleFonts.robotoFlex(
+                            style: TextStyle(
+                              fontFamily: "RobotoFlex",
                               fontWeight: FontWeight.w500,
-                              fontSize: 18.sp,
-                              color: const Color(0xff0C2924),
+                              fontSize: 20.sp,
+                              color: const Color(0xff333333),
                             ),
                           ),
                         ),
@@ -230,10 +240,11 @@ class HomePageState extends State<HomePage> {
                           padding: EdgeInsets.only(top: 8.h, left: 15.w),
                           child: Text(
                             "Highlights",
-                            style: GoogleFonts.robotoFlex(
+                            style: TextStyle(
+                              fontFamily: "RobotoFlex",
                               fontWeight: FontWeight.w500,
-                              fontSize: 18.sp,
-                              color: const Color(0xff0C2924),
+                              fontSize: 20.sp,
+                              color: const Color(0xff333333),
                             ),
                           ),
                         ),
