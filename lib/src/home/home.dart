@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 import '../pages/contents/categories.dart';
 import 'sidemenu.dart';
 
@@ -63,63 +61,70 @@ class HomePageState extends State<HomePage> {
               Container(
                 width: width,
                 height: height,
-                decoration: const BoxDecoration(
-                  image: DecorationImage(
-                    image: AssetImage('assets/images/MAIN.png'),
-                    fit: BoxFit.cover,
-                  ),
-                ),
+                color: const Color(0xff028D8F),
+                // decoration: const BoxDecoration(
+                //   image: DecorationImage(
+                //     image: AssetImage('assets/images/MAIN.png'),
+                //     fit: BoxFit.cover,
+                //   ),
+                // ),
                 // ** ITEMS HERE **
                 child: Stack(
                   children: [
-                    Positioned(
-                      top: 0.h,
-                      right: 0.w,
-                      child: Container(
-                        height: 242.h,
-                        width: 140.w,
-                        decoration: const BoxDecoration(
-                          image: DecorationImage(
-                              image: AssetImage('assets/images/Ellipse 24.png'),
-                              fit: BoxFit.cover),
-                        ),
-                      ),
-                    ),
-                    Positioned(
-                      top: 0.h,
-                      left: 0.w,
-                      child: Image.asset('assets/images/Ellipse 25.png'),
-                    ),
-                    Positioned(
-                      top: 180.h,
-                      left: 65.w,
-                      child: Image.asset('assets/images/Ellipse 26.png'),
-                    ),
+                    // Positioned(
+                    //   top: 0.h,
+                    //   right: 0.w,
+                    //   child: Container(
+                    //     height: 242.h,
+                    //     width: 140.w,
+                    //     decoration: const BoxDecoration(
+                    //       image: DecorationImage(
+                    //           image: AssetImage('assets/images/Ellipse 24.png'),
+                    //           fit: BoxFit.cover),
+                    //     ),
+                    //   ),
+                    // ),
+                    // Positioned(
+                    //   top: 0.h,
+                    //   left: 0.w,
+                    //   child: Image.asset('assets/images/Ellipse 25.png'),
+                    // ),
+                    // Positioned(
+                    //   top: 180.h,
+                    //   left: 65.w,
+                    //   child: Image.asset('assets/images/Ellipse 26.png'),
+                    // ),
                     Align(
                       alignment: Alignment.topCenter,
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           SizedBox(height: 30.h),
-                          Text(
-                            "Legal Ease",
-                            style: TextStyle(
-                              fontSize: 20.sp,
-                              fontFamily: "Questrial",
-                              fontWeight: FontWeight.w400,
-                              color: const Color(0xD90C2924),
+                          Padding(
+                            padding: EdgeInsets.only(left: 150.w),
+                            child: Text(
+                              "Legal Ease",
+                              style: TextStyle(
+                                fontSize: 18.sp,
+                                fontFamily: "RobotoFlex",
+                                fontWeight: FontWeight.w400,
+                                color: Colors.white,
+                              ),
+                              textScaleFactor: 1.2,
                             ),
-                            textScaleFactor: 1.2,
                           ),
-                          Text(
-                            "Ius Criminales",
-                            style: TextStyle(
-                              fontSize: 12.sp,
-                              fontFamily: "Questrial",
-                              fontWeight: FontWeight.w400,
-                              color: const Color(0xD90C2924),
+                          Padding(
+                            padding: EdgeInsets.only(left: 190.w),
+                            child: Text(
+                              "Ius Criminales",
+                              style: TextStyle(
+                                fontSize: 10.sp,
+                                fontFamily: "RobotoFlex",
+                                fontWeight: FontWeight.w400,
+                                color: Colors.white,
+                              ),
+                              textScaleFactor: 1.2,
                             ),
-                            textScaleFactor: 1.2,
                           ),
                           SizedBox(height: 38.h),
                           const _TextField(),
@@ -129,30 +134,30 @@ class HomePageState extends State<HomePage> {
                       ),
                     ),
                     Padding(
-                      padding: EdgeInsets.only(top: 35.h, left: 15.w),
-                      child: Builder(builder: (context) {
-                        return GestureDetector(
-                          onTap: () {
-                            textFieldFocus.unfocus();
-                            Scaffold.of(context).openDrawer();
-                          },
-                          child: Container(
-                            width: 32.w,
-                            height: 32.h,
-                            decoration: BoxDecoration(
-                              color: const Color(0xCCD9D9D9),
-                              borderRadius: BorderRadius.circular(10.r),
+                      padding: EdgeInsets.only(top: 47.h, left: 15.w),
+                      child: Builder(
+                        builder: (context) {
+                          return GestureDetector(
+                            onTap: () {
+                              textFieldFocus.unfocus();
+                              Scaffold.of(context).openDrawer();
+                            },
+                            child: const Icon(
+                              Icons.menu_rounded,
+                              size: 25,
+                              color: Colors.white,
                             ),
-                            child: Center(
-                              child: Icon(
-                                Icons.grid_view_rounded,
-                                color: const Color(0xCC0C2924),
-                                size: 20.sp,
-                              ),
-                            ),
-                          ),
-                        );
-                      }),
+                          );
+                        },
+                      ),
+                    ),
+                    Align(
+                      alignment: Alignment.topRight,
+                      child: Padding(
+                        padding: EdgeInsets.only(top: 11.h, left: 15.w),
+                        child: Image.asset('assets/images/Logo.png',
+                            width: 90.w, height: 90.h),
+                      ),
                     )
                   ],
                 ),
@@ -164,11 +169,20 @@ class HomePageState extends State<HomePage> {
                   width: ScreenUtil().screenWidth,
                   height: 350.h,
                   decoration: BoxDecoration(
-                    color: const Color(0xE6FFFFFF),
+                    color: const Color(0xffF2F2F2),
                     borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(25.r),
                       topRight: Radius.circular(25.r),
                     ),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black.withOpacity(0.2),
+                        blurRadius: 5.0,
+                        spreadRadius: 2.0,
+                        offset:
+                            const Offset(0, -2), // offset the shadow downwards
+                      ),
+                    ],
                   ),
                   // ** ITEMS HERE **
                   child: Stack(
@@ -179,10 +193,11 @@ class HomePageState extends State<HomePage> {
                           padding: EdgeInsets.only(top: 8.h, left: 15.w),
                           child: Text(
                             "Categories",
-                            style: GoogleFonts.robotoFlex(
+                            style: TextStyle(
+                              fontFamily: "RobotoFlex",
                               fontWeight: FontWeight.w500,
-                              fontSize: 18.sp,
-                              color: const Color(0xff0C2924),
+                              fontSize: 20.sp,
+                              color: const Color(0xff333333),
                             ),
                           ),
                         ),
@@ -209,22 +224,26 @@ class HomePageState extends State<HomePage> {
                     children: [
                       Container(
                         width: width,
-                        height: 55.h,
-                        decoration: BoxDecoration(
-                          color: const Color(0xFFFFFFFF),
-                          borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(15.r),
-                            topRight: Radius.circular(15.r),
+                        height: 45.h,
+                        decoration: const BoxDecoration(
+                          color: Color(0xFFFFFFFF),
+                          //color: Colors.blue,
+                          border: Border(
+                            top: BorderSide(
+                              width: 1.0,
+                              color: Color(0x33000000),
+                            ),
                           ),
                         ),
                         child: Padding(
-                          padding: EdgeInsets.only(top: 8.h, left: 15.w),
+                          padding: EdgeInsets.only(top: 10.h, left: 15.w),
                           child: Text(
                             "Highlights",
-                            style: GoogleFonts.robotoFlex(
+                            style: TextStyle(
+                              fontFamily: "RobotoFlex",
                               fontWeight: FontWeight.w500,
-                              fontSize: 18.sp,
-                              color: const Color(0xff0C2924),
+                              fontSize: 20.sp,
+                              color: const Color(0xff333333),
                             ),
                           ),
                         ),
@@ -234,7 +253,7 @@ class HomePageState extends State<HomePage> {
                         child: Container(
                             color: const Color(0xFFFFFFFF),
                             width: width,
-                            height: 235.h,
+                            height: 246.h,
                             child: ListView(
                               children: const [
                                 HighlightsContent(),
@@ -293,7 +312,7 @@ class __TextFieldState extends State<_TextField> {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: const Color(0x99D9D9D9),
+        color: const Color(0xffE8E8E8),
         borderRadius: BorderRadius.circular(12.r),
         boxShadow: const [
           BoxShadow(
@@ -334,12 +353,12 @@ class GenerateBtn extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 105.w,
+      width: 120.w,
       height: 40.h,
       child: ElevatedButton(
         style: ButtonStyle(
           alignment: Alignment.center,
-          backgroundColor: MaterialStateProperty.all(const Color(0xB3D9D9D9)),
+          backgroundColor: MaterialStateProperty.all(const Color(0xffF2F2F2)),
           shape: MaterialStateProperty.all<RoundedRectangleBorder>(
             RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(8.0.r),
@@ -354,7 +373,7 @@ class GenerateBtn extends StatelessWidget {
           _textEditingController.clear();
         },
         child: const Text(
-          "Generate",
+          "Submit",
           style: TextStyle(color: Color(0xff000000)),
         ),
       ),
@@ -368,7 +387,7 @@ class HighlightsContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(top: 15.h, left: 15.w),
+      padding: EdgeInsets.only(left: 15.w),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -384,7 +403,7 @@ class HighlightsContent extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: EdgeInsets.only(bottom: 15.w),
+            padding: EdgeInsets.only(bottom: 5.w),
             child: Text(
               "Random text here. Dont mind it example only example only.",
               style: TextStyle(
@@ -395,6 +414,7 @@ class HighlightsContent extends StatelessWidget {
           ),
           const Divider(
             endIndent: 15,
+            //thickness: 5,
           ),
         ],
       ),

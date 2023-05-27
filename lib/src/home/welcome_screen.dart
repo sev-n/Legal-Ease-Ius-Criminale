@@ -47,7 +47,7 @@ class _WelcomePageState extends State<WelcomePage> {
             Container(
               decoration: const BoxDecoration(
                 image: DecorationImage(
-                    image: AssetImage('assets/welcomeScreen/splash.png'),
+                    image: AssetImage('assets/welcomeScreen/bg.png'),
                     fit: BoxFit.fill),
               ),
               child: PageView(
@@ -145,7 +145,7 @@ class GetStartedBtn extends StatelessWidget {
             );
           },
           style: ElevatedButton.styleFrom(
-            backgroundColor: const Color(0xffB5CFBC),
+            backgroundColor: const Color(0xffE8E8E8),
             foregroundColor: Colors.black,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(30.0),
