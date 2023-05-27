@@ -39,7 +39,7 @@ class _WelcomePageState extends State<WelcomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xff78887b),
+      backgroundColor: const Color(0xff028D8F),
       body: SafeArea(
         child: Stack(
           alignment: Alignment.center,

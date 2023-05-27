@@ -21,7 +21,7 @@ class _SideMenuState extends State<SideMenu> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Drawer(
-        backgroundColor: const Color(0xff6c7a70),
+        backgroundColor: const Color(0xffE8E8E8),
         shadowColor: Colors.black,
         width: 310.w,
         child: ListView(

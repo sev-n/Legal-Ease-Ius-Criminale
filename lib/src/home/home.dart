@@ -130,32 +130,29 @@ class HomePageState extends State<HomePage> {
                     ),
                     Padding(
                       padding: EdgeInsets.only(top: 35.h, left: 15.w),
-                      child: Builder(
-                        builder: (context) {
-                          return GestureDetector(
-                            onTap: (){
-                              textFieldFocus.unfocus();
-                              Scaffold.of(context).openDrawer();
-                              
-                            },
-                            child: Container(
-                              width: 32.w,
-                              height: 32.h,
-                              decoration: BoxDecoration(
-                                color: const Color(0xCCD9D9D9),
-                                borderRadius: BorderRadius.circular(10.r),
-                              ),
-                              child: Center(
-                                child: Icon(
-                                    Icons.grid_view_rounded,
-                                    color: const Color(0xCC0C2924),
-                                    size: 20.sp,
-                                  ),
+                      child: Builder(builder: (context) {
+                        return GestureDetector(
+                          onTap: () {
+                            textFieldFocus.unfocus();
+                            Scaffold.of(context).openDrawer();
+                          },
+                          child: Container(
+                            width: 32.w,
+                            height: 32.h,
+                            decoration: BoxDecoration(
+                              color: const Color(0xCCD9D9D9),
+                              borderRadius: BorderRadius.circular(10.r),
+                            ),
+                            child: Center(
+                              child: Icon(
+                                Icons.grid_view_rounded,
+                                color: const Color(0xCC0C2924),
+                                size: 20.sp,
                               ),
                             ),
-                          );
-                        }
-                      ),
+                          ),
+                        );
+                      }),
                     )
                   ],
                 ),
