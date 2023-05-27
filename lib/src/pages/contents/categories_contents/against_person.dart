@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:legalease_matrimonial/src/pages/contents/categories_contents/categories_sections/Against%20Person/Acts_of_Torture.dart';
-import 'package:legalease_matrimonial/src/pages/contents/categories_contents/categories_sections/Against%20Person/Definitions.dart';
-import 'package:legalease_matrimonial/src/pages/contents/categories_contents/categories_sections/Against%20Person/Short_Title.dart';
-import 'package:legalease_matrimonial/src/pages/contents/categories_contents/categories_sections/Against%20Person/State_of_Policy.dart';
+import 'package:legalease_matrimonial/src/pages/contents/categories_contents/categories_sections/againts_person/definitions.dart';
+import 'package:legalease_matrimonial/src/pages/contents/categories_contents/categories_sections/againts_person/state_of_policy.dart';
+
+import 'categories_sections/againts_person/acts_of_torture.dart';
+import 'categories_sections/againts_person/short_title.dart';
 
 class PersonContent extends StatelessWidget {
   const PersonContent({super.key});
@@ -155,7 +156,7 @@ class PersonContent extends StatelessWidget {
                                       context,
                                       MaterialPageRoute(
                                         builder: (context) =>
-                                            const ActsofTorture(),
+                                            const ActOfTorture(),
                                       ));
                                 },
                               ),

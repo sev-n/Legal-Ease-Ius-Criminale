@@ -16,13 +16,13 @@ Future main() async {
 
   final prefs = await SharedPreferences.getInstance();
 
-  runApp(const MyApp());
+  runApp(MyApp(prefs: prefs));
 }
 
 class MyApp extends StatelessWidget {
-  //final SharedPreferences prefs;
+  final SharedPreferences prefs;
 
-  const MyApp({super.key});
+  const MyApp({super.key, required this.prefs});
 
   // This widget is the root of your application.
   @override
@@ -36,7 +36,7 @@ class MyApp extends StatelessWidget {
           theme: ThemeData(
             primarySwatch: Colors.blue,
           ),
-          home: const WelcomePage(),
+          home: OneTimeWelcomePage(prefs: prefs),
         );
       },
     );

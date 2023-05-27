@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class ActsofTorture extends StatelessWidget {
-  const ActsofTorture({super.key});
+class ActOfTorture extends StatelessWidget {
+  const ActOfTorture({super.key});
 
   @override
   Widget build(BuildContext context) {

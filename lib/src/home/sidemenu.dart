@@ -90,161 +90,159 @@ class _MyDrawerListState extends State<MyDrawerList> {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        Container(
-          child: Column(
-            children: [
-              SizedBox(
-                height: 90.0.h,
-              ),
-              // ListTile(
-              //   minLeadingWidth: 10.0,
-              //   leading: Image.asset('assets/images/home.png',
-              //       width: 30.w, height: 30.h),
-              //   title: const Text(
-              //     'Home',
-              //     style: TextStyle(
-              //       color: Color(0xff0C2924),
-              //       fontFamily: "RobotoFlex",
-              //       fontSize: 16,
-              //     ),
-              //   ),
-              //   onTap: () {
-              //     Navigator.of(context).pushAndRemoveUntil(
-              //         MaterialPageRoute(
-              //           builder: (cont async ext) => const HomePage(),
-              //         ),
-              //         (route) => route.isFirst);
-              //   },
-              // ),
-              // const Divider(
-              //   height: 0.9,
-              //   color: Color(0x33000000),
-              //   indent: 14.0,
-              //   endIndent: 19.0,
-              // ),
-              //const SizedBox(height: 25),
-              ListTile(
-                minLeadingWidth: 10.0,
-                leading: Image.asset('assets/images/bookmark.png',
-                    width: 25, height: 25),
-                title: const Text(
-                  'Bookmark',
-                  style: TextStyle(
-                    color: Color(0xff0C2924),
-                    fontFamily: "RobotoFlex",
-                    fontSize: 16,
-                  ),
+        Column(
+          children: [
+            SizedBox(
+              height: 90.0.h,
+            ),
+            // ListTile(
+            //   minLeadingWidth: 10.0,
+            //   leading: Image.asset('assets/images/home.png',
+            //       width: 30.w, height: 30.h),
+            //   title: const Text(
+            //     'Home',
+            //     style: TextStyle(
+            //       color: Color(0xff0C2924),
+            //       fontFamily: "RobotoFlex",
+            //       fontSize: 16,
+            //     ),
+            //   ),
+            //   onTap: () {
+            //     Navigator.of(context).pushAndRemoveUntil(
+            //         MaterialPageRoute(
+            //           builder: (cont async ext) => const HomePage(),
+            //         ),
+            //         (route) => route.isFirst);
+            //   },
+            // ),
+            // const Divider(
+            //   height: 0.9,
+            //   color: Color(0x33000000),
+            //   indent: 14.0,
+            //   endIndent: 19.0,
+            // ),
+            //const SizedBox(height: 25),
+            ListTile(
+              minLeadingWidth: 10.0,
+              leading: Image.asset('assets/images/bookmark.png',
+                  width: 25, height: 25),
+              title: const Text(
+                'Bookmark',
+                style: TextStyle(
+                  color: Color(0xff0C2924),
+                  fontFamily: "RobotoFlex",
+                  fontSize: 16,
                 ),
-                trailing: const Icon(
-                  Icons.arrow_forward_ios_rounded,
-                  size: 15,
-                  color: Colors.black,
+              ),
+              trailing: const Icon(
+                Icons.arrow_forward_ios_rounded,
+                size: 15,
+                color: Colors.black,
+              ),
+              onTap: () {
+                Navigator.of(context).pushAndRemoveUntil(
+                    MaterialPageRoute(
+                      builder: (context) => const BookMark(),
+                    ),
+                    (route) => route.isFirst);
+              },
+            ),
+            const Divider(
+              height: 0.9,
+              color: Color(0x33000000),
+              indent: 14.0,
+              endIndent: 19.0,
+            ),
+            ListTile(
+              minLeadingWidth: 10.0,
+              leading: Image.asset('assets/images/feedback.png',
+                  width: 25, height: 25),
+              title: const Text(
+                'Feedback',
+                style: TextStyle(
+                  color: Color(0xff0C2924),
+                  fontFamily: "RobotoFlex",
+                  fontSize: 16,
                 ),
-                onTap: () {
-                  Navigator.of(context).pushAndRemoveUntil(
-                      MaterialPageRoute(
-                        builder: (context) => const BookMark(),
-                      ),
-                      (route) => route.isFirst);
-                },
               ),
-              const Divider(
-                height: 0.9,
-                color: Color(0x33000000),
-                indent: 14.0,
-                endIndent: 19.0,
+              trailing: const Icon(
+                Icons.arrow_forward_ios_rounded,
+                size: 15,
+                color: Colors.black,
               ),
-              ListTile(
-                minLeadingWidth: 10.0,
-                leading: Image.asset('assets/images/feedback.png',
-                    width: 25, height: 25),
-                title: const Text(
-                  'Feedback',
-                  style: TextStyle(
-                    color: Color(0xff0C2924),
-                    fontFamily: "RobotoFlex",
-                    fontSize: 16,
-                  ),
+              onTap: () {
+                launchEmail();
+              },
+            ),
+            const Divider(
+              height: 0.9,
+              color: Color(0x33000000),
+              indent: 14.0,
+              endIndent: 19.0,
+            ),
+            ListTile(
+              minLeadingWidth: 10.0,
+              leading: Image.asset('assets/images/about.png',
+                  width: 25, height: 25),
+              title: const Text(
+                'About Us',
+                style: TextStyle(
+                  color: Color(0xff0C2924),
+                  fontFamily: "RobotoFlex",
+                  fontSize: 16,
                 ),
-                trailing: const Icon(
-                  Icons.arrow_forward_ios_rounded,
-                  size: 15,
-                  color: Colors.black,
+              ),
+              trailing: const Icon(
+                Icons.arrow_forward_ios_rounded,
+                size: 15,
+                color: Colors.black,
+              ),
+              onTap: () {
+                Navigator.of(context).pushAndRemoveUntil(
+                    MaterialPageRoute(
+                      builder: (context) => const AboutUs(),
+                    ),
+                    (route) => route.isFirst);
+              },
+            ),
+            const Divider(
+              height: 0.9,
+              color: Color(0x33000000),
+              indent: 14.0,
+              endIndent: 19.0,
+            ),
+            ListTile(
+              minLeadingWidth: 10.0,
+              leading: Image.asset('assets/images/help.png',
+                  width: 30, height: 30),
+              title: const Text(
+                'Help Center',
+                style: TextStyle(
+                  color: Color(0xff0C2924),
+                  fontFamily: "RobotoFlex",
+                  fontSize: 16,
                 ),
-                onTap: () {
-                  launchEmail();
-                },
               ),
-              const Divider(
-                height: 0.9,
-                color: Color(0x33000000),
-                indent: 14.0,
-                endIndent: 19.0,
+              trailing: const Icon(
+                Icons.arrow_forward_ios_rounded,
+                size: 15,
+                color: Colors.black,
               ),
-              ListTile(
-                minLeadingWidth: 10.0,
-                leading: Image.asset('assets/images/about.png',
-                    width: 25, height: 25),
-                title: const Text(
-                  'About Us',
-                  style: TextStyle(
-                    color: Color(0xff0C2924),
-                    fontFamily: "RobotoFlex",
-                    fontSize: 16,
-                  ),
-                ),
-                trailing: const Icon(
-                  Icons.arrow_forward_ios_rounded,
-                  size: 15,
-                  color: Colors.black,
-                ),
-                onTap: () {
-                  Navigator.of(context).pushAndRemoveUntil(
-                      MaterialPageRoute(
-                        builder: (context) => const AboutUs(),
-                      ),
-                      (route) => route.isFirst);
-                },
-              ),
-              const Divider(
-                height: 0.9,
-                color: Color(0x33000000),
-                indent: 14.0,
-                endIndent: 19.0,
-              ),
-              ListTile(
-                minLeadingWidth: 10.0,
-                leading: Image.asset('assets/images/help.png',
-                    width: 30, height: 30),
-                title: const Text(
-                  'Help Center',
-                  style: TextStyle(
-                    color: Color(0xff0C2924),
-                    fontFamily: "RobotoFlex",
-                    fontSize: 16,
-                  ),
-                ),
-                trailing: const Icon(
-                  Icons.arrow_forward_ios_rounded,
-                  size: 15,
-                  color: Colors.black,
-                ),
-                onTap: () {
-                  Navigator.of(context).pushAndRemoveUntil(
-                      MaterialPageRoute(
-                        builder: (context) => const HelpCenter(),
-                      ),
-                      (route) => route.isFirst);
-                },
-              ),
-              const Divider(
-                height: 0.9,
-                color: Color(0x33000000),
-                indent: 14.0,
-                endIndent: 19.0,
-              ),
-            ],
-          ),
+              onTap: () {
+                Navigator.of(context).pushAndRemoveUntil(
+                    MaterialPageRoute(
+                      builder: (context) => const HelpCenter(),
+                    ),
+                    (route) => route.isFirst);
+              },
+            ),
+            const Divider(
+              height: 0.9,
+              color: Color(0x33000000),
+              indent: 14.0,
+              endIndent: 19.0,
+            ),
+          ],
         ),
       ],
     );
