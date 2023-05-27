@@ -62,7 +62,6 @@ class WelcomePageThree extends StatelessWidget {
                 ),
                 // top: screenHeight * 0.66,
                 // left: screenWidth * 0.097,
-                // TODO: need to fix alignment
                 Padding(
                   padding: EdgeInsets.only(top: 15.h),
                   child: Text(

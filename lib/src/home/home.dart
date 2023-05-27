@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 import '../pages/contents/categories.dart';
 import 'sidemenu.dart';
 
@@ -226,9 +224,10 @@ class HomePageState extends State<HomePage> {
                     children: [
                       Container(
                         width: width,
-                        height: 55.h,
+                        height: 45.h,
                         decoration: const BoxDecoration(
                           color: Color(0xFFFFFFFF),
+                          //color: Colors.blue,
                           border: Border(
                             top: BorderSide(
                               width: 1.0,
@@ -237,7 +236,7 @@ class HomePageState extends State<HomePage> {
                           ),
                         ),
                         child: Padding(
-                          padding: EdgeInsets.only(top: 8.h, left: 15.w),
+                          padding: EdgeInsets.only(top: 10.h, left: 15.w),
                           child: Text(
                             "Highlights",
                             style: TextStyle(
@@ -254,7 +253,7 @@ class HomePageState extends State<HomePage> {
                         child: Container(
                             color: const Color(0xFFFFFFFF),
                             width: width,
-                            height: 235.h,
+                            height: 246.h,
                             child: ListView(
                               children: const [
                                 HighlightsContent(),
@@ -354,7 +353,7 @@ class GenerateBtn extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 105.w,
+      width: 120.w,
       height: 40.h,
       child: ElevatedButton(
         style: ButtonStyle(
@@ -374,7 +373,7 @@ class GenerateBtn extends StatelessWidget {
           _textEditingController.clear();
         },
         child: const Text(
-          "Generate",
+          "Submit",
           style: TextStyle(color: Color(0xff000000)),
         ),
       ),
@@ -388,7 +387,7 @@ class HighlightsContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(top: 15.h, left: 15.w),
+      padding: EdgeInsets.only(left: 15.w),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -404,7 +403,7 @@ class HighlightsContent extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: EdgeInsets.only(bottom: 15.w),
+            padding: EdgeInsets.only(bottom: 5.w),
             child: Text(
               "Random text here. Dont mind it example only example only.",
               style: TextStyle(
@@ -415,6 +414,7 @@ class HighlightsContent extends StatelessWidget {
           ),
           const Divider(
             endIndent: 15,
+            //thickness: 5,
           ),
         ],
       ),
