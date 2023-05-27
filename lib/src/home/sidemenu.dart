@@ -63,6 +63,29 @@ class MyDrawerList extends StatefulWidget {
 }
 
 class _MyDrawerListState extends State<MyDrawerList> {
+  
+  Future<void> launchEmail() async {
+    String? encodeQueryParameters(Map<String, String> params) {
+      return params.entries
+          .map((MapEntry<String, String> e) =>
+              '${Uri.encodeComponent(e.key)}=${Uri.encodeComponent(e.value)}')
+          .join('&');
+    }
+
+    final Uri email = Uri(
+      scheme: 'mailto',
+      path: 'legalease.dev@gmail.com',
+      query: encodeQueryParameters(
+          <String, String>{'subject': "Feedback", 'body': ""}),
+    );
+
+    try{
+      await launchUrl(email);
+    } catch (exception) {
+      debugPrint(exception.toString());
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -88,7 +111,7 @@ class _MyDrawerListState extends State<MyDrawerList> {
               //   onTap: () {
               //     Navigator.of(context).pushAndRemoveUntil(
               //         MaterialPageRoute(
-              //           builder: (context) => const HomePage(),
+              //           builder: (cont async ext) => const HomePage(),
               //         ),
               //         (route) => route.isFirst);
               //   },
@@ -148,7 +171,9 @@ class _MyDrawerListState extends State<MyDrawerList> {
                   size: 15,
                   color: Colors.black,
                 ),
-                onTap: () {},
+                onTap: () {
+                  launchEmail();
+                },
               ),
               const Divider(
                 height: 0.9,
