@@ -58,7 +58,7 @@ class ContentButtons extends StatelessWidget {
                 ),
               ),
               GoToPageContent(
-                destination: const PropertyContent(),
+                destination: const AgainstProperty(),
                 child: Container(
                   width: FormatUtil.contSizeCategories.w,
                   height: FormatUtil.contSizeCategories.h,
