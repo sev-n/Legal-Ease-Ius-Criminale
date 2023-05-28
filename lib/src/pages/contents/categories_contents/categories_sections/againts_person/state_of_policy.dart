@@ -1,5 +1,3 @@
-// ignore_for_file: file_names
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -30,7 +28,7 @@ class StateofPolicy extends StatelessWidget {
                     alignment: Alignment.bottomCenter,
                     child: Container(
                       width: MediaQuery.of(context).size.width,
-                      height: MediaQuery.of(context).size.height * 0.70,
+                      height: MediaQuery.of(context).size.height * 0.76,
                       decoration: BoxDecoration(
                         color: const Color(0xffE8E8E8),
                         borderRadius: BorderRadius.only(
@@ -38,8 +36,6 @@ class StateofPolicy extends StatelessWidget {
                           topRight: Radius.circular(15.r),
                         ),
                       ),
-                      // TODO: arrange the items accordingly
-                      // Items here for second container which contains description abt section.
                       child: SingleChildScrollView(
                         child: Column(
                           children: [
