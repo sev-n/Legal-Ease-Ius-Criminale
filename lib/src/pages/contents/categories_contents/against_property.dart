@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'categories_sections/against_property/copyright.dart';
 import 'categories_sections/against_property/industrial_designs.dart';
@@ -13,184 +14,160 @@ class AgainstProperty extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Align(
-          alignment: Alignment.topCenter,
-          child: Stack(
-            children: [
-              Container(
-                width: MediaQuery.of(context).size.width,
-                height: MediaQuery.of(context).size.height,
-                decoration: const BoxDecoration(
-                  color: Color(0xff97a294),
-                ),
-                //! insert items here
-                child: const Padding(
-                  padding: EdgeInsets.only(top: 100, left: 20),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        'Against Property',
-                        style: TextStyle(
-                          fontSize: 24,
-                          fontWeight: FontWeight.bold,
-                          color: Color(0xff0c2924),
+        child: Stack(
+          children: [
+            Container(
+              color: const Color(0xff028D8F),
+              width: MediaQuery.of(context).size.width,
+              height: MediaQuery.of(context).size.height,
+              child: Stack(
+                children: [
+                  // Items here for main container.
+                  // modify the size depends on needs
+                  // sample text -> remove
+                  const Align(
+                    alignment: Alignment.topCenter,
+                    child: Text("Hello world"),
+                  ),
+                  // second container
+                  Align(
+                    alignment: Alignment.bottomCenter,
+                    child: Container(
+                      width: MediaQuery.of(context).size.width,
+                      height: MediaQuery.of(context).size.height * 0.76,
+                      decoration: BoxDecoration(
+                        color: const Color(0xffE8E8E8),
+                        borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(15.r),
+                          topRight: Radius.circular(15.r),
                         ),
                       ),
-                    ],
-                  ),
-                ),
-              ),
-              //* Logo Code
-              //* Logo Code
-              Align(
-                alignment: Alignment.bottomCenter,
-                child: SizedBox(
-                  width: MediaQuery.of(context).size.width,
-                  height: MediaQuery.of(context).size.height - 170,
-                  child: Container(
-                    decoration: const BoxDecoration(
-                        color: Color(0xCCD9D9D9),
-                        borderRadius: BorderRadius.only(
-                          topLeft: Radius.circular(10),
-                          topRight: Radius.circular(10),
-                        )),
-                    //! insert items here!
-                    child: Align(
-                      alignment: Alignment.bottomCenter,
-                      child: SizedBox(
-                        width: MediaQuery.of(context).size.width,
-                        height: MediaQuery.of(context).size.height - 250,
-                        child: Transform.translate(
-                          offset: const Offset(0, -50.0),
-                          child: ListView(
-                            children: [
-                              Divider(
-                                thickness: 1.0,
-                                indent: 20.0,
-                                endIndent: 20.0,
-                                color: Colors.grey[500],
-                              ),
-                              ListTile(
-                                title: const Text(
-                                  "Patents",
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.bold, height: 1.5),
-                                ),
-                                trailing: const Icon(Icons.chevron_right,
-                                    color: Colors.black),
-                                onTap: () {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (context) => const Patents(),
-                                    ),
-                                  );
-                                },
-                              ),
-                              Divider(
-                                thickness: 1.0,
-                                indent: 20.0,
-                                endIndent: 20.0,
-                                color: Colors.grey[500],
-                              ),
-                              ListTile(
-                                title: const Text(
-                                  "Industrial Designs",
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.bold, height: 1.5),
-                                ),
-                                trailing: const Icon(Icons.chevron_right,
-                                    color: Colors.black),
-                                onTap: () {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (context) => const IndustrialDesigns(),
-                                    ),
-                                  );
-                                },
-                              ),
-                              Divider(
-                                thickness: 1.0,
-                                indent: 20.0,
-                                endIndent: 20.0,
-                                color: Colors.grey[500],
-                              ),
-                              ListTile(
-                                title: const Text(
-                                  "Utility Models",
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.bold, height: 1.5),
-                                ),
-                                trailing: const Icon(Icons.chevron_right,
-                                    color: Colors.black),
-                                onTap: () {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (context) => const UtilityModels(),
-                                    ),
-                                  );
-                                },
-                              ),
-                              Divider(
-                                thickness: 1.0,
-                                indent: 20.0,
-                                endIndent: 20.0,
-                                color: Colors.grey[500],
-                              ),
-                              ListTile(
-                                title: const Text(
-                                  "Trade Marks, Service Marks and Trade Names",
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.bold, height: 1.5),
-                                ),
-                                trailing: const Icon(Icons.chevron_right,
-                                    color: Colors.black),
-                                onTap: () {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (context) => const TST(),
-                                    ),
-                                  );
-                                },
-                              ),
-                              Divider(
-                                thickness: 1.0,
-                                indent: 20.0,
-                                endIndent: 20.0,
-                                color: Colors.grey[500],
-                              ),
-                              ListTile(
-                                title: const Text(
-                                  "Copyright",
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.bold, height: 1.5),
-                                ),
-                                trailing: const Icon(Icons.chevron_right,
-                                    color: Colors.black),
-                                onTap: () {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (context) => const Copyright(),
-                                    ),
-                                  );
-                                },
-                              ),
-                            ],
+                      child: ListView(
+                        children: [
+                          Divider(
+                            thickness: 1.0,
+                            indent: 20.0,
+                            endIndent: 20.0,
+                            color: Colors.grey[500],
                           ),
-                        ),
+                          ListTile(
+                            title: const Text(
+                              "Patents",
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold, height: 1.5),
+                            ),
+                            trailing: const Icon(Icons.chevron_right,
+                                color: Colors.black),
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => const Patents(),
+                                ),
+                              );
+                            },
+                          ),
+                          Divider(
+                            thickness: 1.0,
+                            indent: 20.0,
+                            endIndent: 20.0,
+                            color: Colors.grey[500],
+                          ),
+                          ListTile(
+                            title: const Text(
+                              "Industrial Designs",
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold, height: 1.5),
+                            ),
+                            trailing: const Icon(Icons.chevron_right,
+                                color: Colors.black),
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) =>
+                                      const IndustrialDesigns(),
+                                ),
+                              );
+                            },
+                          ),
+                          Divider(
+                            thickness: 1.0,
+                            indent: 20.0,
+                            endIndent: 20.0,
+                            color: Colors.grey[500],
+                          ),
+                          ListTile(
+                            title: const Text(
+                              "Utility Models",
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold, height: 1.5),
+                            ),
+                            trailing: const Icon(Icons.chevron_right,
+                                color: Colors.black),
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => const UtilityModels(),
+                                ),
+                              );
+                            },
+                          ),
+                          Divider(
+                            thickness: 1.0,
+                            indent: 20.0,
+                            endIndent: 20.0,
+                            color: Colors.grey[500],
+                          ),
+                          ListTile(
+                            title: const Text(
+                              "Trade Marks, Service Marks and Trade Names",
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold, height: 1.5),
+                            ),
+                            trailing: const Icon(Icons.chevron_right,
+                                color: Colors.black),
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => const TST(),
+                                ),
+                              );
+                            },
+                          ),
+                          Divider(
+                            thickness: 1.0,
+                            indent: 20.0,
+                            endIndent: 20.0,
+                            color: Colors.grey[500],
+                          ),
+                          ListTile(
+                            title: const Text(
+                              "Copyright",
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold, height: 1.5),
+                            ),
+                            trailing: const Icon(Icons.chevron_right,
+                                color: Colors.black),
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => const Copyright(),
+                                ),
+                              );
+                            },
+                          ),
+                        ],
                       ),
                     ),
                   ),
-                ),
-              )
-            ],
-          ),
+                ],
+              ),
+            ),
+          ],
         ),
       ),
     );
