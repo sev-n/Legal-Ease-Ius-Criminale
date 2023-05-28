@@ -18,35 +18,36 @@ Future main() async {
 
   final prefs = await SharedPreferences.getInstance();
 
-  runApp(const MyApp());
+  runApp(MyApp(prefs: prefs));
 }
 
 class MyApp extends StatelessWidget {
-  //final SharedPreferences prefs;
+  final SharedPreferences prefs;
 
-  const MyApp({super.key});
+  const MyApp({super.key, required this.prefs});
 
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
-        providers: [
-          ChangeNotifierProvider<LoadingState>(
-            create: (_) => LoadingState(),
-          ),
-        ],
-        child: ScreenUtilInit(
-          designSize: const Size(390, 844),
-          builder: (context, child) {
-            return GetMaterialApp(
-              debugShowCheckedModeBanner: false,
-              title: "Legal ease",
-              theme: ThemeData(
-                primarySwatch: Colors.blue,
-              ),
-              home: const WelcomePage(),
-            );
-          },
-        ));
+      providers: [
+        ChangeNotifierProvider<LoadingState>(
+          create: (_) => LoadingState(),
+        ),
+      ],
+      child: ScreenUtilInit(
+        designSize: const Size(390, 844),
+        builder: (context, child) {
+          return GetMaterialApp(
+            debugShowCheckedModeBanner: false,
+            title: "Legal ease",
+            theme: ThemeData(
+              primarySwatch: Colors.blue,
+            ),
+            home: OneTimeWelcomePage(prefs: prefs),
+          );
+        },
+      ),
+    );
   }
 }
