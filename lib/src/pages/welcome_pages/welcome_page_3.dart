@@ -12,43 +12,40 @@ class WelcomePageThree extends StatelessWidget {
     return Container(
       width: screenWidth,
       height: screenHeight,
-      decoration: const BoxDecoration(
-        image: DecorationImage(
-            image: AssetImage('assets/welcomeScreen/welcome_3.png'),
-            fit: BoxFit.fill),
-      ),
+      color: const Color(0xff028D8F),
+      margin: const EdgeInsets.only(left: 20, right: 20),
       child: Stack(
         alignment: Alignment.center,
         children: [
-          Positioned(
-            top: 20.h,
-            right: 15.w,
-            child: Container(
-              width: 60.w,
-              height: 60.h,
-              decoration: const BoxDecoration(
-                image: DecorationImage(
-                  image: AssetImage('assets/welcomeScreen/welcome_logo.png'),
-                  fit: BoxFit.cover,
-                ),
-              ),
-            ),
-          ),
           Padding(
-            padding: EdgeInsets.only(top: 230.h),
+            padding: EdgeInsets.only(top: 20.h),
             child: Column(
               children: [
                 Container(
-                  width: 250.w,
-                  height: 240.h,
+                  width: 75.w,
+                  height: 75.h,
                   decoration: const BoxDecoration(
                     image: DecorationImage(
-                        image: AssetImage('assets/welcomeScreen/image_3.png'),
-                        fit: BoxFit.cover),
+                      image:
+                          AssetImage('assets/welcomeScreen/welcome_logo.png'),
+                      fit: BoxFit.cover,
+                    ),
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.only(top: 15.h),
+                  padding: EdgeInsets.only(top: 80.h),
+                  child: Container(
+                    width: 270.w,
+                    height: 250.h,
+                    decoration: const BoxDecoration(
+                      image: DecorationImage(
+                        image: AssetImage('assets/welcomeScreen/image_3.png'),
+                      ),
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsets.only(top: 40.h),
                   child: Text(
                     "A one tap app and pocketable \nlegal service for you",
                     textAlign: TextAlign.center,
@@ -56,22 +53,20 @@ class WelcomePageThree extends StatelessWidget {
                       fontSize: 22.sp,
                       fontFamily: "RobotoFlex",
                       fontWeight: FontWeight.bold,
-                      color: const Color(0xff0C2924),
+                      color: Colors.white,
                     ),
                   ),
                 ),
-                // top: screenHeight * 0.66,
-                // left: screenWidth * 0.097,
                 Padding(
-                  padding: EdgeInsets.only(top: 15.h),
+                  padding: EdgeInsets.only(top: 20.h),
                   child: Text(
-                    "Designed to be easy to use and offers a range of \nlegal services, all accessible from the palm of \nyour hand.",
-                    textAlign: TextAlign.center,
+                    "Designed to be easy to use and offers a range of legal services, all accessible from the palm of your hand.",
+                    textAlign: TextAlign.justify,
                     style: TextStyle(
                       fontWeight: FontWeight.w400,
                       fontSize: 16.sp,
                       fontFamily: "Habibi",
-                      color: const Color(0xff0C2924),
+                      color: Colors.white,
                     ),
                   ),
                 ),
