@@ -48,42 +48,43 @@ class _WelcomePageState extends State<WelcomePage> {
         child: Stack(
           alignment: Alignment.center,
           children: [
-            Container(
-              decoration: const BoxDecoration(
-                image: DecorationImage(
-                    image: AssetImage('assets/welcomeScreen/bg.png'),
-                    fit: BoxFit.fill),
-              ),
-              child: PageView(
-                onPageChanged: (index) {
-                  setState(() {
-                    isLastPage = (index == 2);
-                  });
-                },
-                controller: _controller,
-                children: const [
-                  // pages
-                  WelcomePageOne(),
-                  WelcomePageTwo(),
-                  WelcomePageThree()
-                ],
-              ),
+            Consumer<LoadingState>(
+              builder: (context, data, child) {
+                return Container(
+                  color: const Color(0xff028D8F),
+                  child: PageView(
+                    physics: data.canSwipe
+                        ? null
+                        : const NeverScrollableScrollPhysics(),
+                    onPageChanged: (index) {
+                      setState(() {
+                        isLastPage = (index == 2);
+                      });
+                    },
+                    controller: _controller,
+                    children: const [
+                      // pages
+                      WelcomePageOne(),
+                      WelcomePageTwo(),
+                      WelcomePageThree()
+                    ],
+                  ),
+                );
+              },
             ),
             isLastPage ? const GetStartedBtn() : const NextBtn(),
             isLastPage
-                ? SizedBox(
-                    child: Consumer<LoadingState>(
-                      builder: (context, data, child) {
-                        return Visibility(
-                          visible: !data.isShowed,
-                          child: const Loading(),
-                        );
-                      },
-                    ),
-                  )
+                ? Consumer<LoadingState>(
+                  builder: (context, data, child) {
+                    return Visibility(
+                      visible: !data.isShowed,
+                      child: const Loading(),
+                    );
+                  },
+                )
                 : const SizedBox(),
             Container(
-              alignment: const Alignment(0, 0.65),
+              alignment: const Alignment(0, 0.60),
               child: const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
@@ -107,28 +108,27 @@ class NextBtn extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // top: 625,
-    // left: 80,
-
     return Align(
       alignment: const Alignment(0, 0.85),
       child: SizedBox(
-        width: 200,
-        child: OutlinedButton(
+        width: MediaQuery.of(context).size.width * .90,
+        height: MediaQuery.of(context).size.height * .065,
+        child: ElevatedButton(
           onPressed: () {
             _controller.nextPage(
                 duration: const Duration(milliseconds: 500),
                 curve: Curves.easeIn);
           },
-          style: FilledButton.styleFrom(
+          style: ElevatedButton.styleFrom(
+            backgroundColor: const Color(0xff028D8F),
+            elevation: 0,
             side: const BorderSide(
               width: 1,
-              color: Color(0xff0C2924),
+              color: Colors.white,
             ),
             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(30.0),
+              borderRadius: BorderRadius.circular(10.r),
             ),
-            foregroundColor: Colors.black,
           ),
           child: const Text(
             "Next",
@@ -136,7 +136,7 @@ class NextBtn extends StatelessWidget {
               fontSize: 18,
               fontWeight: FontWeight.w500,
               fontFamily: "RobotoFlex",
-              color: Color(0xff0C2924),
+              color: Colors.white,
             ),
           ),
         ),
@@ -145,9 +145,14 @@ class NextBtn extends StatelessWidget {
   }
 }
 
-class GetStartedBtn extends StatelessWidget {
+class GetStartedBtn extends StatefulWidget {
   const GetStartedBtn({super.key});
 
+  @override
+  State<GetStartedBtn> createState() => _GetStartedBtnState();
+}
+
+class _GetStartedBtnState extends State<GetStartedBtn> {
   @override
   Widget build(BuildContext context) {
     var varShow = Provider.of<LoadingState>(context, listen: false);
@@ -170,18 +175,22 @@ class GetStartedBtn extends StatelessWidget {
           child: Align(
             alignment: const Alignment(0, 0.85),
             child: SizedBox(
-              width: 200,
+              width: MediaQuery.of(context).size.width * .90,
+              height: MediaQuery.of(context).size.height * .065,
               child: ElevatedButton(
                 onPressed: () {
+                  varShow.setSwipeState(false);
                   sleep();
                   debugPrint('This also code execute');
                   varShow.setShow(false);
                 },
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color(0xffE8E8E8),
-                  foregroundColor: Colors.black,
+                  alignment: Alignment.center,
+                  backgroundColor: const Color(0xff263238),
+                  shadowColor: Colors.black,
+                  elevation: 5,
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(30.0),
+                    borderRadius: BorderRadius.circular(10.r),
                   ),
                 ),
                 child: const Text(
@@ -190,7 +199,7 @@ class GetStartedBtn extends StatelessWidget {
                     fontSize: 18,
                     fontWeight: FontWeight.w500,
                     fontFamily: "RobotoFlex",
-                    color: Color(0xff0C2924),
+                    color: Colors.white,
                   ),
                 ),
               ),
@@ -215,15 +224,11 @@ class _PageIndicatorState extends State<PageIndicator> {
     return SmoothPageIndicator(
       controller: _controller,
       count: 3,
-      effect: const SlideEffect(
-        spacing: 4.0,
-        radius: 4.0,
-        dotWidth: 30.0,
-        dotHeight: 2.5,
-        paintStyle: PaintingStyle.stroke,
-        strokeWidth: 1.5,
-        dotColor: Color(0xff0C2924),
-        activeDotColor: Color(0xff0C2924),
+      effect: const SwapEffect(
+        dotWidth: 8.0,
+        dotHeight: 8.0,
+        activeDotColor: Color(0xff263238),
+        dotColor: Colors.white,
       ),
     );
   }
@@ -243,8 +248,8 @@ class _LoadingState extends State<Loading> {
       alignment: const Alignment(0, 0.88),
       child: Lottie.asset(
         'assets/lottie/loading13.json',
-        width: 100.w,
-        height: 100.h,
+        width: 115.w,
+        height: 115.h,
       ),
     );
   }
