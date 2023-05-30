@@ -12,39 +12,31 @@ class WelcomePageTwo extends StatelessWidget {
     return Container(
       width: screenWidth,
       height: screenHeight,
-      decoration: const BoxDecoration(
-        image: DecorationImage(
-            image: AssetImage('assets/welcomeScreen/welcome_2.png'),
-            fit: BoxFit.fill),
-      ),
+      color: const Color(0xff028D8F),
+      margin: const EdgeInsets.only(left: 20, right: 20),
       child: Stack(
         alignment: Alignment.center,
         children: [
-          Positioned(
-            top: 20.h,
-            right: 15.w,
-            child: Container(
-              width: 60.w,
-              height: 60.h,
-              decoration: const BoxDecoration(
-                image: DecorationImage(
-                  image: AssetImage('assets/welcomeScreen/welcome_logo.png'),
-                  fit: BoxFit.cover,
-                ),
-              ),
-            ),
-          ),
-          // top: screenHeight * 0.25,
-          //left: screenWidth * 0.061,
           Padding(
-            padding: EdgeInsets.only(top: 200.h),
+            padding: EdgeInsets.only(top: 20.h),
             child: Column(
               children: [
+                Container(
+                  width: 75.w,
+                  height: 75.h,
+                  decoration: const BoxDecoration(
+                    image: DecorationImage(
+                      image:
+                          AssetImage('assets/welcomeScreen/welcome_logo.png'),
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ),
                 Padding(
-                  padding: EdgeInsets.only(right: 140.w),
+                  padding: EdgeInsets.only(top: 80.h),
                   child: Container(
-                    width: 230.w,
-                    height: 230.h,
+                    width: 270.w,
+                    height: 250.h,
                     decoration: const BoxDecoration(
                       image: DecorationImage(
                         image: AssetImage('assets/welcomeScreen/image_2.png'),
@@ -53,7 +45,7 @@ class WelcomePageTwo extends StatelessWidget {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.only(top: 50.h),
+                  padding: EdgeInsets.only(top: 40.h),
                   child: Text(
                     "Free Legal Advice and Resources \nfor all",
                     textAlign: TextAlign.center,
@@ -61,20 +53,20 @@ class WelcomePageTwo extends StatelessWidget {
                       fontSize: 22.sp,
                       fontFamily: "RobotoFlex",
                       fontWeight: FontWeight.w700,
-                      color: const Color(0xff0C2924),
+                      color: Colors.white,
                     ),
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.only(top: 20.h),
+                  padding: EdgeInsets.only(top: 20.h, left: 5.w, right: 5.w),
                   child: Text(
-                    "Whether you need help with legal issue, have a \nquestion about the law, or need legal document \npreparation, our app is here to help.",
+                    "Whether you need help with legal issue, have a question about the law, or need legal document preparation, our app is here to help.",
                     textAlign: TextAlign.justify,
                     style: TextStyle(
                       fontWeight: FontWeight.w400,
                       fontSize: 16.sp,
                       fontFamily: "Habibi",
-                      color: const Color(0xff0C2924),
+                      color: Colors.white,
                     ),
                   ),
                 ),

@@ -12,41 +12,35 @@ class WelcomePageOne extends StatelessWidget {
     return Container(
       width: screenWidth,
       height: screenHeight,
-      decoration: const BoxDecoration(
-        image: DecorationImage(
-            image: AssetImage('assets/welcomeScreen/welcome_1.png'),
-            fit: BoxFit.fill),
-      ),
+      color: const Color(0xff028D8F),
+      margin: const EdgeInsets.only(left: 20, right: 20),
       child: Stack(
         alignment: Alignment.center,
         children: [
-          Positioned(
-            top: 20.h,
-            right: 15.w,
-            child: Container(
-              width: 60.w,
-              height: 60.h,
-              decoration: const BoxDecoration(
-                image: DecorationImage(
-                  image: AssetImage('assets/welcomeScreen/welcome_logo.png'),
-                  fit: BoxFit.cover,
-                ),
-              ),
-            ),
-          ),
           Padding(
-            padding: EdgeInsets.only(top: 230.h),
+            padding: EdgeInsets.only(top: 20.h),
             child: Column(
               children: [
-                Transform.rotate(
-                  angle: 0.066 * (3.14 / 180), // convert degrees to radians
+                Container(
+                  width: 75.w,
+                  height: 75.h,
+                  decoration: const BoxDecoration(
+                    image: DecorationImage(
+                      image:
+                          AssetImage('assets/welcomeScreen/welcome_logo.png'),
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsets.only(top: 80.h),
                   child: Container(
-                    width: 200.w,
-                    height: 210.h,
+                    width: 270.w,
+                    height: 250.h,
                     decoration: const BoxDecoration(
                       image: DecorationImage(
-                          image: AssetImage('assets/welcomeScreen/image_1.png'),
-                          fit: BoxFit.cover),
+                        image: AssetImage('assets/welcomeScreen/image_1.png'),
+                      ),
                     ),
                   ),
                 ),
@@ -54,11 +48,12 @@ class WelcomePageOne extends StatelessWidget {
                   padding: EdgeInsets.only(top: 40.h),
                   child: Text(
                     "Legal Ease Ius Criminale as your \ntrusted legal partner",
+                    textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 22.sp,
                       fontFamily: "RobotoFlex",
                       fontWeight: FontWeight.w700,
-                      color: const Color(0xff0C2924),
+                      color: Colors.white,
                     ),
                   ),
                 ),
@@ -66,11 +61,12 @@ class WelcomePageOne extends StatelessWidget {
                   padding: EdgeInsets.only(top: 20.h),
                   child: Text(
                     "Offers you a law consultation whom you may \ncontact privately for your legal matter.",
+                    textAlign: TextAlign.justify,
                     style: TextStyle(
                       fontWeight: FontWeight.w400,
                       fontSize: 16.sp,
                       fontFamily: "Habibi",
-                      color: const Color(0xff0C2924),
+                      color: Colors.white,
                     ),
                   ),
                 ),
