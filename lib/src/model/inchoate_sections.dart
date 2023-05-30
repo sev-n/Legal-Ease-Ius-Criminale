@@ -1,4 +1,5 @@
 import 'package:legalease_matrimonial/src/pages/contents/categories_contents/categories_sections/inchoate_crime/republic_9262/section_1-5.dart';
+import 'package:legalease_matrimonial/src/pages/contents/categories_contents/categories_sections/inchoate_crime/republic_9262/section_11-15.dart';
 import 'package:legalease_matrimonial/src/pages/contents/categories_contents/categories_sections/inchoate_crime/republic_9262/section_6-10.dart';
 
 class Sections {
@@ -76,6 +77,11 @@ class ListOfRoutes {
     SectionEight(),
     SectionNine(),
     SectionTen(),
+    SectionEleven(),
+    SectionTwelve(),
+    SectionThirteen(),
+    SectionFourteen(),
+    SectionFifteen(),
   ];
 
 }
