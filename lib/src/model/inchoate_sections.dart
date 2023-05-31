@@ -3,6 +3,7 @@ import 'package:legalease_matrimonial/src/pages/contents/categories_contents/cat
 import 'package:legalease_matrimonial/src/pages/contents/categories_contents/categories_sections/inchoate_crime/republic_9262/section_16-20.dart';
 import 'package:legalease_matrimonial/src/pages/contents/categories_contents/categories_sections/inchoate_crime/republic_9262/section_21-30.dart';
 import 'package:legalease_matrimonial/src/pages/contents/categories_contents/categories_sections/inchoate_crime/republic_9262/section_31-40.dart';
+import 'package:legalease_matrimonial/src/pages/contents/categories_contents/categories_sections/inchoate_crime/republic_9262/section_41-50.dart';
 import 'package:legalease_matrimonial/src/pages/contents/categories_contents/categories_sections/inchoate_crime/republic_9262/section_6-10.dart';
 
 class Sections {
@@ -110,5 +111,15 @@ class ListOfRoutes {
     SectionThirtyEight(),
     SectionThirtyNine(),
     SectionForty(),
+    SectionFortyOne(),
+    SectionFortyTwo(),
+    SectionFortyThree(),
+    SectionFortyFour(),
+    SectionFortyFive(),
+    SectionFortySix(),
+    SectionFortySeven(),
+    SectionFortyEight(),
+    SectionFortyNine(),
+    SectionFifty(),
   ];
 }
