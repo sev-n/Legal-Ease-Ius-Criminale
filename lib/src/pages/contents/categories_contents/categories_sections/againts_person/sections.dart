@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:legalease_matrimonial/src/model/inchoate_sections.dart';
+import 'package:legalease_matrimonial/src/model/against_person_sections.dart';
 
-class SectionsInchoate extends StatelessWidget {
-  const SectionsInchoate({super.key});
+class SectionsPerson extends StatelessWidget {
+  const SectionsPerson({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +33,7 @@ class SectionsInchoate extends StatelessWidget {
                         ),
                         SizedBox(width: 15.w),
                         Text(
-                          "Inchoate Crime",
+                          "Against Person",
                           style: TextStyle(
                               fontSize: 24.sp,
                               fontWeight: FontWeight.bold,
@@ -57,9 +57,9 @@ class SectionsInchoate extends StatelessWidget {
                         ),
                       ),
                       child: ListView.builder(
-                        itemCount: ListOfSections.sections.length,
+                        itemCount: ListOfSectionsPerson.personSection.length,
                         itemBuilder: (BuildContext context, int index) {
-                          final section = ListOfSections.sections[index];
+                          final section = ListOfSectionsPerson.personSection[index];
                           return Column(
                             children: [
                               Divider(
@@ -90,7 +90,7 @@ class SectionsInchoate extends StatelessWidget {
                                   Navigator.of(context).push(
                                     MaterialPageRoute(
                                       builder: (context) =>
-                                          ListOfRoutes.routes[index],
+                                          ListOfSectionsPerson.routes[index],
                                     ),
                                   );
                                 },
