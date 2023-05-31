@@ -158,7 +158,7 @@ class _GetStartedBtnState extends State<GetStartedBtn> {
     var varShow = Provider.of<LoadingState>(context, listen: false);
 
     void sleep() {
-      Future.delayed(const Duration(seconds: 10), () {
+      Future.delayed(const Duration(seconds: 5), () {
         // code here you want to do after sleep
         debugPrint('This code execute');
         debugPrint(varShow.show.toString());
