@@ -26,7 +26,9 @@ class CrimeContent extends StatelessWidget {
                     child: Row(
                       children: [
                         GestureDetector(
-                          onTap: () {},
+                          onTap: () {
+                            Navigator.of(context).pop();
+                          },
                           child: const Icon(
                             Icons.arrow_back_ios_new_rounded,
                             color: Colors.white,

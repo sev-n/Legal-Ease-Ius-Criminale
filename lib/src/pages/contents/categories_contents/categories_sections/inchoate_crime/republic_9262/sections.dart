@@ -8,6 +8,7 @@ class SectionsInchoate extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color(0xff028D8F),
       body: SafeArea(
         child: Stack(
           children: [
@@ -22,7 +23,9 @@ class SectionsInchoate extends StatelessWidget {
                     child: Row(
                       children: [
                         GestureDetector(
-                          onTap: () {},
+                          onTap: () {
+                            Navigator.of(context).pop();
+                          },
                           child: const Icon(
                             Icons.arrow_back_ios_new_rounded,
                             color: Colors.black,
@@ -44,63 +47,64 @@ class SectionsInchoate extends StatelessWidget {
                   Align(
                     alignment: Alignment.bottomCenter,
                     child: Container(
-                        width: MediaQuery.of(context).size.width,
-                        height: MediaQuery.of(context).size.height * 0.76,
-                        decoration: BoxDecoration(
-                          color: const Color(0xffE8E8E8),
-                          borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(15.r),
-                            topRight: Radius.circular(15.r),
-                          ),
+                      width: MediaQuery.of(context).size.width,
+                      height: MediaQuery.of(context).size.height * 0.76,
+                      decoration: BoxDecoration(
+                        color: const Color(0xffE8E8E8),
+                        borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(15.r),
+                          topRight: Radius.circular(15.r),
                         ),
-                        child: ListView.builder(
-                          itemCount: ListOfSections.sections.length,
-                          itemBuilder: (BuildContext context, int index) {
-                            final section = ListOfSections.sections[index];
-                            // String title =
-                            //     ListOfSections.sections.(index);
-                            // String description =
-                            //     ListOfSections.sections.values.elementAt(index);
+                      ),
+                      child: ListView.builder(
+                        itemCount: ListOfSections.sections.length,
+                        itemBuilder: (BuildContext context, int index) {
+                          final section = ListOfSections.sections[index];
+                          // String title =
+                          //     ListOfSections.sections.(index);
+                          // String description =
+                          //     ListOfSections.sections.values.elementAt(index);
 
-                            return Column(
-                              children: [
-                                Divider(
-                                  thickness: 1.0,
-                                  indent: 16.0,
-                                  endIndent: 16.0,
-                                  color: Colors.grey[500],
-                                ),
-                                ListTile(
-                                  title: Text(
-                                    section.title,
-                                    style: TextStyle(
-                                      fontFamily: "RobotoFlex",
-                                      fontSize: 18.sp,
-                                      fontWeight: FontWeight.bold,
-                                    ),
+                          return Column(
+                            children: [
+                              Divider(
+                                thickness: 1.0,
+                                indent: 16.0,
+                                endIndent: 16.0,
+                                color: Colors.grey[500],
+                              ),
+                              ListTile(
+                                title: Text(
+                                  section.title,
+                                  style: TextStyle(
+                                    fontFamily: "RobotoFlex",
+                                    fontSize: 18.sp,
+                                    fontWeight: FontWeight.bold,
                                   ),
-                                  subtitle: Text(
-                                    section.description,
-                                    textAlign: TextAlign.justify,
-                                    style: TextStyle(
-                                      fontFamily: "RobotoFlex",
-                                      fontSize: 14.sp,
-                                    ),
-                                  ),
-                                  onTap: () {
-                                    debugPrint("$index");
-                                    Navigator.of(context).push(
-                                      MaterialPageRoute(
-                                        builder: (context) =>
-                                            ListOfRoutes.routes[index],
-                                      ),
-                                    );
-                                  },
                                 ),
-                              ],
-                            );
-                          },
-                        )),
+                                subtitle: Text(
+                                  section.description,
+                                  textAlign: TextAlign.justify,
+                                  style: TextStyle(
+                                    fontFamily: "RobotoFlex",
+                                    fontSize: 14.sp,
+                                  ),
+                                ),
+                                onTap: () {
+                                  debugPrint("$index");
+                                  Navigator.of(context).push(
+                                    MaterialPageRoute(
+                                      builder: (context) =>
+                                          ListOfRoutes.routes[index],
+                                    ),
+                                  );
+                                },
+                              ),
+                            ],
+                          );
+                        },
+                      ),
+                    ),
                   ),
                 ],
               ),

@@ -9,6 +9,7 @@ class SectionSix extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color(0xff028D8F),
       body: SafeArea(
         child: Stack(
           children: [
@@ -26,7 +27,9 @@ class SectionSix extends StatelessWidget {
                     child: Row(
                       children: [
                         GestureDetector(
-                          onTap: () {},
+                          onTap: () {
+                            Navigator.of(context).pop();
+                          },
                           child: const Icon(
                             Icons.arrow_back_ios_new_rounded,
                             color: Colors.black,
@@ -130,6 +133,7 @@ class SectionSeven extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color(0xff028D8F),
       body: SafeArea(
         child: Stack(
           children: [
@@ -147,7 +151,9 @@ class SectionSeven extends StatelessWidget {
                     child: Row(
                       children: [
                         GestureDetector(
-                          onTap: () {},
+                          onTap: () {
+                            Navigator.of(context).pop();
+                          },
                           child: const Icon(
                             Icons.arrow_back_ios_new_rounded,
                             color: Colors.black,
@@ -230,6 +236,7 @@ class SectionEight extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color(0xff028D8F),
       body: SafeArea(
         child: Stack(
           children: [
@@ -247,7 +254,9 @@ class SectionEight extends StatelessWidget {
                     child: Row(
                       children: [
                         GestureDetector(
-                          onTap: () {},
+                          onTap: () {
+                            Navigator.of(context).pop();
+                          },
                           child: const Icon(
                             Icons.arrow_back_ios_new_rounded,
                             color: Colors.black,
@@ -375,6 +384,7 @@ class SectionNine extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color(0xff028D8F),
       body: SafeArea(
         child: Stack(
           children: [
@@ -392,7 +402,9 @@ class SectionNine extends StatelessWidget {
                     child: Row(
                       children: [
                         GestureDetector(
-                          onTap: () {},
+                          onTap: () {
+                            Navigator.of(context).pop();
+                          },
                           child: const Icon(
                             Icons.arrow_back_ios_new_rounded,
                             color: Colors.black,
@@ -481,6 +493,7 @@ class SectionTen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color(0xff028D8F),
       body: SafeArea(
         child: Stack(
           children: [
@@ -498,7 +511,9 @@ class SectionTen extends StatelessWidget {
                     child: Row(
                       children: [
                         GestureDetector(
-                          onTap: () {},
+                          onTap: () {
+                            Navigator.of(context).pop();
+                          },
                           child: const Icon(
                             Icons.arrow_back_ios_new_rounded,
                             color: Colors.black,
