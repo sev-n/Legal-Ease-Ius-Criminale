@@ -1,9 +1,6 @@
-
-
-
-
 import 'package:legalease_matrimonial/src/pages/contents/categories_contents/categories_sections/againts_person/section_1-10.dart';
-
+import 'package:legalease_matrimonial/src/pages/contents/categories_contents/categories_sections/againts_person/section_11-20.dart';
+import 'package:legalease_matrimonial/src/pages/contents/categories_contents/categories_sections/againts_person/section_21-27.dart';
 import 'inchoate_sections.dart';
 
 //REPUBLIC ACT NO. 9745 
@@ -50,6 +47,22 @@ class ListOfSectionsPerson {
     PersonSectionEight(),
     PersonSectionNine(),
     PersonSectionTen(),
-
+    PersonSectionEleven(),
+    PersonSectionTwelve(),
+    PersonSectionThirteen(),
+    PersonSectionFourteen(),
+    PersonSectionFifteen(),
+    PersonSectionSixteen(),
+    PersonSectionSeventeen(),
+    PersonSectionEighteen(),
+    PersonSectionNineteen(),
+    PersonSectionTwenty(),
+    PersonSectionTwentyOne(),
+    PersonSectionTwentyTwo(),
+    PersonSectionTwentyThree(),
+    PersonSectionTwentyFour(),
+    PersonSectionTwentyFive(),
+    PersonSectionTwentySix(),
+    PersonSectionTwentySeven(),
   ];
 }
