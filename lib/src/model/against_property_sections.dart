@@ -12,6 +12,9 @@ import 'package:legalease_matrimonial/src/pages/contents/categories_contents/cat
 import 'package:legalease_matrimonial/src/pages/contents/categories_contents/categories_sections/against_property/republic_166/chapter_XII/section_12.dart';
 import 'package:legalease_matrimonial/src/pages/contents/categories_contents/categories_sections/against_property/republic_166/chapter_XIII/section_13.dart';
 import 'package:legalease_matrimonial/src/pages/contents/categories_contents/categories_sections/against_property/republic_166/chapter_XIV/section_14.dart';
+import 'package:legalease_matrimonial/src/pages/contents/categories_contents/categories_sections/against_property/republic_166/contents/section_1-20.dart';
+import 'package:legalease_matrimonial/src/pages/contents/categories_contents/categories_sections/against_property/republic_166/contents/section_21-30.dart';
+import 'package:legalease_matrimonial/src/pages/contents/categories_contents/categories_sections/against_property/republic_166/contents/section_31-45.dart';
 
 import 'inchoate_sections.dart';
 
@@ -97,6 +100,54 @@ class ListOfChaptersProperty {
     Section12(),
     Section13(),
     Section14(),
+  ];
+
+  static List routesContentsPerSection = const [
+    PropertyContentOne(),
+    PropertyContentTwo(),
+    PropertyContentThree(),
+    PropertyContentFour(),
+    PropertyContentFive(),
+    PropertyContentSix(),
+    PropertyContentSeven(),
+    PropertyContentEight(),
+    PropertyContentNine(),
+    PropertyContentTen(),
+    PropertyContentEleven(),
+    PropertyContentTwelve(),
+    PropertyContentThirteen(),
+    PropertyContentFourteen(),
+    PropertyContentFifteen(),
+    PropertyContentSixteen(),
+    PropertyContentSeventeen(),
+    PropertyContentEighteen(),
+    PropertyContentNineteen(),
+    PropertyContentTwenty(),
+    PropertyContentTwentyOne(),
+    PropertyContentTwentyTwo(),
+    PropertyContentTwentyThree(),
+    PropertyContentTwentyFour(),
+    PropertyContentTwentyFive(),
+    PropertyContentTwentySix(),
+    PropertyContentTwentySeven(),
+    PropertyContentTwentyEight(),
+    PropertyContentTwentyNine(),
+    PropertyContentThirty(),
+    PropertyContentThirtyOne(),
+    PropertyContentThirtyTwo(),
+    PropertyContentThirtyThree(),
+    PropertyContentThirtyFour(),
+    PropertyContentThirtyFive(),
+    PropertyContentThirtySix(),
+    PropertyContentThirtySeven(),
+    PropertyContentThirtyEight(),
+    PropertyContentThirtyNine(),
+    PropertyContentForty(),
+    PropertyContentFortyOne(),
+    PropertyContentFortyTwo(),
+    PropertyContentFortyThree(),
+    PropertyContentFortyFour(),
+    PropertyContentFortyFive(),
   ];
 }
 

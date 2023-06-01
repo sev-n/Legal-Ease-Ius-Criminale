@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:legalease_matrimonial/src/model/against_property_sections.dart';
-import 'package:legalease_matrimonial/src/model/collar_sections.dart';
 
 class Section9 extends StatelessWidget {
   const Section9({super.key});
@@ -34,7 +33,7 @@ class Section9 extends StatelessWidget {
                         ),
                         SizedBox(width: 15.w),
                         Text(
-                          "Against Property",
+                          "Chapter IX",
                           style: TextStyle(
                               fontSize: 24.sp,
                               fontWeight: FontWeight.bold,
@@ -91,7 +90,7 @@ class Section9 extends StatelessWidget {
                                   Navigator.of(context).push(
                                     MaterialPageRoute(
                                       builder: (context) =>
-                                          ListOfSectionsCollar.routes[index],
+                                          ListOfChaptersProperty.routesContentsPerSection[index+32],
                                     ),
                                   );
                                 },
