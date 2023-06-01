@@ -11,7 +11,7 @@ class Sections {
   final String description;
 
   Sections(
-      {required this.title, required this.description});
+      {required this.title, this.description = ''});
 }
 
 class ListOfSections {
