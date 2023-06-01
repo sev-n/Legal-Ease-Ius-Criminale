@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:legalease_matrimonial/src/pages/contents/categories_contents/categories_sections/white_collar/sections.dart';
+import 'package:legalease_matrimonial/src/pages/contents/categories_contents/categories_sections/white_collar/republic_3019/sections.dart';
 
 class CollarContent extends StatelessWidget {
   const CollarContent({super.key});

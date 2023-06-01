@@ -1,4 +1,4 @@
-import 'package:legalease_matrimonial/src/pages/contents/categories_contents/categories_sections/white_collar/section_1-16.dart';
+import 'package:legalease_matrimonial/src/pages/contents/categories_contents/categories_sections/white_collar/republic_3019/section_1-16.dart';
 
 import 'inchoate_sections.dart';
 
