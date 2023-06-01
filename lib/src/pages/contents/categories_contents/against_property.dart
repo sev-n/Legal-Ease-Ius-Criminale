@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
-import 'categories_sections/inchoate_crime/republic_9262/sections.dart';
+import 'package:legalease_matrimonial/src/pages/contents/categories_contents/categories_sections/against_property/republic_166/chapters.dart';
 
 class AgainstProperty extends StatelessWidget {
   const AgainstProperty({super.key});
@@ -81,7 +80,7 @@ class AgainstProperty extends StatelessWidget {
                                 context,
                                 MaterialPageRoute(
                                   builder: (context) =>
-                                      const SectionsInchoate(),
+                                      const ChaptersProperty(),
                                 ),
                               );
                             },
