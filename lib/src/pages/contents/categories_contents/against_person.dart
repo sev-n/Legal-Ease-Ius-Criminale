@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:legalease_matrimonial/src/pages/contents/categories_contents/categories_sections/againts_person/sections.dart';
+import 'package:legalease_matrimonial/src/pages/contents/categories_contents/categories_sections/againts_person/republic_9745/sections.dart';
 
 class PersonContent extends StatelessWidget {
   const PersonContent({super.key});
