@@ -2,8 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:legalease_matrimonial/src/pages/contents/categories_contents/categories_sections/against_property/republic_166/chapters.dart';
 
-class AgainstProperty extends StatelessWidget {
+class AgainstProperty extends StatefulWidget {
   const AgainstProperty({super.key});
+
+  @override
+  State<AgainstProperty> createState() => _AgainstPropertyState();
+}
+
+class _AgainstPropertyState extends State<AgainstProperty> {
+  bool isExpanded166 = false;
+
+  void toggleExpansion166() {
+    setState(() {
+      isExpanded166 = !isExpanded166;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -59,37 +72,58 @@ class AgainstProperty extends StatelessWidget {
                         ),
                       ),
                       child: ListView(
-                        padding: EdgeInsets.only(left: 5.w, right: 5.w),
+                        padding:
+                            EdgeInsets.only(top: 10.h, left: 5.w, right: 5.w),
                         children: [
-                          Divider(
-                            thickness: 1.0,
-                            indent: 16.0,
-                            endIndent: 16.0,
-                            color: Colors.grey[500],
-                          ),
-                          ListTile(
-                            title: const Text(
-                              "REPUBLIC ACT NO. 166",
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                            subtitle: const Text("June 20, 1947"),
-                            onTap: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) =>
-                                      const ChaptersProperty(),
-                                ),
-                              );
+                          ExpansionPanelList(
+                            elevation: 0,
+                            dividerColor: Colors.transparent,
+                            expandedHeaderPadding: EdgeInsets.zero,
+                            animationDuration:
+                                const Duration(milliseconds: 400),
+                            expansionCallback:
+                                (int panelIndex, bool isExpanded) {
+                              toggleExpansion166();
                             },
-                          ),
-                          Divider(
-                            thickness: 1.0,
-                            indent: 16.0,
-                            endIndent: 16.0,
-                            color: Colors.grey[500],
+                            children: [
+                              ExpansionPanel(
+                                backgroundColor: const Color(0xffE8E8E8),
+                                canTapOnHeader: false,
+                                headerBuilder: (context, isExpanded) {
+                                  return ListTile(
+                                    title: const Text(
+                                      "REPUBLIC ACT NO. 166",
+                                      style: TextStyle(
+                                        fontFamily: "RobotoFlex",
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                    onTap: () {
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (context) =>
+                                              const ChaptersProperty(),
+                                        ),
+                                      );
+                                    },
+                                  );
+                                },
+                                body: Padding(
+                                  padding: EdgeInsets.only(left: 5.w, right: 5.w),
+                                  child: const Text(
+                                    "\nAN ACT TO PROVIDE FOR THE REGISTRATION AND PROTECTION OF TRADE-MARKS, TRADE NAMES AND SERVICE-MARKS, DEFINING UNFAIR COMPETITION AND FALSE MARKING AND PROVIDING REMEDIES AGAINST THE SAME, AND FOR OTHER PURPOSES.\n\n",
+                                    textAlign: TextAlign.center,
+                                    style: TextStyle(
+                                        fontFamily: "RobotoFlex",
+                                        fontWeight: FontWeight.w500,
+                                        height: 1.4,
+                                        ),
+                                  ),
+                                ),
+                                isExpanded: isExpanded166,
+                              ),
+                            ],
                           ),
                         ],
                       ),

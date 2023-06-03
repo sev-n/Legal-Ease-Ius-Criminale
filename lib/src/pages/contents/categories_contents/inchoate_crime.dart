@@ -3,8 +3,21 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'categories_sections/inchoate_crime/republic_9262/sections.dart';
 
-class CrimeContent extends StatelessWidget {
+class CrimeContent extends StatefulWidget {
   const CrimeContent({super.key});
+
+  @override
+  State<CrimeContent> createState() => _CrimeContentState();
+}
+
+class _CrimeContentState extends State<CrimeContent> {
+  bool isExpanded9262 = false;
+
+  void toggleExpansion9262() {
+    setState(() {
+      isExpanded9262 = !isExpanded9262;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -60,36 +73,60 @@ class CrimeContent extends StatelessWidget {
                         ),
                       ),
                       child: ListView(
-                        padding: EdgeInsets.only(left: 5.w, right: 5.w),
+                        padding:
+                            EdgeInsets.only(top: 10.h, left: 5.w, right: 5.w),
                         children: [
-                          Divider(
-                            thickness: 1.0,
-                            indent: 16.0,
-                            endIndent: 16.0,
-                            color: Colors.grey[500],
-                          ),
-                          ListTile(
-                            title: const Text(
-                              "REPUBLIC ACT NO. 9262",
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                            onTap: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) =>
-                                      const SectionsInchoate(),
-                                ),
-                              );
+                          ExpansionPanelList(
+                            elevation: 0,
+                            dividerColor: Colors.transparent,
+                            expandedHeaderPadding: EdgeInsets.zero,
+                            animationDuration:
+                                const Duration(milliseconds: 400),
+                            expansionCallback:
+                                (int panelIndex, bool isExpanded) {
+                              toggleExpansion9262();
                             },
-                          ),
-                          Divider(
-                            thickness: 1.0,
-                            indent: 16.0,
-                            endIndent: 16.0,
-                            color: Colors.grey[500],
+                            children: [
+                              ExpansionPanel(
+                                backgroundColor: const Color(0xffE8E8E8),
+                                canTapOnHeader: false,
+                                headerBuilder: (context, isExpanded) {
+                                  return ListTile(
+                                    title: const Text(
+                                      "REPUBLIC ACT NO. 9262",
+                                      style: TextStyle(
+                                        fontFamily: "RobotoFlex",
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                    onTap: () {
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (context) =>
+                                              const SectionsInchoate(),
+                                        ),
+                                      );
+                                    },
+                                  );
+                                },
+                                body: Padding(
+                                  padding: EdgeInsets.only(left: 5.w, right: 5.w),
+                                  child: const Text(
+                                    "\nAN ACT DEFINING VIOLENCE AGAINST WOMEN AND THEIR CHILDREN, "
+                                    "PROVIDING FOR PROTECTIVE MEASURES FOR VICTIMS, PRESCRIBING "
+                                    "PENALTIES THEREFORE, AND FOR OTHER PURPOSES.\n\n",
+                                    textAlign: TextAlign.center,
+                                    style: TextStyle(
+                                        fontFamily: "RobotoFlex",
+                                        fontWeight: FontWeight.w500,
+                                        height: 1.4,
+                                        ),
+                                  ),
+                                ),
+                                isExpanded: isExpanded9262,
+                              ),
+                            ],
                           ),
                         ],
                       ),
