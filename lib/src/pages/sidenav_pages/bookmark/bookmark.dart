@@ -19,7 +19,7 @@ class BookMark extends StatelessWidget {
                 width: MediaQuery.of(context).size.width,
                 height: MediaQuery.of(context).size.height,
                 decoration: const BoxDecoration(
-                  color: Color(0xff97a294),
+                  color: Color(0xff028D8F),
                 ),
                 // !alert insert items here
                 child: Stack(
@@ -35,7 +35,7 @@ class BookMark extends StatelessWidget {
                             style: TextStyle(
                               fontSize: 25,
                               fontWeight: FontWeight.w700,
-                              color: Color(0xff0C2924),
+                              color: Color(0xff000000),
                               fontFamily: 'RobotoFlex',
                             ),
                           ),
@@ -82,9 +82,9 @@ class BookMark extends StatelessWidget {
                   width: MediaQuery.of(context).size.width,
                   height: MediaQuery.of(context).size.height - 170,
                   child: Container(
-                    decoration: BoxDecoration(
-                      color: const Color(0xCCD9D9D9).withAlpha(150),
-                      borderRadius: const BorderRadius.only(
+                    decoration: const BoxDecoration(
+                      color: Color(0xffE8E8E8),
+                      borderRadius: BorderRadius.only(
                         topLeft: Radius.circular(12),
                         topRight: Radius.circular(12),
                       ),
