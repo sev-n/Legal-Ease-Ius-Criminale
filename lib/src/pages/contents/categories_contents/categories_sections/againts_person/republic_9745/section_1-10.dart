@@ -23,7 +23,7 @@ class PersonSectionOne extends StatelessWidget {
                   // modify the size depends on needs
                   // sample text -> remove
                   Padding(
-                    padding: EdgeInsets.only(top: 120.h, left: 13.w),
+                    padding: EdgeInsets.only(top: 100.h, left: 13.w),
                     child: Row(
                       children: [
                         GestureDetector(
@@ -39,7 +39,7 @@ class PersonSectionOne extends StatelessWidget {
                         Text(
                           "Against Person",
                           style: TextStyle(
-                              fontSize: 24.sp,
+                              fontSize: 22.sp,
                               fontWeight: FontWeight.bold,
                               fontFamily: "RobotoFlex",
                               color: Colors.black),
@@ -52,7 +52,7 @@ class PersonSectionOne extends StatelessWidget {
                     alignment: Alignment.bottomCenter,
                     child: Container(
                       width: MediaQuery.of(context).size.width,
-                      height: MediaQuery.of(context).size.height * 0.76,
+                      height: MediaQuery.of(context).size.height * 0.80,
                       decoration: BoxDecoration(
                         color: const Color(0xffE8E8E8),
                         borderRadius: BorderRadius.only(
@@ -122,7 +122,7 @@ class PersonSectionTwo extends StatelessWidget {
                   // modify the size depends on needs
                   // sample text -> remove
                   Padding(
-                    padding: EdgeInsets.only(top: 120.h, left: 13.w),
+                    padding: EdgeInsets.only(top: 100.h, left: 13.w),
                     child: Row(
                       children: [
                         GestureDetector(
@@ -138,7 +138,7 @@ class PersonSectionTwo extends StatelessWidget {
                         Text(
                           "Against Person",
                           style: TextStyle(
-                              fontSize: 24.sp,
+                              fontSize: 22.sp,
                               fontWeight: FontWeight.bold,
                               fontFamily: "RobotoFlex",
                               color: Colors.black),
@@ -231,7 +231,7 @@ class PersonSectionThree extends StatelessWidget {
                   // modify the size depends on needs
                   // sample text -> remove
                   Padding(
-                    padding: EdgeInsets.only(top: 120.h, left: 13.w),
+                    padding: EdgeInsets.only(top: 100.h, left: 13.w),
                     child: Row(
                       children: [
                         GestureDetector(
@@ -247,7 +247,7 @@ class PersonSectionThree extends StatelessWidget {
                         Text(
                           "Against Person",
                           style: TextStyle(
-                              fontSize: 24.sp,
+                              fontSize: 22.sp,
                               fontWeight: FontWeight.bold,
                               fontFamily: "RobotoFlex",
                               color: Colors.black),
@@ -350,7 +350,7 @@ class PersonSectionFour extends StatelessWidget {
                   // modify the size depends on needs
                   // sample text -> remove
                   Padding(
-                    padding: EdgeInsets.only(top: 120.h, left: 13.w),
+                    padding: EdgeInsets.only(top: 100.h, left: 13.w),
                     child: Row(
                       children: [
                         GestureDetector(
@@ -366,7 +366,7 @@ class PersonSectionFour extends StatelessWidget {
                         Text(
                           "Against Person",
                           style: TextStyle(
-                              fontSize: 24.sp,
+                              fontSize: 22.sp,
                               fontWeight: FontWeight.bold,
                               fontFamily: "RobotoFlex",
                               color: Colors.black),
@@ -487,7 +487,7 @@ class PersonSectionFive extends StatelessWidget {
                   // modify the size depends on needs
                   // sample text -> remove
                   Padding(
-                    padding: EdgeInsets.only(top: 120.h, left: 13.w),
+                    padding: EdgeInsets.only(top: 100.h, left: 13.w),
                     child: Row(
                       children: [
                         GestureDetector(
@@ -503,7 +503,7 @@ class PersonSectionFive extends StatelessWidget {
                         Text(
                           "Against Person",
                           style: TextStyle(
-                              fontSize: 24.sp,
+                              fontSize: 22.sp,
                               fontWeight: FontWeight.bold,
                               fontFamily: "RobotoFlex",
                               color: Colors.black),
@@ -591,7 +591,7 @@ class PersonSectionSix extends StatelessWidget {
                   // modify the size depends on needs
                   // sample text -> remove
                   Padding(
-                    padding: EdgeInsets.only(top: 120.h, left: 13.w),
+                    padding: EdgeInsets.only(top: 100.h, left: 13.w),
                     child: Row(
                       children: [
                         GestureDetector(
@@ -607,7 +607,7 @@ class PersonSectionSix extends StatelessWidget {
                         Text(
                           "Against Person",
                           style: TextStyle(
-                              fontSize: 24.sp,
+                              fontSize: 22.sp,
                               fontWeight: FontWeight.bold,
                               fontFamily: "RobotoFlex",
                               color: Colors.black),
@@ -693,7 +693,7 @@ class PersonSectionSeven extends StatelessWidget {
                   // modify the size depends on needs
                   // sample text -> remove
                   Padding(
-                    padding: EdgeInsets.only(top: 120.h, left: 13.w),
+                    padding: EdgeInsets.only(top: 100.h, left: 13.w),
                     child: Row(
                       children: [
                         GestureDetector(
@@ -709,7 +709,7 @@ class PersonSectionSeven extends StatelessWidget {
                         Text(
                           "Against Person",
                           style: TextStyle(
-                              fontSize: 24.sp,
+                              fontSize: 22.sp,
                               fontWeight: FontWeight.bold,
                               fontFamily: "RobotoFlex",
                               color: Colors.black),
@@ -801,7 +801,7 @@ class PersonSectionEight extends StatelessWidget {
                   // modify the size depends on needs
                   // sample text -> remove
                   Padding(
-                    padding: EdgeInsets.only(top: 120.h, left: 13.w),
+                    padding: EdgeInsets.only(top: 100.h, left: 13.w),
                     child: Row(
                       children: [
                         GestureDetector(
@@ -817,7 +817,7 @@ class PersonSectionEight extends StatelessWidget {
                         Text(
                           "Against Person",
                           style: TextStyle(
-                              fontSize: 24.sp,
+                              fontSize: 22.sp,
                               fontWeight: FontWeight.bold,
                               fontFamily: "RobotoFlex",
                               color: Colors.black),
@@ -902,7 +902,7 @@ class PersonSectionNine extends StatelessWidget {
                   // modify the size depends on needs
                   // sample text -> remove
                   Padding(
-                    padding: EdgeInsets.only(top: 120.h, left: 13.w),
+                    padding: EdgeInsets.only(top: 100.h, left: 13.w),
                     child: Row(
                       children: [
                         GestureDetector(
@@ -918,7 +918,7 @@ class PersonSectionNine extends StatelessWidget {
                         Text(
                           "Against Person",
                           style: TextStyle(
-                              fontSize: 24.sp,
+                              fontSize: 22.sp,
                               fontWeight: FontWeight.bold,
                               fontFamily: "RobotoFlex",
                               color: Colors.black),
@@ -1011,7 +1011,7 @@ class PersonSectionTen extends StatelessWidget {
                   // modify the size depends on needs
                   // sample text -> remove
                   Padding(
-                    padding: EdgeInsets.only(top: 120.h, left: 13.w),
+                    padding: EdgeInsets.only(top: 100.h, left: 13.w),
                     child: Row(
                       children: [
                         GestureDetector(
@@ -1027,7 +1027,7 @@ class PersonSectionTen extends StatelessWidget {
                         Text(
                           "Against Person",
                           style: TextStyle(
-                              fontSize: 24.sp,
+                              fontSize: 22.sp,
                               fontWeight: FontWeight.bold,
                               fontFamily: "RobotoFlex",
                               color: Colors.black),

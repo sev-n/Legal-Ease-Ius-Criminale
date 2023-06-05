@@ -23,7 +23,7 @@ class SectionOne extends StatelessWidget {
                   // modify the size depends on needs
                   // sample text -> remove
                   Padding(
-                    padding: EdgeInsets.only(top: 120.h, left: 13.w),
+                    padding: EdgeInsets.only(top: 100.h, left: 13.w),
                     child: Row(
                       children: [
                         GestureDetector(
@@ -33,13 +33,14 @@ class SectionOne extends StatelessWidget {
                           child: const Icon(
                             Icons.arrow_back_ios_new_rounded,
                             color: Colors.black,
+                            size: 25,
                           ),
                         ),
                         SizedBox(width: 15.w),
                         Text(
                           "Inchoate Crime",
                           style: TextStyle(
-                              fontSize: 24.sp,
+                              fontSize: 22.sp,
                               fontWeight: FontWeight.bold,
                               fontFamily: "RobotoFlex",
                               color: Colors.black),
@@ -52,7 +53,7 @@ class SectionOne extends StatelessWidget {
                     alignment: Alignment.bottomCenter,
                     child: Container(
                       width: MediaQuery.of(context).size.width,
-                      height: MediaQuery.of(context).size.height * 0.76,
+                      height: MediaQuery.of(context).size.height * 0.80,
                       decoration: BoxDecoration(
                         color: const Color(0xffE8E8E8),
                         borderRadius: BorderRadius.only(
@@ -122,7 +123,7 @@ class SectionTwo extends StatelessWidget {
                   // modify the size depends on needs
                   // sample text -> remove
                   Padding(
-                    padding: EdgeInsets.only(top: 120.h, left: 13.w),
+                    padding: EdgeInsets.only(top: 100.h, left: 13.w),
                     child: Row(
                       children: [
                         GestureDetector(
@@ -138,7 +139,7 @@ class SectionTwo extends StatelessWidget {
                         Text(
                           "Inchoate Crime",
                           style: TextStyle(
-                              fontSize: 24.sp,
+                              fontSize: 22.sp,
                               fontWeight: FontWeight.bold,
                               fontFamily: "RobotoFlex",
                               color: Colors.black),
@@ -151,7 +152,7 @@ class SectionTwo extends StatelessWidget {
                     alignment: Alignment.bottomCenter,
                     child: Container(
                       width: MediaQuery.of(context).size.width,
-                      height: MediaQuery.of(context).size.height * 0.76,
+                      height: MediaQuery.of(context).size.height * 0.80,
                       decoration: BoxDecoration(
                         color: const Color(0xffE8E8E8),
                         borderRadius: BorderRadius.only(
@@ -185,7 +186,7 @@ class SectionTwo extends StatelessWidget {
                                 'and children in keeping with the fundamental freedoms guaranteed under the Constitution and '
                                 'the Provisions of the Universal Declaration of Human Rights, the convention on the Elimination '
                                 'of all forms of discrimination Against Women, Convention on the Rights of the Child and other '
-                                'international human rights instruments of which the Philippines is a party.',
+                                'international human rights instruments of which the Philippines is a party.\n',
                                 textAlign: TextAlign.justify,
                                 style: TextStyle(
                                   fontFamily: "RobotoFlex",
@@ -230,7 +231,7 @@ class SectionThree extends StatelessWidget {
                   // modify the size depends on needs
                   // sample text -> remove
                   Padding(
-                    padding: EdgeInsets.only(top: 120.h, left: 13.w),
+                    padding: EdgeInsets.only(top: 100.h, left: 13.w),
                     child: Row(
                       children: [
                         GestureDetector(
@@ -246,7 +247,7 @@ class SectionThree extends StatelessWidget {
                         Text(
                           "Inchoate Crime",
                           style: TextStyle(
-                              fontSize: 24.sp,
+                              fontSize: 22.sp,
                               fontWeight: FontWeight.bold,
                               fontFamily: "RobotoFlex",
                               color: Colors.black),
@@ -259,7 +260,7 @@ class SectionThree extends StatelessWidget {
                     alignment: Alignment.bottomCenter,
                     child: Container(
                       width: MediaQuery.of(context).size.width,
-                      height: MediaQuery.of(context).size.height * 0.76,
+                      height: MediaQuery.of(context).size.height * 0.80,
                       decoration: BoxDecoration(
                         color: const Color(0xffE8E8E8),
                         borderRadius: BorderRadius.only(
@@ -381,7 +382,7 @@ class SectionFour extends StatelessWidget {
                   // modify the size depends on needs
                   // sample text -> remove
                   Padding(
-                    padding: EdgeInsets.only(top: 120.h, left: 13.w),
+                    padding: EdgeInsets.only(top: 100.h, left: 13.w),
                     child: Row(
                       children: [
                         GestureDetector(
@@ -397,7 +398,7 @@ class SectionFour extends StatelessWidget {
                         Text(
                           "Inchoate Crime",
                           style: TextStyle(
-                              fontSize: 24.sp,
+                              fontSize: 22.sp,
                               fontWeight: FontWeight.bold,
                               fontFamily: "RobotoFlex",
                               color: Colors.black),
@@ -410,7 +411,7 @@ class SectionFour extends StatelessWidget {
                     alignment: Alignment.bottomCenter,
                     child: Container(
                       width: MediaQuery.of(context).size.width,
-                      height: MediaQuery.of(context).size.height * 0.76,
+                      height: MediaQuery.of(context).size.height * 0.80,
                       decoration: BoxDecoration(
                         color: const Color(0xffE8E8E8),
                         borderRadius: BorderRadius.only(
@@ -481,7 +482,7 @@ class SectionFive extends StatelessWidget {
                   // modify the size depends on needs
                   // sample text -> remove
                   Padding(
-                    padding: EdgeInsets.only(top: 120.h, left: 13.w),
+                    padding: EdgeInsets.only(top: 100.h, left: 13.w),
                     child: Row(
                       children: [
                         GestureDetector(
@@ -497,7 +498,7 @@ class SectionFive extends StatelessWidget {
                         Text(
                           "Inchoate Crime",
                           style: TextStyle(
-                              fontSize: 24.sp,
+                              fontSize: 22.sp,
                               fontWeight: FontWeight.bold,
                               fontFamily: "RobotoFlex",
                               color: Colors.black),
@@ -510,7 +511,7 @@ class SectionFive extends StatelessWidget {
                     alignment: Alignment.bottomCenter,
                     child: Container(
                       width: MediaQuery.of(context).size.width,
-                      height: MediaQuery.of(context).size.height * 0.76,
+                      height: MediaQuery.of(context).size.height * 0.80,
                       decoration: BoxDecoration(
                         color: const Color(0xffE8E8E8),
                         borderRadius: BorderRadius.only(
@@ -570,7 +571,7 @@ class SectionFive extends StatelessWidget {
                                 '(5) Engaging in any form of harassment or violence.\n'
                                 '(i) Causing mental or emotional anguish, public ridicule or humiliation to the woman or her child, '
                                 'including, but not limited to, repeated verbal and emotional abuse, and denial of financial '
-                                "support or custody of minor children of access to the woman's child/children. ",
+                                "support or custody of minor children of access to the woman's child/children.\n",
                                 textAlign: TextAlign.justify,
                                 style: TextStyle(
                                   fontFamily: "RobotoFlex",

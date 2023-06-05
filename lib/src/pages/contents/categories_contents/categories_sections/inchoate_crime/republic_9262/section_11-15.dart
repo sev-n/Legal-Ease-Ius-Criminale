@@ -23,7 +23,7 @@ class SectionEleven extends StatelessWidget {
                   // modify the size depends on needs
                   // sample text -> remove
                   Padding(
-                    padding: EdgeInsets.only(top: 120.h, left: 13.w),
+                    padding: EdgeInsets.only(top: 100.h, left: 13.w),
                     child: Row(
                       children: [
                         GestureDetector(
@@ -39,7 +39,7 @@ class SectionEleven extends StatelessWidget {
                         Text(
                           "Inchoate Crime",
                           style: TextStyle(
-                              fontSize: 24.sp,
+                              fontSize: 22.sp,
                               fontWeight: FontWeight.bold,
                               fontFamily: "RobotoFlex",
                               color: Colors.black),
@@ -52,7 +52,7 @@ class SectionEleven extends StatelessWidget {
                     alignment: Alignment.bottomCenter,
                     child: Container(
                       width: MediaQuery.of(context).size.width,
-                      height: MediaQuery.of(context).size.height * 0.76,
+                      height: MediaQuery.of(context).size.height * 0.80,
                       decoration: BoxDecoration(
                         color: const Color(0xffE8E8E8),
                         borderRadius: BorderRadius.only(
@@ -145,7 +145,7 @@ class SectionTwelve extends StatelessWidget {
                   // modify the size depends on needs
                   // sample text -> remove
                   Padding(
-                    padding: EdgeInsets.only(top: 120.h, left: 13.w),
+                    padding: EdgeInsets.only(top: 100.h, left: 13.w),
                     child: Row(
                       children: [
                         GestureDetector(
@@ -161,7 +161,7 @@ class SectionTwelve extends StatelessWidget {
                         Text(
                           "Inchoate Crime",
                           style: TextStyle(
-                              fontSize: 24.sp,
+                              fontSize: 22.sp,
                               fontWeight: FontWeight.bold,
                               fontFamily: "RobotoFlex",
                               color: Colors.black),
@@ -248,7 +248,7 @@ class SectionThirteen extends StatelessWidget {
                   // modify the size depends on needs
                   // sample text -> remove
                   Padding(
-                    padding: EdgeInsets.only(top: 120.h, left: 13.w),
+                    padding: EdgeInsets.only(top: 100.h, left: 13.w),
                     child: Row(
                       children: [
                         GestureDetector(
@@ -264,7 +264,7 @@ class SectionThirteen extends StatelessWidget {
                         Text(
                           "Inchoate Crime",
                           style: TextStyle(
-                              fontSize: 24.sp,
+                              fontSize: 22.sp,
                               fontWeight: FontWeight.bold,
                               fontFamily: "RobotoFlex",
                               color: Colors.black),
@@ -356,7 +356,7 @@ class SectionFourteen extends StatelessWidget {
                   // modify the size depends on needs
                   // sample text -> remove
                   Padding(
-                    padding: EdgeInsets.only(top: 120.h, left: 13.w),
+                    padding: EdgeInsets.only(top: 100.h, left: 13.w),
                     child: Row(
                       children: [
                         GestureDetector(
@@ -372,7 +372,7 @@ class SectionFourteen extends StatelessWidget {
                         Text(
                           "Inchoate Crime",
                           style: TextStyle(
-                              fontSize: 24.sp,
+                              fontSize: 22.sp,
                               fontWeight: FontWeight.bold,
                               fontFamily: "RobotoFlex",
                               color: Colors.black),
@@ -423,13 +423,7 @@ class SectionFourteen extends StatelessWidget {
                                 'days. Immediately after the issuance of an ex parte BPO, the Punong Barangay or Barangay '
                                 'Kagawad shall personally serve a copy of the same on the respondent, or direct any barangay '
                                 'official to effect is personal service.\n'
-                                'The parties may be accompanied by a non-lawyer advocate in any proceeding before the Punong Barangay.\n'
-
-
-                                
-                                
-                                
-                                ,
+                                'The parties may be accompanied by a non-lawyer advocate in any proceeding before the Punong Barangay.\n',
                                 textAlign: TextAlign.justify,
                                 style: TextStyle(
                                   fontFamily: "RobotoFlex",
@@ -474,7 +468,7 @@ class SectionFifteen extends StatelessWidget {
                   // modify the size depends on needs
                   // sample text -> remove
                   Padding(
-                    padding: EdgeInsets.only(top: 120.h, left: 13.w),
+                    padding: EdgeInsets.only(top: 100.h, left: 13.w),
                     child: Row(
                       children: [
                         GestureDetector(
@@ -490,7 +484,7 @@ class SectionFifteen extends StatelessWidget {
                         Text(
                           "Inchoate Crime",
                           style: TextStyle(
-                              fontSize: 24.sp,
+                              fontSize: 22.sp,
                               fontWeight: FontWeight.bold,
                               fontFamily: "RobotoFlex",
                               color: Colors.black),
@@ -535,9 +529,7 @@ class SectionFifteen extends StatelessWidget {
                                 'schedule a hearing on the issuance of a PPO prior to or on the date of the expiration of the '
                                 'TPO. The court shall order the immediate personal service of the TPO on the respondent by the '
                                 'court sheriff who may obtain the assistance of law enforcement agents for the service. The TPO '
-                                'shall include notice of the date of the hearing on the merits of the issuance of a PPO.\n'
-                                
-                                ,
+                                'shall include notice of the date of the hearing on the merits of the issuance of a PPO.\n',
                                 textAlign: TextAlign.justify,
                                 style: TextStyle(
                                   fontFamily: "RobotoFlex",
