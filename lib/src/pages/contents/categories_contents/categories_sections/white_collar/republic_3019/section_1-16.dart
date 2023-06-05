@@ -23,7 +23,7 @@ class CollarSectionOne extends StatelessWidget {
                   // modify the size depends on needs
                   // sample text -> remove
                   Padding(
-                    padding: EdgeInsets.only(top: 120.h, left: 13.w),
+                    padding: EdgeInsets.only(top: 100.h, left: 13.w),
                     child: Row(
                       children: [
                         GestureDetector(
@@ -37,9 +37,9 @@ class CollarSectionOne extends StatelessWidget {
                         ),
                         SizedBox(width: 15.w),
                         Text(
-                          "Against Person",
+                          "White Collar",
                           style: TextStyle(
-                              fontSize: 24.sp,
+                              fontSize: 22.sp,
                               fontWeight: FontWeight.bold,
                               fontFamily: "RobotoFlex",
                               color: Colors.black),
@@ -52,7 +52,7 @@ class CollarSectionOne extends StatelessWidget {
                     alignment: Alignment.bottomCenter,
                     child: Container(
                       width: MediaQuery.of(context).size.width,
-                      height: MediaQuery.of(context).size.height * 0.76,
+                      height: MediaQuery.of(context).size.height * 0.80,
                       decoration: BoxDecoration(
                         color: const Color(0xffE8E8E8),
                         borderRadius: BorderRadius.only(
@@ -126,7 +126,7 @@ class CollarSectionTwo extends StatelessWidget {
                   // modify the size depends on needs
                   // sample text -> remove
                   Padding(
-                    padding: EdgeInsets.only(top: 120.h, left: 13.w),
+                    padding: EdgeInsets.only(top: 100.h, left: 13.w),
                     child: Row(
                       children: [
                         GestureDetector(
@@ -140,9 +140,9 @@ class CollarSectionTwo extends StatelessWidget {
                         ),
                         SizedBox(width: 15.w),
                         Text(
-                          "Against Person",
+                          "White Collar",
                           style: TextStyle(
-                              fontSize: 24.sp,
+                              fontSize: 22.sp,
                               fontWeight: FontWeight.bold,
                               fontFamily: "RobotoFlex",
                               color: Colors.black),
@@ -155,7 +155,7 @@ class CollarSectionTwo extends StatelessWidget {
                     alignment: Alignment.bottomCenter,
                     child: Container(
                       width: MediaQuery.of(context).size.width,
-                      height: MediaQuery.of(context).size.height * 0.76,
+                      height: MediaQuery.of(context).size.height * 0.80,
                       decoration: BoxDecoration(
                         color: const Color(0xffE8E8E8),
                         borderRadius: BorderRadius.only(
@@ -240,7 +240,7 @@ class CollarSectionThree extends StatelessWidget {
                   // modify the size depends on needs
                   // sample text -> remove
                   Padding(
-                    padding: EdgeInsets.only(top: 120.h, left: 13.w),
+                    padding: EdgeInsets.only(top: 100.h, left: 13.w),
                     child: Row(
                       children: [
                         GestureDetector(
@@ -254,9 +254,9 @@ class CollarSectionThree extends StatelessWidget {
                         ),
                         SizedBox(width: 15.w),
                         Text(
-                          "Against Person",
+                          "White Collar",
                           style: TextStyle(
-                              fontSize: 24.sp,
+                              fontSize: 22.sp,
                               fontWeight: FontWeight.bold,
                               fontFamily: "RobotoFlex",
                               color: Colors.black),
@@ -269,7 +269,7 @@ class CollarSectionThree extends StatelessWidget {
                     alignment: Alignment.bottomCenter,
                     child: Container(
                       width: MediaQuery.of(context).size.width,
-                      height: MediaQuery.of(context).size.height * 0.76,
+                      height: MediaQuery.of(context).size.height * 0.80,
                       decoration: BoxDecoration(
                         color: const Color(0xffE8E8E8),
                         borderRadius: BorderRadius.only(
@@ -396,7 +396,7 @@ class CollarSectionFour extends StatelessWidget {
                   // modify the size depends on needs
                   // sample text -> remove
                   Padding(
-                    padding: EdgeInsets.only(top: 120.h, left: 13.w),
+                    padding: EdgeInsets.only(top: 100.h, left: 13.w),
                     child: Row(
                       children: [
                         GestureDetector(
@@ -410,9 +410,9 @@ class CollarSectionFour extends StatelessWidget {
                         ),
                         SizedBox(width: 15.w),
                         Text(
-                          "Against Person",
+                          "White Collar",
                           style: TextStyle(
-                              fontSize: 24.sp,
+                              fontSize: 22.sp,
                               fontWeight: FontWeight.bold,
                               fontFamily: "RobotoFlex",
                               color: Colors.black),
@@ -425,7 +425,7 @@ class CollarSectionFour extends StatelessWidget {
                     alignment: Alignment.bottomCenter,
                     child: Container(
                       width: MediaQuery.of(context).size.width,
-                      height: MediaQuery.of(context).size.height * 0.76,
+                      height: MediaQuery.of(context).size.height * 0.80,
                       decoration: BoxDecoration(
                         color: const Color(0xffE8E8E8),
                         borderRadius: BorderRadius.only(
@@ -507,7 +507,7 @@ class CollarSectionFive extends StatelessWidget {
                   // modify the size depends on needs
                   // sample text -> remove
                   Padding(
-                    padding: EdgeInsets.only(top: 120.h, left: 13.w),
+                    padding: EdgeInsets.only(top: 100.h, left: 13.w),
                     child: Row(
                       children: [
                         GestureDetector(
@@ -521,9 +521,9 @@ class CollarSectionFive extends StatelessWidget {
                         ),
                         SizedBox(width: 15.w),
                         Text(
-                          "Against Person",
+                          "White Collar",
                           style: TextStyle(
-                              fontSize: 24.sp,
+                              fontSize: 22.sp,
                               fontWeight: FontWeight.bold,
                               fontFamily: "RobotoFlex",
                               color: Colors.black),
@@ -536,7 +536,7 @@ class CollarSectionFive extends StatelessWidget {
                     alignment: Alignment.bottomCenter,
                     child: Container(
                       width: MediaQuery.of(context).size.width,
-                      height: MediaQuery.of(context).size.height * 0.76,
+                      height: MediaQuery.of(context).size.height * 0.80,
                       decoration: BoxDecoration(
                         color: const Color(0xffE8E8E8),
                         borderRadius: BorderRadius.only(
@@ -619,7 +619,7 @@ class CollarSectionSix extends StatelessWidget {
                   // modify the size depends on needs
                   // sample text -> remove
                   Padding(
-                    padding: EdgeInsets.only(top: 120.h, left: 13.w),
+                    padding: EdgeInsets.only(top: 100.h, left: 13.w),
                     child: Row(
                       children: [
                         GestureDetector(
@@ -633,9 +633,9 @@ class CollarSectionSix extends StatelessWidget {
                         ),
                         SizedBox(width: 15.w),
                         Text(
-                          "Against Person",
+                          "White Collar",
                           style: TextStyle(
-                              fontSize: 24.sp,
+                              fontSize: 22.sp,
                               fontWeight: FontWeight.bold,
                               fontFamily: "RobotoFlex",
                               color: Colors.black),
@@ -648,7 +648,7 @@ class CollarSectionSix extends StatelessWidget {
                     alignment: Alignment.bottomCenter,
                     child: Container(
                       width: MediaQuery.of(context).size.width,
-                      height: MediaQuery.of(context).size.height * 0.76,
+                      height: MediaQuery.of(context).size.height * 0.80,
                       decoration: BoxDecoration(
                         color: const Color(0xffE8E8E8),
                         borderRadius: BorderRadius.only(
@@ -729,7 +729,7 @@ class CollarSectionSeven extends StatelessWidget {
                   // modify the size depends on needs
                   // sample text -> remove
                   Padding(
-                    padding: EdgeInsets.only(top: 120.h, left: 13.w),
+                    padding: EdgeInsets.only(top: 100.h, left: 13.w),
                     child: Row(
                       children: [
                         GestureDetector(
@@ -743,9 +743,9 @@ class CollarSectionSeven extends StatelessWidget {
                         ),
                         SizedBox(width: 15.w),
                         Text(
-                          "Against Person",
+                          "White Collar",
                           style: TextStyle(
-                              fontSize: 24.sp,
+                              fontSize: 22.sp,
                               fontWeight: FontWeight.bold,
                               fontFamily: "RobotoFlex",
                               color: Colors.black),
@@ -758,7 +758,7 @@ class CollarSectionSeven extends StatelessWidget {
                     alignment: Alignment.bottomCenter,
                     child: Container(
                       width: MediaQuery.of(context).size.width,
-                      height: MediaQuery.of(context).size.height * 0.76,
+                      height: MediaQuery.of(context).size.height * 0.80,
                       decoration: BoxDecoration(
                         color: const Color(0xffE8E8E8),
                         borderRadius: BorderRadius.only(
@@ -840,7 +840,7 @@ class CollarSectionEight extends StatelessWidget {
                   // modify the size depends on needs
                   // sample text -> remove
                   Padding(
-                    padding: EdgeInsets.only(top: 120.h, left: 13.w),
+                    padding: EdgeInsets.only(top: 100.h, left: 13.w),
                     child: Row(
                       children: [
                         GestureDetector(
@@ -854,9 +854,9 @@ class CollarSectionEight extends StatelessWidget {
                         ),
                         SizedBox(width: 15.w),
                         Text(
-                          "Against Person",
+                          "White Collar",
                           style: TextStyle(
-                              fontSize: 24.sp,
+                              fontSize: 22.sp,
                               fontWeight: FontWeight.bold,
                               fontFamily: "RobotoFlex",
                               color: Colors.black),
@@ -869,7 +869,7 @@ class CollarSectionEight extends StatelessWidget {
                     alignment: Alignment.bottomCenter,
                     child: Container(
                       width: MediaQuery.of(context).size.width,
-                      height: MediaQuery.of(context).size.height * 0.76,
+                      height: MediaQuery.of(context).size.height * 0.80,
                       decoration: BoxDecoration(
                         color: const Color(0xffE8E8E8),
                         borderRadius: BorderRadius.only(
@@ -955,7 +955,7 @@ class CollarSectionNine extends StatelessWidget {
                   // modify the size depends on needs
                   // sample text -> remove
                   Padding(
-                    padding: EdgeInsets.only(top: 120.h, left: 13.w),
+                    padding: EdgeInsets.only(top: 100.h, left: 13.w),
                     child: Row(
                       children: [
                         GestureDetector(
@@ -969,9 +969,9 @@ class CollarSectionNine extends StatelessWidget {
                         ),
                         SizedBox(width: 15.w),
                         Text(
-                          "Against Person",
+                          "White Collar",
                           style: TextStyle(
-                              fontSize: 24.sp,
+                              fontSize: 22.sp,
                               fontWeight: FontWeight.bold,
                               fontFamily: "RobotoFlex",
                               color: Colors.black),
@@ -984,7 +984,7 @@ class CollarSectionNine extends StatelessWidget {
                     alignment: Alignment.bottomCenter,
                     child: Container(
                       width: MediaQuery.of(context).size.width,
-                      height: MediaQuery.of(context).size.height * 0.76,
+                      height: MediaQuery.of(context).size.height * 0.80,
                       decoration: BoxDecoration(
                         color: const Color(0xffE8E8E8),
                         borderRadius: BorderRadius.only(
@@ -1071,7 +1071,7 @@ class CollarSectionTen extends StatelessWidget {
                   // modify the size depends on needs
                   // sample text -> remove
                   Padding(
-                    padding: EdgeInsets.only(top: 120.h, left: 13.w),
+                    padding: EdgeInsets.only(top: 100.h, left: 13.w),
                     child: Row(
                       children: [
                         GestureDetector(
@@ -1085,9 +1085,9 @@ class CollarSectionTen extends StatelessWidget {
                         ),
                         SizedBox(width: 15.w),
                         Text(
-                          "Against Person",
+                          "White Collar",
                           style: TextStyle(
-                              fontSize: 24.sp,
+                              fontSize: 22.sp,
                               fontWeight: FontWeight.bold,
                               fontFamily: "RobotoFlex",
                               color: Colors.black),
@@ -1100,7 +1100,7 @@ class CollarSectionTen extends StatelessWidget {
                     alignment: Alignment.bottomCenter,
                     child: Container(
                       width: MediaQuery.of(context).size.width,
-                      height: MediaQuery.of(context).size.height * 0.76,
+                      height: MediaQuery.of(context).size.height * 0.80,
                       decoration: BoxDecoration(
                         color: const Color(0xffE8E8E8),
                         borderRadius: BorderRadius.only(
@@ -1173,7 +1173,7 @@ class CollarSectionEleven extends StatelessWidget {
                   // modify the size depends on needs
                   // sample text -> remove
                   Padding(
-                    padding: EdgeInsets.only(top: 120.h, left: 13.w),
+                    padding: EdgeInsets.only(top: 100.h, left: 13.w),
                     child: Row(
                       children: [
                         GestureDetector(
@@ -1187,9 +1187,9 @@ class CollarSectionEleven extends StatelessWidget {
                         ),
                         SizedBox(width: 15.w),
                         Text(
-                          "Against Person",
+                          "White Collar",
                           style: TextStyle(
-                              fontSize: 24.sp,
+                              fontSize: 22.sp,
                               fontWeight: FontWeight.bold,
                               fontFamily: "RobotoFlex",
                               color: Colors.black),
@@ -1202,7 +1202,7 @@ class CollarSectionEleven extends StatelessWidget {
                     alignment: Alignment.bottomCenter,
                     child: Container(
                       width: MediaQuery.of(context).size.width,
-                      height: MediaQuery.of(context).size.height * 0.76,
+                      height: MediaQuery.of(context).size.height * 0.80,
                       decoration: BoxDecoration(
                         color: const Color(0xffE8E8E8),
                         borderRadius: BorderRadius.only(
@@ -1273,7 +1273,7 @@ class CollarSectionTwelve extends StatelessWidget {
                   // modify the size depends on needs
                   // sample text -> remove
                   Padding(
-                    padding: EdgeInsets.only(top: 120.h, left: 13.w),
+                    padding: EdgeInsets.only(top: 100.h, left: 13.w),
                     child: Row(
                       children: [
                         GestureDetector(
@@ -1287,9 +1287,9 @@ class CollarSectionTwelve extends StatelessWidget {
                         ),
                         SizedBox(width: 15.w),
                         Text(
-                          "Against Person",
+                          "White Collar",
                           style: TextStyle(
-                              fontSize: 24.sp,
+                              fontSize: 22.sp,
                               fontWeight: FontWeight.bold,
                               fontFamily: "RobotoFlex",
                               color: Colors.black),
@@ -1302,7 +1302,7 @@ class CollarSectionTwelve extends StatelessWidget {
                     alignment: Alignment.bottomCenter,
                     child: Container(
                       width: MediaQuery.of(context).size.width,
-                      height: MediaQuery.of(context).size.height * 0.76,
+                      height: MediaQuery.of(context).size.height * 0.80,
                       decoration: BoxDecoration(
                         color: const Color(0xffE8E8E8),
                         borderRadius: BorderRadius.only(
@@ -1375,7 +1375,7 @@ class CollarSectionThirteen extends StatelessWidget {
                   // modify the size depends on needs
                   // sample text -> remove
                   Padding(
-                    padding: EdgeInsets.only(top: 120.h, left: 13.w),
+                    padding: EdgeInsets.only(top: 100.h, left: 13.w),
                     child: Row(
                       children: [
                         GestureDetector(
@@ -1389,9 +1389,9 @@ class CollarSectionThirteen extends StatelessWidget {
                         ),
                         SizedBox(width: 15.w),
                         Text(
-                          "Against Person",
+                          "White Collar",
                           style: TextStyle(
-                              fontSize: 24.sp,
+                              fontSize: 22.sp,
                               fontWeight: FontWeight.bold,
                               fontFamily: "RobotoFlex",
                               color: Colors.black),
@@ -1404,7 +1404,7 @@ class CollarSectionThirteen extends StatelessWidget {
                     alignment: Alignment.bottomCenter,
                     child: Container(
                       width: MediaQuery.of(context).size.width,
-                      height: MediaQuery.of(context).size.height * 0.76,
+                      height: MediaQuery.of(context).size.height * 0.80,
                       decoration: BoxDecoration(
                         color: const Color(0xffE8E8E8),
                         borderRadius: BorderRadius.only(
@@ -1486,7 +1486,7 @@ class CollarSectionFourteen extends StatelessWidget {
                   // modify the size depends on needs
                   // sample text -> remove
                   Padding(
-                    padding: EdgeInsets.only(top: 120.h, left: 13.w),
+                    padding: EdgeInsets.only(top: 100.h, left: 13.w),
                     child: Row(
                       children: [
                         GestureDetector(
@@ -1500,9 +1500,9 @@ class CollarSectionFourteen extends StatelessWidget {
                         ),
                         SizedBox(width: 15.w),
                         Text(
-                          "Against Person",
+                          "White Collar",
                           style: TextStyle(
-                              fontSize: 24.sp,
+                              fontSize: 22.sp,
                               fontWeight: FontWeight.bold,
                               fontFamily: "RobotoFlex",
                               color: Colors.black),
@@ -1515,7 +1515,7 @@ class CollarSectionFourteen extends StatelessWidget {
                     alignment: Alignment.bottomCenter,
                     child: Container(
                       width: MediaQuery.of(context).size.width,
-                      height: MediaQuery.of(context).size.height * 0.76,
+                      height: MediaQuery.of(context).size.height * 0.80,
                       decoration: BoxDecoration(
                         color: const Color(0xffE8E8E8),
                         borderRadius: BorderRadius.only(
@@ -1594,7 +1594,7 @@ class CollarSectionFifteen extends StatelessWidget {
                   // modify the size depends on needs
                   // sample text -> remove
                   Padding(
-                    padding: EdgeInsets.only(top: 120.h, left: 13.w),
+                    padding: EdgeInsets.only(top: 100.h, left: 13.w),
                     child: Row(
                       children: [
                         GestureDetector(
@@ -1608,9 +1608,9 @@ class CollarSectionFifteen extends StatelessWidget {
                         ),
                         SizedBox(width: 15.w),
                         Text(
-                          "Against Person",
+                          "White Collar",
                           style: TextStyle(
-                              fontSize: 24.sp,
+                              fontSize: 22.sp,
                               fontWeight: FontWeight.bold,
                               fontFamily: "RobotoFlex",
                               color: Colors.black),
@@ -1623,7 +1623,7 @@ class CollarSectionFifteen extends StatelessWidget {
                     alignment: Alignment.bottomCenter,
                     child: Container(
                       width: MediaQuery.of(context).size.width,
-                      height: MediaQuery.of(context).size.height * 0.76,
+                      height: MediaQuery.of(context).size.height * 0.80,
                       decoration: BoxDecoration(
                         color: const Color(0xffE8E8E8),
                         borderRadius: BorderRadius.only(
@@ -1697,7 +1697,7 @@ class CollarSectionSixteen extends StatelessWidget {
                   // modify the size depends on needs
                   // sample text -> remove
                   Padding(
-                    padding: EdgeInsets.only(top: 120.h, left: 13.w),
+                    padding: EdgeInsets.only(top: 100.h, left: 13.w),
                     child: Row(
                       children: [
                         GestureDetector(
@@ -1711,9 +1711,9 @@ class CollarSectionSixteen extends StatelessWidget {
                         ),
                         SizedBox(width: 15.w),
                         Text(
-                          "Against Person",
+                          "White Collar",
                           style: TextStyle(
-                              fontSize: 24.sp,
+                              fontSize: 22.sp,
                               fontWeight: FontWeight.bold,
                               fontFamily: "RobotoFlex",
                               color: Colors.black),
@@ -1726,7 +1726,7 @@ class CollarSectionSixteen extends StatelessWidget {
                     alignment: Alignment.bottomCenter,
                     child: Container(
                       width: MediaQuery.of(context).size.width,
-                      height: MediaQuery.of(context).size.height * 0.76,
+                      height: MediaQuery.of(context).size.height * 0.80,
                       decoration: BoxDecoration(
                         color: const Color(0xffE8E8E8),
                         borderRadius: BorderRadius.only(

@@ -63,7 +63,6 @@ class MyDrawerList extends StatefulWidget {
 }
 
 class _MyDrawerListState extends State<MyDrawerList> {
-  
   Future<void> launchEmail() async {
     String? encodeQueryParameters(Map<String, String> params) {
       return params.entries
@@ -79,7 +78,7 @@ class _MyDrawerListState extends State<MyDrawerList> {
           <String, String>{'subject': "Feedback", 'body': ""}),
     );
 
-    try{
+    try {
       await launchUrl(email);
     } catch (exception) {
       debugPrint(exception.toString());
@@ -158,7 +157,7 @@ class _MyDrawerListState extends State<MyDrawerList> {
               leading: Image.asset('assets/images/feedback.png',
                   width: 25, height: 25),
               title: const Text(
-                'Feedback',
+                'Contact Us',
                 style: TextStyle(
                   color: Color(0xff0C2924),
                   fontFamily: "RobotoFlex",
@@ -182,8 +181,8 @@ class _MyDrawerListState extends State<MyDrawerList> {
             ),
             ListTile(
               minLeadingWidth: 10.0,
-              leading: Image.asset('assets/images/about.png',
-                  width: 25, height: 25),
+              leading:
+                  Image.asset('assets/images/about.png', width: 25, height: 25),
               title: const Text(
                 'About Us',
                 style: TextStyle(
@@ -213,8 +212,8 @@ class _MyDrawerListState extends State<MyDrawerList> {
             ),
             ListTile(
               minLeadingWidth: 10.0,
-              leading: Image.asset('assets/images/help.png',
-                  width: 30, height: 30),
+              leading:
+                  Image.asset('assets/images/help.png', width: 30, height: 30),
               title: const Text(
                 'Help Center',
                 style: TextStyle(

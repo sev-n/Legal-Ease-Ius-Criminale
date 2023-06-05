@@ -23,7 +23,7 @@ class PersonSectionTwentyOne extends StatelessWidget {
                   // modify the size depends on needs
                   // sample text -> remove
                   Padding(
-                    padding: EdgeInsets.only(top: 120.h, left: 13.w),
+                    padding: EdgeInsets.only(top: 100.h, left: 13.w),
                     child: Row(
                       children: [
                         GestureDetector(
@@ -39,7 +39,7 @@ class PersonSectionTwentyOne extends StatelessWidget {
                         Text(
                           "Against Person",
                           style: TextStyle(
-                              fontSize: 24.sp,
+                              fontSize: 22.sp,
                               fontWeight: FontWeight.bold,
                               fontFamily: "RobotoFlex",
                               color: Colors.black),
@@ -52,7 +52,7 @@ class PersonSectionTwentyOne extends StatelessWidget {
                     alignment: Alignment.bottomCenter,
                     child: Container(
                       width: MediaQuery.of(context).size.width,
-                      height: MediaQuery.of(context).size.height * 0.76,
+                      height: MediaQuery.of(context).size.height * 0.80,
                       decoration: BoxDecoration(
                         color: const Color(0xffE8E8E8),
                         borderRadius: BorderRadius.only(
@@ -133,7 +133,7 @@ class PersonSectionTwentyTwo extends StatelessWidget {
                   // modify the size depends on needs
                   // sample text -> remove
                   Padding(
-                    padding: EdgeInsets.only(top: 120.h, left: 13.w),
+                    padding: EdgeInsets.only(top: 100.h, left: 13.w),
                     child: Row(
                       children: [
                         GestureDetector(
@@ -149,7 +149,7 @@ class PersonSectionTwentyTwo extends StatelessWidget {
                         Text(
                           "Against Person",
                           style: TextStyle(
-                              fontSize: 24.sp,
+                              fontSize: 22.sp,
                               fontWeight: FontWeight.bold,
                               fontFamily: "RobotoFlex",
                               color: Colors.black),
@@ -162,7 +162,7 @@ class PersonSectionTwentyTwo extends StatelessWidget {
                     alignment: Alignment.bottomCenter,
                     child: Container(
                       width: MediaQuery.of(context).size.width,
-                      height: MediaQuery.of(context).size.height * 0.76,
+                      height: MediaQuery.of(context).size.height * 0.80,
                       decoration: BoxDecoration(
                         color: const Color(0xffE8E8E8),
                         borderRadius: BorderRadius.only(
@@ -239,7 +239,7 @@ class PersonSectionTwentyThree extends StatelessWidget {
                   // modify the size depends on needs
                   // sample text -> remove
                   Padding(
-                    padding: EdgeInsets.only(top: 120.h, left: 13.w),
+                    padding: EdgeInsets.only(top: 100.h, left: 13.w),
                     child: Row(
                       children: [
                         GestureDetector(
@@ -255,7 +255,7 @@ class PersonSectionTwentyThree extends StatelessWidget {
                         Text(
                           "Against Person",
                           style: TextStyle(
-                              fontSize: 24.sp,
+                              fontSize: 22.sp,
                               fontWeight: FontWeight.bold,
                               fontFamily: "RobotoFlex",
                               color: Colors.black),
@@ -268,7 +268,7 @@ class PersonSectionTwentyThree extends StatelessWidget {
                     alignment: Alignment.bottomCenter,
                     child: Container(
                       width: MediaQuery.of(context).size.width,
-                      height: MediaQuery.of(context).size.height * 0.76,
+                      height: MediaQuery.of(context).size.height * 0.80,
                       decoration: BoxDecoration(
                         color: const Color(0xffE8E8E8),
                         borderRadius: BorderRadius.only(
@@ -342,7 +342,7 @@ class PersonSectionTwentyFour extends StatelessWidget {
                   // modify the size depends on needs
                   // sample text -> remove
                   Padding(
-                    padding: EdgeInsets.only(top: 120.h, left: 13.w),
+                    padding: EdgeInsets.only(top: 100.h, left: 13.w),
                     child: Row(
                       children: [
                         GestureDetector(
@@ -358,7 +358,7 @@ class PersonSectionTwentyFour extends StatelessWidget {
                         Text(
                           "Against Person",
                           style: TextStyle(
-                              fontSize: 24.sp,
+                              fontSize: 22.sp,
                               fontWeight: FontWeight.bold,
                               fontFamily: "RobotoFlex",
                               color: Colors.black),
@@ -371,7 +371,7 @@ class PersonSectionTwentyFour extends StatelessWidget {
                     alignment: Alignment.bottomCenter,
                     child: Container(
                       width: MediaQuery.of(context).size.width,
-                      height: MediaQuery.of(context).size.height * 0.76,
+                      height: MediaQuery.of(context).size.height * 0.80,
                       decoration: BoxDecoration(
                         color: const Color(0xffE8E8E8),
                         borderRadius: BorderRadius.only(
@@ -446,7 +446,7 @@ class PersonSectionTwentyFive extends StatelessWidget {
                   // modify the size depends on needs
                   // sample text -> remove
                   Padding(
-                    padding: EdgeInsets.only(top: 120.h, left: 13.w),
+                    padding: EdgeInsets.only(top: 100.h, left: 13.w),
                     child: Row(
                       children: [
                         GestureDetector(
@@ -462,7 +462,7 @@ class PersonSectionTwentyFive extends StatelessWidget {
                         Text(
                           "Against Person",
                           style: TextStyle(
-                              fontSize: 24.sp,
+                              fontSize: 22.sp,
                               fontWeight: FontWeight.bold,
                               fontFamily: "RobotoFlex",
                               color: Colors.black),
@@ -475,7 +475,7 @@ class PersonSectionTwentyFive extends StatelessWidget {
                     alignment: Alignment.bottomCenter,
                     child: Container(
                       width: MediaQuery.of(context).size.width,
-                      height: MediaQuery.of(context).size.height * 0.76,
+                      height: MediaQuery.of(context).size.height * 0.80,
                       decoration: BoxDecoration(
                         color: const Color(0xffE8E8E8),
                         borderRadius: BorderRadius.only(
@@ -546,7 +546,7 @@ class PersonSectionTwentySix extends StatelessWidget {
                   // modify the size depends on needs
                   // sample text -> remove
                   Padding(
-                    padding: EdgeInsets.only(top: 120.h, left: 13.w),
+                    padding: EdgeInsets.only(top: 100.h, left: 13.w),
                     child: Row(
                       children: [
                         GestureDetector(
@@ -562,7 +562,7 @@ class PersonSectionTwentySix extends StatelessWidget {
                         Text(
                           "Against Person",
                           style: TextStyle(
-                              fontSize: 24.sp,
+                              fontSize: 22.sp,
                               fontWeight: FontWeight.bold,
                               fontFamily: "RobotoFlex",
                               color: Colors.black),
@@ -575,7 +575,7 @@ class PersonSectionTwentySix extends StatelessWidget {
                     alignment: Alignment.bottomCenter,
                     child: Container(
                       width: MediaQuery.of(context).size.width,
-                      height: MediaQuery.of(context).size.height * 0.76,
+                      height: MediaQuery.of(context).size.height * 0.80,
                       decoration: BoxDecoration(
                         color: const Color(0xffE8E8E8),
                         borderRadius: BorderRadius.only(
@@ -646,7 +646,7 @@ class PersonSectionTwentySeven extends StatelessWidget {
                   // modify the size depends on needs
                   // sample text -> remove
                   Padding(
-                    padding: EdgeInsets.only(top: 120.h, left: 13.w),
+                    padding: EdgeInsets.only(top: 100.h, left: 13.w),
                     child: Row(
                       children: [
                         GestureDetector(
@@ -662,7 +662,7 @@ class PersonSectionTwentySeven extends StatelessWidget {
                         Text(
                           "Against Person",
                           style: TextStyle(
-                              fontSize: 24.sp,
+                              fontSize: 22.sp,
                               fontWeight: FontWeight.bold,
                               fontFamily: "RobotoFlex",
                               color: Colors.black),
@@ -675,7 +675,7 @@ class PersonSectionTwentySeven extends StatelessWidget {
                     alignment: Alignment.bottomCenter,
                     child: Container(
                       width: MediaQuery.of(context).size.width,
-                      height: MediaQuery.of(context).size.height * 0.76,
+                      height: MediaQuery.of(context).size.height * 0.80,
                       decoration: BoxDecoration(
                         color: const Color(0xffE8E8E8),
                         borderRadius: BorderRadius.only(

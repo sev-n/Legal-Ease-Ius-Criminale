@@ -40,7 +40,7 @@ class CollarContentState extends State<CollarContent> {
               child: Stack(
                 children: [
                   Padding(
-                    padding: EdgeInsets.only(top: 120.h, left: 13.w),
+                    padding: EdgeInsets.only(top: 100.h, left: 13.w),
                     child: Row(
                       children: [
                         GestureDetector(
@@ -50,13 +50,14 @@ class CollarContentState extends State<CollarContent> {
                           child: const Icon(
                             Icons.arrow_back_ios_new_rounded,
                             color: Colors.white,
+                            size: 25,
                           ),
                         ),
                         SizedBox(width: 15.w),
                         Text(
                           "White Collar",
                           style: TextStyle(
-                              fontSize: 28.sp,
+                              fontSize: 22.sp,
                               fontWeight: FontWeight.bold,
                               fontFamily: "RobotoFlex",
                               color: Colors.white),
@@ -68,7 +69,7 @@ class CollarContentState extends State<CollarContent> {
                     alignment: Alignment.bottomCenter,
                     child: Container(
                       width: MediaQuery.of(context).size.width,
-                      height: MediaQuery.of(context).size.height * 0.76,
+                      height: MediaQuery.of(context).size.height * 0.80,
                       decoration: BoxDecoration(
                         color: const Color(0xffE8E8E8),
                         borderRadius: BorderRadius.only(
@@ -130,10 +131,10 @@ class CollarContentState extends State<CollarContent> {
                                   child: const Text(
                                     "\nANTI-GRAFT AND CORRUPT PRACTICES ACT\n\n",
                                     style: TextStyle(
-                                        fontFamily: "RobotoFlex",
-                                        fontWeight: FontWeight.w500,
-                                        height: 1.4,
-                                        ),
+                                      fontFamily: "RobotoFlex",
+                                      fontWeight: FontWeight.w500,
+                                      height: 1.4,
+                                    ),
                                   ),
                                 ),
                                 isExpanded: isExpanded3019,

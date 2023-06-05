@@ -35,7 +35,7 @@ class _CrimeContentState extends State<CrimeContent> {
                   // modify the size depends on needs
                   // sample text -> remove
                   Padding(
-                    padding: EdgeInsets.only(top: 120.h, left: 13.w),
+                    padding: EdgeInsets.only(top: 100.h, left: 13.w),
                     child: Row(
                       children: [
                         GestureDetector(
@@ -45,13 +45,14 @@ class _CrimeContentState extends State<CrimeContent> {
                           child: const Icon(
                             Icons.arrow_back_ios_new_rounded,
                             color: Colors.white,
+                            size: 25,
                           ),
                         ),
                         SizedBox(width: 15.w),
                         Text(
                           "Inchoate Crime",
                           style: TextStyle(
-                              fontSize: 28.sp,
+                              fontSize: 22.sp,
                               fontWeight: FontWeight.bold,
                               fontFamily: "RobotoFlex",
                               color: Colors.white),
@@ -64,7 +65,7 @@ class _CrimeContentState extends State<CrimeContent> {
                     alignment: Alignment.bottomCenter,
                     child: Container(
                       width: MediaQuery.of(context).size.width,
-                      height: MediaQuery.of(context).size.height * 0.76,
+                      height: MediaQuery.of(context).size.height * 0.80,
                       decoration: BoxDecoration(
                         color: const Color(0xffE8E8E8),
                         borderRadius: BorderRadius.only(
@@ -111,17 +112,18 @@ class _CrimeContentState extends State<CrimeContent> {
                                   );
                                 },
                                 body: Padding(
-                                  padding: EdgeInsets.only(left: 5.w, right: 5.w),
+                                  padding:
+                                      EdgeInsets.only(left: 5.w, right: 5.w),
                                   child: const Text(
                                     "\nAN ACT DEFINING VIOLENCE AGAINST WOMEN AND THEIR CHILDREN, "
                                     "PROVIDING FOR PROTECTIVE MEASURES FOR VICTIMS, PRESCRIBING "
                                     "PENALTIES THEREFORE, AND FOR OTHER PURPOSES.\n\n",
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
-                                        fontFamily: "RobotoFlex",
-                                        fontWeight: FontWeight.w500,
-                                        height: 1.4,
-                                        ),
+                                      fontFamily: "RobotoFlex",
+                                      fontWeight: FontWeight.w500,
+                                      height: 1.4,
+                                    ),
                                   ),
                                 ),
                                 isExpanded: isExpanded9262,

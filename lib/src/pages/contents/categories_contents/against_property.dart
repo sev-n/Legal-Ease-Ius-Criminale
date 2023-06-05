@@ -34,7 +34,7 @@ class _AgainstPropertyState extends State<AgainstProperty> {
                   // modify the size depends on needs
                   // sample text -> remove
                   Padding(
-                    padding: EdgeInsets.only(top: 120.h, left: 13.w),
+                    padding: EdgeInsets.only(top: 100.h, left: 13.w),
                     child: Row(
                       children: [
                         GestureDetector(
@@ -50,7 +50,7 @@ class _AgainstPropertyState extends State<AgainstProperty> {
                         Text(
                           "Against Property",
                           style: TextStyle(
-                              fontSize: 28.sp,
+                              fontSize: 22.sp,
                               fontWeight: FontWeight.bold,
                               fontFamily: "RobotoFlex",
                               color: Colors.white),
@@ -63,7 +63,7 @@ class _AgainstPropertyState extends State<AgainstProperty> {
                     alignment: Alignment.bottomCenter,
                     child: Container(
                       width: MediaQuery.of(context).size.width,
-                      height: MediaQuery.of(context).size.height * 0.76,
+                      height: MediaQuery.of(context).size.height * 0.80,
                       decoration: BoxDecoration(
                         color: const Color(0xffE8E8E8),
                         borderRadius: BorderRadius.only(
@@ -110,15 +110,16 @@ class _AgainstPropertyState extends State<AgainstProperty> {
                                   );
                                 },
                                 body: Padding(
-                                  padding: EdgeInsets.only(left: 5.w, right: 5.w),
+                                  padding:
+                                      EdgeInsets.only(left: 5.w, right: 5.w),
                                   child: const Text(
                                     "\nAN ACT TO PROVIDE FOR THE REGISTRATION AND PROTECTION OF TRADE-MARKS, TRADE NAMES AND SERVICE-MARKS, DEFINING UNFAIR COMPETITION AND FALSE MARKING AND PROVIDING REMEDIES AGAINST THE SAME, AND FOR OTHER PURPOSES.\n\n",
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
-                                        fontFamily: "RobotoFlex",
-                                        fontWeight: FontWeight.w500,
-                                        height: 1.4,
-                                        ),
+                                      fontFamily: "RobotoFlex",
+                                      fontWeight: FontWeight.w500,
+                                      height: 1.4,
+                                    ),
                                   ),
                                 ),
                                 isExpanded: isExpanded166,
