@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:legalease_matrimonial/src/pages/contents/categories_contents/categories_sections/white_collar/republic_3019/sections.dart';
+import 'package:legalease_matrimonial/src/pages/contents/categories_contents/categories_sections/white_collar/republic_6713/sections.dart';
 
 class CollarContent extends StatefulWidget {
   const CollarContent({Key? key}) : super(key: key);
@@ -155,7 +156,7 @@ class CollarContentState extends State<CollarContent> {
                                         context,
                                         MaterialPageRoute(
                                           builder: (context) =>
-                                              const SectionsCollar3019(),
+                                              const SectionsCollar6713(),
                                         ),
                                       );
                                     },
