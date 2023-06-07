@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:legalease_matrimonial/src/model/collar_sections.dart';
 
-class SectionsCollar extends StatelessWidget {
-  const SectionsCollar({super.key});
+class SectionsCollar3019 extends StatelessWidget {
+  const SectionsCollar3019({super.key});
 
   @override
   Widget build(BuildContext context) {

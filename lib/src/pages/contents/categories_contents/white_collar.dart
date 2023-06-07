@@ -6,7 +6,6 @@ class CollarContent extends StatefulWidget {
   const CollarContent({Key? key}) : super(key: key);
 
   @override
-  // ignore: library_private_types_in_public_api
   CollarContentState createState() => CollarContentState();
 }
 
@@ -119,7 +118,7 @@ class CollarContentState extends State<CollarContent> {
                                         context,
                                         MaterialPageRoute(
                                           builder: (context) =>
-                                              const SectionsCollar(),
+                                              const SectionsCollar3019(),
                                         ),
                                       );
                                     },
@@ -156,7 +155,7 @@ class CollarContentState extends State<CollarContent> {
                                         context,
                                         MaterialPageRoute(
                                           builder: (context) =>
-                                              const SectionsCollar(),
+                                              const SectionsCollar3019(),
                                         ),
                                       );
                                     },
