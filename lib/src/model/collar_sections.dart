@@ -1,4 +1,5 @@
 import 'package:legalease_matrimonial/src/pages/contents/categories_contents/categories_sections/white_collar/republic_3019/section_1-16.dart';
+import 'package:legalease_matrimonial/src/pages/contents/categories_contents/categories_sections/white_collar/republic_6713/section_1-17.dart';
 
 import 'inchoate_sections.dart';
 
@@ -40,5 +41,47 @@ class ListOfSectionsCollar {
     CollarSectionFourteen(),
     CollarSectionFifteen(),
     CollarSectionSixteen(),
+  ];
+}
+
+class ListOfSectionsCollar6713 {
+  static List<Sections> collarSection6713 = [
+    Sections(title: 'Section 1', description: 'Title'),
+    Sections(title: 'Section 2', description: 'Declaration of Policies'),
+    Sections(title: 'Section 3', description: 'Definition of Terms'),
+    Sections(title: 'Section 4', description: 'Norms of Conduct of Public Officials and Employees'),
+    Sections(title: 'Section 5', description: 'Duties of Public Officials and Employees'),
+    Sections(title: 'Section 6', description: 'System of Incentives and Rewards'),
+    Sections(title: 'Section 7', description: 'Prohibited Acts and Transactions'),
+    Sections(title: 'Section 8', description: 'Statements and Disclosure'),
+    Sections(title: 'Section 9', description: 'Divestment'),
+    Sections(title: 'Section 10', description: 'Review and Compliance Procedure'),
+    Sections(title: 'Section 11', description: 'Penalties'),
+    Sections(title: 'Section 12', description: 'Promulgation of Rules and Regulations, Administration and Enforcement of this Act'),
+    Sections(title: 'Section 13', description: 'Provisions for More Stringent Standards'),
+    Sections(title: 'Section 14', description: 'Appropriations'),
+    Sections(title: 'Section 15', description: 'Separability Clause'),
+    Sections(title: 'Section 16', description: 'Repealing Clause'),
+    Sections(title: 'Section 17', description: 'Effectivity'),
+  ];
+
+  static List routes6713 = const [
+    CollarSectionOne6713(),
+    CollarSectionTwo6713(),
+    CollarSectionThree6713(),
+    CollarSectionFour6713(),
+    CollarSectionFive6713(),
+    CollarSectionSix6713(),
+    CollarSectionSeven6713(),
+    CollarSectionEight6713(),
+    CollarSectionNine6713(),
+    CollarSectionTen6713(),
+    CollarSectionEleven6713(),
+    CollarSectionTwelve6713(),
+    CollarSectionThirteen6713(),
+    CollarSectionFourteen6713(),
+    CollarSectionFifteen6713(),
+    CollarSectionSixteen6713(),
+    CollarSectionSeventeen6713(),
   ];
 }
