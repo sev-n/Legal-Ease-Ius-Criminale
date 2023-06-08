@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:legalease_matrimonial/src/pages/contents/categories_contents/categories_sections/white_collar/republic_3019/sections.dart';
 import 'package:legalease_matrimonial/src/pages/contents/categories_contents/categories_sections/white_collar/republic_6713/sections.dart';
+import 'package:legalease_matrimonial/src/pages/contents/categories_contents/categories_sections/white_collar/republic_6770/sections.dart';
 
 class CollarContent extends StatefulWidget {
   const CollarContent({Key? key}) : super(key: key);
@@ -13,6 +14,7 @@ class CollarContent extends StatefulWidget {
 class CollarContentState extends State<CollarContent> {
   bool isExpanded3019 = false;
   bool isExpanded6713 = false;
+  bool isExpanded6770 = false;
   int index = 0;
 
   void toggleExpansion3019() {
@@ -24,6 +26,12 @@ class CollarContentState extends State<CollarContent> {
   void toggleExpansion6713() {
     setState(() {
       isExpanded6713 = !isExpanded6713;
+    });
+  }
+
+  void toggleExpansion6770() {
+    setState(() {
+      isExpanded6770 = !isExpanded6770;
     });
   }
 
@@ -81,12 +89,6 @@ class CollarContentState extends State<CollarContent> {
                         padding:
                             EdgeInsets.only(top: 10.h, left: 5.w, right: 5.w),
                         children: [
-                          // Divider(
-                          //   thickness: 1.0,
-                          //   indent: 16.0,
-                          //   endIndent: 16.0,
-                          //   color: Colors.grey[500],
-                          // ),
                           ExpansionPanelList(
                             elevation: 0,
                             dividerColor: Colors.transparent,
@@ -100,6 +102,9 @@ class CollarContentState extends State<CollarContent> {
                               }
                               if (panelIndex == 1) {
                                 toggleExpansion6713();
+                              }
+                              if(panelIndex == 2){
+                                toggleExpansion6770();
                               }
                             },
                             children: [
@@ -182,14 +187,47 @@ class CollarContentState extends State<CollarContent> {
                                 ),
                                 isExpanded: isExpanded6713,
                               ),
+
+                              ExpansionPanel(
+                                backgroundColor: const Color(0xffE8E8E8),
+                                canTapOnHeader: false,
+                                headerBuilder: (context, isExpanded) {
+                                  return ListTile(
+                                    title: const Text(
+                                      "REPUBLIC ACT NO. 6770",
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                    onTap: () {
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (context) =>
+                                              const SectionsCollar6770(),
+                                        ),
+                                      );
+                                    },
+                                  );
+                                },
+                                body: Padding(
+                                  padding:
+                                      EdgeInsets.only(left: 5.w, right: 5.w),
+                                  child: const Text(
+                                    "\nAN ACT PROVIDING FOR THE FUNCTIONAL AND STRUCTURAL "
+                                    "ORGANIZATION OF THE OFFICE OF THE OMBUDSMAN, AND FOR OTHER PURPOSES\n\n",
+                                    textAlign: TextAlign.center,
+                                    style: TextStyle(
+                                      fontFamily: "RobotoFlex",
+                                      fontWeight: FontWeight.w500,
+                                      height: 1.4,
+                                    ),
+                                  ),
+                                ),
+                                isExpanded: isExpanded6770,
+                              ),
                             ],
                           ),
-                          // Divider(
-                          //   thickness: 1.0,
-                          //   indent: 16.0,
-                          //   endIndent: 16.0,
-                          //   color: Colors.grey[500],
-                          // ),
                         ],
                       ),
                     ),
