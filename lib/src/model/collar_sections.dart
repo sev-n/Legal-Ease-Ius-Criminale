@@ -177,7 +177,6 @@ class ListOfSectionsCollar6770 {
     CollarSectionFifteen6770(),
     CollarSectionSixteen6770(),
     CollarSectionSeventeen6770(),
-    CollarSectionSeventeen6770(),
     CollarSectionEighteen6770(),
     CollarSectionNineteen6770(),
     CollarSectionTwenty6770(),
