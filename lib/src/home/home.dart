@@ -227,7 +227,6 @@ class HomePageState extends State<HomePage> {
                         height: 45.h,
                         decoration: const BoxDecoration(
                           color: Color(0xFFFFFFFF),
-                          //color: Colors.blue,
                           border: Border(
                             top: BorderSide(
                               width: 1.0,
@@ -238,7 +237,7 @@ class HomePageState extends State<HomePage> {
                         child: Padding(
                           padding: EdgeInsets.only(top: 10.h, left: 15.w),
                           child: Text(
-                            "Highlights",
+                            "Related Cases",
                             style: TextStyle(
                               fontFamily: "RobotoFlex",
                               fontWeight: FontWeight.w500,
@@ -256,18 +255,18 @@ class HomePageState extends State<HomePage> {
                             height: 246.h,
                             child: ListView(
                               children: const [
-                                HighlightsContent(),
-                                HighlightsContent(),
-                                HighlightsContent(),
-                                HighlightsContent(),
-                                HighlightsContent(),
-                                HighlightsContent(),
-                                HighlightsContent(),
-                                HighlightsContent(),
-                                HighlightsContent(),
-                                HighlightsContent(),
-                                HighlightsContent(),
-                                HighlightsContent(),
+                                RelatedCases(),
+                                RelatedCases(),
+                                RelatedCases(),
+                                RelatedCases(),
+                                RelatedCases(),
+                                RelatedCases(),
+                                RelatedCases(),
+                                RelatedCases(),
+                                RelatedCases(),
+                                RelatedCases(),
+                                RelatedCases(),
+                                RelatedCases(),
                               ],
                             )),
                       )
@@ -381,8 +380,8 @@ class GenerateBtn extends StatelessWidget {
   }
 }
 
-class HighlightsContent extends StatelessWidget {
-  const HighlightsContent({super.key});
+class RelatedCases extends StatelessWidget {
+  const RelatedCases({super.key});
 
   @override
   Widget build(BuildContext context) {
