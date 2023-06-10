@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:legalease_matrimonial/src/pages/contents/categories_contents/categories_sections/againts_person/republic_7610/chapters.dart';
 import 'package:legalease_matrimonial/src/pages/contents/categories_contents/categories_sections/againts_person/republic_9745/sections.dart';
 
 class PersonContent extends StatefulWidget {
@@ -11,10 +12,17 @@ class PersonContent extends StatefulWidget {
 
 class _PersonContentState extends State<PersonContent> {
   bool isExpanded9745 = false;
+  bool isExpanded7610 = false;
 
   void toggleExpansion9745() {
     setState(() {
       isExpanded9745 = !isExpanded9745;
+    });
+  }
+
+  void toggleExpansion7610() {
+    setState(() {
+      isExpanded7610  = !isExpanded7610;
     });
   }
 
@@ -83,7 +91,12 @@ class _PersonContentState extends State<PersonContent> {
                                 const Duration(milliseconds: 400),
                             expansionCallback:
                                 (int panelIndex, bool isExpanded) {
-                              toggleExpansion9745();
+                                  if(panelIndex == 0){
+                                      toggleExpansion9745();
+                                  }
+                                  if(panelIndex == 1){
+                                      toggleExpansion7610();
+                                  }
                             },
                             children: [
                               ExpansionPanel(
@@ -125,6 +138,46 @@ class _PersonContentState extends State<PersonContent> {
                                   ),
                                 ),
                                 isExpanded: isExpanded9745,
+                              ),
+                              ExpansionPanel(
+                                backgroundColor: const Color(0xffE8E8E8),
+                                canTapOnHeader: false,
+                                headerBuilder: (context, isExpanded) {
+                                  return ListTile(
+                                    title: const Text(
+                                      "REPUBLIC ACT NO. 7610",
+                                      style: TextStyle(
+                                        fontFamily: "RobotoFlex",
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                    onTap: () {
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (context) =>
+                                              const ChaptersPerson(),
+                                        ),
+                                      );
+                                    },
+                                  );
+                                },
+                                body: Padding(
+                                  padding:
+                                      EdgeInsets.only(left: 5.w, right: 5.w),
+                                  child: const Text(
+                                    "\nAN ACT PROVIDING FOR STRONGER DETERRENCE AND SPECIAL PROTECTION AGAINST\n\n"
+                                    "CHILD ABUSE, EXPLOITATION AND DISCRIMINATION, AND FOR OTHER PURPOSES "
+                                    "Be it enacted by the Senate and House of Representatives of the Philippines in Congress assembled:\n\n",
+                                    textAlign: TextAlign.center,
+                                    style: TextStyle(
+                                      fontFamily: "RobotoFlex",
+                                      fontWeight: FontWeight.w500,
+                                      height: 1.4,
+                                    ),
+                                  ),
+                                ),
+                                isExpanded: isExpanded7610,
                               ),
                             ],
                           ),
