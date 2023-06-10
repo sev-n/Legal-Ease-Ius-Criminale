@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:legalease_matrimonial/src/pages/contents/categories_contents/categories_sections/againts_person/republic_7610/chapters.dart';
+import 'package:legalease_matrimonial/src/pages/contents/categories_contents/categories_sections/againts_person/republic_7877/sections.dart';
 import 'package:legalease_matrimonial/src/pages/contents/categories_contents/categories_sections/againts_person/republic_9745/sections.dart';
 
 class PersonContent extends StatefulWidget {
@@ -13,6 +14,7 @@ class PersonContent extends StatefulWidget {
 class _PersonContentState extends State<PersonContent> {
   bool isExpanded9745 = false;
   bool isExpanded7610 = false;
+  bool isExpanded7877 = false;
 
   void toggleExpansion9745() {
     setState(() {
@@ -23,6 +25,12 @@ class _PersonContentState extends State<PersonContent> {
   void toggleExpansion7610() {
     setState(() {
       isExpanded7610  = !isExpanded7610;
+    });
+  }
+
+  void toggleExpansion7877() {
+    setState(() {
+      isExpanded7877  = !isExpanded7877;
     });
   }
 
@@ -96,6 +104,9 @@ class _PersonContentState extends State<PersonContent> {
                                   }
                                   if(panelIndex == 1){
                                       toggleExpansion7610();
+                                  }
+                                  if(panelIndex == 2) {
+                                    toggleExpansion7877();
                                   }
                             },
                             children: [
@@ -178,6 +189,47 @@ class _PersonContentState extends State<PersonContent> {
                                   ),
                                 ),
                                 isExpanded: isExpanded7610,
+                              ),
+
+                              ExpansionPanel(
+                                backgroundColor: const Color(0xffE8E8E8),
+                                canTapOnHeader: false,
+                                headerBuilder: (context, isExpanded) {
+                                  return ListTile(
+                                    title: const Text(
+                                      "REPUBLIC ACT NO. 7877",
+                                      style: TextStyle(
+                                        fontFamily: "RobotoFlex",
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                    onTap: () {
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (context) =>
+                                              const SectionsPerson7877(),
+                                        ),
+                                      );
+                                    },
+                                  );
+                                },
+                                body: Padding(
+                                  padding:
+                                      EdgeInsets.only(left: 5.w, right: 5.w),
+                                  child: const Text(
+                                    "\nAN ACT DECLARING SEXUAL HARASSMENT UNLAWFUL IN THE "
+                                    "EMPLOYMENT, EDUACATION OR TRAINING ENVIRONMENT, AND "
+                                    "FOR OTHER PURPOSES\n\n",
+                                    textAlign: TextAlign.center,
+                                    style: TextStyle(
+                                      fontFamily: "RobotoFlex",
+                                      fontWeight: FontWeight.w500,
+                                      height: 1.4,
+                                    ),
+                                  ),
+                                ),
+                                isExpanded: isExpanded7877,
                               ),
                             ],
                           ),
