@@ -63,12 +63,6 @@ class Section1 extends StatelessWidget {
                               ListOfChaptersProperty.sections[index];
                           return Column(
                             children: [
-                              Divider(
-                                thickness: 1.0,
-                                indent: 16.0,
-                                endIndent: 16.0,
-                                color: Colors.grey[500],
-                              ),
                               ListTile(
                                 title: Text(
                                   section.title,
@@ -96,6 +90,12 @@ class Section1 extends StatelessWidget {
                                     ),
                                   );
                                 },
+                              ),
+                              Divider(
+                                thickness: 1.0,
+                                indent: 16.0,
+                                endIndent: 16.0,
+                                color: Colors.grey[500],
                               ),
                             ],
                           );

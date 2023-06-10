@@ -60,15 +60,9 @@ class SectionPerson9 extends StatelessWidget {
                         itemCount: 5,
                         itemBuilder: (BuildContext context, int index) {
                           final section =
-                              ListOfChaptersPerson.sections[index+16];
+                              ListOfChaptersPerson.sections[index + 16];
                           return Column(
                             children: [
-                              Divider(
-                                thickness: 1.0,
-                                indent: 16.0,
-                                endIndent: 16.0,
-                                color: Colors.grey[500],
-                              ),
                               ListTile(
                                 title: Text(
                                   section.title,
@@ -90,12 +84,17 @@ class SectionPerson9 extends StatelessWidget {
                                   debugPrint("$index");
                                   Navigator.of(context).push(
                                     MaterialPageRoute(
-                                      builder: (context) =>
-                                          ListOfChaptersPerson
-                                              .routesContentsPerSection[index+16],
+                                      builder: (context) => ListOfChaptersPerson
+                                          .routesContentsPerSection[index + 16],
                                     ),
                                   );
                                 },
+                              ),
+                              Divider(
+                                thickness: 1.0,
+                                indent: 16.0,
+                                endIndent: 16.0,
+                                color: Colors.grey[500],
                               ),
                             ],
                           );

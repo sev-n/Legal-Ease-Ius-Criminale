@@ -59,16 +59,9 @@ class SectionPerson1 extends StatelessWidget {
                       child: ListView.builder(
                         itemCount: 3,
                         itemBuilder: (BuildContext context, int index) {
-                          final section =
-                              ListOfChaptersPerson.sections[index];
+                          final section = ListOfChaptersPerson.sections[index];
                           return Column(
                             children: [
-                              Divider(
-                                thickness: 1.0,
-                                indent: 16.0,
-                                endIndent: 16.0,
-                                color: Colors.grey[500],
-                              ),
                               ListTile(
                                 title: Text(
                                   section.title,
@@ -90,12 +83,17 @@ class SectionPerson1 extends StatelessWidget {
                                   debugPrint("$index");
                                   Navigator.of(context).push(
                                     MaterialPageRoute(
-                                      builder: (context) =>
-                                          ListOfChaptersPerson
-                                              .routesContentsPerSection[index],
+                                      builder: (context) => ListOfChaptersPerson
+                                          .routesContentsPerSection[index],
                                     ),
                                   );
                                 },
+                              ),
+                              Divider(
+                                thickness: 1.0,
+                                indent: 16.0,
+                                endIndent: 16.0,
+                                color: Colors.grey[500],
                               ),
                             ],
                           );

@@ -62,12 +62,6 @@ class ChaptersPerson extends StatelessWidget {
                           final chapter = ListOfChaptersPerson.chapters[index];
                           return Column(
                             children: [
-                              Divider(
-                                thickness: 1.0,
-                                indent: 16.0,
-                                endIndent: 16.0,
-                                color: Colors.grey[500],
-                              ),
                               ListTile(
                                 title: Text(
                                   chapter.title,
@@ -89,11 +83,17 @@ class ChaptersPerson extends StatelessWidget {
                                   debugPrint("$index");
                                   Navigator.of(context).push(
                                     MaterialPageRoute(
-                                      builder: (context) =>
-                                          ListOfChaptersPerson.routesPerChapterPerson[index],
+                                      builder: (context) => ListOfChaptersPerson
+                                          .routesPerChapterPerson[index],
                                     ),
                                   );
                                 },
+                              ),
+                              Divider(
+                                thickness: 1.0,
+                                indent: 16.0,
+                                endIndent: 16.0,
+                                color: Colors.grey[500],
                               ),
                             ],
                           );

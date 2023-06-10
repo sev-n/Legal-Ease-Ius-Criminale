@@ -59,15 +59,10 @@ class ChaptersProperty extends StatelessWidget {
                       child: ListView.builder(
                         itemCount: ListOfChaptersProperty.chapters.length,
                         itemBuilder: (BuildContext context, int index) {
-                          final chapter = ListOfChaptersProperty.chapters[index];
+                          final chapter =
+                              ListOfChaptersProperty.chapters[index];
                           return Column(
                             children: [
-                              Divider(
-                                thickness: 1.0,
-                                indent: 16.0,
-                                endIndent: 16.0,
-                                color: Colors.grey[500],
-                              ),
                               ListTile(
                                 title: Text(
                                   chapter.title,
@@ -90,10 +85,17 @@ class ChaptersProperty extends StatelessWidget {
                                   Navigator.of(context).push(
                                     MaterialPageRoute(
                                       builder: (context) =>
-                                          ListOfChaptersProperty.routesPerChapter[index],
+                                          ListOfChaptersProperty
+                                              .routesPerChapter[index],
                                     ),
                                   );
                                 },
+                              ),
+                              Divider(
+                                thickness: 1.0,
+                                indent: 16.0,
+                                endIndent: 16.0,
+                                color: Colors.grey[500],
                               ),
                             ],
                           );

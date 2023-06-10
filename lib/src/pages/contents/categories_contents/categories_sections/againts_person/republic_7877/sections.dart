@@ -57,18 +57,13 @@ class SectionsPerson7877 extends StatelessWidget {
                         ),
                       ),
                       child: ListView.builder(
-                        itemCount: ListOfSectionsPerson7877.sectionPerson7877.length,
+                        itemCount:
+                            ListOfSectionsPerson7877.sectionPerson7877.length,
                         itemBuilder: (BuildContext context, int index) {
                           final section =
                               ListOfSectionsPerson7877.sectionPerson7877[index];
                           return Column(
                             children: [
-                              Divider(
-                                thickness: 1.0,
-                                indent: 16.0,
-                                endIndent: 16.0,
-                                color: Colors.grey[500],
-                              ),
                               ListTile(
                                 title: Text(
                                   section.title,
@@ -91,10 +86,17 @@ class SectionsPerson7877 extends StatelessWidget {
                                   Navigator.of(context).push(
                                     MaterialPageRoute(
                                       builder: (context) =>
-                                          ListOfSectionsPerson7877.routes7877[index],
+                                          ListOfSectionsPerson7877
+                                              .routes7877[index],
                                     ),
                                   );
                                 },
+                              ),
+                              Divider(
+                                thickness: 1.0,
+                                indent: 16.0,
+                                endIndent: 16.0,
+                                color: Colors.grey[500],
                               ),
                             ],
                           );

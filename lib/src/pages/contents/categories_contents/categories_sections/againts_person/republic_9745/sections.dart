@@ -63,12 +63,6 @@ class SectionsPerson extends StatelessWidget {
                               ListOfSectionsPerson.personSection[index];
                           return Column(
                             children: [
-                              Divider(
-                                thickness: 1.0,
-                                indent: 16.0,
-                                endIndent: 16.0,
-                                color: Colors.grey[500],
-                              ),
                               ListTile(
                                 title: Text(
                                   section.title,
@@ -95,6 +89,12 @@ class SectionsPerson extends StatelessWidget {
                                     ),
                                   );
                                 },
+                              ),
+                              Divider(
+                                thickness: 1.0,
+                                indent: 16.0,
+                                endIndent: 16.0,
+                                color: Colors.grey[500],
                               ),
                             ],
                           );
