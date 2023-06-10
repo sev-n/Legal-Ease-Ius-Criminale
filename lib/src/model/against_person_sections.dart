@@ -13,6 +13,7 @@ import 'package:legalease_matrimonial/src/pages/contents/categories_contents/cat
 import 'package:legalease_matrimonial/src/pages/contents/categories_contents/categories_sections/againts_person/republic_7610/chapter_XIII/section_13.dart';
 import 'package:legalease_matrimonial/src/pages/contents/categories_contents/categories_sections/againts_person/republic_7610/contents/section_1-20.dart';
 import 'package:legalease_matrimonial/src/pages/contents/categories_contents/categories_sections/againts_person/republic_7610/contents/section_21-36.dart';
+import 'package:legalease_matrimonial/src/pages/contents/categories_contents/categories_sections/againts_person/republic_7877/sections_1-10.dart';
 import 'package:legalease_matrimonial/src/pages/contents/categories_contents/categories_sections/againts_person/republic_9745/section_1-10.dart';
 import 'package:legalease_matrimonial/src/pages/contents/categories_contents/categories_sections/againts_person/republic_9745/section_11-20.dart';
 import 'package:legalease_matrimonial/src/pages/contents/categories_contents/categories_sections/againts_person/republic_9745/section_21-27.dart';
@@ -194,4 +195,33 @@ class ListOfChaptersPerson {
     PersonContentThirtyFive(),
     PersonContentThirtySix(),
   ];
+}
+
+class ListOfSectionsPerson7877 {
+  static List<Sections> sectionPerson7877 = [
+    Sections(title: 'Section 1', description: 'Title'),
+    Sections(title: 'Section 2', description: 'Declaration of Policy'),
+    Sections(title: 'Section 3', description: 'Work, Education or Training-related Sexual Harassment Defined'),
+    Sections(title: 'Section 4', description: 'Duty of the Employer or Head of Office in a Work-related, Education or Training Environment'),
+    Sections(title: 'Section 5', description: 'Liability of the Employer, Head of Office, Educational or Training Institution'),
+    Sections(title: 'Section 6', description: 'Independent Action for Damages'),
+    Sections(title: 'Section 7', description: 'Penalties'),
+    Sections(title: 'Section 8', description: 'Separability Clause'),
+    Sections(title: 'Section 9', description: 'Repealing Clause'),
+    Sections(title: 'Section 10', description: 'Effectivity Clause'),
+  ];
+
+  static List routes7877 = const [
+    PersonSectionOne7877(),
+    PersonSectionTwo7877(),
+    PersonSectionThree7877(),
+    PersonSectionFour7877(),
+    PersonSectionFive7877(),
+    PersonSectionSix7877(),
+    PersonSectionSeven7877(),
+    PersonSectionEight7877(),
+    PersonSectionNine7877(),
+    PersonSectionTen7877(),
+  ];
+
 }
