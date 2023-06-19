@@ -91,7 +91,7 @@ class HomePageState extends State<HomePage> {
   }
 
   @override
-  void initState(){
+  void initState() {
     showContent = false;
     Future.delayed(const Duration(seconds: 10), () {
       setState(() {
@@ -295,20 +295,23 @@ class HomePageState extends State<HomePage> {
                                 Uri url = urlMaps.values.elementAt(index);
                                 return Column(
                                   children: [
-                                    !showContent ? const ShimmerListTile() : ListTile(
-                                      title: Text(
-                                          title.toUpperCase(),
-                                          textAlign: TextAlign.start,
-                                          style: TextStyle(
-                                              fontWeight: FontWeight.w500,
-                                              color: const Color(0xff000000),
-                                              fontSize: 16.sp,
-                                              fontFamily: "RobotoFLex"),
-                                        ),
-                                      onTap: () {
-                                        _launchUrl(url);
-                                      },
-                                    ),
+                                    !showContent
+                                        ? const ShimmerListTile()
+                                        : ListTile(
+                                            title: Text(
+                                              title.toUpperCase(),
+                                              textAlign: TextAlign.start,
+                                              style: TextStyle(
+                                                  fontWeight: FontWeight.w500,
+                                                  color:
+                                                      const Color(0xff000000),
+                                                  fontSize: 16.sp,
+                                                  fontFamily: "RobotoFLex"),
+                                            ),
+                                            onTap: () {
+                                              _launchUrl(url);
+                                            },
+                                          ),
                                     const Divider(
                                       indent: 15,
                                       endIndent: 15,
@@ -437,6 +440,15 @@ class ShimmerListTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
+      subtitle: Shimmer.fromColors(
+        baseColor: Colors.grey[300]!,
+        highlightColor: Colors.grey[100]!,
+        child: Container(
+          width: double.infinity,
+          height: 10,
+          color: Colors.white,
+        ),
+      ),
       title: Shimmer.fromColors(
         baseColor: Colors.grey[300]!,
         highlightColor: Colors.grey[100]!,
