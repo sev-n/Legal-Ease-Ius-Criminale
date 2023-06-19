@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:shimmer/shimmer.dart';
 import '../pages/contents/categories.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'sidemenu.dart';
@@ -52,6 +53,8 @@ class HomePage extends StatefulWidget {
 }
 
 class HomePageState extends State<HomePage> {
+  late bool showContent;
+
   Future<bool> _androidBackBtn() async {
     return (await showDialog(
           context: context,
@@ -79,9 +82,23 @@ class HomePageState extends State<HomePage> {
   }
 
   Future<void> _launchUrl(Uri url) async {
-    if (!await launchUrl(url, mode: LaunchMode.inAppWebView,)) {
+    if (!await launchUrl(
+      url,
+      mode: LaunchMode.inAppWebView,
+    )) {
       throw Exception('Could not launch $url');
     }
+  }
+
+  @override
+  void initState(){
+    showContent = false;
+    Future.delayed(const Duration(seconds: 10), () {
+      setState(() {
+        showContent = true;
+      });
+    });
+    super.initState();
   }
 
   @override
@@ -197,8 +214,8 @@ class HomePageState extends State<HomePage> {
                           color: Colors.black.withOpacity(0.2),
                           blurRadius: 5.0,
                           spreadRadius: 2.0,
-                          offset:
-                              const Offset(0, -2), // offset the shadow downwards
+                          offset: const Offset(
+                              0, -2), // offset the shadow downwards
                         ),
                       ],
                     ),
@@ -278,16 +295,16 @@ class HomePageState extends State<HomePage> {
                                 Uri url = urlMaps.values.elementAt(index);
                                 return Column(
                                   children: [
-                                    ListTile(
+                                    !showContent ? const ShimmerListTile() : ListTile(
                                       title: Text(
-                                        title.toUpperCase(),
-                                        textAlign: TextAlign.start,
-                                        style: TextStyle(
-                                            fontWeight: FontWeight.w300,
-                                            color: const Color(0xff000000),
-                                            fontSize: 16.sp,
-                                            fontFamily: "RobotoFLex"),
-                                      ),
+                                          title.toUpperCase(),
+                                          textAlign: TextAlign.start,
+                                          style: TextStyle(
+                                              fontWeight: FontWeight.w500,
+                                              color: const Color(0xff000000),
+                                              fontSize: 16.sp,
+                                              fontFamily: "RobotoFLex"),
+                                        ),
                                       onTap: () {
                                         _launchUrl(url);
                                       },
@@ -414,43 +431,20 @@ class GenerateBtn extends StatelessWidget {
   }
 }
 
-class RelatedCases extends StatelessWidget {
-  const RelatedCases({super.key});
+class ShimmerListTile extends StatelessWidget {
+  const ShimmerListTile({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.only(left: 15.w),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Padding(
-            padding: EdgeInsets.only(bottom: 5.w),
-            child: Text(
-              "Random text here. Dont mind it ",
-              style: TextStyle(
-                  fontWeight: FontWeight.w300,
-                  color: const Color(0xff000000),
-                  fontSize: 16.sp,
-                  fontFamily: "RobotoFLex"),
-            ),
-          ),
-          Padding(
-            padding: EdgeInsets.only(bottom: 5.w),
-            child: Text(
-              "Random text here. Dont mind it example only example only.",
-              style: TextStyle(
-                  color: const Color(0xff000000),
-                  fontSize: 12.sp,
-                  fontFamily: "RobotoFLex"),
-            ),
-          ),
-          const Divider(
-              // indent: 15,
-              // endIndent: 15,
-              //thickness: 5,
-              ),
-        ],
+    return ListTile(
+      title: Shimmer.fromColors(
+        baseColor: Colors.grey[300]!,
+        highlightColor: Colors.grey[100]!,
+        child: Container(
+          width: double.infinity,
+          height: 10,
+          color: Colors.white,
+        ),
       ),
     );
   }
