@@ -1,9 +1,12 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:shimmer/shimmer.dart';
 import '../pages/contents/categories.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'sidemenu.dart';
+import 'package:connectivity_plus/connectivity_plus.dart';
 
 TextEditingController _textEditingController = TextEditingController();
 
@@ -54,6 +57,7 @@ class HomePage extends StatefulWidget {
 
 class HomePageState extends State<HomePage> {
   late bool showContent;
+  late StreamSubscription subscription;
 
   Future<bool> _androidBackBtn() async {
     return (await showDialog(
@@ -90,6 +94,23 @@ class HomePageState extends State<HomePage> {
     }
   }
 
+  void checkConnectivity(ConnectivityResult result) {
+    final hasInternet = result != ConnectivityResult.none;
+    final messages = hasInternet
+        ? result == ConnectivityResult.mobile
+            ? 'Connected'
+            : 'Connected to WiFi'
+        : 'Please connect to the internet';
+    final color = hasInternet ? Colors.blue : Colors.white;
+
+    showSnackBar(context, messages, color);
+  }
+
+  void showSnackBar(BuildContext context, String? messages, Color color){
+    final snackBar = SnackBar(content: Text(messages!), backgroundColor: color,);
+    ScaffoldMessenger.of(context).showSnackBar(snackBar);
+  }
+
   @override
   void initState() {
     showContent = false;
@@ -98,6 +119,7 @@ class HomePageState extends State<HomePage> {
         showContent = true;
       });
     });
+    subscription = Connectivity().onConnectivityChanged.listen(checkConnectivity);
     super.initState();
   }
 
@@ -308,7 +330,11 @@ class HomePageState extends State<HomePage> {
                                                   fontSize: 16.sp,
                                                   fontFamily: "RobotoFLex"),
                                             ),
-                                            onTap: () {
+                                            onTap: () async {
+                                              final result =
+                                                  await Connectivity()
+                                                      .checkConnectivity();
+                                              checkConnectivity(result);
                                               _launchUrl(url);
                                             },
                                           ),
