@@ -17,7 +17,7 @@ class _AboutUsState extends State<AboutUs> {
     Widget content() => SliverToBoxAdapter(
       child: Container(
         width: MediaQuery.of(context).size.width,
-        height: screenHeight * 1.9, // TODO: not sure if this is the best way.
+        height: screenHeight * 1.9,
         decoration: const BoxDecoration(
           color: Color(0xff028D8F)
         ),
