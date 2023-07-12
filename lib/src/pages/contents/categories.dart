@@ -6,7 +6,6 @@ import 'categories_contents/against_person.dart';
 import 'categories_contents/against_property.dart';
 import 'categories_contents/inchoate_crime.dart';
 import 'categories_contents/statutory_rights.dart';
-import 'categories_contents/traffic_offense.dart';
 import 'categories_contents/white_collar.dart';
 
 class ContentButtons extends StatelessWidget {
@@ -21,24 +20,6 @@ class ContentButtons extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              GoToPageContent(
-                destination: const TrafficContent(),
-                child: Container(
-                  width: FormatUtil.contSizeCategories.w,
-                  height: FormatUtil.contSizeCategories.h,
-                  decoration: BoxDecoration(
-                    color: const Color(0xffD5D5D5),
-                    borderRadius: BorderRadius.circular(10.r),
-                  ),
-                  child: Center(
-                    child: SizedBox(
-                      width: FormatUtil.sizeBoxCategories.w,
-                      height: FormatUtil.sizeBoxCategories.h,
-                      child: Image.asset('assets/images/traffic_icon.png'),
-                    ),
-                  ),
-                ),
-              ),
               GoToPageContent(
                 destination: const PersonContent(),
                 child: Container(
@@ -87,15 +68,6 @@ class ContentButtons extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                Text(
-                  "Traffic Offense",
-                  style: TextStyle(
-                    fontFamily: "RobotoFlex",
-                    fontSize: 12.sp,
-                    fontWeight: FontWeight.w600,
-                    color: const Color(0xCC0C2924),
-                  ),
-                ),
                 Text(
                   "Against Person",
                   style: TextStyle(

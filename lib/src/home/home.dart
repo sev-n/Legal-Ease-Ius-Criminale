@@ -124,6 +124,12 @@ class HomePageState extends State<HomePage> {
   }
 
   @override
+  void dispose(){
+    super.dispose();
+    subscription.cancel();
+  }
+
+  @override
   Widget build(BuildContext context) {
     final FocusScopeNode textFieldFocus = FocusScope.of(context);
     double width = ScreenUtil().screenWidth;
