@@ -78,7 +78,20 @@ class StatutoryOne extends StatelessWidget {
                               ),
                               SizedBox(height: 20.h),
                               Text(
-                                '',
+                                'For purposes of these Regulations, the terms herein enumerated shall have the following meanings:\n\n'
+                                'a. “Non-stock, non-profit corporation or organization” - shall refer to a corporation or association/organization referred to under Section 30 € and (G) of the Tax Code created or organized under Philippine laws exclusively for one or more of the following purposes:\n\n'
+                                'i. Religious\n'
+                                'ii. charitable;\n'
+                                'iii. scientific;\n'
+                                'iv. athletic;\n'
+                                'v. cultural;\n'
+                                'vi. rehabilitation of veterans; and\n'
+                                'vii. social welfare\n\n'
+                                'b. "Non-government Organization (NGO)" - shall refer to a non-stock, non-profit domestic corporation or organization as defined under Section 34 (H)(2)(c) of the Tax Code organized and operated exclusively for scientific, research, educational, character- building and youth and sports development, health, social welfare, cultural or charitable purposes, or a combination thereof, no part of the net income of which inures to the benefit of any private individual.\n\n'
+                                "i. Which, not later than the fifteenth (15th) day of the third month after the close of the NGO's taxable year in which contributions are received, makes utilization directly for the active conduct of the activities constituting the "
+                                'purpose or function for which it is organized and operated, unless an extended period is granted by the Secretary of Finance, upon recommendation of the Commissioner; '
+                                
+                                ,
                                 textAlign: TextAlign.justify,
                                 style: TextStyle(
                                   fontFamily: "RobotoFlex",
