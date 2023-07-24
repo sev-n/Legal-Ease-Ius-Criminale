@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:legalease_matrimonial/src/pages/contents/categories_contents/categories_sections/statutory_rights/republic_8424/section_statutory.dart';
+import 'package:legalease_matrimonial/src/pages/contents/categories_contents/categories_sections/statutory_rights/republic_881/statutory_articles.dart';
 
 class RightsContent extends StatefulWidget {
   const RightsContent({super.key});
@@ -11,12 +12,20 @@ class RightsContent extends StatefulWidget {
 
 class _RightsContentState extends State<RightsContent> {
   bool isExpanded8424 = false;
+  bool isExpanded881 = false;
 
   void toggleExpansion8424() {
     setState(() {
       isExpanded8424 = !isExpanded8424;
     });
   }
+
+  void toggleExpansion881() {
+    setState(() {
+      isExpanded881 = !isExpanded881;
+    });
+  }
+
 
   @override
   Widget build(BuildContext context) {
@@ -84,7 +93,12 @@ class _RightsContentState extends State<RightsContent> {
                                 const Duration(milliseconds: 400),
                             expansionCallback:
                                 (int panelIndex, bool isExpanded) {
-                              toggleExpansion8424();
+                              if(panelIndex == 0){
+                                toggleExpansion8424();
+                              }
+                              if(panelIndex == 1){
+                                toggleExpansion881();
+                              }
                             },
                             children: [
                               ExpansionPanel(
@@ -124,6 +138,45 @@ class _RightsContentState extends State<RightsContent> {
                                   ),
                                 ),
                                 isExpanded: isExpanded8424,
+                              ),
+
+                              ExpansionPanel(
+                                backgroundColor: const Color(0xffE8E8E8),
+                                canTapOnHeader: false,
+                                headerBuilder: (context, isExpanded) {
+                                  return ListTile(
+                                    title: const Text(
+                                      "REPUBLIC ACT NO. 881",
+                                      style: TextStyle(
+                                        fontFamily: "RobotoFlex",
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                    onTap: () {
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (context) =>
+                                              const ArticlesProperty(),
+                                        ),
+                                      );
+                                    },
+                                  );
+                                },
+                                body: Padding(
+                                  padding:
+                                      EdgeInsets.only(left: 5.w, right: 5.w),
+                                  child: const Text(
+                                    'This Act shall be known and cited as the "Omnibus Election Code of the Philippines."',
+                                    textAlign: TextAlign.center,
+                                    style: TextStyle(
+                                      fontFamily: "RobotoFlex",
+                                      fontWeight: FontWeight.w500,
+                                      height: 1.4,
+                                    ),
+                                  ),
+                                ),
+                                isExpanded: isExpanded881,
                               ),
                             ],
                           ),
