@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:legalease_matrimonial/src/pages/contents/categories_contents/categories_sections/statutory_rights/statutory.dart';
+import 'package:legalease_matrimonial/src/pages/contents/categories_contents/categories_sections/statutory_rights/republic_8424/section_statutory.dart';
 
 class RightsContent extends StatefulWidget {
   const RightsContent({super.key});

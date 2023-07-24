@@ -1,4 +1,4 @@
-import 'package:legalease_matrimonial/src/pages/contents/categories_contents/categories_sections/statutory_rights/statutory_1-13.dart';
+import 'package:legalease_matrimonial/src/pages/contents/categories_contents/categories_sections/statutory_rights/republic_8424/statutory_1-13.dart';
 
 import 'inchoate_sections.dart';
 
