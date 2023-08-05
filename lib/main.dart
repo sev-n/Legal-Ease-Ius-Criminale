@@ -7,6 +7,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'src/home/welcome_screen.dart';
 import 'package:provider/provider.dart';
 
+import 'src/model/keywords/white_collar.dart';
+
 Future main() async {
   WidgetsFlutterBinding
       .ensureInitialized(); // making sure flutter framework is initialize before creating BuildContext.
@@ -33,6 +35,18 @@ class MyApp extends StatelessWidget {
       providers: [
         ChangeNotifierProvider<LoadingState>(
           create: (_) => LoadingState(),
+        ),
+        ChangeNotifierProvider<WhiteCollar6770>(
+          create: (_) => WhiteCollar6770(),
+        ),
+        ChangeNotifierProvider<WhiteCollar3019>(
+          create: (_) => WhiteCollar3019(),
+        ),
+        ChangeNotifierProvider<Gen>(
+          create: (_) => Gen(),
+        ),
+        ChangeNotifierProvider<WhiteCollar6713>(
+          create: (_) => WhiteCollar6713(),
         ),
       ],
       child: ScreenUtilInit(

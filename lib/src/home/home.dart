@@ -2,6 +2,9 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:legalease_matrimonial/src/home/result.dart';
+import 'package:legalease_matrimonial/src/model/keywords/white_collar.dart';
+import 'package:provider/provider.dart';
 import 'package:shimmer/shimmer.dart';
 import '../pages/contents/categories.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -106,8 +109,11 @@ class HomePageState extends State<HomePage> {
     showSnackBar(context, messages, color);
   }
 
-  void showSnackBar(BuildContext context, String? messages, Color color){
-    final snackBar = SnackBar(content: Text(messages!), backgroundColor: color,);
+  void showSnackBar(BuildContext context, String? messages, Color color) {
+    final snackBar = SnackBar(
+      content: Text(messages!),
+      backgroundColor: color,
+    );
     ScaffoldMessenger.of(context).showSnackBar(snackBar);
   }
 
@@ -119,12 +125,13 @@ class HomePageState extends State<HomePage> {
         showContent = true;
       });
     });
-    subscription = Connectivity().onConnectivityChanged.listen(checkConnectivity);
+    subscription =
+        Connectivity().onConnectivityChanged.listen(checkConnectivity);
     super.initState();
   }
 
   @override
-  void dispose(){
+  void dispose() {
     super.dispose();
     subscription.cancel();
   }
@@ -189,10 +196,10 @@ class HomePageState extends State<HomePage> {
                                 textScaleFactor: 1.2,
                               ),
                             ),
-                            SizedBox(height: 50.h),
+                            SizedBox(height: 38.h),
                             const _TextField(),
                             SizedBox(height: 18.h),
-                            
+                            const GenerateBtn(),
                           ],
                         ),
                       ),
@@ -428,6 +435,115 @@ class __TextFieldState extends State<_TextField> {
           ),
           border: InputBorder.none,
         ),
+      ),
+    );
+  }
+}
+
+class GenerateBtn extends StatefulWidget {
+  const GenerateBtn({super.key});
+
+  @override
+  State<GenerateBtn> createState() => _GenerateBtnState();
+}
+
+class _GenerateBtnState extends State<GenerateBtn> {
+  bool isSubmitting = false;
+  bool showCircular = false;
+  WhiteCollar6770 collar = WhiteCollar6770();
+
+  void handleSubmit() {
+    setState(() {
+      isSubmitting = true;
+    });
+
+    Future.delayed(const Duration(seconds: 3), () {
+      Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => const Result(),
+          ));
+      setState(() {
+        isSubmitting = false;
+        showCircular = false;
+      });
+    });
+  }
+
+  @override
+  void initState() {
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    var collar = Provider.of<WhiteCollar6770>(context, listen: false);
+    var collar3019 = Provider.of<WhiteCollar3019>(context, listen: false);
+    return SizedBox(
+      width: 120.w,
+      height: 40.h,
+      child: Consumer3<Gen, WhiteCollar6770, WhiteCollar3019>(
+        builder: (context, gen, cwl6770, cwl3019, child) {
+          return ElevatedButton(
+            style: ButtonStyle(
+              alignment: Alignment.center,
+              backgroundColor:
+                  MaterialStateProperty.all(const Color(0xffF2F2F2)),
+              shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(8.0.r),
+                  // side: const BorderSide(
+                  //   color: Color(0xff97a294),
+                  // ),
+                ),
+              ),
+            ),
+            onPressed: () async {
+              gen.clearListTile();
+              collar.clearList();
+              collar3019.clearList();
+
+              if (_textEditingController.text == '') {
+                print('please enter a text');
+              } else {
+                setState(() {
+                  showCircular = true;
+                });
+
+                await collar.init();
+                await collar3019.init3019();
+                print(_textEditingController.text);
+
+                collar.compare(_textEditingController.text);
+                collar3019.compare3019(_textEditingController.text);
+
+                if(collar.check){
+                  Widget adds = gen.createListTile("White Collar", "Republic Act No. 6770");
+                  gen.addContainer(adds);
+                }
+                if(collar3019.check){
+                  Widget adds = gen.createListTile("White Collar", "Republic Act No. 3019");
+                  gen.addContainer(adds);
+                }
+
+                
+
+                handleSubmit();
+                _textEditingController.clear();
+
+              }
+            },
+            child: showCircular
+                ? const CircularProgressIndicator(
+                    strokeWidth: 2,
+                    color: Color(0xff028D8F),
+                  )
+                : const Text(
+                    "Submit",
+                    style: TextStyle(color: Color(0xff000000)),
+                  ),
+          );
+        },
       ),
     );
   }
