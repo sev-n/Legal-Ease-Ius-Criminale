@@ -581,7 +581,7 @@ class _GenerateBtnState extends State<GenerateBtn> {
                   gen.addContainer(adds);
                 }
                 if(rights8424.check){
-                  Widget adds = gen.createListTile("keyword - ${_textEditingController.text}", "Republic Act No. 8424");
+                  Widget adds = gen.createListTile("Statutory Rights", "Republic Act No. 8424");
                   gen.addContainer(adds);
                 }
                 if(rights881.check){
