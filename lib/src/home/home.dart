@@ -189,10 +189,10 @@ class HomePageState extends State<HomePage> {
                                 textScaleFactor: 1.2,
                               ),
                             ),
-                            SizedBox(height: 38.h),
+                            SizedBox(height: 50.h),
                             const _TextField(),
                             SizedBox(height: 18.h),
-                            const GenerateBtn(),
+                            
                           ],
                         ),
                       ),
@@ -415,51 +415,18 @@ class __TextFieldState extends State<_TextField> {
         minLines: 1,
         maxLines: 1,
         decoration: InputDecoration(
+          prefixIcon: const Icon(Icons.search),
           contentPadding: EdgeInsets.only(
             left: 20.0,
             top: _focusNode.hasFocus ? 10.0 : 5.0,
             bottom: _focusNode.hasFocus ? 10.0 : 0.0,
           ),
-          labelText: _focusNode.hasFocus ? "Enter concerns" : "Consultation",
+          labelText: _focusNode.hasFocus ? "Enter keywords" : "Search",
           labelStyle: TextStyle(
             color:
                 _focusNode.hasFocus ? Colors.black45 : const Color(0xff0C2924),
           ),
           border: InputBorder.none,
-        ),
-      ),
-    );
-  }
-}
-
-class GenerateBtn extends StatelessWidget {
-  const GenerateBtn({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return SizedBox(
-      width: 120.w,
-      height: 40.h,
-      child: ElevatedButton(
-        style: ButtonStyle(
-          alignment: Alignment.center,
-          backgroundColor: MaterialStateProperty.all(const Color(0xffF2F2F2)),
-          shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-            RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(8.0.r),
-              // side: const BorderSide(
-              //   color: Color(0xff97a294),
-              // ),
-            ),
-          ),
-        ),
-        onPressed: () {
-          // !final
-          _textEditingController.clear();
-        },
-        child: const Text(
-          "Submit",
-          style: TextStyle(color: Color(0xff000000)),
         ),
       ),
     );
