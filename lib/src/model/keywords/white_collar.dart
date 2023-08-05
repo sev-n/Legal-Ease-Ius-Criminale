@@ -1,12 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:legalease_matrimonial/src/model/keywords/on_tap.dart';
 
 class Gen extends ChangeNotifier {
   List<Widget> widgets = [];
 
-  Widget createListTile(String title, String sub) {
-    return ListTile(
-      title: Text(title),
-      subtitle: Text(sub),
+  Widget createListTile(String title, String sub, String path) {
+    return Clickable(
+      destination: path,
+      child: ListTile(
+        title: Text(title),
+        subtitle: Text(sub),
+      ),
     );
   }
 

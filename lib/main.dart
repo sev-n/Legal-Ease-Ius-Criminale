@@ -6,6 +6,11 @@ import 'package:legalease_matrimonial/src/model/keywords/againts_property.dart';
 import 'package:legalease_matrimonial/src/model/keywords/inchoate_crime.dart';
 import 'package:legalease_matrimonial/src/model/keywords/statutory_rights.dart';
 import 'package:legalease_matrimonial/src/model/loading_state.dart';
+import 'package:legalease_matrimonial/src/pages/contents/categories_contents/against_person.dart';
+import 'package:legalease_matrimonial/src/pages/contents/categories_contents/against_property.dart';
+import 'package:legalease_matrimonial/src/pages/contents/categories_contents/inchoate_crime.dart';
+import 'package:legalease_matrimonial/src/pages/contents/categories_contents/statutory_rights.dart';
+import 'package:legalease_matrimonial/src/pages/contents/categories_contents/white_collar.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'src/home/welcome_screen.dart';
@@ -84,6 +89,13 @@ class MyApp extends StatelessWidget {
               primarySwatch: Colors.blue,
             ),
             home: OneTimeWelcomePage(prefs: prefs),
+            routes: {
+              '/property': (context) => const AgainstProperty(),
+              '/person': (context) => const PersonContent(),
+              '/crime': (context) => const CrimeContent(),
+              '/rights': (context) => const RightsContent(),
+              '/collar': (context) => const CollarContent(),
+            },
           );
         },
       ),
