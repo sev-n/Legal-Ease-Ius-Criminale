@@ -20,12 +20,20 @@ class _ResultState extends State<Result> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Result"),
+        title: const Text(
+          "Result",
+          style: TextStyle(
+            fontSize: 20,
+            fontFamily: "RobotoFlex",
+            fontWeight: FontWeight.w600,
+            color: Colors.white,
+          ),
+        ),
         centerTitle: true,
+        backgroundColor: const Color(0xff028D8F),
       ),
       body: Consumer<Gen>(
         builder: (context, gen, child) {
-
           return ListView.builder(
             itemCount: gen.widgets.length,
             itemBuilder: (context, int index) {

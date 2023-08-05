@@ -8,8 +8,20 @@ class Gen extends ChangeNotifier {
     return Clickable(
       destination: path,
       child: ListTile(
-        title: Text(title),
-        subtitle: Text(sub),
+        title: Text(
+          title,
+          style: const TextStyle(
+            fontSize: 16,
+            fontFamily: "RobotoFlex",
+            fontWeight: FontWeight.w600,
+            color: Colors.black,
+          ),
+        ),
+        subtitle: Text(sub, style: const TextStyle(
+            fontSize: 14,
+            fontFamily: "RobotoFlex",
+            color: Colors.grey,
+          ),),
       ),
     );
   }
