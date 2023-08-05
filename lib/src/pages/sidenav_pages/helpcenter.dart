@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:legalease_matrimonial/src/pages/sidenav_pages/help_center_contents/legal_everyone.dart';
 import '../../home/sidemenu.dart';
 
 class HelpCenter extends StatelessWidget {
@@ -136,7 +137,15 @@ class HelpCenter extends StatelessWidget {
                               Material(
                                 type: MaterialType.transparency,
                                 child: InkWell(
-                                  onTap: () {},
+                                  onTap: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) =>
+                                            const LegalEveryone(),
+                                      ),
+                                    );
+                                  },
                                   splashColor: Colors.black.withOpacity(0.3),
                                   child: const Text(
                                     "About Legal Ease for everyone",
