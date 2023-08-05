@@ -106,23 +106,6 @@ class HelpCenter extends StatelessWidget {
                                   onTap: () {},
                                   splashColor: Colors.black.withOpacity(0.3),
                                   child: const Text(
-                                    "Where to find the bookmark?",
-                                    style: TextStyle(
-                                        decoration: TextDecoration.underline,
-                                        fontSize: 16,
-                                        fontFamily: 'RobotoFlex'),
-                                  ),
-                                ),
-                              ),
-                              const SizedBox(
-                                height: 30.0,
-                              ),
-                              Material(
-                                type: MaterialType.transparency,
-                                child: InkWell(
-                                  onTap: () {},
-                                  splashColor: Colors.black.withOpacity(0.3),
-                                  child: const Text(
                                     "How to use this app?",
                                     style: TextStyle(
                                         decoration: TextDecoration.underline,
@@ -155,42 +138,7 @@ class HelpCenter extends StatelessWidget {
                                         fontFamily: 'RobotoFlex'),
                                   ),
                                 ),
-                              ),
-                              const SizedBox(
-                                height: 30.0,
-                              ),
-                              Material(
-                                type: MaterialType.transparency,
-                                child: InkWell(
-                                  onTap: () {},
-                                  splashColor: Colors.black.withOpacity(0.3),
-                                  child: const Text(
-                                    "How Legal Ease will help you?",
-                                    style: TextStyle(
-                                        decoration: TextDecoration.underline,
-                                        fontSize: 16,
-                                        fontFamily: 'RobotoFlex'),
-                                  ),
-                                ),
-                              ),
-                              const SizedBox(
-                                height: 30.0,
-                              ),
-                              Material(
-                                type: MaterialType.transparency,
-                                child: InkWell(
-                                  onTap: () {},
-                                  splashColor: Colors.black.withOpacity(0.3),
-                                  child: const Text(
-                                    "How to use consultation feature?",
-                                    style: TextStyle(
-                                      decoration: TextDecoration.underline,
-                                      fontSize: 16,
-                                      fontFamily: 'RobotoFlex',
-                                    ),
-                                  ),
-                                ),
-                              ),
+                              )
                             ],
                           ),
                         ),
