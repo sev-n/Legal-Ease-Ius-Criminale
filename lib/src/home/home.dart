@@ -3,6 +3,10 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:legalease_matrimonial/src/home/result.dart';
+import 'package:legalease_matrimonial/src/model/keywords/againts_person.dart';
+import 'package:legalease_matrimonial/src/model/keywords/againts_property.dart';
+import 'package:legalease_matrimonial/src/model/keywords/inchoate_crime.dart';
+import 'package:legalease_matrimonial/src/model/keywords/statutory_rights.dart';
 import 'package:legalease_matrimonial/src/model/keywords/white_collar.dart';
 import 'package:provider/provider.dart';
 import 'package:shimmer/shimmer.dart';
@@ -450,7 +454,6 @@ class GenerateBtn extends StatefulWidget {
 class _GenerateBtnState extends State<GenerateBtn> {
   bool isSubmitting = false;
   bool showCircular = false;
-  WhiteCollar6770 collar = WhiteCollar6770();
 
   void handleSubmit() {
     setState(() {
@@ -479,6 +482,16 @@ class _GenerateBtnState extends State<GenerateBtn> {
   Widget build(BuildContext context) {
     var collar = Provider.of<WhiteCollar6770>(context, listen: false);
     var collar3019 = Provider.of<WhiteCollar3019>(context, listen: false);
+    var collar6713 = Provider.of<WhiteCollar6713>(context, listen: false);
+    var crime9262 = Provider.of<InchoateCrime9262>(context, listen: false);
+    var rights8424 = Provider.of<StatutoryRights8424>(context, listen: false);
+    var rights881 = Provider.of<StatutoryRights881>(context, listen: false);
+    var person9745 = Provider.of<AgaintsPerson9745>(context, listen: false);
+    var person7610 = Provider.of<AgaintsPerson7610>(context, listen: false);
+    var person7877 = Provider.of<AgaintsPerson7877>(context, listen: false);
+    var property166 = Provider.of<AgaintsProperty166>(context, listen: false);
+    
+
     return SizedBox(
       width: 120.w,
       height: 40.h,
@@ -500,8 +513,26 @@ class _GenerateBtnState extends State<GenerateBtn> {
             ),
             onPressed: () async {
               gen.clearListTile();
+              // white collar
               collar.clearList();
               collar3019.clearList();
+              collar6713.clearList();
+
+              // inchoate crime
+              crime9262.clearList();
+
+              // statutory rights
+              rights8424.clearList();
+              rights881.clearList();
+
+              // againts person
+              person9745.clearList();
+              person7610.clearList();
+              person7877.clearList();
+
+              // againts property
+              property166.clearList();
+              
 
               if (_textEditingController.text == '') {
                 print('please enter a text');
@@ -512,10 +543,26 @@ class _GenerateBtnState extends State<GenerateBtn> {
 
                 await collar.init();
                 await collar3019.init3019();
+                await collar6713.init6713();
+                await crime9262.init9262();
+                await rights8424.init8424();
+                await rights881.init881();
+                await person9745.init9745();
+                await person7610.init7610();
+                await person7877.init7877();
+                await property166.init166();
                 print(_textEditingController.text);
 
                 collar.compare(_textEditingController.text);
                 collar3019.compare3019(_textEditingController.text);
+                collar6713.compare6713(_textEditingController.text);
+                crime9262.compare9262(_textEditingController.text);
+                rights8424.compare8424(_textEditingController.text);
+                rights881.compare881(_textEditingController.text);
+                person9745.compare9745(_textEditingController.text);
+                person7610.compare7610(_textEditingController.text);
+                person7877.compare7877(_textEditingController.text);
+                property166.compare166(_textEditingController.text);
 
                 if(collar.check){
                   Widget adds = gen.createListTile("White Collar", "Republic Act No. 6770");
@@ -523,6 +570,42 @@ class _GenerateBtnState extends State<GenerateBtn> {
                 }
                 if(collar3019.check){
                   Widget adds = gen.createListTile("White Collar", "Republic Act No. 3019");
+                  gen.addContainer(adds);
+                }
+                if(collar6713.check){
+                  Widget adds = gen.createListTile("White Collar", "Republic Act No. 6713");
+                  gen.addContainer(adds);
+                }
+                if(crime9262.check){
+                  Widget adds = gen.createListTile("Inchoate Crime", "Republic Act No. 9262");
+                  gen.addContainer(adds);
+                }
+                if(rights8424.check){
+                  Widget adds = gen.createListTile("keyword - ${_textEditingController.text}", "Republic Act No. 8424");
+                  gen.addContainer(adds);
+                }
+                if(rights881.check){
+                  Widget adds = gen.createListTile("Statutory Rights", "Republic Act No. 881");
+                  gen.addContainer(adds);
+                }
+
+                if(person9745.check){
+                  Widget adds = gen.createListTile("Againts Person", "Republic Act No. 9745");
+                  gen.addContainer(adds);
+                }
+
+                if(person7610.check){
+                  Widget adds = gen.createListTile("Againts Person", "Republic Act No. 7610");
+                  gen.addContainer(adds);
+                }
+
+                if(person7877.check){
+                  Widget adds = gen.createListTile("Againts Person", "Republic Act No. 7877");
+                  gen.addContainer(adds);
+                }
+
+                if(property166.check){
+                  Widget adds = gen.createListTile("Againts Property", "Republic Act No. 166");
                   gen.addContainer(adds);
                 }
 

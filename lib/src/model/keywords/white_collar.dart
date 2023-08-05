@@ -10,12 +10,12 @@ class Gen extends ChangeNotifier {
     );
   }
 
-   void addContainer(Widget container) {
+  void addContainer(Widget container) {
     widgets.insert(0, container);
     notifyListeners();
   }
 
-  void clearListTile(){
+  void clearListTile() {
     widgets.clear();
     notifyListeners();
   }
@@ -203,7 +203,44 @@ class WhiteCollar6713 extends ChangeNotifier {
   bool get check => _check6713;
 
   static final keywords6713 = [
-    '',
+    'Republic Act 6713',
+    'RA 6713',
+    'Code of Conduct',
+    'Ethical Standards',
+    'Public Officials',
+    'Public Employees',
+    'Integrity',
+    'Professionalism',
+    'Public Service',
+    'Prohibited Acts',
+    'Gifts and Favors',
+    'Partisan Political Activities',
+    'Personal Gain',
+    'Transparency',
+    'Accountability',
+    'Statements of Assets, Liabilities, and Net Worth (SALN)',
+    'Public Disclosure',
+    'Privacy',
+    'Administrative Sanctions',
+    'Disciplinary Actions',
+    'Public Service Ethics',
+    'Conflict of Interest',
+    'Public Trust',
+    'Accountability Mechanisms',
+    'Whistleblower Protection',
+    'Nepotism',
+    'Bribery',
+    'Misuse of Public Funds',
+    'Fairness',
+    'Impartiality',
+    'Code of Conduct Committee',
+    'Prohibited Transactions',
+    'Professional Development',
+    'Public Sector Integrity',
+    'Ethical Decision Making',
+    'Moral Turpitude',
+    'Anti-Corruption Measures',
+    'Reporting Violations',
   ];
 
   List<String> lowercaseList6713 =

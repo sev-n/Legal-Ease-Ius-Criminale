@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
+import 'package:legalease_matrimonial/src/model/keywords/againts_person.dart';
+import 'package:legalease_matrimonial/src/model/keywords/againts_property.dart';
+import 'package:legalease_matrimonial/src/model/keywords/inchoate_crime.dart';
+import 'package:legalease_matrimonial/src/model/keywords/statutory_rights.dart';
 import 'package:legalease_matrimonial/src/model/loading_state.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -47,6 +51,27 @@ class MyApp extends StatelessWidget {
         ),
         ChangeNotifierProvider<WhiteCollar6713>(
           create: (_) => WhiteCollar6713(),
+        ),
+        ChangeNotifierProvider<InchoateCrime9262>(
+          create: (_) => InchoateCrime9262(),
+        ),
+        ChangeNotifierProvider<StatutoryRights8424>(
+          create: (_) => StatutoryRights8424(),
+        ),
+        ChangeNotifierProvider<StatutoryRights881>(
+          create: (_) => StatutoryRights881(),
+        ),
+        ChangeNotifierProvider<AgaintsPerson9745>(
+          create: (_) => AgaintsPerson9745(),
+        ),
+        ChangeNotifierProvider<AgaintsPerson7610>(
+          create: (_) => AgaintsPerson7610(),
+        ),
+        ChangeNotifierProvider<AgaintsPerson7877>(
+          create: (_) => AgaintsPerson7877(),
+        ),
+        ChangeNotifierProvider<AgaintsProperty166>(
+          create: (_) => AgaintsProperty166(),
         ),
       ],
       child: ScreenUtilInit(
