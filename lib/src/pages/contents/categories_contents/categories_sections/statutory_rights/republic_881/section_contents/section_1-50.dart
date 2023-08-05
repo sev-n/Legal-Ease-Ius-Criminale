@@ -3176,7 +3176,7 @@ class Statutory32 extends StatelessWidget {
                           child: Column(
                             children: [
                               Text(
-                                '${title[32].title}. ${title[32].description}.',
+                                '${title[31].title}. ${title[31].description}.',
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                   fontFamily: "RobotoFlex",

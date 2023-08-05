@@ -57,7 +57,7 @@ class SectionStatu1 extends StatelessWidget {
                         ),
                       ),
                       child: ListView.builder(
-                        itemCount: 3,
+                        itemCount: 12,
                         itemBuilder: (BuildContext context, int index) {
                           final section = ListOfArticlesStatutory.sections881[index];
                           return Column(

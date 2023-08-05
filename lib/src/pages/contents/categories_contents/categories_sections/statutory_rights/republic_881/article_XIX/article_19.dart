@@ -33,7 +33,7 @@ class SectionStatu19 extends StatelessWidget {
                         ),
                         SizedBox(width: 15.w),
                         Text(
-                          "Article I",
+                          "Article XIX",
                           style: TextStyle(
                               fontSize: 22.sp,
                               fontWeight: FontWeight.bold,
@@ -57,9 +57,9 @@ class SectionStatu19 extends StatelessWidget {
                         ),
                       ),
                       child: ListView.builder(
-                        itemCount: 3,
+                        itemCount: 20,
                         itemBuilder: (BuildContext context, int index) {
-                          final section = ListOfArticlesStatutory.sections881[index];
+                          final section = ListOfArticlesStatutory.sections881[index + 220];
                           return Column(
                             children: [
                               ListTile(
@@ -84,7 +84,7 @@ class SectionStatu19 extends StatelessWidget {
                                   Navigator.of(context).push(
                                     MaterialPageRoute(
                                       builder: (context) => ListOfArticlesStatutory
-                                          .contentRoutes[index],
+                                          .contentRoutes[index + 220],
                                     ),
                                   );
                                 },

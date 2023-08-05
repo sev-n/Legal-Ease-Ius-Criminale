@@ -82,14 +82,13 @@ class ArticlesProperty extends StatelessWidget {
                                   ),
                                 ),
                                 onTap: () {
-                                  debugPrint("$index");
-                                  // Navigator.of(context).push(
-                                  //   MaterialPageRoute(
-                                  //     builder: (context) =>
-                                  //         ListOfChaptersProperty
-                                  //             .routesPerChapter[index],
-                                  //   ),
-                                  // );
+                                  Navigator.of(context).push(
+                                    MaterialPageRoute(
+                                      builder: (context) =>
+                                          ListOfArticlesStatutory
+                                              .articleRoutes[index],
+                                    ),
+                                  );
                                 },
                               ),
                               Divider(
