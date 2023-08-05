@@ -490,7 +490,6 @@ class _GenerateBtnState extends State<GenerateBtn> {
     var person7610 = Provider.of<AgaintsPerson7610>(context, listen: false);
     var person7877 = Provider.of<AgaintsPerson7877>(context, listen: false);
     var property166 = Provider.of<AgaintsProperty166>(context, listen: false);
-    
 
     return SizedBox(
       width: 120.w,
@@ -532,7 +531,6 @@ class _GenerateBtnState extends State<GenerateBtn> {
 
               // againts property
               property166.clearList();
-              
 
               if (_textEditingController.text == '') {
                 print('please enter a text');
@@ -564,56 +562,63 @@ class _GenerateBtnState extends State<GenerateBtn> {
                 person7877.compare7877(_textEditingController.text);
                 property166.compare166(_textEditingController.text);
 
-                if(collar.check){
-                  Widget adds = gen.createListTile("White Collar", "Republic Act No. 6770", '/collar');
+                if (collar.check) {
+                  Widget adds = gen.createListTile(
+                      "White Collar", "Republic Act No. 6770", '/collar', '/collar6770');
                   gen.addContainer(adds);
                 }
-                if(collar3019.check){
-                  Widget adds = gen.createListTile("White Collar", "Republic Act No. 3019", '/collar');
+                if (collar3019.check) {
+                  Widget adds = gen.createListTile(
+                      "White Collar", "Republic Act No. 3019", '/collar', '/collar3019');
                   gen.addContainer(adds);
                 }
-                if(collar6713.check){
-                  Widget adds = gen.createListTile("White Collar", "Republic Act No. 6713", '/collar');
+                if (collar6713.check) {
+                  Widget adds = gen.createListTile(
+                      "White Collar", "Republic Act No. 6713", '/collar', '/collar6713');
                   gen.addContainer(adds);
                 }
-                if(crime9262.check){
-                  Widget adds = gen.createListTile("Inchoate Crime", "Republic Act No. 9262", '/crime');
+                if (crime9262.check) {
+                  Widget adds = gen.createListTile(
+                      "Inchoate Crime", "Republic Act No. 9262", '/crime', '/crime9262');
                   gen.addContainer(adds);
                 }
-                if(rights8424.check){
-                  Widget adds = gen.createListTile("Statutory Rights", "Republic Act No. 8424", '/rights');
+                if (rights8424.check) {
+                  Widget adds = gen.createListTile(
+                      "Statutory Rights", "Republic Act No. 8424", '/rights', '/rights8424');
                   gen.addContainer(adds);
                 }
-                if(rights881.check){
-                  Widget adds = gen.createListTile("Statutory Rights", "Republic Act No. 881", '/rights');
-                  gen.addContainer(adds);
-                }
-
-                if(person9745.check){
-                  Widget adds = gen.createListTile("Againts Person", "Republic Act No. 9745", '/person');
-                  gen.addContainer(adds);
-                }
-
-                if(person7610.check){
-                  Widget adds = gen.createListTile("Againts Person", "Republic Act No. 7610", '/person');
+                if (rights881.check) {
+                  Widget adds = gen.createListTile(
+                      "Statutory Rights", "Republic Act No. 881", '/rights', '/rights881');
                   gen.addContainer(adds);
                 }
 
-                if(person7877.check){
-                  Widget adds = gen.createListTile("Againts Person", "Republic Act No. 7877", '/person');
+                if (person9745.check) {
+                  Widget adds = gen.createListTile(
+                      "Againts Person", "Republic Act No. 9745", '/person', '/person9745');
                   gen.addContainer(adds);
                 }
 
-                if(property166.check){
-                  Widget adds = gen.createListTile("Againts Property", "Republic Act No. 166", '/property');
+                if (person7610.check) {
+                  Widget adds = gen.createListTile(
+                      "Againts Person", "Republic Act No. 7610", '/person', '/person7610');
                   gen.addContainer(adds);
                 }
 
-                
+                if (person7877.check) {
+                  Widget adds = gen.createListTile(
+                      "Againts Person", "Republic Act No. 7877", '/person', '/person7877');
+                  gen.addContainer(adds);
+                }
+
+                if (property166.check) {
+                  Widget adds = gen.createListTile(
+                      "Againts Property", "Republic Act No. 166", '/property', '/property166');
+                  gen.addContainer(adds);
+                }
 
                 handleSubmit();
                 _textEditingController.clear();
-
               }
             },
             child: showCircular

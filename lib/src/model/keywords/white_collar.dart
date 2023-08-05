@@ -4,9 +4,10 @@ import 'package:legalease_matrimonial/src/model/keywords/on_tap.dart';
 class Gen extends ChangeNotifier {
   List<Widget> widgets = [];
 
-  Widget createListTile(String title, String sub, String path) {
+  Widget createListTile(String title, String sub, String path, String finalPath) {
     return Clickable(
       destination: path,
+      finalDestination: finalPath,
       child: ListTile(
         title: Text(
           title,

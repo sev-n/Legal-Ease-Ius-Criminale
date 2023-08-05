@@ -8,6 +8,16 @@ import 'package:legalease_matrimonial/src/model/keywords/statutory_rights.dart';
 import 'package:legalease_matrimonial/src/model/loading_state.dart';
 import 'package:legalease_matrimonial/src/pages/contents/categories_contents/against_person.dart';
 import 'package:legalease_matrimonial/src/pages/contents/categories_contents/against_property.dart';
+import 'package:legalease_matrimonial/src/pages/contents/categories_contents/categories_sections/against_property/republic_166/chapters.dart';
+import 'package:legalease_matrimonial/src/pages/contents/categories_contents/categories_sections/againts_person/republic_7610/chapters.dart';
+import 'package:legalease_matrimonial/src/pages/contents/categories_contents/categories_sections/againts_person/republic_7877/sections.dart';
+import 'package:legalease_matrimonial/src/pages/contents/categories_contents/categories_sections/againts_person/republic_9745/sections.dart';
+import 'package:legalease_matrimonial/src/pages/contents/categories_contents/categories_sections/inchoate_crime/republic_9262/sections.dart';
+import 'package:legalease_matrimonial/src/pages/contents/categories_contents/categories_sections/statutory_rights/republic_8424/section_statutory.dart';
+import 'package:legalease_matrimonial/src/pages/contents/categories_contents/categories_sections/statutory_rights/republic_881/statutory_articles.dart';
+import 'package:legalease_matrimonial/src/pages/contents/categories_contents/categories_sections/white_collar/republic_3019/sections.dart';
+import 'package:legalease_matrimonial/src/pages/contents/categories_contents/categories_sections/white_collar/republic_6713/sections.dart';
+import 'package:legalease_matrimonial/src/pages/contents/categories_contents/categories_sections/white_collar/republic_6770/sections.dart';
 import 'package:legalease_matrimonial/src/pages/contents/categories_contents/inchoate_crime.dart';
 import 'package:legalease_matrimonial/src/pages/contents/categories_contents/statutory_rights.dart';
 import 'package:legalease_matrimonial/src/pages/contents/categories_contents/white_collar.dart';
@@ -95,6 +105,16 @@ class MyApp extends StatelessWidget {
               '/crime': (context) => const CrimeContent(),
               '/rights': (context) => const RightsContent(),
               '/collar': (context) => const CollarContent(),
+              '/collar3019': (context) => const SectionsCollar3019(),
+              '/collar6713': (context) => const SectionsCollar6713(),
+              '/collar6770': (context) => const SectionsCollar6770(),
+              '/rights881': (context) => const ArticlesProperty(),
+              '/rights8424': (context) => const SectionsRights(),
+              '/crime9262': (context) => const SectionsInchoate(),
+              '/person9745': (context) => const SectionsPerson(),
+              '/person7877': (context) => const SectionsPerson7877(),
+              '/person7610': (context) => const ChaptersPerson(),
+              '/property166': (context) => const ChaptersProperty(),
             },
           );
         },
