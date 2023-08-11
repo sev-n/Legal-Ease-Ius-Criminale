@@ -138,7 +138,25 @@ class HelpCenter extends StatelessWidget {
                                         fontFamily: 'RobotoFlex'),
                                   ),
                                 ),
-                              )
+                              ),
+                              const SizedBox(
+                                height: 30.0,
+                              ),
+                              // Material(
+                              //   type: MaterialType.transparency,
+                              //   child: InkWell(
+                              //     onTap: () {},
+                              //     splashColor: Colors.black.withOpacity(0.3),
+                              //     child: const Text(
+                              //       "How to use consultation feature?",
+                              //       style: TextStyle(
+                              //         decoration: TextDecoration.underline,
+                              //         fontSize: 16,
+                              //         fontFamily: 'RobotoFlex',
+                              //       ),
+                              //     ),
+                              //   ),
+                              // ),
                             ],
                           ),
                         ),

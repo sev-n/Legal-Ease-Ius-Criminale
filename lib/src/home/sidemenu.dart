@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import '../pages/sidenav_pages/about_us.dart';
-import '../pages/sidenav_pages/bookmark/bookmark.dart';
 import '../pages/sidenav_pages/helpcenter.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -121,37 +120,37 @@ class _MyDrawerListState extends State<MyDrawerList> {
             //   endIndent: 19.0,
             // ),
             //const SizedBox(height: 25),
-            ListTile(
-              minLeadingWidth: 10.0,
-              leading: Image.asset('assets/images/bookmark.png',
-                  width: 25, height: 25),
-              title: const Text(
-                'Bookmark',
-                style: TextStyle(
-                  color: Color(0xff0C2924),
-                  fontFamily: "RobotoFlex",
-                  fontSize: 16,
-                ),
-              ),
-              trailing: const Icon(
-                Icons.arrow_forward_ios_rounded,
-                size: 15,
-                color: Colors.black,
-              ),
-              onTap: () {
-                Navigator.of(context).pushAndRemoveUntil(
-                    MaterialPageRoute(
-                      builder: (context) => const BookMark(),
-                    ),
-                    (route) => route.isFirst);
-              },
-            ),
-            const Divider(
-              height: 0.9,
-              color: Color(0x33000000),
-              indent: 14.0,
-              endIndent: 19.0,
-            ),
+            // ListTile(
+            //   minLeadingWidth: 10.0,
+            //   leading: Image.asset('assets/images/bookmark.png',
+            //       width: 25, height: 25),
+            //   title: const Text(
+            //     'Bookmark',
+            //     style: TextStyle(
+            //       color: Color(0xff0C2924),
+            //       fontFamily: "RobotoFlex",
+            //       fontSize: 16,
+            //     ),
+            //   ),
+            //   trailing: const Icon(
+            //     Icons.arrow_forward_ios_rounded,
+            //     size: 15,
+            //     color: Colors.black,
+            //   ),
+            //   onTap: () {
+            //     Navigator.of(context).pushAndRemoveUntil(
+            //         MaterialPageRoute(
+            //           builder: (context) => const BookMark(),
+            //         ),
+            //         (route) => route.isFirst);
+            //   },
+            // ),
+            // const Divider(
+            //   height: 0.9,
+            //   color: Color(0x33000000),
+            //   indent: 14.0,
+            //   endIndent: 19.0,
+            // ),
             ListTile(
               minLeadingWidth: 10.0,
               leading: Image.asset('assets/images/feedback.png',
